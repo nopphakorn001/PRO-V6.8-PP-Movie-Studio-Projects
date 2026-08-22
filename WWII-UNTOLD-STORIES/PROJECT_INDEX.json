@@ -1,0 +1,24 @@
+{
+  "seriesId": "wwii-untold-stories",
+  "seriesName": "สงครามโลกครั้งที่ 2: เรื่องที่ไม่ค่อยถูกเล่า",
+  "format": {
+    "aspectRatio": "9:16",
+    "targetDurationSeconds": 600,
+    "targetSceneCount": 75,
+    "secondsPerScene": 8,
+    "storyMode": "historical-cinematic-documentary",
+    "narrationStrategy": "narrator-primary-dialogue-minimal"
+  },
+  "episodes": [
+    {"episode":1,"id":"castle-itter","title":"ศึกปราสาทอิตเทอร์: วันที่ศัตรูยืนอยู่ข้างเดียวกัน","folder":"EP01-Castle-Itter","event":"Battle of Castle Itter","date":"1945-05-04/1945-05-05","status":"outline-ready-existing-step4-to-migrate","plan":"EP01-Castle-Itter/PLAN.md","step6":null},
+    {"episode":2,"id":"operation-postmaster","title":"ปฏิบัติการโพสต์มาสเตอร์: คืนที่อังกฤษขโมยเรือศัตรูจากท่าเรือของชาติเป็นกลาง","folder":"EP02-Operation-Postmaster","event":"Operation Postmaster","date":"1942-01-14","status":"outline-ready","plan":"EP02-Operation-Postmaster/PLAN.md","step6":null},
+    {"episode":3,"id":"operation-mincemeat","title":"ศพที่หลอกกองบัญชาการเยอรมัน","folder":"EP03-Operation-Mincemeat","event":"Operation Mincemeat","date":"1943-04/1943-07","status":"outline-ready","plan":"EP03-Operation-Mincemeat/PLAN.md","step6":null},
+    {"episode":4,"id":"operation-gunnerside","title":"คืนบุกโรงงานน้ำมวลหนัก","folder":"EP04-Operation-Gunnerside","event":"Operation Gunnerside","date":"1943-02-27/1943-02-28","status":"outline-ready","plan":"EP04-Operation-Gunnerside/PLAN.md","step6":null},
+    {"episode":5,"id":"battle-of-attu","title":"สมรภูมิหิมะที่อเมริกาแทบลืม","folder":"EP05-Battle-of-Attu","event":"Battle of Attu","date":"1943-05-11/1943-05-30","status":"outline-ready","plan":"EP05-Battle-of-Attu/PLAN.md","step6":null},
+    {"episode":6,"id":"operation-jaywick","title":"เรือประมงปลอมกับระเบิดในท่าเรือสิงคโปร์","folder":"EP06-Operation-Jaywick","event":"Operation Jaywick","date":"1943-09/1943-10","status":"outline-ready","plan":"EP06-Operation-Jaywick/PLAN.md","step6":null},
+    {"episode":7,"id":"rescue-danish-jews","title":"คืนที่เดนมาร์กพาคนกว่าพันชีวิตข้ามทะเล","folder":"EP07-Rescue-of-Danish-Jews","event":"Rescue of the Danish Jews","date":"1943-09/1943-10","status":"outline-ready","plan":"EP07-Rescue-of-Danish-Jews/PLAN.md","step6":null},
+    {"episode":8,"id":"kohima-tennis-court","title":"สนามเทนนิสที่กลายเป็นแนวรบ","folder":"EP08-Battle-of-Kohima-Tennis-Court","event":"Battle of Kohima — Tennis Court","date":"1944-04/1944-05","status":"outline-ready","plan":"EP08-Battle-of-Kohima-Tennis-Court/PLAN.md","step6":null},
+    {"episode":9,"id":"operation-viersen","title":"กองทัพปลอมริมแม่น้ำไรน์","folder":"EP09-Operation-Viersen-Ghost-Army","event":"Operation Viersen / Ghost Army","date":"1945-03-18/1945-03-24","status":"outline-ready","plan":"EP09-Operation-Viersen-Ghost-Army/PLAN.md","step6":null},
+    {"episode":10,"id":"cabanatuan-raid","title":"ภารกิจช่วยเชลยกว่า 500 คนหลังแนวข้าศึก","folder":"EP10-Raid-at-Cabanatuan","event":"Raid at Cabanatuan","date":"1945-01-30","status":"outline-ready","plan":"EP10-Raid-at-Cabanatuan/PLAN.md","step6":null}
+  ]
+}
