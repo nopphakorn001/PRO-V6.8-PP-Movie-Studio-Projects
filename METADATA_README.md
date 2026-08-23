@@ -40,6 +40,8 @@ The shared schema lives in `METADATA_SCHEMA.json`. All episode metadata uses upp
 
 `AUTOMATION_NOTES.READY_FOR_AUTO_POST` is currently `false` by default. Set it to `true` only after the rendered video, thumbnail, subtitles, and final caption review are complete.
 
+The AI Company OS controller in `automation/` can perform this approval after checking required files. It writes local asset references during approval and writes platform IDs and published URLs back after successful publishing.
+
 ## Content Policy Notes
 
 - `MINECRAFT-ADVENTURES` is an unofficial fan-made creative project and should keep the fan project notice.

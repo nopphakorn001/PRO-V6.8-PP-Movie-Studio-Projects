@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Company OS Auto-Post Job",
+  "type": "object",
+  "required": [
+    "job_id",
+    "content_id",
+    "channel_group",
+    "series_id",
+    "episode",
+    "metadata_file",
+    "scheduled_at",
+    "status",
+    "assets",
+    "readiness",
+    "platform_runs"
+  ],
+  "properties": {
+    "job_id": { "type": "string" },
+    "content_id": { "type": "string" },
+    "channel_group": { "enum": ["kid", "history"] },
+    "series_id": { "type": "string" },
+    "episode": { "type": "integer", "minimum": 1 },
+    "metadata_file": { "type": "string" },
+    "scheduled_at": { "type": "string", "format": "date-time" },
+    "status": {
+      "enum": [
+        "WAITING_ASSETS",
+        "READY",
+        "CLAIMED",
+        "PUBLISHING",
+        "PARTIAL",
+        "PUBLISHED",
+        "FAILED",
+        "PAUSED"
+      ]
+    },
+    "assets": { "type": "object" },
+    "readiness": { "type": "object" },
+    "platform_runs": { "type": "object" }
+  },
+  "additionalProperties": true
+}

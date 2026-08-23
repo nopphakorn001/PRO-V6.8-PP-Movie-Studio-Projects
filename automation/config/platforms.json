@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "safe_mode": true,
+  "default_visibility": "private",
+  "platforms": {
+    "youtube": {
+      "enabled": true,
+      "asset_role": "master_video",
+      "caption_key": "YOUTUBE",
+      "initial_visibility": "private"
+    },
+    "youtube_shorts": {
+      "enabled": true,
+      "asset_role": "short_video",
+      "caption_key": "YOUTUBE_SHORTS",
+      "initial_visibility": "private"
+    },
+    "tiktok": {
+      "enabled": true,
+      "asset_role": "short_video",
+      "caption_key": "TIKTOK",
+      "initial_visibility": "self_only"
+    },
+    "facebook_reels": {
+      "enabled": true,
+      "asset_role": "short_video",
+      "caption_key": "FACEBOOK_REELS",
+      "initial_visibility": "draft"
+    }
+  }
+}

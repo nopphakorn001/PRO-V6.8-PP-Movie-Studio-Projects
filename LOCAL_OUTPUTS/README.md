@@ -6,17 +6,25 @@ Recommended structure:
 
 ```text
 LOCAL_OUTPUTS/
-  MINECRAFT-ADVENTURES/
-    EP01/
-      video.mp4
-      thumbnail.png
-      subtitle.srt
-  BLOCK-TALES/
-    EP01/
-      video.mp4
-  WWII-UNTOLD-STORIES/
-    EP01/
-      video.mp4
+  KID/
+    minecraft-adventures/
+      EP01/
+        master.mp4
+        short.mp4
+        thumbnail.jpg
+        subtitle.srt
+    block-tales/
+      EP01/
+        master.mp4
+  HISTORY/
+    wwii-untold-stories/
+      EP01/
+        master.mp4
+        short.mp4
+        thumbnail.jpg
+        subtitle.srt
 ```
+
+`master.mp4` is the YouTube version. `short.mp4` is the Shorts, TikTok, and Facebook Reels version. Kid jobs may reuse the master when it is already short-form; History normally needs both full and short versions.
 
 Video files such as `.mp4`, `.mov`, `.mkv`, `.avi`, and `.webm` are ignored by Git. Store only metadata references in each episode `metadata.json`.

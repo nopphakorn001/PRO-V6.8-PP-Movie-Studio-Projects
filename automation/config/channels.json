@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "timezone": "Asia/Bangkok",
+  "default_start_date": null,
+  "default_start_mode": "tomorrow",
+  "channels": {
+    "kid": {
+      "display_name": "Kid Channel",
+      "series_ids": [
+        "minecraft-adventures",
+        "block-tales"
+      ],
+      "series_priority": [
+        "minecraft-adventures",
+        "block-tales"
+      ],
+      "daily_publish_time": "17:00",
+      "audience": "family_and_kids",
+      "publishing_policy": {
+        "youtube_category_id": "20",
+        "youtube_made_for_kids": true,
+        "contains_synthetic_media": true,
+        "tiktok_is_aigc": true
+      },
+      "platforms": [
+        "youtube",
+        "youtube_shorts",
+        "tiktok",
+        "facebook_reels"
+      ]
+    },
+    "history": {
+      "display_name": "History Channel",
+      "series_ids": [
+        "wwii-untold-stories"
+      ],
+      "series_priority": [
+        "wwii-untold-stories"
+      ],
+      "daily_publish_time": "20:00",
+      "audience": "general_history",
+      "publishing_policy": {
+        "youtube_category_id": "27",
+        "youtube_made_for_kids": false,
+        "contains_synthetic_media": true,
+        "tiktok_is_aigc": true
+      },
+      "platforms": [
+        "youtube",
+        "youtube_shorts",
+        "tiktok",
+        "facebook_reels"
+      ]
+    }
+  }
+}

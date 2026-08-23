@@ -16,3 +16,16 @@ VIDEOS/*
 !RENDERS/README.md
 !EXPORTS/README.md
 !VIDEOS/README.md
+
+# Auto-post runtime state and secrets
+.env
+.env.*
+!.env.example
+automation/state/*.json
+automation/state/*.lock
+automation/logs/
+!automation/state/.gitkeep
+
+# Python local cache
+__pycache__/
+*.py[cod]

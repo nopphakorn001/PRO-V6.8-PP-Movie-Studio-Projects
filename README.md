@@ -22,6 +22,10 @@ Production-content repository for JSON projects created for PRO V6.8 P&P Movie S
 - `STEP6_IMAGE.json` is optional and should be stored only as an important checkpoint because embedded Base64 images can make files very large.
 - Generated video binaries should normally stay outside Git; keep production metadata/references here instead.
 
+## Auto-Post Control
+
+The `automation/` folder provides a two-channel queue and local API bridge for AI Company OS. Kid content is scheduled at 17:00 and History content at 20:00 in `Asia/Bangkok`, one episode per channel per day. See `automation/README.md` for setup, readiness rules, and the controller contract.
+
 ## Migration status
 
 BLOCK TALES EP01–EP06 have been migrated from `AICompanyOS/exports/block-tales` into this repository and the new repository is now the source location for future BLOCK TALES production files.

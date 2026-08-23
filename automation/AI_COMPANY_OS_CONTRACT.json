@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "service": "ai-company-os-autopost",
+  "base_url": "http://127.0.0.1:8787/v1",
+  "authentication": {
+    "type": "bearer",
+    "environment_variable": "AICOMPANYOS_API_TOKEN",
+    "required_when_configured": true
+  },
+  "workflow": [
+    "POST /sync",
+    "POST /validate",
+    "GET /jobs/next?channel=kid",
+    "GET /jobs/{job_id}/publish-payload?platform=youtube",
+    "POST /jobs/{job_id}/approve",
+    "POST /jobs/{job_id}/claim",
+    "POST /jobs/{job_id}/status",
+    "POST /jobs/{job_id}/platform-result"
+  ],
+  "endpoints": {
+    "GET /health": "Service health; authentication is not required.",
+    "GET /channels": "Channel schedules and enabled publishing targets.",
+    "GET /queue": "Queue jobs; optional channel and status query filters.",
+    "GET /jobs/next": "Next READY and due job; optional channel and include_future filters.",
+    "GET /jobs/{job_id}/publish-payload": "Resolved asset, caption, tags, schedule, audience, AI-generated disclosure, and safe visibility options for one platform.",
+    "POST /sync": "Rescan episode metadata and local assets while preserving active results.",
+    "POST /validate": "Validate configuration, metadata, captions, and queue generation.",
+    "POST /jobs/{job_id}/approve": "Check required assets and approve with body {approved_by}; writes approval and local asset references to episode metadata.",
+    "POST /jobs/{job_id}/claim": "Claim a READY job with body {agent_id}.",
+    "POST /jobs/{job_id}/status": "Set status with body {status, message}.",
+    "POST /jobs/{job_id}/platform-result": "Record {platform, status, remote_id, url, error}; successful IDs and URLs are written back to episode metadata."
+  },
+  "job_statuses": [
+    "WAITING_ASSETS",
+    "READY",
+    "CLAIMED",
+    "PUBLISHING",
+    "PARTIAL",
+    "PUBLISHED",
+    "FAILED",
+    "PAUSED"
+  ],
+  "platform_statuses": [
+    "PENDING",
+    "UPLOADING",
+    "SCHEDULED",
+    "PUBLISHED",
+    "FAILED",
+    "SKIPPED"
+  ]
+}
