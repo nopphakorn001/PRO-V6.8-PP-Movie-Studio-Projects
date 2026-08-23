@@ -20,10 +20,15 @@ class AutoPostSmokeTests(unittest.TestCase):
         self.assertEqual(len(kid), 16)
         self.assertEqual(len(history), 10)
 
-    def test_every_job_targets_all_platforms(self) -> None:
-        expected = {"youtube", "youtube_shorts", "tiktok", "facebook_reels"}
+    def test_every_job_targets_only_approved_platforms(self) -> None:
+        expected = {"youtube", "youtube_shorts"}
         for job in self.queue["jobs"]:
             self.assertEqual(set(job["platform_runs"]), expected)
+
+    def test_disabled_platforms_are_removed_from_existing_jobs(self) -> None:
+        for job in self.queue["jobs"]:
+            self.assertNotIn("tiktok", job["platform_runs"])
+            self.assertNotIn("facebook_reels", job["platform_runs"])
 
     def test_unapproved_jobs_are_blocked(self) -> None:
         for job in self.queue["jobs"]:

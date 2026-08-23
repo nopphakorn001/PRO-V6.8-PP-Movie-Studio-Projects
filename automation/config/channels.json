@@ -5,7 +5,9 @@
   "default_start_mode": "tomorrow",
   "channels": {
     "kid": {
-      "display_name": "Kid Channel",
+      "display_name": "CubeLoom Adventures",
+      "youtube_channel_id": "UClL7w9w4DKWXFqz7GVQdWIQ",
+      "youtube_url": "https://youtube.com/@CubeLoomAdventures",
       "series_ids": [
         "minecraft-adventures",
         "block-tales"
@@ -24,13 +26,13 @@
       },
       "platforms": [
         "youtube",
-        "youtube_shorts",
-        "tiktok",
-        "facebook_reels"
+        "youtube_shorts"
       ]
     },
     "history": {
-      "display_name": "History Channel",
+      "display_name": "War & History Vault",
+      "youtube_channel_id": "UCd0cD2MqJ_w5bkrg6AOF42A",
+      "youtube_url": "https://www.youtube.com/@WarHistoryVault-l3d",
       "series_ids": [
         "wwii-untold-stories"
       ],
@@ -47,9 +49,7 @@
       },
       "platforms": [
         "youtube",
-        "youtube_shorts",
-        "tiktok",
-        "facebook_reels"
+        "youtube_shorts"
       ]
     }
   }

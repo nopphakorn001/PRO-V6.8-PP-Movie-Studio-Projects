@@ -16,13 +16,13 @@
       "initial_visibility": "private"
     },
     "tiktok": {
-      "enabled": true,
+      "enabled": false,
       "asset_role": "short_video",
       "caption_key": "TIKTOK",
       "initial_visibility": "self_only"
     },
     "facebook_reels": {
-      "enabled": true,
+      "enabled": false,
       "asset_role": "short_video",
       "caption_key": "FACEBOOK_REELS",
       "initial_visibility": "draft"

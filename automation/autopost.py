@@ -221,6 +221,12 @@ def build_queue(start_date: str | None = None) -> dict[str, Any]:
             previous = old_jobs.get(job_id)
             if previous:
                 job = deepcopy(previous)
+                previous_runs = dict(job.get("platform_runs") or {})
+                default_runs = new_platform_runs(channel["platforms"])
+                job["platform_runs"] = {
+                    name: previous_runs.get(name, default_runs[name])
+                    for name in channel["platforms"]
+                }
                 job.update(
                     {
                         "content_id": metadata["CONTENT_ID"],
