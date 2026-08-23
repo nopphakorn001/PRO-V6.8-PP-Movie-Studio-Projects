@@ -1,18 +1,96 @@
 {
-  "seriesId":"minecraft-adventures",
-  "seriesName":"Minecraft Adventures — เรื่องสั้นผจญภัยจบในตอน",
-  "format":{"aspectRatio":"9:16","secondsPerScene":8,"defaultSceneCount":10,"approxDurationSeconds":80,"dialogue":false,"narration":false,"audio":"music + ambience + SFX"},
-  "status":"STEP6_READY",
-  "episodes":[
-    {"episode":1,"titleTH":"หมาป่าที่หลงทาง","titleEN":"The Lost Wolf","path":"MINECRAFT-ADVENTURES/EP01-The-Lost-Wolf/STEP6.json","status":"STEP6_READY"},
-    {"episode":2,"titleTH":"สะพานของหมู่บ้าน","titleEN":"The Village Bridge","path":"MINECRAFT-ADVENTURES/EP02-The-Village-Bridge/STEP6.json","status":"STEP6_READY"},
-    {"episode":3,"titleTH":"Allay กับมรกตที่หายไป","titleEN":"Allay and the Lost Emerald","path":"MINECRAFT-ADVENTURES/EP03-Allay-and-the-Lost-Emerald/STEP6.json","status":"STEP6_READY"},
-    {"episode":4,"titleTH":"การผจญภัยในวิหารทะเลทราย","titleEN":"Desert Temple Adventure","path":"MINECRAFT-ADVENTURES/EP04-Desert-Temple-Adventure/STEP6.json","status":"STEP6_READY"},
-    {"episode":5,"titleTH":"เพชรใต้ถ้ำเขียว","titleEN":"Diamond Beneath the Lush Cave","path":"MINECRAFT-ADVENTURES/EP05-Diamond-Beneath-the-Lush-Cave/STEP6.json","status":"STEP6_READY"},
-    {"episode":6,"titleTH":"เข็มทิศใต้ทะเล","titleEN":"The Compass Under the Sea","path":"MINECRAFT-ADVENTURES/EP06-The-Compass-Under-the-Sea/STEP6.json","status":"STEP6_READY"},
-    {"episode":7,"titleTH":"เมล็ดพันธุ์ของ Sniffer","titleEN":"The Sniffer's Lost Seed","path":"MINECRAFT-ADVENTURES/EP07-The-Sniffers-Lost-Seed/STEP6.json","status":"STEP6_READY"},
-    {"episode":8,"titleTH":"รถรางเหมืองหลุดราง","titleEN":"Runaway Minecart","path":"MINECRAFT-ADVENTURES/EP08-Runaway-Minecart/STEP6.json","status":"STEP6_READY"},
-    {"episode":9,"titleTH":"ช่วยรังผึ้งก่อนเย็น","titleEN":"Save the Bees","path":"MINECRAFT-ADVENTURES/EP09-Save-the-Bees/STEP6.json","status":"STEP6_READY"},
-    {"episode":10,"titleTH":"เค้กสำหรับงานเทศกาลหมู่บ้าน","titleEN":"Cake for the Village Festival","path":"MINECRAFT-ADVENTURES/EP10-Cake-for-the-Village-Festival/STEP6.json","status":"STEP6_READY"}
+  "seriesId": "minecraft-adventures",
+  "seriesName": "Minecraft Adventures — เรื่องสั้นผจญภัยจบในตอน",
+  "format": {
+    "aspectRatio": "9:16",
+    "secondsPerScene": 8,
+    "defaultSceneCount": 10,
+    "approxDurationSeconds": 80,
+    "dialogue": false,
+    "narration": false,
+    "audio": "music + ambience + SFX"
+  },
+  "status": "STEP6_READY",
+  "episodes": [
+    {
+      "episode": 1,
+      "titleTH": "หมาป่าที่หลงทาง",
+      "titleEN": "The Lost Wolf",
+      "path": "MINECRAFT-ADVENTURES/EP01-The-Lost-Wolf/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "MINECRAFT-ADVENTURES/EP01-The-Lost-Wolf/metadata.json"
+    },
+    {
+      "episode": 2,
+      "titleTH": "สะพานของหมู่บ้าน",
+      "titleEN": "The Village Bridge",
+      "path": "MINECRAFT-ADVENTURES/EP02-The-Village-Bridge/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "MINECRAFT-ADVENTURES/EP02-The-Village-Bridge/metadata.json"
+    },
+    {
+      "episode": 3,
+      "titleTH": "Allay กับมรกตที่หายไป",
+      "titleEN": "Allay and the Lost Emerald",
+      "path": "MINECRAFT-ADVENTURES/EP03-Allay-and-the-Lost-Emerald/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "MINECRAFT-ADVENTURES/EP03-Allay-and-the-Lost-Emerald/metadata.json"
+    },
+    {
+      "episode": 4,
+      "titleTH": "การผจญภัยในวิหารทะเลทราย",
+      "titleEN": "Desert Temple Adventure",
+      "path": "MINECRAFT-ADVENTURES/EP04-Desert-Temple-Adventure/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "MINECRAFT-ADVENTURES/EP04-Desert-Temple-Adventure/metadata.json"
+    },
+    {
+      "episode": 5,
+      "titleTH": "เพชรใต้ถ้ำเขียว",
+      "titleEN": "Diamond Beneath the Lush Cave",
+      "path": "MINECRAFT-ADVENTURES/EP05-Diamond-Beneath-the-Lush-Cave/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "MINECRAFT-ADVENTURES/EP05-Diamond-Beneath-the-Lush-Cave/metadata.json"
+    },
+    {
+      "episode": 6,
+      "titleTH": "เข็มทิศใต้ทะเล",
+      "titleEN": "The Compass Under the Sea",
+      "path": "MINECRAFT-ADVENTURES/EP06-The-Compass-Under-the-Sea/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "MINECRAFT-ADVENTURES/EP06-The-Compass-Under-the-Sea/metadata.json"
+    },
+    {
+      "episode": 7,
+      "titleTH": "เมล็ดพันธุ์ของ Sniffer",
+      "titleEN": "The Sniffer's Lost Seed",
+      "path": "MINECRAFT-ADVENTURES/EP07-The-Sniffers-Lost-Seed/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "MINECRAFT-ADVENTURES/EP07-The-Sniffers-Lost-Seed/metadata.json"
+    },
+    {
+      "episode": 8,
+      "titleTH": "รถรางเหมืองหลุดราง",
+      "titleEN": "Runaway Minecart",
+      "path": "MINECRAFT-ADVENTURES/EP08-Runaway-Minecart/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "MINECRAFT-ADVENTURES/EP08-Runaway-Minecart/metadata.json"
+    },
+    {
+      "episode": 9,
+      "titleTH": "ช่วยรังผึ้งก่อนเย็น",
+      "titleEN": "Save the Bees",
+      "path": "MINECRAFT-ADVENTURES/EP09-Save-the-Bees/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "MINECRAFT-ADVENTURES/EP09-Save-the-Bees/metadata.json"
+    },
+    {
+      "episode": 10,
+      "titleTH": "เค้กสำหรับงานเทศกาลหมู่บ้าน",
+      "titleEN": "Cake for the Village Festival",
+      "path": "MINECRAFT-ADVENTURES/EP10-Cake-for-the-Village-Festival/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "MINECRAFT-ADVENTURES/EP10-Cake-for-the-Village-Festival/metadata.json"
+    }
   ]
 }

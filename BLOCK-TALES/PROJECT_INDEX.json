@@ -1,0 +1,62 @@
+{
+  "seriesId": "block-tales",
+  "seriesName": "BLOCK TALES",
+  "format": {
+    "aspectRatio": "9:16",
+    "secondsPerScene": 8,
+    "dialogue": "EP01 minimal; EP02 onward none",
+    "narration": false,
+    "audio": "music + ambience + SFX"
+  },
+  "status": "STEP6_READY",
+  "episodes": [
+    {
+      "episode": 1,
+      "titleTH": "อย่าขุดบล็อกสุดท้ายนั้น",
+      "titleEN": "Don't Mine the Last Block",
+      "path": "BLOCK-TALES/EP01-Dont-Mine-The-Last-Block/STEP6.json",
+      "metadata": "BLOCK-TALES/EP01-Dont-Mine-The-Last-Block/metadata.json",
+      "status": "STEP6_READY"
+    },
+    {
+      "episode": 2,
+      "titleTH": "หีบที่ขยับเอง",
+      "titleEN": "The Chest That Moved",
+      "path": "BLOCK-TALES/EP02-The-Chest-That-Moved/STEP6.json",
+      "metadata": "BLOCK-TALES/EP02-The-Chest-That-Moved/metadata.json",
+      "status": "STEP6_READY"
+    },
+    {
+      "episode": 3,
+      "titleTH": "คบเพลิงอันสุดท้าย",
+      "titleEN": "One Torch Left",
+      "path": "BLOCK-TALES/EP03-One-Torch-Left/STEP6.json",
+      "metadata": "BLOCK-TALES/EP03-One-Torch-Left/metadata.json",
+      "status": "STEP6_READY"
+    },
+    {
+      "episode": 4,
+      "titleTH": "สะพานที่หายไปทีละบล็อก",
+      "titleEN": "The Disappearing Bridge",
+      "path": "BLOCK-TALES/EP04-The-Disappearing-Bridge/STEP6.json",
+      "metadata": "BLOCK-TALES/EP04-The-Disappearing-Bridge/metadata.json",
+      "status": "STEP6_READY"
+    },
+    {
+      "episode": 5,
+      "titleTH": "หมู่บ้านที่ไม่มีใครตื่น",
+      "titleEN": "The Silent Village",
+      "path": "BLOCK-TALES/EP05-The-Silent-Village/STEP6.json",
+      "metadata": "BLOCK-TALES/EP05-The-Silent-Village/metadata.json",
+      "status": "STEP6_READY"
+    },
+    {
+      "episode": 6,
+      "titleTH": "ประตูที่ไม่มีอยู่เมื่อครู่",
+      "titleEN": "The Door That Wasn't There",
+      "path": "BLOCK-TALES/EP06-The-Door-That-Wasnt-There/STEP6.json",
+      "metadata": "BLOCK-TALES/EP06-The-Door-That-Wasnt-There/metadata.json",
+      "status": "STEP6_READY"
+    }
+  ]
+}

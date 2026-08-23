@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PRO V6.8 Auto-Post Episode Metadata",
+  "type": "object",
+  "required": [
+    "SCHEMA_VERSION",
+    "CONTENT_ID",
+    "SERIES",
+    "SERIES_ID",
+    "EPISODE",
+    "TITLE_TH",
+    "TITLE_EN",
+    "SHORT_DESCRIPTION_TH",
+    "LONG_DESCRIPTION_TH",
+    "HOOK",
+    "HASHTAGS",
+    "KEYWORDS",
+    "TAGS",
+    "PLATFORM_CAPTIONS",
+    "CTA",
+    "CONTENT_WARNING",
+    "LANGUAGE",
+    "ASPECT_RATIO",
+    "DURATION_TARGET",
+    "STATUS",
+    "GITHUB_PATH",
+    "OUTPUT_REFERENCES"
+  ],
+  "properties": {
+    "SCHEMA_VERSION": {
+      "type": "string"
+    },
+    "CONTENT_ID": {
+      "type": "string"
+    },
+    "SERIES": {
+      "type": "string"
+    },
+    "SERIES_ID": {
+      "type": "string"
+    },
+    "EPISODE": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "TITLE_TH": {
+      "type": "string"
+    },
+    "TITLE_EN": {
+      "type": "string"
+    },
+    "SHORT_DESCRIPTION_TH": {
+      "type": "string"
+    },
+    "LONG_DESCRIPTION_TH": {
+      "type": "string"
+    },
+    "HOOK": {
+      "type": "string"
+    },
+    "HASHTAGS": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "KEYWORDS": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "TAGS": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "PLATFORM_CAPTIONS": {
+      "type": "object",
+      "required": [
+        "YOUTUBE",
+        "YOUTUBE_SHORTS",
+        "TIKTOK",
+        "FACEBOOK_REELS"
+      ]
+    },
+    "CTA": {
+      "type": "string"
+    },
+    "CONTENT_WARNING": {
+      "type": "string"
+    },
+    "LANGUAGE": {
+      "type": "string"
+    },
+    "ASPECT_RATIO": {
+      "type": "string"
+    },
+    "DURATION_TARGET": {
+      "type": "string"
+    },
+    "STATUS": {
+      "type": "string"
+    },
+    "GITHUB_PATH": {
+      "type": "string"
+    },
+    "GITHUB_URL": {
+      "type": "string"
+    },
+    "SOURCE_PROJECT_FILE": {
+      "type": "string"
+    },
+    "OUTPUT_REFERENCES": {
+      "type": "object"
+    },
+    "AUTOMATION_NOTES": {
+      "type": "object"
+    },
+    "UPDATED_AT": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
