@@ -1,0 +1,18 @@
+# Local generated video outputs
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+
+# Local render/export work folders
+LOCAL_OUTPUTS/*
+RENDERS/*
+EXPORTS/*
+VIDEOS/*
+
+# Keep folder documentation tracked
+!LOCAL_OUTPUTS/README.md
+!RENDERS/README.md
+!EXPORTS/README.md
+!VIDEOS/README.md
