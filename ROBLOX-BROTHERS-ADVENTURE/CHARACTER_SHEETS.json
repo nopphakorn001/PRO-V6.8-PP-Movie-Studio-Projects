@@ -1,0 +1,60 @@
+{
+  "seriesId": "roblox-brothers-adventure",
+  "seriesName": "Roblox Brothers Adventure — 2 พี่น้องตะลุยโลกเกม",
+  "referencePolicy": "Use the uploaded image only as a broad visual reference for two stylized child game avatars. Do not identify real people, do not generate photoreal portraits, and keep the designs consistent across all scenes and episodes.",
+  "characters": [
+    {
+      "id": "big_brother_max",
+      "name": "MAX",
+      "thaiName": "แม็กซ์",
+      "role": "พี่ชาย นักลุยและคนปกป้องน้อง",
+      "ageStyle": "stylized child game avatar, older sibling proportions",
+      "description": "Roblox-style blocky boy avatar inspired by the older child in the reference photo, without identifying the real person. Slightly taller than MINI, warm smile, brave posture, friendly rounded block proportions.",
+      "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband",
+      "colors": {
+        "primary": "cream",
+        "accent": "light green",
+        "secondary": "tan",
+        "shoes": "white"
+      },
+      "hair": "short dark-brown blocky hair, neat side sweep",
+      "face": "simple cheerful game-avatar face, expressive eyebrows, no photorealism",
+      "props": {
+        "personalProps": "small square backpack, green checkpoint badge"
+      },
+      "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
+      "continuity": {
+        "continuityRules": "Keep MAX taller than MINI, same cream/light-green outfit, same short dark hair, same square backpack and green wristband in every scene and every episode.",
+        "appearingScenes": []
+      },
+      "imageStatus": "idle"
+    },
+    {
+      "id": "little_brother_mini",
+      "name": "MINI",
+      "thaiName": "มินิ",
+      "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
+      "ageStyle": "stylized child game avatar, younger sibling proportions",
+      "description": "Roblox-style blocky boy avatar inspired by the younger child in the reference photo, without identifying the real person. Shorter than MAX, curious bright expression, quick energetic poses.",
+      "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch",
+      "colors": {
+        "primary": "white",
+        "accent": "bright blue",
+        "secondary": "navy",
+        "shoes": "blue-white"
+      },
+      "hair": "short dark-brown blocky hair, slightly fluffy front",
+      "face": "simple cheerful game-avatar face, curious eyes, no photorealism",
+      "props": {
+        "personalProps": "blue utility pouch, tiny compass charm"
+      },
+      "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
+      "continuity": {
+        "continuityRules": "Keep MINI shorter than MAX, same white/blue outfit, same fluffy dark hair, same blue utility pouch and compass charm in every scene and every episode.",
+        "appearingScenes": []
+      },
+      "imageStatus": "idle"
+    }
+  ],
+  "updatedAt": "2026-08-24T09:00:00+07:00"
+}

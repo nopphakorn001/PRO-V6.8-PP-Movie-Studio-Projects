@@ -1,0 +1,108 @@
+{
+  "seriesId": "roblox-brothers-adventure",
+  "seriesName": "Roblox Brothers Adventure — 2 พี่น้องตะลุยโลกเกม",
+  "format": {
+    "aspectRatio": "9:16",
+    "secondsPerScene": 8,
+    "defaultSceneCount": 10,
+    "approxDurationSeconds": 80,
+    "dialogue": false,
+    "narration": false,
+    "audio": "music + ambience + SFX",
+    "tone": "bright, playful, family-friendly, not dark"
+  },
+  "status": "STEP6_READY",
+  "characterSheets": "ROBLOX-BROTHERS-ADVENTURE/CHARACTER_SHEETS.json",
+  "episodes": [
+    {
+      "episode": 1,
+      "titleTH": "ประตูสู่ Beginner Obby",
+      "titleEN": "Beginner Obby Portal",
+      "level": "Beginner Obby / Portal",
+      "path": "ROBLOX-BROTHERS-ADVENTURE/EP01-Beginner-Obby-Portal/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP01-Beginner-Obby-Portal/metadata.json"
+    },
+    {
+      "episode": 2,
+      "titleTH": "รถรางเหมืองสุดป่วน",
+      "titleEN": "Minecart Adventure",
+      "level": "Minecart Adventure",
+      "path": "ROBLOX-BROTHERS-ADVENTURE/EP02-Minecart-Adventure/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP02-Minecart-Adventure/metadata.json"
+    },
+    {
+      "episode": 3,
+      "titleTH": "เกาะลอยฟ้า",
+      "titleEN": "Sky Islands",
+      "level": "Sky Islands",
+      "path": "ROBLOX-BROTHERS-ADVENTURE/EP03-Sky-Islands/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP03-Sky-Islands/metadata.json"
+    },
+    {
+      "episode": 4,
+      "titleTH": "เมืองน้ำท่วม",
+      "titleEN": "Flood Escape",
+      "level": "Flood Escape",
+      "path": "ROBLOX-BROTHERS-ADVENTURE/EP04-Flood-Escape/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP04-Flood-Escape/metadata.json"
+    },
+    {
+      "episode": 5,
+      "titleTH": "ปราสาทปริศนา",
+      "titleEN": "Puzzle Castle",
+      "level": "Puzzle Castle",
+      "path": "ROBLOX-BROTHERS-ADVENTURE/EP05-Puzzle-Castle/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP05-Puzzle-Castle/metadata.json"
+    },
+    {
+      "episode": 6,
+      "titleTH": "แข่งรถสุดป่วน",
+      "titleEN": "Racing World",
+      "level": "Racing World",
+      "path": "ROBLOX-BROTHERS-ADVENTURE/EP06-Racing-World/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP06-Racing-World/metadata.json"
+    },
+    {
+      "episode": 7,
+      "titleTH": "สวนสัตว์หลุดกรง",
+      "titleEN": "Animal Rescue",
+      "level": "Animal Rescue",
+      "path": "ROBLOX-BROTHERS-ADVENTURE/EP07-Animal-Rescue/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP07-Animal-Rescue/metadata.json"
+    },
+    {
+      "episode": 8,
+      "titleTH": "โรงงานหุ่นยนต์วุ่นวาย",
+      "titleEN": "Robot Factory",
+      "level": "Robot Factory",
+      "path": "ROBLOX-BROTHERS-ADVENTURE/EP08-Robot-Factory/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP08-Robot-Factory/metadata.json"
+    },
+    {
+      "episode": 9,
+      "titleTH": "โจรสลัดแห่งเกาะสมบัติ",
+      "titleEN": "Pirate Island",
+      "level": "Pirate Island",
+      "path": "ROBLOX-BROTHERS-ADVENTURE/EP09-Pirate-Island/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP09-Pirate-Island/metadata.json"
+    },
+    {
+      "episode": 10,
+      "titleTH": "Mega Obby Final",
+      "titleEN": "Mega Obby Final",
+      "level": "Mega Obby Final",
+      "path": "ROBLOX-BROTHERS-ADVENTURE/EP10-Mega-Obby-Final/STEP6.json",
+      "status": "STEP6_READY",
+      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP10-Mega-Obby-Final/metadata.json"
+    }
+  ]
+}
