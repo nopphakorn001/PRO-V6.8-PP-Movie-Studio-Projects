@@ -16,11 +16,12 @@ from urllib.parse import parse_qs, urlparse
 
 import autopost
 import flow_runner
+import youtube_publisher
 
 
 MAX_BODY_BYTES = 1024 * 1024
 WRITE_LOCK = threading.Lock()
-JOB_ROUTE = re.compile(r"^/v1/jobs/([^/]+)/(approve|claim|status|platform-result)$")
+JOB_ROUTE = re.compile(r"^/v1/jobs/([^/]+)/(approve|claim|status|platform-result|youtube-private)$")
 PAYLOAD_ROUTE = re.compile(r"^/v1/jobs/([^/]+)/publish-payload$")
 
 
@@ -97,6 +98,9 @@ class BridgeHandler(BaseHTTPRequestHandler):
                 return
             if route.path == "/v1/flow/status":
                 self.send_json(HTTPStatus.OK, flow_runner.status())
+                return
+            if route.path == "/v1/youtube/status":
+                self.send_json(HTTPStatus.OK, youtube_publisher.credential_status())
                 return
             if not self.require_auth():
                 return
@@ -189,7 +193,7 @@ class BridgeHandler(BaseHTTPRequestHandler):
                             str(body.get("status", "")),
                             str(body.get("message", "")),
                         )
-                    else:
+                    elif action == "platform-result":
                         platform = str(body.get("platform", ""))
                         status = str(body.get("status", ""))
                         if not platform or not status:
@@ -202,6 +206,8 @@ class BridgeHandler(BaseHTTPRequestHandler):
                             str(body.get("url", "")),
                             str(body.get("error", "")),
                         )
+                    else:
+                        job = youtube_publisher.publish_private(job_id)
                     self.send_json(HTTPStatus.OK, {"ok": True, "job": job})
                     return
             self.send_json(HTTPStatus.NOT_FOUND, {"ok": False, "error": "not_found"})

@@ -58,7 +58,7 @@
   "GITHUB_URL": "https://github.com/nopphakorn001/PRO-V6.8-PP-Movie-Studio-Projects/tree/main/BLOCK-TALES/EP03-One-Torch-Left",
   "SOURCE_PROJECT_FILE": "BLOCK-TALES/EP03-One-Torch-Left/STEP6.json",
   "OUTPUT_REFERENCES": {
-    "VIDEO_FILE": "",
+    "VIDEO_FILE": "LOCAL_OUTPUTS/KID/block-tales/EP03/master.mp4",
     "THUMBNAIL_FILE": "",
     "SUBTITLE_FILE": "",
     "YOUTUBE_VIDEO_ID": "",
@@ -70,12 +70,16 @@
       "YOUTUBE_SHORTS": "",
       "TIKTOK": "",
       "FACEBOOK_REELS": ""
-    }
+    },
+    "SHORT_VIDEO_FILE": "LOCAL_OUTPUTS/KID/block-tales/EP03/master.mp4"
   },
   "AUTOMATION_NOTES": {
-    "READY_FOR_AUTO_POST": false,
+    "READY_FOR_AUTO_POST": true,
     "CAPTION_REVIEWED": true,
-    "RIGHTS_NOTES": "Original voxel/block-world story; avoid branded game UI, logos, copied textures, or exact recreation of copyrighted game characters."
+    "RIGHTS_NOTES": "Original voxel/block-world story; avoid branded game UI, logos, copied textures, or exact recreation of copyrighted game characters.",
+    "AUTO_POST_STATUS": "APPROVED",
+    "APPROVED_BY": "owner",
+    "APPROVED_AT": "2026-08-24T10:09:11.019394Z"
   },
-  "UPDATED_AT": "2026-08-23T00:00:00+07:00"
+  "UPDATED_AT": "2026-08-24T10:09:11.019394Z"
 }

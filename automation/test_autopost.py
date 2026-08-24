@@ -32,7 +32,7 @@ class AutoPostSmokeTests(unittest.TestCase):
 
     def test_unapproved_jobs_are_blocked(self) -> None:
         for job in self.queue["jobs"]:
-            if job["job_id"] == "kid-block-tales-ep02":
+            if job["job_id"] in {"kid-block-tales-ep02", "kid-block-tales-ep03"}:
                 self.assertEqual(job["status"], "READY")
                 self.assertEqual(job["readiness"]["blockers"], [])
                 continue

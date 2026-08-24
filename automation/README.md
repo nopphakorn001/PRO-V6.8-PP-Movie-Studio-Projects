@@ -109,3 +109,15 @@ Official references:
 - https://developers.google.com/youtube/v3/docs/videos/insert
 - https://developers.tiktok.com/docs/en/content-posting-api-reference-direct-post
 - https://developers.facebook.com/docs/video-api/guides/reels-publishing/
+
+### YouTube Private Publisher
+
+The local publisher uses the official desktop OAuth loopback flow, verifies the authenticated channel ID, forces `privacyStatus=private`, and uses a resumable upload session. OAuth material is stored under the current Windows user's local application data, outside Git.
+
+```powershell
+python automation/youtube_publisher.py status
+python automation/youtube_publisher.py oauth --client-secrets C:\path\to\desktop-client.json
+python automation/youtube_publisher.py upload-private --job-id kid-block-tales-ep03
+```
+
+One vertical upload is recorded as both the YouTube video and YouTube Short result with the same remote ID; no duplicate upload is created. Public visibility is not implemented by this command.

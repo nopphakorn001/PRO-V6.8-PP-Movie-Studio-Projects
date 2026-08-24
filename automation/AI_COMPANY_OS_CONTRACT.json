@@ -11,13 +11,15 @@
     "POST /sync",
     "POST /validate",
     "GET /flow/status",
+    "GET /youtube/status",
     "POST /flow/jobs",
     "GET /jobs/next?channel=kid",
     "GET /jobs/{job_id}/publish-payload?platform=youtube",
     "POST /jobs/{job_id}/approve",
     "POST /jobs/{job_id}/claim",
     "POST /jobs/{job_id}/status",
-    "POST /jobs/{job_id}/platform-result"
+    "POST /jobs/{job_id}/platform-result",
+    "POST /jobs/{job_id}/youtube-private"
   ],
   "endpoints": {
     "GET /health": "Service health; authentication is not required.",
@@ -33,6 +35,7 @@
     "POST /jobs/{job_id}/claim": "Claim a READY job with body {agent_id}.",
     "POST /jobs/{job_id}/status": "Set status with body {status, message}.",
     "POST /jobs/{job_id}/platform-result": "Record {platform, status, remote_id, url, error}; successful IDs and URLs are written back to episode metadata."
+    ,"POST /jobs/{job_id}/youtube-private": "Upload one approved vertical asset through the official YouTube API with privacy forced to private, verify channel identity, and persist the returned video ID."
   },
   "job_statuses": [
     "WAITING_ASSETS",
