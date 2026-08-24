@@ -21,8 +21,10 @@ VIDEOS/*
 .env
 .env.*
 !.env.example
+Access_Key.txt
 automation/state/*.json
 automation/state/*.lock
+automation/state/flow-chrome-profile/
 automation/logs/
 !automation/state/.gitkeep
 

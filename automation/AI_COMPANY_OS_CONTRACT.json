@@ -10,6 +10,8 @@
   "workflow": [
     "POST /sync",
     "POST /validate",
+    "GET /flow/status",
+    "POST /flow/jobs",
     "GET /jobs/next?channel=kid",
     "GET /jobs/{job_id}/publish-payload?platform=youtube",
     "POST /jobs/{job_id}/approve",
@@ -25,6 +27,8 @@
     "GET /jobs/{job_id}/publish-payload": "Resolved asset, caption, tags, schedule, audience, AI-generated disclosure, and safe visibility options for one platform.",
     "POST /sync": "Rescan episode metadata and local assets while preserving active results.",
     "POST /validate": "Validate configuration, metadata, captions, and queue generation.",
+    "GET /flow/status": "Read the bounded local Google Flow worker state; never returns access-key or browser-session values.",
+    "POST /flow/jobs": "Queue an allowlisted Google Flow action with body {job_id, action}; existing credits only and no YouTube upload.",
     "POST /jobs/{job_id}/approve": "Check required assets and approve with body {approved_by}; writes approval and local asset references to episode metadata.",
     "POST /jobs/{job_id}/claim": "Claim a READY job with body {agent_id}.",
     "POST /jobs/{job_id}/status": "Set status with body {status, message}.",

@@ -15,6 +15,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 import autopost
+import flow_runner
 
 
 MAX_BODY_BYTES = 1024 * 1024
@@ -90,8 +91,12 @@ class BridgeHandler(BaseHTTPRequestHandler):
                         "service": "ai-company-os-autopost",
                         "version": "1.0.0",
                         "queue_exists": autopost.QUEUE_FILE.exists(),
+                        "flow_worker": flow_runner.status(),
                     },
                 )
+                return
+            if route.path == "/v1/flow/status":
+                self.send_json(HTTPStatus.OK, flow_runner.status())
                 return
             if not self.require_auth():
                 return
@@ -157,6 +162,13 @@ class BridgeHandler(BaseHTTPRequestHandler):
                         HTTPStatus.OK if result["ok"] else HTTPStatus.UNPROCESSABLE_ENTITY,
                         result,
                     )
+                    return
+                if route.path == "/v1/flow/jobs":
+                    job_id = str(body.get("job_id", "")).strip()
+                    action = str(body.get("action", "")).strip()
+                    if not job_id or not action:
+                        raise autopost.AutoPostError("job_id and action are required")
+                    self.send_json(HTTPStatus.ACCEPTED, {"ok": True, "flow_job": flow_runner.dispatch(job_id, action)})
                     return
                 match = JOB_ROUTE.match(route.path)
                 if match:
