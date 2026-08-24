@@ -117,7 +117,10 @@ The local publisher uses the official desktop OAuth loopback flow, verifies the 
 ```powershell
 python automation/youtube_publisher.py status
 python automation/youtube_publisher.py oauth --client-secrets C:\path\to\desktop-client.json
+python automation/youtube_publisher.py oauth --client-secrets C:\path\to\desktop-client.json --auth-url-file %LOCALAPPDATA%\AICompanyOS\secrets\youtube_auth_url.tmp
 python automation/youtube_publisher.py upload-private --job-id kid-block-tales-ep03
 ```
+
+`--auth-url-file` supports a controlled browser handoff when the normal desktop browser cannot be automated. The file contains only a short-lived authorization URL, is stored outside Git, and is deleted after the OAuth callback completes.
 
 One vertical upload is recorded as both the YouTube video and YouTube Short result with the same remote ID; no duplicate upload is created. Public visibility is not implemented by this command.

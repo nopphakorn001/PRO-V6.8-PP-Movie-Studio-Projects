@@ -61,13 +61,13 @@
     "VIDEO_FILE": "LOCAL_OUTPUTS/KID/block-tales/EP03/master.mp4",
     "THUMBNAIL_FILE": "",
     "SUBTITLE_FILE": "",
-    "YOUTUBE_VIDEO_ID": "",
-    "YOUTUBE_SHORTS_ID": "",
+    "YOUTUBE_VIDEO_ID": "swEBRZ_UPQs",
+    "YOUTUBE_SHORTS_ID": "swEBRZ_UPQs",
     "TIKTOK_POST_ID": "",
     "FACEBOOK_REEL_ID": "",
     "PUBLISHED_URLS": {
-      "YOUTUBE": "",
-      "YOUTUBE_SHORTS": "",
+      "YOUTUBE": "https://youtu.be/swEBRZ_UPQs",
+      "YOUTUBE_SHORTS": "https://youtu.be/swEBRZ_UPQs",
       "TIKTOK": "",
       "FACEBOOK_REELS": ""
     },
@@ -77,9 +77,10 @@
     "READY_FOR_AUTO_POST": true,
     "CAPTION_REVIEWED": true,
     "RIGHTS_NOTES": "Original voxel/block-world story; avoid branded game UI, logos, copied textures, or exact recreation of copyrighted game characters.",
-    "AUTO_POST_STATUS": "APPROVED",
+    "AUTO_POST_STATUS": "PUBLISHED",
     "APPROVED_BY": "owner",
-    "APPROVED_AT": "2026-08-24T10:09:11.019394Z"
+    "APPROVED_AT": "2026-08-24T10:09:11.019394Z",
+    "LAST_AUTO_POST_UPDATE": "2026-08-24T10:36:12.119332Z"
   },
-  "UPDATED_AT": "2026-08-24T10:09:11.019394Z"
+  "UPDATED_AT": "2026-08-24T10:36:12.119332Z"
 }

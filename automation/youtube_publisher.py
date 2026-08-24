@@ -110,7 +110,13 @@ def _oauth_client(path: Path) -> dict[str, str]:
     return {"client_id": client_id, "client_secret": client_secret}
 
 
-def authorize(client_secrets: Path, *, timeout_seconds: int = 300, store: Path = SECRET_FILE) -> dict[str, Any]:
+def authorize(
+    client_secrets: Path,
+    *,
+    timeout_seconds: int = 300,
+    store: Path = SECRET_FILE,
+    auth_url_file: Path | None = None,
+) -> dict[str, Any]:
     """Run the desktop-app loopback OAuth flow and persist only in the user profile."""
     client = _oauth_client(client_secrets)
     state = secrets.token_urlsafe(32)
@@ -149,10 +155,17 @@ def authorize(client_secrets: Path, *, timeout_seconds: int = 300, store: Path =
         "code_challenge": challenge, "code_challenge_method": "S256",
         "access_type": "offline", "prompt": "consent",
     })
-    webbrowser.open(AUTH_URI + "?" + query)
+    authorization_url = AUTH_URI + "?" + query
+    if auth_url_file is None:
+        webbrowser.open(authorization_url)
+    else:
+        auth_url_file.parent.mkdir(parents=True, exist_ok=True)
+        auth_url_file.write_text(authorization_url, encoding="utf-8")
     event.wait(max(30, min(timeout_seconds, 600)))
     server.shutdown()
     server.server_close()
+    if auth_url_file is not None:
+        auth_url_file.unlink(missing_ok=True)
     if result.get("state") != state or not result.get("code") or result.get("error"):
         raise YouTubePublisherError("YOUTUBE_OAUTH_AUTHORIZATION_FAILED")
     token = _post_form(TOKEN_URI, {
@@ -283,11 +296,13 @@ def main() -> int:
     sub.add_parser("status")
     oauth = sub.add_parser("oauth")
     oauth.add_argument("--client-secrets", type=Path, required=True)
+    oauth.add_argument("--auth-url-file", type=Path)
     upload = sub.add_parser("upload-private")
     upload.add_argument("--job-id", required=True)
     args = parser.parse_args()
     result = credential_status() if args.command == "status" else (
-        authorize(args.client_secrets) if args.command == "oauth" else publish_private(args.job_id)
+        authorize(args.client_secrets, auth_url_file=args.auth_url_file)
+        if args.command == "oauth" else publish_private(args.job_id)
     )
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))
     return 0
