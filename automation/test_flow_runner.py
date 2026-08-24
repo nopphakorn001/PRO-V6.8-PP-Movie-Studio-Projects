@@ -26,6 +26,17 @@ class FlowRunnerTests(unittest.TestCase):
         with self.assertRaisesRegex(flow_runner.FlowRunnerError, "NOT_ALLOWLISTED"):
             flow_runner.dispatch("kid-block-tales-ep03", "DELETE_ALL")
 
+    def test_worker_uses_step6_for_images_and_blocks_export_without_videos(self) -> None:
+        worker = flow_runner.WORKER.read_text(encoding="utf-8")
+        self.assertIn('"STEP\\\\s*06|สร้างหนัง", "STEP_06"', worker)
+        self.assertNotIn('"STEP\\\\s*05|ตัวละคร", "STEP_05"', worker)
+        self.assertIn("FLOW_IMAGES_NOT_READY_FOR_VIDEO", worker)
+        self.assertIn("FLOW_VIDEOS_NOT_READY_FOR_EXPORT", worker)
+        self.assertIn('"สร้างวิดีโอ|generate video", "ทั้งหมด|all"', worker)
+        self.assertIn('"ส่งออกรวมคลิป|export full clip|export clip"', worker)
+        self.assertLess(worker.index("await verifyImagesReady(cdp, contextMap);"), worker.index("GENERATE_ALL_VIDEOS"))
+        self.assertLess(worker.index("await verifyVideosReadyForExport(cdp, contextMap);"), worker.index("CREATE_COVER"))
+
 
 if __name__ == "__main__":
     unittest.main()

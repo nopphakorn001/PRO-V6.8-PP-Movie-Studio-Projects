@@ -137,6 +137,39 @@ async function clickButton(cdp, contextMap, pattern, label) {
   throw new Error(`BLOCKED_UI_CONTRACT_MISMATCH:${label}`);
 }
 
+async function enabledButtonCount(cdp, contextMap, pattern, rejectPattern = "") {
+  let count = 0;
+  for (const scope of contextMap) {
+    count += Number(await evaluate(cdp, scope, `(() => { const rx=new RegExp(${JSON.stringify(pattern)},'i'); const reject=${JSON.stringify(rejectPattern)}?new RegExp(${JSON.stringify(rejectPattern)},'i'):null; return [...document.querySelectorAll('button')].filter(x=>{ const label=(x.innerText||x.getAttribute('aria-label')||'').trim(); return !x.disabled&&rx.test(label)&&(!reject||!reject.test(label)); }).length; })()`).catch(() => 0));
+  }
+  return count;
+}
+
+async function visibleText(cdp, contextMap) {
+  const chunks = [];
+  for (const scope of contextMap) {
+    if (/google\.com/i.test(String(scope.context.origin || scope.context.name || ""))) continue;
+    chunks.push(String(await evaluate(cdp, scope, "document.body?.innerText||''").catch(() => "")));
+  }
+  return chunks.join("\n");
+}
+
+async function verifyImagesReady(cdp, contextMap) {
+  const videoButtons = await enabledButtonCount(cdp, contextMap, "สร้างวิดีโอ|generate video", "ทั้งหมด|all");
+  if (videoButtons <= 0) throw new Error("FLOW_IMAGES_NOT_READY_FOR_VIDEO");
+  return true;
+}
+
+async function verifyVideosReadyForExport(cdp, contextMap) {
+  const text = await visibleText(cdp, contextMap);
+  if (/ยังไม่มีวิดีโอที่พร้อมตัดต่อ|no videos? ready/i.test(text)) {
+    throw new Error("FLOW_VIDEOS_NOT_READY_FOR_EXPORT");
+  }
+  const exportButtons = await enabledButtonCount(cdp, contextMap, "ส่งออกรวมคลิป|export full clip|export clip");
+  if (exportButtons <= 0) throw new Error("FLOW_EXPORT_NOT_READY");
+  return true;
+}
+
 async function waitForIdle(cdp, contextMap, phase, timeoutMs) {
   const deadline = Date.now() + timeoutMs;
   let stable = 0;
@@ -155,22 +188,26 @@ async function runAction(cdp, contextMap) {
   const action = request.action;
   if (action === "FLOW_IMPORT_STEP6") return "IMPORTED";
   if (["FLOW_CREATE_ALL_IMAGES", "FLOW_RUN_TO_EXPORT"].includes(action)) {
-    await clickButton(cdp, contextMap, "STEP\\s*05|ตัวละคร", "STEP_05");
+    await clickButton(cdp, contextMap, "STEP\\s*06|สร้างหนัง", "STEP_06");
     await new Promise(resolve => setTimeout(resolve, 1500));
     await clickButton(cdp, contextMap, "สร้างรูปทั้งหมด|create all images", "CREATE_ALL_IMAGES");
     await waitForIdle(cdp, contextMap, "IMAGE_GENERATION", 30 * 60 * 1000);
+    await verifyImagesReady(cdp, contextMap);
     if (action === "FLOW_CREATE_ALL_IMAGES") return "IMAGES_COMPLETE";
   }
   if (["FLOW_GENERATE_ALL_VIDEOS", "FLOW_RUN_TO_EXPORT"].includes(action)) {
     await clickButton(cdp, contextMap, "STEP\\s*06|สร้างหนัง", "STEP_06");
     await new Promise(resolve => setTimeout(resolve, 1500));
+    if (action === "FLOW_GENERATE_ALL_VIDEOS") await verifyImagesReady(cdp, contextMap);
     await clickButton(cdp, contextMap, "สร้างวิดีโอทั้งหมด|generate all videos", "GENERATE_ALL_VIDEOS");
     await waitForIdle(cdp, contextMap, "VIDEO_GENERATION", 60 * 60 * 1000);
+    await verifyVideosReadyForExport(cdp, contextMap);
     if (action === "FLOW_GENERATE_ALL_VIDEOS") return "VIDEOS_COMPLETE";
   }
   if (["FLOW_CREATE_COVER", "FLOW_RUN_TO_EXPORT"].includes(action)) {
     await clickButton(cdp, contextMap, "STEP\\s*07|ส่งออก", "STEP_07");
     await new Promise(resolve => setTimeout(resolve, 1500));
+    await verifyVideosReadyForExport(cdp, contextMap);
     await clickButton(cdp, contextMap, "สร้างปกใหม่|create new cover", "CREATE_COVER");
     await waitForIdle(cdp, contextMap, "COVER_GENERATION", 20 * 60 * 1000);
     if (action === "FLOW_CREATE_COVER") return "COVER_COMPLETE";
@@ -178,6 +215,7 @@ async function runAction(cdp, contextMap) {
   if (["FLOW_EXPORT_1080P", "FLOW_RUN_TO_EXPORT"].includes(action)) {
     await clickButton(cdp, contextMap, "STEP\\s*07|ส่งออก", "STEP_07").catch(() => true);
     await new Promise(resolve => setTimeout(resolve, 1000));
+    await verifyVideosReadyForExport(cdp, contextMap);
     await clickButton(cdp, contextMap, "1080P|1080p", "EXPORT_1080P");
     return "EXPORT_STARTED";
   }
