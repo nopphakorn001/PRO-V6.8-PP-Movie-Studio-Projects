@@ -241,7 +241,8 @@ try {
   const completed = await runAction(cdp, contextMap);
   await result(completed, { imported, output_path: request.output_path });
   cdp.close();
+  process.exit(0);
 } catch (error) {
   await result("FAILED", { error: String(error?.message || error).slice(0, 300) });
-  process.exitCode = 1;
+  process.exit(1);
 }

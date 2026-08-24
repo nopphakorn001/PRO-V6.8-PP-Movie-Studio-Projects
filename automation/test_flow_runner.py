@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 
+import json
 import unittest
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
 import flow_runner
@@ -34,8 +37,32 @@ class FlowRunnerTests(unittest.TestCase):
         self.assertIn("FLOW_VIDEOS_NOT_READY_FOR_EXPORT", worker)
         self.assertIn('"สร้างวิดีโอ|generate video", "ทั้งหมด|all"', worker)
         self.assertIn('"ส่งออกรวมคลิป|export full clip|export clip"', worker)
+        self.assertIn("process.exit(0);", worker)
+        self.assertIn("process.exit(1);", worker)
         self.assertLess(worker.index("await verifyImagesReady(cdp, contextMap);"), worker.index("GENERATE_ALL_VIDEOS"))
         self.assertLess(worker.index("await verifyVideosReadyForExport(cdp, contextMap);"), worker.index("CREATE_COVER"))
+
+    def test_status_marks_stale_active_job_failed(self) -> None:
+        with TemporaryDirectory() as temp:
+            state_file = Path(temp) / "flow_jobs.json"
+            old = (datetime.now(timezone.utc) - timedelta(hours=5)).isoformat()
+            state_file.write_text(json.dumps({
+                "schema_version": "1.0.0",
+                "jobs": [{
+                    "run_id": "flowrun_stale",
+                    "job_id": "kid-roblox-brothers-adventure-ep01",
+                    "content_id": "roblox-brothers-adventure-ep01",
+                    "action": "FLOW_RUN_TO_EXPORT",
+                    "status": "RUNNING",
+                    "result_path": str(Path(temp) / "missing.result.json"),
+                    "created_at": old,
+                    "updated_at": old,
+                }],
+            }), encoding="utf-8")
+            with patch.object(flow_runner, "STATE_FILE", state_file):
+                report = flow_runner.status()
+            self.assertEqual(report["jobs"][0]["status"], "FAILED")
+            self.assertEqual(report["jobs"][0]["detail"]["error"], "PPMOVIE_FLOW_STALE_ACTIVE_JOB")
 
 
 if __name__ == "__main__":

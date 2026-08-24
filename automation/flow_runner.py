@@ -9,7 +9,7 @@ from __future__ import annotations
 import json
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path, PurePosixPath
 from uuid import uuid4
 
@@ -31,6 +31,7 @@ ALLOWED_ACTIONS = {
     "FLOW_EXPORT_1080P",
     "FLOW_RUN_TO_EXPORT",
 }
+ACTIVE_STALE_AFTER = timedelta(hours=4)
 
 
 class FlowRunnerError(ValueError):
@@ -39,6 +40,16 @@ class FlowRunnerError(ValueError):
 
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+def _parse_timestamp(value: object) -> datetime | None:
+    try:
+        parsed = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
 
 
 def _safe_path(value: str) -> Path:
@@ -93,16 +104,27 @@ def _job_contract(job_id: str) -> dict[str, object]:
 def status() -> dict[str, object]:
     state = _read_state()
     changed = False
+    now = datetime.now(timezone.utc)
     for item in state["jobs"]:
         result_path = Path(str(item.get("result_path") or ""))
-        if not result_path.is_file():
-            continue
-        value = json.loads(result_path.read_text(encoding="utf-8"))
-        if item.get("status") != value.get("status") or item.get("detail") != value.get("detail"):
-            item["status"] = value.get("status", "FAILED")
-            item["detail"] = value.get("detail", {})
-            item["updated_at"] = value.get("updated_at", _now())
-            changed = True
+        if result_path.is_file():
+            value = json.loads(result_path.read_text(encoding="utf-8"))
+            if (
+                item.get("status") != value.get("status")
+                or item.get("detail") != value.get("detail")
+                or item.get("updated_at") != value.get("updated_at")
+            ):
+                item["status"] = value.get("status", "FAILED")
+                item["detail"] = value.get("detail", {})
+                item["updated_at"] = value.get("updated_at", _now())
+                changed = True
+        if item.get("status") in {"QUEUED", "RUNNING"}:
+            updated_at = _parse_timestamp(item.get("updated_at") or item.get("created_at"))
+            if updated_at and now - updated_at > ACTIVE_STALE_AFTER:
+                item["status"] = "FAILED"
+                item["detail"] = {"error": "PPMOVIE_FLOW_STALE_ACTIVE_JOB"}
+                item["updated_at"] = _now()
+                changed = True
     if changed:
         _write_state(state)
     jobs = list(state["jobs"])[-20:]
@@ -122,6 +144,7 @@ def dispatch(job_id: str, action: str) -> dict[str, object]:
     if not ACCESS_KEY_FILE.is_file() or ACCESS_KEY_FILE.stat().st_size == 0:
         raise FlowRunnerError("PPMOVIE_FLOW_ACCESS_KEY_NOT_CONFIGURED")
     contract = _job_contract(job_id)
+    status()
     state = _read_state()
     active = next((item for item in reversed(state["jobs"]) if item["job_id"] == job_id and item["status"] in {"QUEUED", "RUNNING"}), None)
     if active:
