@@ -10,11 +10,13 @@
       "youtube_url": "https://youtube.com/@CubeLoomAdventures",
       "series_ids": [
         "minecraft-adventures",
-        "block-tales"
+        "block-tales",
+        "roblox-brothers-adventure"
       ],
       "series_priority": [
         "minecraft-adventures",
-        "block-tales"
+        "block-tales",
+        "roblox-brothers-adventure"
       ],
       "daily_publish_time": "17:00",
       "audience": "family_and_kids",

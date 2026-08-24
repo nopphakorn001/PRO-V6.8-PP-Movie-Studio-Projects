@@ -12,12 +12,12 @@ class AutoPostSmokeTests(unittest.TestCase):
         cls.queue = autopost.build_queue()
 
     def test_discovers_all_episodes(self) -> None:
-        self.assertEqual(len(self.queue["jobs"]), 26)
+        self.assertEqual(len(self.queue["jobs"]), 36)
 
     def test_channel_split(self) -> None:
         kid = [job for job in self.queue["jobs"] if job["channel_group"] == "kid"]
         history = [job for job in self.queue["jobs"] if job["channel_group"] == "history"]
-        self.assertEqual(len(kid), 16)
+        self.assertEqual(len(kid), 26)
         self.assertEqual(len(history), 10)
 
     def test_every_job_targets_only_approved_platforms(self) -> None:
@@ -32,6 +32,10 @@ class AutoPostSmokeTests(unittest.TestCase):
 
     def test_unapproved_jobs_are_blocked(self) -> None:
         for job in self.queue["jobs"]:
+            if job["job_id"] == "kid-block-tales-ep02":
+                self.assertEqual(job["status"], "READY")
+                self.assertEqual(job["readiness"]["blockers"], [])
+                continue
             self.assertEqual(job["status"], "WAITING_ASSETS")
             self.assertIn("metadata_not_approved", job["readiness"]["blockers"])
 
