@@ -52,7 +52,7 @@ class Cdp {
     await new Promise((resolve, reject) => { this.ws.addEventListener("open", resolve, { once: true }); this.ws.addEventListener("error", reject, { once: true }); });
     this.ws.addEventListener("message", event => { const msg = JSON.parse(event.data); if (msg.id && this.pending.has(msg.id)) { const { resolve, reject } = this.pending.get(msg.id); this.pending.delete(msg.id); msg.error ? reject(new Error(msg.error.message)) : resolve(msg.result); } });
   }
-  send(method, params = {}) { const id = ++this.id; this.ws.send(JSON.stringify({ id, method, params })); return new Promise((resolve, reject) => this.pending.set(id, { resolve, reject })); }
+  send(method, params = {}, sessionId = "") { const id = ++this.id; this.ws.send(JSON.stringify({ id, method, params, ...(sessionId ? { sessionId } : {}) })); return new Promise((resolve, reject) => this.pending.set(id, { resolve, reject })); }
   close() { this.ws.close(); }
 }
 
@@ -65,16 +65,27 @@ async function findFlowTarget() {
   return target;
 }
 
-async function contexts(cdp) {
+async function contexts(cdp, sessionId = "") {
   const found = new Map();
-  cdp.ws.addEventListener("message", event => { const msg = JSON.parse(event.data); if (msg.method === "Runtime.executionContextCreated") found.set(msg.params.context.id, msg.params.context); });
-  await cdp.send("Runtime.enable");
+  cdp.ws.addEventListener("message", event => { const msg = JSON.parse(event.data); if ((msg.sessionId || "") === sessionId && msg.method === "Runtime.executionContextCreated") found.set(msg.params.context.id, msg.params.context); });
+  await cdp.send("Runtime.enable", {}, sessionId);
   await new Promise(resolve => setTimeout(resolve, 1200));
-  return found;
+  return [...found.values()].map(context => ({ contextId: context.id, context, sessionId }));
 }
 
-async function evaluate(cdp, contextId, expression) {
-  const reply = await cdp.send("Runtime.evaluate", { contextId, expression, awaitPromise: true, returnByValue: true, userGesture: true });
+async function allContexts(cdp) {
+  const scopes = await contexts(cdp);
+  const targets = await cdp.send("Target.getTargets");
+  for (const target of targets.targetInfos || []) {
+    if (target.type !== "iframe" || target.url !== "about:srcdoc") continue;
+    const attached = await cdp.send("Target.attachToTarget", { targetId: target.targetId, flatten: true });
+    scopes.push(...await contexts(cdp, attached.sessionId));
+  }
+  return scopes;
+}
+
+async function evaluate(cdp, scope, expression) {
+  const reply = await cdp.send("Runtime.evaluate", { contextId: scope.contextId, expression, awaitPromise: true, returnByValue: true, userGesture: true }, scope.sessionId);
   if (reply.exceptionDetails) throw new Error("FLOW_PAGE_EVALUATION_FAILED");
   return reply.result?.value;
 }
@@ -82,10 +93,10 @@ async function evaluate(cdp, contextId, expression) {
 async function importStep6(cdp, contextMap) {
   const bytes = await fs.readFile(request.source_path);
   const base64 = bytes.toString("base64");
-  for (const contextId of contextMap.keys()) {
-    const present = await evaluate(cdp, contextId, `Boolean(document.querySelector('input[type=file]'))`).catch(() => false);
+  for (const scope of contextMap) {
+    const present = await evaluate(cdp, scope, `Boolean([...document.querySelectorAll('input[type=file]')].find(x=>/\\.json|application\\/json/i.test(x.accept||'')))`).catch(() => false);
     if (!present) continue;
-    return evaluate(cdp, contextId, `(() => { const input=document.querySelector('input[type=file]'); const raw=atob(${JSON.stringify(base64)}); const bytes=Uint8Array.from(raw,c=>c.charCodeAt(0)); const file=new File([bytes],'STEP6.json',{type:'application/json'}); const dt=new DataTransfer(); dt.items.add(file); input.files=dt.files; input.dispatchEvent(new Event('input',{bubbles:true,composed:true})); input.dispatchEvent(new Event('change',{bubbles:true})); return {ok:true,name:file.name,size:file.size}; })()`);
+    return evaluate(cdp, scope, `(() => { const input=[...document.querySelectorAll('input[type=file]')].find(x=>/\\.json|application\\/json/i.test(x.accept||'')); if(!input)return false; const raw=atob(${JSON.stringify(base64)}); const bytes=Uint8Array.from(raw,c=>c.charCodeAt(0)); const file=new File([bytes],'STEP6.json',{type:'application/json'}); const dt=new DataTransfer(); dt.items.add(file); input.files=dt.files; input.dispatchEvent(new Event('input',{bubbles:true,composed:true})); input.dispatchEvent(new Event('change',{bubbles:true,composed:true})); return {ok:true,name:file.name,size:file.size,accept:input.accept}; })()`);
   }
   throw new Error("FLOW_FILE_INPUT_NOT_FOUND");
 }
@@ -93,8 +104,8 @@ async function importStep6(cdp, contextMap) {
 async function enterStudio(cdp, contextMap) {
   const key = (await fs.readFile(request.access_key_path, "utf8")).trim();
   if (!key) throw new Error("FLOW_ACCESS_KEY_EMPTY");
-  for (const contextId of contextMap.keys()) {
-    const handled = await evaluate(cdp, contextId, `(() => { const input=[...document.querySelectorAll('input')].find(x=>/ENTER ACCESS KEY/i.test(x.placeholder||x.getAttribute('aria-label')||'')); if(!input)return false; const setter=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set; setter.call(input,${JSON.stringify(key)}); input.dispatchEvent(new Event('input',{bubbles:true})); input.dispatchEvent(new Event('change',{bubbles:true})); const button=[...document.querySelectorAll('button')].find(x=>/เข้าสู่สตูดิโอ|enter studio/i.test(x.innerText||x.getAttribute('aria-label')||'')); if(!button)return false; button.click(); return true; })()`).catch(() => false);
+  for (const scope of contextMap) {
+    const handled = await evaluate(cdp, scope, `(() => { const input=[...document.querySelectorAll('input')].find(x=>/ENTER ACCESS KEY/i.test(x.placeholder||x.getAttribute('aria-label')||'')); if(!input)return false; const setter=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set; setter.call(input,${JSON.stringify(key)}); input.dispatchEvent(new Event('input',{bubbles:true})); input.dispatchEvent(new Event('change',{bubbles:true})); const button=[...document.querySelectorAll('button')].find(x=>/เข้าสู่สตูดิโอ|enter studio/i.test(x.innerText||x.getAttribute('aria-label')||'')); if(!button)return false; button.click(); return true; })()`).catch(() => false);
     if (handled) {
       await new Promise(resolve => setTimeout(resolve, 2500));
       return true;
@@ -105,13 +116,13 @@ async function enterStudio(cdp, contextMap) {
 
 async function guard(cdp, contextMap) {
   const text = [];
-  for (const [id, context] of contextMap.entries()) {
-    if (/google\.com/i.test(String(context.origin || context.name || ""))) continue;
-    text.push(String(await evaluate(cdp, id, "document.body?.innerText||''").catch(() => "")));
+  for (const scope of contextMap) {
+    if (/google\.com/i.test(String(scope.context.origin || scope.context.name || ""))) continue;
+    text.push(String(await evaluate(cdp, scope, "document.body?.innerText||''").catch(() => "")));
   }
   const joined = text.join("\n");
-  for (const id of contextMap.keys()) {
-    const visibleChallenge = await evaluate(cdp, id, `Boolean([...document.querySelectorAll('iframe[src*="recaptcha"][src*="bframe"]')].find(x=>{const r=x.getBoundingClientRect();return r.width>20&&r.height>20}))`).catch(() => false);
+  for (const scope of contextMap) {
+    const visibleChallenge = await evaluate(cdp, scope, `Boolean([...document.querySelectorAll('iframe[src*="recaptcha"][src*="bframe"]')].find(x=>{const r=x.getBoundingClientRect();return r.width>20&&r.height>20}))`).catch(() => false);
     if (visibleChallenge) throw new Error("BLOCKED_CAPTCHA");
   }
   if (/buy credits|purchase credits|ซื้อเครดิต|เครดิตไม่เพียงพอ/i.test(joined)) throw new Error("BLOCKED_CREDIT_PURCHASE_REQUIRED");
@@ -119,8 +130,8 @@ async function guard(cdp, contextMap) {
 }
 
 async function clickButton(cdp, contextMap, pattern, label) {
-  for (const id of contextMap.keys()) {
-    const clicked = await evaluate(cdp, id, `(() => { const rx=new RegExp(${JSON.stringify(pattern)},'i'); const items=[...document.querySelectorAll('button')]; const button=items.find(x=>!x.disabled&&rx.test((x.innerText||x.getAttribute('aria-label')||'').trim())); if(!button)return false; button.click(); return true; })()`).catch(() => false);
+  for (const scope of contextMap) {
+    const clicked = await evaluate(cdp, scope, `(() => { const rx=new RegExp(${JSON.stringify(pattern)},'i'); const items=[...document.querySelectorAll('button')]; const button=items.find(x=>!x.disabled&&rx.test((x.innerText||x.getAttribute('aria-label')||'').trim())); if(!button)return false; button.click(); return true; })()`).catch(() => false);
     if (clicked) return true;
   }
   throw new Error(`BLOCKED_UI_CONTRACT_MISMATCH:${label}`);
@@ -178,11 +189,11 @@ try {
   const target = await findFlowTarget();
   const cdp = new Cdp(target.webSocketDebuggerUrl);
   await cdp.open();
-  const contextMap = await contexts(cdp);
+  const contextMap = await allContexts(cdp);
   const bodyTexts = [];
-  for (const [id, context] of contextMap.entries()) {
-    if (/google\.com/i.test(String(context.origin || context.name || ""))) continue;
-    bodyTexts.push(String(await evaluate(cdp, id, "document.body?.innerText||''").catch(() => "")));
+  for (const scope of contextMap) {
+    if (/google\.com/i.test(String(scope.context.origin || scope.context.name || ""))) continue;
+    bodyTexts.push(String(await evaluate(cdp, scope, "document.body?.innerText||''").catch(() => "")));
   }
   const joined = bodyTexts.join("\n");
   if (/sign in|เข้าสู่ระบบ/i.test(joined) && !/STEP 01|สไตล์หนัง/i.test(joined)) { await result("BLOCKED_GOOGLE_SIGN_IN_REQUIRED", { profile }); cdp.close(); process.exit(3); }

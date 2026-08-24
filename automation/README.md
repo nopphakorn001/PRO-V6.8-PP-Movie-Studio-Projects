@@ -80,7 +80,7 @@ The default address is `http://127.0.0.1:8787`. Keep it on localhost unless netw
 
 `POST /v1/flow/jobs` queues a bounded browser job for one existing PPMovie job. The recommended full render request is `{"job_id":"kid-block-tales-ep03","action":"FLOW_RUN_TO_EXPORT"}`.
 
-The worker uses a dedicated Chrome profile and imports the episode `STEP6.json` directly, so no Windows file-picker interaction is required. Read progress at `GET /v1/flow/status`. The local `Access_Key.txt` is read only at runtime and is ignored by Git. Google sign-in is a one-time owner action in the dedicated profile; CAPTCHA, account mismatch, credit purchase and YouTube upload remain stop conditions.
+The worker uses a dedicated Chrome profile and imports the episode `STEP6.json` directly, so no Windows file-picker interaction is required. The P&P Studio runs inside an out-of-process `about:srcdoc` iframe; the worker attaches to that iframe explicitly and accepts only a file input whose `accept` contract is `.json` or `application/json`. It must never fall back to the outer Google Flow `image/*` uploader. Read progress at `GET /v1/flow/status`. The local `Access_Key.txt` is read only at runtime and is ignored by Git. Google sign-in is a one-time owner action in the dedicated profile; CAPTCHA, account mismatch, credit purchase and YouTube upload remain stop conditions.
 
 Use `AI_COMPANY_OS_CONTRACT.json` as the machine-readable endpoint contract. Runtime queue state is stored at `automation/state/queue.json` and is ignored by Git. Platform credentials belong only in `.env` or the AI Company OS secret store.
 

@@ -20,7 +20,7 @@ STATE_FILE = autopost.ROOT / "automation" / "state" / "flow_jobs.json"
 WORKER = autopost.ROOT / "automation" / "flow_worker.mjs"
 ACCESS_KEY_FILE = autopost.ROOT / "Access_Key.txt"
 FLOW_URL = (
-    "https://labs.google/fx/tools/flow/project/f0f25309-8c32-4be3-b88e-2995738fe5f3/"
+    "https://labs.google/fx/tools/flow/project/7c7bdbb9-b431-4ad8-a2d7-0597f685b5fe/"
     "tool-version/c137fec7-6ff7-41eb-8d93-784d1d54c03c"
 )
 ALLOWED_ACTIONS = {
