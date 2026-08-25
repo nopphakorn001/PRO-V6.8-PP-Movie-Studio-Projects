@@ -1,0 +1,15 @@
+{
+  "schemaVersion":"1.0","series":"WWII SOLDIER POV","set":"Set 01","episode":5,"slug":"iwo-jima-soldier-pov",
+  "title":"WWII Soldier POV: Iwo Jima — Black Sand Landing","shortTitle":"Iwo Jima Soldier POV",
+  "hook":"The ramp drops onto black volcanic sand — and every step sinks beneath you.",
+  "shortDescription":"Experience the opening days of Iwo Jima from the first-person perspective of a fictional U.S. Marine. Cinematic historical reenactment, not archival footage.",
+  "longDescription":"Step into an immersive first-person historical reenactment of the Battle of Iwo Jima beginning February 19, 1945. This episode follows a fictional composite U.S. Marine from the landing craft onto the island's black volcanic beaches, through the difficult inland push and airfield terrain, to a later distant view of Mount Suribachi after the flag raising. The story ends by making clear that the battle continued for weeks. AI-generated cinematic reenactment, not real wartime footage.",
+  "historicalEvent":{"name":"Battle of Iwo Jima","dateRange":"February–March 1945","location":"Iwo Jima, Volcano Islands","perspective":"Fictional composite U.S. Marine"},
+  "disclosure":"AI-generated cinematic historical reenactment. Not archival footage.","language":"English","aspectRatio":"9:16","durationTargetSeconds":120,"audience":"Global WWII, military history and cinematic POV audiences","contentRating":"Non-graphic historical combat",
+  "thumbnailText":["IWO JIMA","BLACK SAND","MARINE POV"],
+  "keywords":["Iwo Jima","Battle of Iwo Jima","World War II","WWII POV","US Marines","Pacific War","Mount Suribachi","history short","cinematic history","Marine POV","military history"],
+  "tags":["WWII","World War 2","Iwo Jima","US Marines","Pacific War","Mount Suribachi","History","Military History","POV","History Shorts","Cinematic History"],
+  "hashtags":["#WWII","#WorldWar2","#IwoJima","#USMarines","#PacificWar","#MountSuribachi","#History","#MilitaryHistory","#POV","#HistoryShorts","#CinematicHistory"],
+  "platformCaptions":{"youtube":"WWII Soldier POV: Iwo Jima — Black Sand Landing","youtubeShorts":"POV: The ramp drops on Iwo Jima and the black sand swallows every step. #WWII #IwoJima #HistoryShorts","tiktok":"POV: You are a U.S. Marine landing on Iwo Jima in 1945. Cinematic reenactment. #WWII #IwoJima #POV #HistoryTok","facebookReels":"Experience the opening days of Iwo Jima from the ground in this immersive WWII Marine POV reenactment. #WWII #History #IwoJima"},
+  "cta":"Follow for more immersive WWII Soldier POV episodes.","status":"READY_FOR_PRODUCTION","step6Path":"WWII-SOLDIER-POV/EP05-Iwo-Jima/STEP6.json","outputs":{"video":"","thumbnail":"","subtitle":""}
+}
