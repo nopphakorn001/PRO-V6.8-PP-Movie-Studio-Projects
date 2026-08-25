@@ -1,0 +1,15 @@
+{
+  "schemaVersion":"1.0","series":"WWII SOLDIER POV","set":"Set 01","episode":3,"slug":"el-alamein-soldier-pov",
+  "title":"WWII Soldier POV: El Alamein — Through the Minefields","shortTitle":"El Alamein Soldier POV",
+  "hook":"The desert is silent. Then hundreds of guns open fire at once.",
+  "shortDescription":"Experience the Second Battle of El Alamein from the first-person perspective of a fictional British Eighth Army infantry soldier. Cinematic historical reenactment, not archival footage.",
+  "longDescription":"Step into an immersive first-person historical reenactment of the Second Battle of El Alamein, fought in Egypt from October 23 to November 4, 1942. This episode follows a fictional composite British Eighth Army infantry soldier from the opening artillery barrage, through marked minefield lanes and forward desert positions, to the eventual Allied breakthrough. AI-generated cinematic reenactment, not real wartime footage.",
+  "historicalEvent":{"name":"Second Battle of El Alamein","dateRange":"1942-10-23 to 1942-11-04","location":"El Alamein, Egypt","perspective":"Fictional composite British Eighth Army infantry soldier"},
+  "disclosure":"AI-generated cinematic historical reenactment. Not archival footage.","language":"English","aspectRatio":"9:16","durationTargetSeconds":120,"audience":"Global WWII, military history and cinematic POV audiences","contentRating":"Non-graphic historical combat",
+  "thumbnailText":["EL ALAMEIN","DESERT WAR","SOLDIER POV"],
+  "keywords":["El Alamein","Second Battle of El Alamein","World War II","WWII POV","North Africa campaign","British Eighth Army","desert war","history short","cinematic history","soldier POV"],
+  "tags":["WWII","World War 2","El Alamein","North Africa","Eighth Army","Desert War","History","Military History","POV","History Shorts","Cinematic History"],
+  "hashtags":["#WWII","#WorldWar2","#ElAlamein","#NorthAfrica","#DesertWar","#History","#MilitaryHistory","#POV","#HistoryShorts","#CinematicHistory"],
+  "platformCaptions":{"youtube":"WWII Soldier POV: El Alamein — Through the Minefields","youtubeShorts":"The silence breaks as the El Alamein barrage begins. Soldier POV historical reenactment. #WWII #ElAlamein #HistoryShorts","tiktok":"POV: You are moving through the minefields at El Alamein in 1942. #WWII #POV #HistoryTok #ElAlamein","facebookReels":"Experience El Alamein from the ground in this immersive WWII soldier POV reenactment. #WWII #History #ElAlamein"},
+  "cta":"Follow for the next immersive WWII Soldier POV episode.","status":"READY_FOR_PRODUCTION","step6Path":"WWII-SOLDIER-POV/EP03-El-Alamein/STEP6.json","outputs":{"video":"","thumbnail":"","subtitle":""}
+}
