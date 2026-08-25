@@ -105,8 +105,7 @@ async function enterStudio(cdp, contextMap) {
   const key = (await fs.readFile(request.access_key_path, "utf8")).trim();
   if (!key) throw new Error("FLOW_ACCESS_KEY_EMPTY");
   for (const scope of contextMap) {
-    const handled = await evaluate(cdp, scope, `(() => {
-      const key=${JSON.stringify(key)};
+    const prepared = await evaluate(cdp, scope, `(() => {
       const inputSelector='input,textarea,[contenteditable="true"]';
       const labelOf=(x)=>[
         x.placeholder,
@@ -123,12 +122,36 @@ async function enterStudio(cdp, contextMap) {
       if(!input)return false;
       input.scrollIntoView({block:'center',inline:'center'});
       input.focus();
-      const setter=Object.getOwnPropertyDescriptor(input instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype,'value')?.set;
-      if(setter) setter.call(input,key); else input.textContent=key;
+      if (typeof input.select === 'function') input.select();
       input.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,composed:true,key:'a',ctrlKey:true}));
-      input.dispatchEvent(new InputEvent('beforeinput',{bubbles:true,composed:true,inputType:'insertText',data:key}));
-      input.dispatchEvent(new InputEvent('input',{bubbles:true,composed:true,inputType:'insertText',data:key}));
+      input.dispatchEvent(new KeyboardEvent('keyup',{bubbles:true,composed:true,key:'a',ctrlKey:true}));
+      return {input_ready:true};
+    })()`).catch(() => false);
+    if (!prepared) continue;
+
+    await cdp.send("Input.insertText", { text: key }, scope.sessionId);
+    await new Promise(resolve => setTimeout(resolve, 250));
+
+    const handled = await evaluate(cdp, scope, `(() => {
+      const expectedLength=${key.length};
+      const inputSelector='input,textarea,[contenteditable="true"]';
+      const labelOf=(x)=>[
+        x.placeholder,
+        x.getAttribute('aria-label'),
+        x.getAttribute('title'),
+        x.name,
+        x.id,
+        x.closest('label')?.innerText,
+        x.parentElement?.innerText,
+      ].filter(Boolean).join(' ').replace(/\\s+/g,' ').trim();
+      const visible=(x)=>{ const r=x.getBoundingClientRect(); const s=getComputedStyle(x); return r.width>20&&r.height>10&&s.visibility!=='hidden'&&s.display!=='none'; };
+      const candidates=[...document.querySelectorAll(inputSelector)].filter(x=>visible(x)&&!x.disabled&&x.getAttribute('aria-disabled')!=='true');
+      const input=candidates.find(x=>/ENTER ACCESS KEY|access key|รหัส/i.test(labelOf(x))) || (candidates.length===1?candidates[0]:null);
+      if(!input)return false;
+      const value=input.value||input.textContent||'';
+      input.dispatchEvent(new InputEvent('input',{bubbles:true,composed:true,inputType:'insertText',data:'*'}));
       input.dispatchEvent(new Event('change',{bubbles:true,composed:true}));
+      if(value.length!==expectedLength) return {key_entered:false,value_length:value.length};
       const controls=[...document.querySelectorAll('button,[role="button"],input[type="button"],input[type="submit"],a,[tabindex]:not([tabindex="-1"])')];
       const ctlLabel=(x)=>[x.innerText,x.value,x.getAttribute('aria-label'),x.getAttribute('title'),x.textContent].filter(Boolean).join(' ').replace(/\\s+/g,' ').trim();
       const enabled=(x)=>!x.disabled&&x.getAttribute('aria-disabled')!=='true'&&!/disabled/i.test(x.className||'');

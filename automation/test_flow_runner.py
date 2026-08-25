@@ -42,6 +42,8 @@ class FlowRunnerTests(unittest.TestCase):
         self.assertIn("FLOW_ACCESS_KEY_ENTRY_NOT_CONFIRMED", worker)
         self.assertIn("accessKeyGateVisible", worker)
         self.assertIn("new InputEvent('input'", worker)
+        self.assertIn('Input.insertText', worker)
+        self.assertIn("value.length!==expectedLength", worker)
         self.assertGreaterEqual(worker.count("contextMap = await allContexts(cdp);"), 7)
         self.assertIn("process.exit(0);", worker)
         self.assertIn("process.exit(1);", worker)
