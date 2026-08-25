@@ -184,6 +184,27 @@ async function accessKeyGateVisible(cdp, contextMap) {
   return false;
 }
 
+async function expectedSceneCount() {
+  try {
+    const source = JSON.parse(await fs.readFile(request.source_path, "utf8"));
+    const scenes = source?.movie?.scenes;
+    return Array.isArray(scenes) ? scenes.length : 0;
+  } catch {
+    return 0;
+  }
+}
+
+async function readyImageCount(cdp, contextMap) {
+  let count = 0;
+  for (const scope of contextMap) {
+    count += Number(await evaluate(cdp, scope, `(() => {
+      const visible=(x)=>{ const r=x.getBoundingClientRect(); const s=getComputedStyle(x); return r.width>100&&r.height>100&&s.visibility!=='hidden'&&s.display!=='none'; };
+      return [...document.querySelectorAll('img')].filter(x=>visible(x)&&/(^data:image|flow-content\\.google\\/image)/i.test(x.currentSrc||x.src||'')).length;
+    })()`).catch(() => 0));
+  }
+  return count;
+}
+
 async function studioReady(cdp, contextMap) {
   const text = await visibleText(cdp, contextMap);
   return /STEP\s*01|สไตล์หนัง/i.test(text) && /STEP\s*06|สร้างหนัง/i.test(text);
@@ -270,10 +291,12 @@ async function visibleText(cdp, contextMap) {
 }
 
 async function verifyImagesReady(cdp, contextMap) {
-  const allVideoButtons = await enabledButtonCount(cdp, contextMap, "สร้างวิดีโอทั้งหมด|generate all videos");
-  if (allVideoButtons > 0) return true;
+  const expected = await expectedSceneCount();
+  const ready = await readyImageCount(cdp, contextMap);
+  if (expected > 0 && ready < expected) throw new Error("FLOW_IMAGES_NOT_READY_FOR_VIDEO");
   const videoButtons = await enabledButtonCount(cdp, contextMap, "สร้างวิดีโอ|generate video", "ทั้งหมด|all");
-  if (videoButtons <= 0) throw new Error("FLOW_IMAGES_NOT_READY_FOR_VIDEO");
+  const allVideoButtons = await enabledButtonCount(cdp, contextMap, "สร้างวิดีโอทั้งหมด|generate all videos");
+  if (videoButtons <= 0 && allVideoButtons <= 0) throw new Error("FLOW_IMAGES_NOT_READY_FOR_VIDEO");
   return true;
 }
 
@@ -364,9 +387,13 @@ try {
   if (!await studioReady(cdp, contextMap) && (!studioEntered || await accessKeyGateVisible(cdp, contextMap))) {
     throw new Error("FLOW_ACCESS_KEY_ENTRY_NOT_CONFIRMED");
   }
-  const imported = await importStep6(cdp, contextMap);
-  await new Promise(resolve => setTimeout(resolve, 1500));
-  contextMap = await allContexts(cdp);
+  let imported = false;
+  const mayContinueExistingStudio = ["FLOW_GENERATE_ALL_VIDEOS", "FLOW_CREATE_COVER", "FLOW_EXPORT_1080P"].includes(request.action);
+  if (!mayContinueExistingStudio || await readyImageCount(cdp, contextMap) < await expectedSceneCount()) {
+    imported = await importStep6(cdp, contextMap);
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    contextMap = await allContexts(cdp);
+  }
   const completed = await runAction(cdp, contextMap);
   await result(completed, { imported, output_path: request.output_path });
   cdp.close();
