@@ -18,6 +18,25 @@ Immersive first-person historical reenactment shorts for PRO V6.8 P&P Movie Stud
 - Non-graphic historical combat depiction
 - 1 scene = 1 shot + 1 primary action + 1 camera movement
 
+## Immersion-first directing policy
+The objective is not constant action. The objective is to make the viewer feel physically present inside the historical environment.
+
+- Do **not** fire weapons in every scene.
+- Do **not** place explosions or artillery impacts in every scene.
+- Every episode must include quiet or recovery beats where little happens externally.
+- Silence, breathing, waiting, looking, drinking water, checking gear, cold hands, mud, dust, sweat, sea spray, snow, wind, fabric, metal, footsteps and distant sounds are part of the story.
+- Let some scenes breathe. A scene may contain only a slow look, a hand movement, a pause behind cover, a distant horizon or environmental sound.
+- Battlefield sound intensity must rise and fall naturally rather than remain continuously loud.
+- Close gunfire should appear only when the story requires it. Distant combat can disappear almost completely during rest or observation scenes.
+- Avoid action-movie pacing, heroic posing, game-like movement, constant camera shake and excessive visual effects.
+- Camera motion should feel like a real tired human body: weight, hesitation, balance shifts, uneven breathing, natural head movement and brief stillness.
+- Preserve physical continuity: wetness, dust, snow, mud, damaged equipment, fatigue and lighting should carry from scene to scene.
+
+## Sensory detail standard
+Each `imageDescription` and `videoPrompt` should describe concrete physical details that help the viewer feel present: surface texture, temperature, moisture, wind direction, smoke density, visibility, light quality, distance of sounds, equipment weight, fabric movement, breath, footsteps and the immediate space around the soldier.
+
+Audio should use depth: foreground breathing/equipment, mid-ground footsteps/vehicles/environment, background battlefield activity. Quiet scenes should intentionally leave space between sounds.
+
 ## Set 01
 1. D-Day — Omaha Beach, 6 June 1944
 2. Stalingrad — Operation Uranus / encirclement phase, November 1942
