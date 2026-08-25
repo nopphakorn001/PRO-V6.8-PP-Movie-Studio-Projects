@@ -11,7 +11,7 @@
     "productionMode": "frame",
     "audioType": "music_ambience_sfx_dialogue",
     "voiceGender": "child-friendly dialogue mix",
-    "voiceStyle": "บทสนทนาธรรมชาติระหว่างสองพี่น้อง เรียกชื่อ C-SHARP และ ARI เป็นระยะตลอดเรื่อง ไม่มีผู้บรรยาย",
+    "voiceStyle": "บทสนทนาธรรมชาติระหว่างสองพี่น้อง เรียกชื่อ C-SHARP และ อาริ เป็นระยะตลอดเรื่อง ไม่มีผู้บรรยาย",
     "voiceStyleId": "natural-thai-kids-dialogue",
     "selectedProjectStyle": "custom-structure",
     "selectedProjectType": "custom-structure",
@@ -24,7 +24,15 @@
     "visualStyle": "Bright family-friendly Roblox-style adventure world with toy-like blocky avatars, colorful obstacle levels, clean readable shapes, cheerful daylight or arcade lighting. No dark horror, no realistic injury, no official logos, no copied UI, no photorealism.",
     "customProjectStructure": "Vertical Roblox-style adventure, 16 scenes x 8 seconds. One level per episode, ends in this episode. Each scene has one main action, actionDescription, imageDescription, videoPrompt, and natural dialogue where C-SHARP and ARI call each other by name.",
     "visualStyleId": "custom",
-    "customVisualStyle": "Colorful stylized game cinematic with blocky avatars, playful physics, glossy toy materials, vivid level design and strong visual storytelling."
+    "customVisualStyle": "Colorful stylized game cinematic with blocky avatars, playful physics, glossy toy materials, vivid level design and strong visual storytelling.",
+    "voicePronunciation": {
+      "ARI": {
+        "displayName": "ARI",
+        "pronunciation": "อาริ",
+        "phonetic": "Ah-ree",
+        "instruction": "Pronounce ARI as อาริ (Ah-ree), two syllables."
+      }
+    }
   },
   "movie": {
     "genre": "",
@@ -65,11 +73,11 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "C-SHARP: ARI ดูประตู Mega เปิดตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\nARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง",
+        "script": "C-SHARP: อาริ ดูประตู Mega เปิดตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\nARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง",
         "dialogues": [
           {
             "speaker": "C-SHARP",
-            "text": "ARI ดูประตู Mega เปิดตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน"
+            "text": "อาริ ดูประตู Mega เปิดตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน"
           },
           {
             "speaker": "ARI",
@@ -83,7 +91,7 @@
         "actionDescription": "C-SHARP เรียก ARI ให้ดู ประตู Mega เปิด ใน Mega Lobby แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final",
         "mainAction": "C-SHARP เรียก ARI ให้ดู ประตู Mega เปิด ใน Mega Lobby แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Lobby. Scene beat: ประตู Mega เปิด. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP เรียก ARI ให้ดู ประตู Mega เปิด ใน Mega Lobby แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ดูประตู Mega เปิดตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\" and \"ARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP เรียก ARI ให้ดู ประตู Mega เปิด ใน Mega Lobby แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: อาริ ดูประตู Mega เปิดตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\" and \"ARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -106,7 +114,7 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "ARI: C-SHARP ผมเห็นทางตรงตราทั้งเก้าเรืองแสง น่าจะเป็นใบ้ของด่านนี้\nC-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย",
+        "script": "ARI: C-SHARP ผมเห็นทางตรงตราทั้งเก้าเรืองแสง น่าจะเป็นใบ้ของด่านนี้\nC-SHARP: เยี่ยมมาก อาริ พี่ตามแผนน้องเลย",
         "dialogues": [
           {
             "speaker": "ARI",
@@ -114,7 +122,7 @@
           },
           {
             "speaker": "C-SHARP",
-            "text": "เยี่ยมมาก ARI พี่ตามแผนน้องเลย"
+            "text": "เยี่ยมมาก อาริ พี่ตามแผนน้องเลย"
           }
         ],
         "isGenerating": false,
@@ -124,7 +132,7 @@
         "actionDescription": "ARI เรียก C-SHARP ให้สังเกต ตราทั้งเก้าเรืองแสง ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
         "mainAction": "ARI เรียก C-SHARP ให้สังเกต ตราทั้งเก้าเรืองแสง ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Lobby. Scene beat: ตราทั้งเก้าเรืองแสง. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI เรียก C-SHARP ให้สังเกต ตราทั้งเก้าเรืองแสง ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ผมเห็นทางตรงตราทั้งเก้าเรืองแสง น่าจะเป็นใบ้ของด่านนี้\" and \"C-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI เรียก C-SHARP ให้สังเกต ตราทั้งเก้าเรืองแสง ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ผมเห็นทางตรงตราทั้งเก้าเรืองแสง น่าจะเป็นใบ้ของด่านนี้\" and \"C-SHARP: เยี่ยมมาก อาริ พี่ตามแผนน้องเลย\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -147,11 +155,11 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านเริ่มด่านรวม\nARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้",
+        "script": "C-SHARP: อาริ อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านเริ่มด่านรวม\nARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้",
         "dialogues": [
           {
             "speaker": "C-SHARP",
-            "text": "ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านเริ่มด่านรวม"
+            "text": "อาริ อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านเริ่มด่านรวม"
           },
           {
             "speaker": "ARI",
@@ -165,7 +173,7 @@
         "actionDescription": "C-SHARP ช่วยเปิดทางหลักของ Mega Lobby ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ เริ่มด่านรวม",
         "mainAction": "C-SHARP ช่วยเปิดทางหลักของ Mega Lobby ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ เริ่มด่านรวม",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Lobby. Scene beat: เริ่มด่านรวม. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP ช่วยเปิดทางหลักของ Mega Lobby ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ เริ่มด่านรวม. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านเริ่มด่านรวม\" and \"ARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP ช่วยเปิดทางหลักของ Mega Lobby ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ เริ่มด่านรวม. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: อาริ อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านเริ่มด่านรวม\" and \"ARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -188,7 +196,7 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\nC-SHARP: ไปเลย ARI ทีมเราทำได้",
+        "script": "ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\nC-SHARP: ไปเลย อาริ ทีมเราทำได้",
         "dialogues": [
           {
             "speaker": "ARI",
@@ -196,7 +204,7 @@
           },
           {
             "speaker": "C-SHARP",
-            "text": "ไปเลย ARI ทีมเราทำได้"
+            "text": "ไปเลย อาริ ทีมเราทำได้"
           }
         ],
         "isGenerating": false,
@@ -206,7 +214,7 @@
         "actionDescription": "ARI แก้จังหวะของ ARI อ่านแพตเทิร์น แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
         "mainAction": "ARI แก้จังหวะของ ARI อ่านแพตเทิร์น แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Lobby. Scene beat: ARI อ่านแพตเทิร์น. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI แก้จังหวะของ ARI อ่านแพตเทิร์น แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\" and \"C-SHARP: ไปเลย ARI ทีมเราทำได้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI แก้จังหวะของ ARI อ่านแพตเทิร์น แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\" and \"C-SHARP: ไปเลย อาริ ทีมเราทำได้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -229,11 +237,11 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "C-SHARP: ARI ถ้าเรากดพร้อมกัน C-SHARP นำกระโดด น่าจะปลดล็อก\nARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว",
+        "script": "C-SHARP: อาริ ถ้าเรากดพร้อมกัน C-SHARP นำกระโดด น่าจะปลดล็อก\nARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว",
         "dialogues": [
           {
             "speaker": "C-SHARP",
-            "text": "ARI ถ้าเรากดพร้อมกัน C-SHARP นำกระโดด น่าจะปลดล็อก"
+            "text": "อาริ ถ้าเรากดพร้อมกัน C-SHARP นำกระโดด น่าจะปลดล็อก"
           },
           {
             "speaker": "ARI",
@@ -247,7 +255,7 @@
         "actionDescription": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน C-SHARP นำกระโดด โดยไม่เสียจังหวะของด่าน",
         "mainAction": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน C-SHARP นำกระโดด โดยไม่เสียจังหวะของด่าน",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Lobby. Scene beat: C-SHARP นำกระโดด. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน C-SHARP นำกระโดด โดยไม่เสียจังหวะของด่าน. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ถ้าเรากดพร้อมกัน C-SHARP นำกระโดด น่าจะปลดล็อก\" and \"ARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน C-SHARP นำกระโดด โดยไม่เสียจังหวะของด่าน. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: อาริ ถ้าเรากดพร้อมกัน C-SHARP นำกระโดด น่าจะปลดล็อก\" and \"ARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -270,7 +278,7 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "ARI: C-SHARP ระวังจุดเด้งตรงรถรางสั้นกลับมานะครับ\nC-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน",
+        "script": "ARI: C-SHARP ระวังจุดเด้งตรงรถรางสั้นกลับมานะครับ\nC-SHARP: ขอบใจ อาริ พี่เห็นแล้ว เราไปทางปลอดภัยกัน",
         "dialogues": [
           {
             "speaker": "ARI",
@@ -278,7 +286,7 @@
           },
           {
             "speaker": "C-SHARP",
-            "text": "ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน"
+            "text": "ขอบใจ อาริ พี่เห็นแล้ว เราไปทางปลอดภัยกัน"
           }
         ],
         "isGenerating": false,
@@ -288,7 +296,7 @@
         "actionDescription": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ รถรางสั้นกลับมา อย่างปลอดภัย",
         "mainAction": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ รถรางสั้นกลับมา อย่างปลอดภัย",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Lobby. Scene beat: รถรางสั้นกลับมา. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ รถรางสั้นกลับมา อย่างปลอดภัย. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ระวังจุดเด้งตรงรถรางสั้นกลับมานะครับ\" and \"C-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ รถรางสั้นกลับมา อย่างปลอดภัย. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ระวังจุดเด้งตรงรถรางสั้นกลับมานะครับ\" and \"C-SHARP: ขอบใจ อาริ พี่เห็นแล้ว เราไปทางปลอดภัยกัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -311,11 +319,11 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "C-SHARP: ARI เก่งมาก ใกล้ผ่านเมฆลอยสลับทางแล้ว\nARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ",
+        "script": "C-SHARP: อาริ เก่งมาก ใกล้ผ่านเมฆลอยสลับทางแล้ว\nARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ",
         "dialogues": [
           {
             "speaker": "C-SHARP",
-            "text": "ARI เก่งมาก ใกล้ผ่านเมฆลอยสลับทางแล้ว"
+            "text": "อาริ เก่งมาก ใกล้ผ่านเมฆลอยสลับทางแล้ว"
           },
           {
             "speaker": "ARI",
@@ -329,7 +337,7 @@
         "actionDescription": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ เมฆลอยสลับทาง แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
         "mainAction": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ เมฆลอยสลับทาง แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Tower. Scene beat: เมฆลอยสลับทาง. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI มองเห็นทางลัดเล็ก ๆ ใกล้ เมฆลอยสลับทาง แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI เก่งมาก ใกล้ผ่านเมฆลอยสลับทางแล้ว\" and \"ARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI มองเห็นทางลัดเล็ก ๆ ใกล้ เมฆลอยสลับทาง แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: อาริ เก่งมาก ใกล้ผ่านเมฆลอยสลับทางแล้ว\" and \"ARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -352,7 +360,7 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของปุ่มน้ำและสะพาน\nC-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน",
+        "script": "ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของปุ่มน้ำและสะพาน\nC-SHARP: ใช่เลย อาริ เอามารวมกันแล้วจบด่านนี้กัน",
         "dialogues": [
           {
             "speaker": "ARI",
@@ -360,7 +368,7 @@
           },
           {
             "speaker": "C-SHARP",
-            "text": "ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน"
+            "text": "ใช่เลย อาริ เอามารวมกันแล้วจบด่านนี้กัน"
           }
         ],
         "isGenerating": false,
@@ -370,7 +378,7 @@
         "actionDescription": "สองพี่น้องรวมพลังที่ Mega Obby Tower เพื่อปลดล็อก ปุ่มน้ำและสะพาน และเข้าใกล้เส้นชัยของตอนนี้",
         "mainAction": "สองพี่น้องรวมพลังที่ Mega Obby Tower เพื่อปลดล็อก ปุ่มน้ำและสะพาน และเข้าใกล้เส้นชัยของตอนนี้",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Tower. Scene beat: ปุ่มน้ำและสะพาน. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: สองพี่น้องรวมพลังที่ Mega Obby Tower เพื่อปลดล็อก ปุ่มน้ำและสะพาน และเข้าใกล้เส้นชัยของตอนนี้. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของปุ่มน้ำและสะพาน\" and \"C-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: สองพี่น้องรวมพลังที่ Mega Obby Tower เพื่อปลดล็อก ปุ่มน้ำและสะพาน และเข้าใกล้เส้นชัยของตอนนี้. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของปุ่มน้ำและสะพาน\" and \"C-SHARP: ใช่เลย อาริ เอามารวมกันแล้วจบด่านนี้กัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -393,11 +401,11 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "C-SHARP: ARI ดูปริศนาแสงปราสาทตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\nARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง",
+        "script": "C-SHARP: อาริ ดูปริศนาแสงปราสาทตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\nARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง",
         "dialogues": [
           {
             "speaker": "C-SHARP",
-            "text": "ARI ดูปริศนาแสงปราสาทตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน"
+            "text": "อาริ ดูปริศนาแสงปราสาทตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน"
           },
           {
             "speaker": "ARI",
@@ -411,7 +419,7 @@
         "actionDescription": "C-SHARP เรียก ARI ให้ดู ปริศนาแสงปราสาท ใน Mega Obby Tower แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final",
         "mainAction": "C-SHARP เรียก ARI ให้ดู ปริศนาแสงปราสาท ใน Mega Obby Tower แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Tower. Scene beat: ปริศนาแสงปราสาท. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP เรียก ARI ให้ดู ปริศนาแสงปราสาท ใน Mega Obby Tower แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ดูปริศนาแสงปราสาทตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\" and \"ARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP เรียก ARI ให้ดู ปริศนาแสงปราสาท ใน Mega Obby Tower แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: อาริ ดูปริศนาแสงปราสาทตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\" and \"ARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -434,7 +442,7 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "ARI: C-SHARP ผมเห็นทางตรงทางแข่งจิ๋ว น่าจะเป็นใบ้ของด่านนี้\nC-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย",
+        "script": "ARI: C-SHARP ผมเห็นทางตรงทางแข่งจิ๋ว น่าจะเป็นใบ้ของด่านนี้\nC-SHARP: เยี่ยมมาก อาริ พี่ตามแผนน้องเลย",
         "dialogues": [
           {
             "speaker": "ARI",
@@ -442,7 +450,7 @@
           },
           {
             "speaker": "C-SHARP",
-            "text": "เยี่ยมมาก ARI พี่ตามแผนน้องเลย"
+            "text": "เยี่ยมมาก อาริ พี่ตามแผนน้องเลย"
           }
         ],
         "isGenerating": false,
@@ -452,7 +460,7 @@
         "actionDescription": "ARI เรียก C-SHARP ให้สังเกต ทางแข่งจิ๋ว ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
         "mainAction": "ARI เรียก C-SHARP ให้สังเกต ทางแข่งจิ๋ว ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Tower. Scene beat: ทางแข่งจิ๋ว. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI เรียก C-SHARP ให้สังเกต ทางแข่งจิ๋ว ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ผมเห็นทางตรงทางแข่งจิ๋ว น่าจะเป็นใบ้ของด่านนี้\" and \"C-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI เรียก C-SHARP ให้สังเกต ทางแข่งจิ๋ว ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ผมเห็นทางตรงทางแข่งจิ๋ว น่าจะเป็นใบ้ของด่านนี้\" and \"C-SHARP: เยี่ยมมาก อาริ พี่ตามแผนน้องเลย\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -475,11 +483,11 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านสัตว์บล็อกช่วยเปิดทาง\nARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้",
+        "script": "C-SHARP: อาริ อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านสัตว์บล็อกช่วยเปิดทาง\nARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้",
         "dialogues": [
           {
             "speaker": "C-SHARP",
-            "text": "ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านสัตว์บล็อกช่วยเปิดทาง"
+            "text": "อาริ อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านสัตว์บล็อกช่วยเปิดทาง"
           },
           {
             "speaker": "ARI",
@@ -493,7 +501,7 @@
         "actionDescription": "C-SHARP ช่วยเปิดทางหลักของ Mega Obby Tower ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ สัตว์บล็อกช่วยเปิดทาง",
         "mainAction": "C-SHARP ช่วยเปิดทางหลักของ Mega Obby Tower ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ สัตว์บล็อกช่วยเปิดทาง",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Tower. Scene beat: สัตว์บล็อกช่วยเปิดทาง. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP ช่วยเปิดทางหลักของ Mega Obby Tower ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ สัตว์บล็อกช่วยเปิดทาง. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านสัตว์บล็อกช่วยเปิดทาง\" and \"ARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP ช่วยเปิดทางหลักของ Mega Obby Tower ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ สัตว์บล็อกช่วยเปิดทาง. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: อาริ อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านสัตว์บล็อกช่วยเปิดทาง\" and \"ARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -516,7 +524,7 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\nC-SHARP: ไปเลย ARI ทีมเราทำได้",
+        "script": "ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\nC-SHARP: ไปเลย อาริ ทีมเราทำได้",
         "dialogues": [
           {
             "speaker": "ARI",
@@ -524,7 +532,7 @@
           },
           {
             "speaker": "C-SHARP",
-            "text": "ไปเลย ARI ทีมเราทำได้"
+            "text": "ไปเลย อาริ ทีมเราทำได้"
           }
         ],
         "isGenerating": false,
@@ -534,7 +542,7 @@
         "actionDescription": "ARI แก้จังหวะของ หุ่นยนต์ยกแพลตฟอร์ม แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
         "mainAction": "ARI แก้จังหวะของ หุ่นยนต์ยกแพลตฟอร์ม แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Tower. Scene beat: หุ่นยนต์ยกแพลตฟอร์ม. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI แก้จังหวะของ หุ่นยนต์ยกแพลตฟอร์ม แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\" and \"C-SHARP: ไปเลย ARI ทีมเราทำได้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI แก้จังหวะของ หุ่นยนต์ยกแพลตฟอร์ม แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\" and \"C-SHARP: ไปเลย อาริ ทีมเราทำได้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -557,11 +565,11 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "C-SHARP: ARI ถ้าเรากดพร้อมกัน สมบัติกลายเป็นกุญแจ น่าจะปลดล็อก\nARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว",
+        "script": "C-SHARP: อาริ ถ้าเรากดพร้อมกัน สมบัติกลายเป็นกุญแจ น่าจะปลดล็อก\nARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว",
         "dialogues": [
           {
             "speaker": "C-SHARP",
-            "text": "ARI ถ้าเรากดพร้อมกัน สมบัติกลายเป็นกุญแจ น่าจะปลดล็อก"
+            "text": "อาริ ถ้าเรากดพร้อมกัน สมบัติกลายเป็นกุญแจ น่าจะปลดล็อก"
           },
           {
             "speaker": "ARI",
@@ -575,7 +583,7 @@
         "actionDescription": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน สมบัติกลายเป็นกุญแจ โดยไม่เสียจังหวะของด่าน",
         "mainAction": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน สมบัติกลายเป็นกุญแจ โดยไม่เสียจังหวะของด่าน",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Portal Finale. Scene beat: สมบัติกลายเป็นกุญแจ. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน สมบัติกลายเป็นกุญแจ โดยไม่เสียจังหวะของด่าน. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ถ้าเรากดพร้อมกัน สมบัติกลายเป็นกุญแจ น่าจะปลดล็อก\" and \"ARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน สมบัติกลายเป็นกุญแจ โดยไม่เสียจังหวะของด่าน. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: อาริ ถ้าเรากดพร้อมกัน สมบัติกลายเป็นกุญแจ น่าจะปลดล็อก\" and \"ARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -598,7 +606,7 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "ARI: C-SHARP ระวังจุดเด้งตรงปีนหอสุดท้ายนะครับ\nC-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน",
+        "script": "ARI: C-SHARP ระวังจุดเด้งตรงปีนหอสุดท้ายนะครับ\nC-SHARP: ขอบใจ อาริ พี่เห็นแล้ว เราไปทางปลอดภัยกัน",
         "dialogues": [
           {
             "speaker": "ARI",
@@ -606,7 +614,7 @@
           },
           {
             "speaker": "C-SHARP",
-            "text": "ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน"
+            "text": "ขอบใจ อาริ พี่เห็นแล้ว เราไปทางปลอดภัยกัน"
           }
         ],
         "isGenerating": false,
@@ -616,7 +624,7 @@
         "actionDescription": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ปีนหอสุดท้าย อย่างปลอดภัย",
         "mainAction": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ปีนหอสุดท้าย อย่างปลอดภัย",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Portal Finale. Scene beat: ปีนหอสุดท้าย. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ปีนหอสุดท้าย อย่างปลอดภัย. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ระวังจุดเด้งตรงปีนหอสุดท้ายนะครับ\" and \"C-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ปีนหอสุดท้าย อย่างปลอดภัย. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ระวังจุดเด้งตรงปีนหอสุดท้ายนะครับ\" and \"C-SHARP: ขอบใจ อาริ พี่เห็นแล้ว เราไปทางปลอดภัยกัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -639,11 +647,11 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "C-SHARP: ARI เก่งมาก ใกล้ผ่านPortal Finale เปิดแล้ว\nARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ",
+        "script": "C-SHARP: อาริ เก่งมาก ใกล้ผ่านPortal Finale เปิดแล้ว\nARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ",
         "dialogues": [
           {
             "speaker": "C-SHARP",
-            "text": "ARI เก่งมาก ใกล้ผ่านPortal Finale เปิดแล้ว"
+            "text": "อาริ เก่งมาก ใกล้ผ่านPortal Finale เปิดแล้ว"
           },
           {
             "speaker": "ARI",
@@ -657,7 +665,7 @@
         "actionDescription": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ Portal Finale เปิด แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
         "mainAction": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ Portal Finale เปิด แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Portal Finale. Scene beat: Portal Finale เปิด. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI มองเห็นทางลัดเล็ก ๆ ใกล้ Portal Finale เปิด แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI เก่งมาก ใกล้ผ่านPortal Finale เปิดแล้ว\" and \"ARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI มองเห็นทางลัดเล็ก ๆ ใกล้ Portal Finale เปิด แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: อาริ เก่งมาก ใกล้ผ่านPortal Finale เปิดแล้ว\" and \"ARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
@@ -680,15 +688,15 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของC-SHARP กับ ARI ฉลองจบซีรีส์\nC-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน",
+        "script": "ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของC-SHARP กับ อาริ ฉลองจบซีรีส์\nC-SHARP: ใช่เลย อาริ เอามารวมกันแล้วจบด่านนี้กัน",
         "dialogues": [
           {
             "speaker": "ARI",
-            "text": "C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของC-SHARP กับ ARI ฉลองจบซีรีส์"
+            "text": "C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของC-SHARP กับ อาริ ฉลองจบซีรีส์"
           },
           {
             "speaker": "C-SHARP",
-            "text": "ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน"
+            "text": "ใช่เลย อาริ เอามารวมกันแล้วจบด่านนี้กัน"
           }
         ],
         "isGenerating": false,
@@ -698,7 +706,7 @@
         "actionDescription": "สองพี่น้องรวมพลังที่ Portal Finale เพื่อปลดล็อก C-SHARP กับ ARI ฉลองจบซีรีส์ และเข้าใกล้เส้นชัยของตอนนี้",
         "mainAction": "สองพี่น้องรวมพลังที่ Portal Finale เพื่อปลดล็อก C-SHARP กับ ARI ฉลองจบซีรีส์ และเข้าใกล้เส้นชัยของตอนนี้",
         "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Portal Finale. Scene beat: C-SHARP กับ ARI ฉลองจบซีรีส์. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: สองพี่น้องรวมพลังที่ Portal Finale เพื่อปลดล็อก C-SHARP กับ ARI ฉลองจบซีรีส์ และเข้าใกล้เส้นชัยของตอนนี้. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของC-SHARP กับ ARI ฉลองจบซีรีส์\" and \"C-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: สองพี่น้องรวมพลังที่ Portal Finale เพื่อปลดล็อก C-SHARP กับ ARI ฉลองจบซีรีส์ และเข้าใกล้เส้นชัยของตอนนี้. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของC-SHARP กับ อาริ ฉลองจบซีรีส์\" and \"C-SHARP: ใช่เลย อาริ เอามารวมกันแล้วจบด่านนี้กัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       }
     ],
@@ -749,7 +757,7 @@
       {
         "id": "little_brother_ari",
         "name": "ARI",
-        "thaiName": "อารี",
+        "thaiName": "อาริ",
         "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
         "ageStyle": "stylized child game avatar, younger sibling proportions",
         "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
@@ -787,7 +795,10 @@
             "rba10-016"
           ]
         },
-        "imageStatus": "idle"
+        "imageStatus": "idle",
+        "pronunciation": "อาริ",
+        "phonetic": "Ah-ree",
+        "pronunciationInstruction": "Pronounce ARI as อาริ (Ah-ree), two syllables."
       }
     ],
     "characterSheets": {
@@ -839,7 +850,7 @@
         {
           "id": "little_brother_ari",
           "name": "ARI",
-          "thaiName": "อารี",
+          "thaiName": "อาริ",
           "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
           "ageStyle": "stylized child game avatar, younger sibling proportions",
           "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
@@ -877,7 +888,10 @@
               "rba10-016"
             ]
           },
-          "imageStatus": "idle"
+          "imageStatus": "idle",
+          "pronunciation": "อาริ",
+          "phonetic": "Ah-ree",
+          "pronunciationInstruction": "Pronounce ARI as อาริ (Ah-ree), two syllables."
         }
       ]
     },
@@ -942,9 +956,10 @@
     "customGenre": "Roblox-style Family Adventure",
     "productionDesignAnalyzed": true,
     "continuityRules": {
-      "names": "พี่ชายชื่อ C-SHARP, น้องชายชื่อ ARI. Scene dialogue must use these exact names naturally throughout each episode.",
+      "names": "พี่ชายชื่อ C-SHARP, น้องชายชื่อ ARI. Keep ARI as the system/display name; when the name is spoken in dialogue, write อาริ.",
       "visualIdentity": "Keep C-SHARP and ARI visually consistent across all scenes and all 10 episodes using the same outfits, hair, proportions, props, and blocky stylized avatar style.",
-      "format": "9:16, short-form adventure, one main action per scene, 15-18 scenes per episode, one level per episode, ends in the episode, bright and not dark."
+      "format": "9:16, short-form adventure, one main action per scene, 15-18 scenes per episode, one level per episode, ends in the episode, bright and not dark.",
+      "dialoguePronunciation": "Pronounce ARI as อาริ (Ah-ree), two syllables."
     }
   },
   "currentStep": 6,

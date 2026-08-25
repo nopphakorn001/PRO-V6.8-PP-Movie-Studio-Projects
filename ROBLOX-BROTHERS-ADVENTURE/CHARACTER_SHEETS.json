@@ -32,7 +32,7 @@
     {
       "id": "little_brother_ari",
       "name": "ARI",
-      "thaiName": "อารี",
+      "thaiName": "อาริ",
       "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
       "ageStyle": "stylized child game avatar, younger sibling proportions",
       "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
@@ -53,13 +53,17 @@
         "continuityRules": "Keep ARI shorter than C-SHARP, with the same white/blue outfit, fluffy dark hair, blue utility pouch, and compass charm in every scene and every episode.",
         "appearingScenes": []
       },
-      "imageStatus": "idle"
+      "imageStatus": "idle",
+      "pronunciation": "อาริ",
+      "phonetic": "Ah-ree",
+      "pronunciationInstruction": "Pronounce ARI as อาริ (Ah-ree), two syllables."
     }
   ],
   "continuityRules": {
-    "names": "พี่ชื่อ C-SHARP, น้องชื่อ ARI. Use these exact display names in character sheets, sceneCharacters, dialogue, scripts, summaries, README, PROJECT_INDEX, and metadata.",
-    "dialogue": "Every scene must include short natural dialogue where the brothers call each other C-SHARP and ARI as part of teamwork.",
-    "visualIdentity": "C-SHARP and ARI keep the same stylized Roblox/game-avatar identity across all 10 EP: same height relationship, outfits, hair, props, cheerful blocky proportions, no photorealism."
+    "names": "พี่ชื่อ C-SHARP, น้องชื่อ ARI. Keep ARI in metadata/system fields, character sheets, sceneCharacters.name, IDs, summaries, README, PROJECT_INDEX, and publishing metadata; use อาริ whenever the name is spoken in dialogue.",
+    "dialogue": "Every scene must include short natural dialogue. Use อาริ for every spoken call of ARI so Thai TTS reads the name correctly; speaker/name/id metadata remains ARI.",
+    "visualIdentity": "C-SHARP and ARI keep the same stylized Roblox/game-avatar identity across all 10 EP: same height relationship, outfits, hair, props, cheerful blocky proportions, no photorealism.",
+    "dialoguePronunciation": "Pronounce ARI as อาริ (Ah-ree), two syllables."
   },
   "updatedAt": "2026-08-25T19:45:00+07:00"
 }

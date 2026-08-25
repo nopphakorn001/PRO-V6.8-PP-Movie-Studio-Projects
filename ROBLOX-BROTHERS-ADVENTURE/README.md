@@ -8,7 +8,7 @@
 - 15-18 scenes ต่อ EP; เวอร์ชันนี้ใช้ 16 scenes ทุก EP
 - 8 วินาทีต่อ scene; ประมาณ 128 วินาทีต่อ EP
 - แนวตั้ง 9:16 เหมาะกับ short-form adventure
-- มีบทสนทนาสั้น ๆ เป็นธรรมชาติในทุก scene โดยเรียกชื่อกันว่า C-SHARP และ ARI
+- มีบทสนทนาสั้น ๆ เป็นธรรมชาติในทุก scene โดยชื่อระบบ/metadata คงเป็น `ARI` แต่เมื่อเรียกชื่อในบทพูดให้เขียน `อาริ` เพื่อให้ TTS อ่านถูก
 - ไม่มีผู้บรรยาย
 - เน้น dialogue + music + ambience + SFX + visual storytelling
 - โทนสดใส ผจญภัย ครอบครัว ไม่ dark/horror
@@ -20,7 +20,9 @@
 ดู `CHARACTER_SHEETS.json`
 
 - **C-SHARP / ซีชาร์ป** — พี่ชาย ตัวสูงกว่า ชุด cream + light green, ใจกล้า วางแผน และช่วยปกป้องน้อง
-- **ARI / อารี** — น้องชาย ตัวเล็กกว่า ชุด white + blue, ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา
+- **ARI / อาริ** — น้องชาย ตัวเล็กกว่า ชุด white + blue, ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา
+
+กติกาการออกเสียง: `pronunciation="อาริ"`, `phonetic="Ah-ree"` และ `Pronounce ARI as อาริ (Ah-ree), two syllables.` ค่า `speaker`, `sceneCharacters.name`, character `name` และ `id` ยังคงใช้ `ARI` ตามเดิม
 
 ทั้งสองเป็น stylized game avatars อ้างอิงภาพผู้ใช้อัปโหลดในระดับรูปลักษณ์รวมเท่านั้น ไม่ใช่ภาพเหมือนจริงและไม่ระบุตัวตนจริง ต้องคง height relationship, outfit, hair, props และ blocky toy-like style ข้ามทั้ง 10 EP
 

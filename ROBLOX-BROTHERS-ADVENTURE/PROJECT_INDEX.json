@@ -14,7 +14,7 @@
   },
   "status": "STEP6_READY",
   "characterSheets": "ROBLOX-BROTHERS-ADVENTURE/CHARACTER_SHEETS.json",
-  "continuity": "C-SHARP is the older brother and ARI is the younger brother. Keep their stylized Roblox/game-avatar visual identity consistent across all 10 EP and use their exact names naturally in every scene dialogue.",
+  "continuity": "C-SHARP is the older brother and ARI is the younger brother. Keep ARI in metadata/system name and ID fields; write อาริ whenever the name is spoken in dialogue. Keep both stylized game-avatar identities consistent across all 10 EP.",
   "episodes": [
     {
       "episode": 1,
@@ -117,5 +117,11 @@
       "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP10-Mega-Obby-Final/metadata.json"
     }
   ],
-  "updatedAt": "2026-08-25T19:45:00+07:00"
+  "updatedAt": "2026-08-25T19:45:00+07:00",
+  "namePronunciation": {
+    "systemName": "ARI",
+    "spokenName": "อาริ",
+    "phonetic": "Ah-ree",
+    "instruction": "Pronounce ARI as อาริ (Ah-ree), two syllables."
+  }
 }
