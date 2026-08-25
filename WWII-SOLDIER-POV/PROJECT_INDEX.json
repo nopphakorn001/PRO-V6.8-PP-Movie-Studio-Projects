@@ -1,12 +1,92 @@
 {
-  "schemaVersion":"1.0",
-  "series":{"id":"wwii-soldier-pov","name":"WWII SOLDIER POV","description":"Immersive first-person cinematic historical reenactments placing the viewer in the role of a fictional composite soldier during major World War II events.","language":"English","aspectRatio":"9:16","sceneDurationSeconds":8,"scenesPerEpisode":15,"durationTargetSeconds":120,"publishingAudience":"global"},
-  "episodes":[
-    {"episode":1,"title":"D-Day: Omaha Beach","folder":"EP01-D-Day-Omaha-Beach","step6":"WWII-SOLDIER-POV/EP01-D-Day-Omaha-Beach/STEP6.json","metadata":"WWII-SOLDIER-POV/EP01-D-Day-Omaha-Beach/metadata.json","status":"READY_FOR_PRODUCTION"},
-    {"episode":2,"title":"Stalingrad: The Encirclement Begins","folder":"EP02-Stalingrad","step6":"WWII-SOLDIER-POV/EP02-Stalingrad/STEP6.json","metadata":"WWII-SOLDIER-POV/EP02-Stalingrad/metadata.json","status":"READY_FOR_PRODUCTION"},
-    {"episode":3,"title":"El Alamein: Through the Minefields","folder":"EP03-El-Alamein","step6":"WWII-SOLDIER-POV/EP03-El-Alamein/STEP6.json","metadata":"WWII-SOLDIER-POV/EP03-El-Alamein/metadata.json","status":"READY_FOR_PRODUCTION"},
-    {"episode":4,"title":"Bastogne: Surrounded in the Snow","folder":"EP04-Bastogne","step6":"WWII-SOLDIER-POV/EP04-Bastogne/STEP6.json","metadata":"WWII-SOLDIER-POV/EP04-Bastogne/metadata.json","status":"READY_FOR_PRODUCTION"},
-    {"episode":5,"title":"Iwo Jima: Black Sand Landing","folder":"EP05-Iwo-Jima","step6":"WWII-SOLDIER-POV/EP05-Iwo-Jima/STEP6.json","metadata":"WWII-SOLDIER-POV/EP05-Iwo-Jima/metadata.json","status":"READY_FOR_PRODUCTION"}
+  "schemaVersion": "1.1",
+  "series": {
+    "id": "wwii-soldier-pov",
+    "name": "WWII SOLDIER POV",
+    "description": "Immersive first-person cinematic historical reenactments placing the viewer in the role of a fictional composite soldier during major World War II events.",
+    "language": "English",
+    "aspectRatio": "9:16",
+    "sceneDurationSeconds": 8,
+    "scenesPerEpisode": 15,
+    "durationTargetSeconds": 120,
+    "publishingAudience": "global",
+    "factionPolicy": "WWII-SOLDIER-POV/FACTION_LOCKS.json"
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "title": "D-Day: Omaha Beach",
+      "folder": "EP01-D-Day-Omaha-Beach",
+      "step6": "WWII-SOLDIER-POV/EP01-D-Day-Omaha-Beach/STEP6.json",
+      "metadata": "WWII-SOLDIER-POV/EP01-D-Day-Omaha-Beach/metadata.json",
+      "povFaction": "Allied",
+      "friendlyForce": "U.S. Army infantry",
+      "enemyForce": "German defenders",
+      "factionLockId": "episode-1",
+      "status": "READY_FOR_PRODUCTION"
+    },
+    {
+      "episode": 2,
+      "title": "Stalingrad: The Encirclement Begins",
+      "folder": "EP02-Stalingrad",
+      "step6": "WWII-SOLDIER-POV/EP02-Stalingrad/STEP6.json",
+      "metadata": "WWII-SOLDIER-POV/EP02-Stalingrad/metadata.json",
+      "povFaction": "Allied",
+      "friendlyForce": "Soviet Red Army",
+      "enemyForce": "German Sixth Army / Axis forces",
+      "factionLockId": "episode-2",
+      "status": "READY_FOR_PRODUCTION"
+    },
+    {
+      "episode": 3,
+      "title": "El Alamein: Through the Minefields",
+      "folder": "EP03-El-Alamein",
+      "step6": "WWII-SOLDIER-POV/EP03-El-Alamein/STEP6.json",
+      "metadata": "WWII-SOLDIER-POV/EP03-El-Alamein/metadata.json",
+      "povFaction": "Allied",
+      "friendlyForce": "British Eighth Army / Allied desert forces",
+      "enemyForce": "German Afrika Korps / Italian Axis forces",
+      "factionLockId": "episode-3",
+      "status": "READY_FOR_PRODUCTION"
+    },
+    {
+      "episode": 4,
+      "title": "Bastogne: Surrounded in the Snow",
+      "folder": "EP04-Bastogne",
+      "step6": "WWII-SOLDIER-POV/EP04-Bastogne/STEP6.json",
+      "metadata": "WWII-SOLDIER-POV/EP04-Bastogne/metadata.json",
+      "povFaction": "Allied",
+      "friendlyForce": "U.S. airborne / U.S. defending forces",
+      "enemyForce": "German attacking forces",
+      "factionLockId": "episode-4",
+      "status": "READY_FOR_PRODUCTION"
+    },
+    {
+      "episode": 5,
+      "title": "Iwo Jima: Black Sand Landing",
+      "folder": "EP05-Iwo-Jima",
+      "step6": "WWII-SOLDIER-POV/EP05-Iwo-Jima/STEP6.json",
+      "metadata": "WWII-SOLDIER-POV/EP05-Iwo-Jima/metadata.json",
+      "povFaction": "Allied",
+      "friendlyForce": "U.S. Marines",
+      "enemyForce": "Japanese defenders",
+      "factionLockId": "episode-5",
+      "status": "READY_FOR_PRODUCTION"
+    }
   ],
-  "automation":{"metadataLanguage":"English","platforms":["youtube","youtube_shorts","tiktok","facebook_reels"],"requiredEpisodeFiles":["STEP6.json","metadata.json"],"disclosureRequired":true,"disclosureText":"AI-generated cinematic historical reenactment. Not archival footage."}
+  "automation": {
+    "metadataLanguage": "English",
+    "platforms": ["youtube", "youtube_shorts", "tiktok", "facebook_reels"],
+    "requiredEpisodeFiles": ["STEP6.json", "metadata.json"],
+    "requiredSeriesFiles": ["FACTION_LOCKS.json"],
+    "generationPreflight": [
+      "Load FACTION_LOCKS.json before generating any image or video.",
+      "Confirm exactly one POV faction for the episode.",
+      "Confirm all nearby friendly uniforms, weapons, vehicles and positions match the friendly force.",
+      "Confirm any visible enemy is spatially and visually separated as the opposing force.",
+      "Reject generation prompts that ambiguously mix Allied and Axis soldiers in the same local formation."
+    ],
+    "disclosureRequired": true,
+    "disclosureText": "AI-generated cinematic historical reenactment. Not archival footage."
+  }
 }
