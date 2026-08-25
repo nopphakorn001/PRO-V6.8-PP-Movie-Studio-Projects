@@ -4,13 +4,13 @@
   "referencePolicy": "Use the uploaded image only as a broad visual reference for two stylized child game avatars. Do not identify real people, do not generate photoreal portraits, and keep the designs consistent across all scenes and episodes.",
   "characters": [
     {
-      "id": "big_brother_max",
-      "name": "MAX",
-      "thaiName": "แม็กซ์",
-      "role": "พี่ชาย นักลุยและคนปกป้องน้อง",
+      "id": "big_brother_csharp",
+      "name": "C-SHARP",
+      "thaiName": "ซีชาร์ป",
+      "role": "พี่ชาย นักวางแผน กล้าลุย และคอยปกป้องน้อง",
       "ageStyle": "stylized child game avatar, older sibling proportions",
-      "description": "Roblox-style blocky boy avatar inspired by the older child in the reference photo, without identifying the real person. Slightly taller than MINI, warm smile, brave posture, friendly rounded block proportions.",
-      "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband",
+      "description": "Roblox-style blocky boy avatar inspired broadly by the older child in the uploaded reference photo, without identifying the real person. Slightly taller than ARI, warm confident smile, brave posture, friendly rounded block proportions.",
+      "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband, square backpack with checkpoint badge",
       "colors": {
         "primary": "cream",
         "accent": "light green",
@@ -20,23 +20,23 @@
       "hair": "short dark-brown blocky hair, neat side sweep",
       "face": "simple cheerful game-avatar face, expressive eyebrows, no photorealism",
       "props": {
-        "personalProps": "small square backpack, green checkpoint badge"
+        "personalProps": "small square backpack, green checkpoint badge, green wristband"
       },
       "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
       "continuity": {
-        "continuityRules": "Keep MAX taller than MINI, same cream/light-green outfit, same short dark hair, same square backpack and green wristband in every scene and every episode.",
+        "continuityRules": "Keep C-SHARP taller than ARI, with the same cream/light-green outfit, short dark hair, square backpack, checkpoint badge, and green wristband in every scene and every episode.",
         "appearingScenes": []
       },
       "imageStatus": "idle"
     },
     {
-      "id": "little_brother_mini",
-      "name": "MINI",
-      "thaiName": "มินิ",
+      "id": "little_brother_ari",
+      "name": "ARI",
+      "thaiName": "อารี",
       "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
       "ageStyle": "stylized child game avatar, younger sibling proportions",
-      "description": "Roblox-style blocky boy avatar inspired by the younger child in the reference photo, without identifying the real person. Shorter than MAX, curious bright expression, quick energetic poses.",
-      "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch",
+      "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
+      "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch with compass charm",
       "colors": {
         "primary": "white",
         "accent": "bright blue",
@@ -50,11 +50,16 @@
       },
       "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
       "continuity": {
-        "continuityRules": "Keep MINI shorter than MAX, same white/blue outfit, same fluffy dark hair, same blue utility pouch and compass charm in every scene and every episode.",
+        "continuityRules": "Keep ARI shorter than C-SHARP, with the same white/blue outfit, fluffy dark hair, blue utility pouch, and compass charm in every scene and every episode.",
         "appearingScenes": []
       },
       "imageStatus": "idle"
     }
   ],
-  "updatedAt": "2026-08-24T09:00:00+07:00"
+  "continuityRules": {
+    "names": "พี่ชื่อ C-SHARP, น้องชื่อ ARI. Use these exact display names in character sheets, sceneCharacters, dialogue, scripts, summaries, README, PROJECT_INDEX, and metadata.",
+    "dialogue": "Every scene must include short natural dialogue where the brothers call each other C-SHARP and ARI as part of teamwork.",
+    "visualIdentity": "C-SHARP and ARI keep the same stylized Roblox/game-avatar identity across all 10 EP: same height relationship, outfits, hair, props, cheerful blocky proportions, no photorealism."
+  },
+  "updatedAt": "2026-08-25T19:45:00+07:00"
 }

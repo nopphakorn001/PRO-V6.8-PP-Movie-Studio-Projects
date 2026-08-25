@@ -3,26 +3,26 @@
   "settings": {
     "aspectRatio": "9:16",
     "language": "Thai",
-    "durationMode": "1m",
-    "targetSceneCount": 10,
+    "durationMode": "short-form-adventure",
+    "targetSceneCount": 16,
     "secondsPerScene": 8,
     "imageModel": "🍌 Nano Banana Pro",
     "videoModel": "veo-3-1-lite-lower-priority",
     "productionMode": "frame",
-    "audioType": "music_ambience_sfx",
-    "voiceGender": "none",
-    "voiceStyle": "ไม่มีบทพูด ไม่มีผู้บรรยาย ใช้ดนตรี บรรยากาศ และ SFX เล่าเรื่อง",
-    "voiceStyleId": "none",
+    "audioType": "music_ambience_sfx_dialogue",
+    "voiceGender": "child-friendly dialogue mix",
+    "voiceStyle": "บทสนทนาธรรมชาติระหว่างสองพี่น้อง เรียกชื่อ C-SHARP และ ARI เป็นระยะตลอดเรื่อง ไม่มีผู้บรรยาย",
+    "voiceStyleId": "natural-thai-kids-dialogue",
     "selectedProjectStyle": "custom-structure",
     "selectedProjectType": "custom-structure",
     "characterStyleCategory": "stylized game avatars",
-    "customCharacterStyle": "Consistent Roblox-style blocky child adventure avatars based on uploaded reference image, stylized only, no real identity, no photorealism.",
+    "customCharacterStyle": "Consistent Roblox-style blocky child adventure avatars based broadly on uploaded reference image, stylized only, no real identity, no photorealism.",
     "castingMode": "custom",
     "customCastingCount": 2,
     "locationMode": "custom",
     "customLocationCount": 3,
     "visualStyle": "Bright family-friendly Roblox-style adventure world with toy-like blocky avatars, colorful obstacle levels, clean readable shapes, cheerful daylight or arcade lighting. No dark horror, no realistic injury, no official logos, no copied UI, no photorealism.",
-    "customProjectStructure": "Silent vertical Roblox-style adventure, approximately 80 seconds, 10 scenes x 8 seconds. No long dialogue, no dialogue and no narration. Music, ambience and SFX only. One main action and one camera movement per scene.",
+    "customProjectStructure": "Vertical Roblox-style adventure, 16 scenes x 8 seconds. One level per episode, ends in this episode. Each scene has one main action, actionDescription, imageDescription, videoPrompt, and natural dialogue where C-SHARP and ARI call each other by name.",
     "visualStyleId": "custom",
     "customVisualStyle": "Colorful stylized game cinematic with blocky avatars, playful physics, glossy toy materials, vivid level design and strong visual storytelling."
   },
@@ -40,331 +40,677 @@
       "teamwork"
     ],
     "plotDetails": "",
-    "mainStoryPrompt": "Silent bright Roblox-style adventure for kids and family. MAX and MINI are two stylized brother game avatars inspired by the uploaded reference photo without identifying the real children. EP10: Mega Obby Final. MAX และ MINI ผจญภัยในด่าน Mega Obby Final แบบจบในตอน ต้องใช้ teamwork ระหว่างพี่ชายที่กล้าลุยกับน้องชายที่ช่างสังเกต ผ่าน 10 ฉากสั้น ๆ โดยไม่มีบทพูด เน้นภาพ ดนตรี ambience และ SFX. End in this episode while lightly hinting at the next level. No long dialogue, no speech, no narration. Visual storytelling only with upbeat music, ambience and SFX. Keep tone colorful, safe and not dark.",
-    "storySummary": "MAX และ MINI ผจญภัยในด่าน Mega Obby Final แบบจบในตอน ต้องใช้ teamwork ระหว่างพี่ชายที่กล้าลุยกับน้องชายที่ช่างสังเกต ผ่าน 10 ฉากสั้น ๆ โดยไม่มีบทพูด เน้นภาพ ดนตรี ambience และ SFX",
+    "mainStoryPrompt": "Bright Roblox-style adventure for kids and family. C-SHARP and ARI are two stylized brother game avatars inspired broadly by the uploaded reference photo without identifying the real children. EP10: Mega Obby Final. C-SHARP พี่ชาย และ ARI น้องชาย ผจญภัยหนึ่งด่านแบบจบในตอน ผ่าน 16 scenes สั้น ๆ พร้อมบทสนทนาเรียกชื่อกันตลอดเรื่องอย่างเป็นธรรมชาติ เน้น teamwork, music, ambience, SFX และ dialogue สั้น ๆ. Keep tone colorful, safe and not dark.",
+    "storySummary": "C-SHARP และ ARI ผจญภัยในด่าน Mega Obby Final แบบจบในตอน โดย C-SHARP คอยนำทางและปกป้อง ส่วน ARI ช่างสังเกตและช่วยแก้ปริศนา ทั้งคู่เรียกชื่อกันอย่างเป็นธรรมชาติในทุก scene ระหว่างผ่าน 16 ฉากสั้นแนวผจญภัยสดใส",
     "genreDetailPrompt": "",
     "storyTitle": "Roblox Brothers Adventure — 2 พี่น้องตะลุยโลกเกม EP10 — Mega Obby Final",
     "scenes": [
       {
         "id": "rba10-001",
         "order": 1,
-        "title": "Final Lobby Icons",
-        "scene": "EP10 scene 01: Final Lobby Icons",
-        "description": "Final Lobby Icons in Mega Obby Final, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "Final Lobby",
+        "title": "ประตู Mega เปิด",
+        "scene": "EP10 scene 01: ประตู Mega เปิด",
+        "description": "ประตู Mega เปิด in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Mega Lobby",
         "mood": "Cheerful",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI ดูประตู Mega เปิดตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\nARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ดูประตู Mega เปิดตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MAX และ MINI โผล่มาที่ Final Lobby และมองเห็นเป้าหมายของด่านนี้อย่างตื่นเต้น",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Final Lobby. Scene beat: Final Lobby Icons. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Mega Obby Final. One clear action: MAX และ MINI โผล่มาที่ Final Lobby และมองเห็นเป้าหมายของด่านนี้อย่างตื่นเต้น. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP เรียก ARI ให้ดู ประตู Mega เปิด ใน Mega Lobby แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final",
+        "mainAction": "C-SHARP เรียก ARI ให้ดู ประตู Mega เปิด ใน Mega Lobby แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Lobby. Scene beat: ประตู Mega เปิด. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP เรียก ARI ให้ดู ประตู Mega เปิด ใน Mega Lobby แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ดูประตู Mega เปิดตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\" and \"ARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba10-002",
         "order": 2,
-        "title": "Beginner Jump Return",
-        "scene": "EP10 scene 02: Beginner Jump Return",
-        "description": "Beginner Jump Return in Mega Obby Final, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "Final Lobby",
+        "title": "ตราทั้งเก้าเรืองแสง",
+        "scene": "EP10 scene 02: ตราทั้งเก้าเรืองแสง",
+        "description": "ตราทั้งเก้าเรืองแสง in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Mega Lobby",
         "mood": "Focused Adventure",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP ผมเห็นทางตรงตราทั้งเก้าเรืองแสง น่าจะเป็นใบ้ของด่านนี้\nC-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ผมเห็นทางตรงตราทั้งเก้าเรืองแสง น่าจะเป็นใบ้ของด่านนี้"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "เยี่ยมมาก ARI พี่ตามแผนน้องเลย"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "ทั้งคู่เริ่มเคลื่อนที่ผ่าน Final Lobby โดย MAX นำทางและ MINI สังเกตปุ่มหรือสัญลักษณ์สำคัญ",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Final Lobby. Scene beat: Beginner Jump Return. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Mega Obby Final. One clear action: ทั้งคู่เริ่มเคลื่อนที่ผ่าน Final Lobby โดย MAX นำทางและ MINI สังเกตปุ่มหรือสัญลักษณ์สำคัญ. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI เรียก C-SHARP ให้สังเกต ตราทั้งเก้าเรืองแสง ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "mainAction": "ARI เรียก C-SHARP ให้สังเกต ตราทั้งเก้าเรืองแสง ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Lobby. Scene beat: ตราทั้งเก้าเรืองแสง. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI เรียก C-SHARP ให้สังเกต ตราทั้งเก้าเรืองแสง ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ผมเห็นทางตรงตราทั้งเก้าเรืองแสง น่าจะเป็นใบ้ของด่านนี้\" and \"C-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba10-003",
         "order": 3,
-        "title": "Minecart Switch Return",
-        "scene": "EP10 scene 03: Minecart Switch Return",
-        "description": "Minecart Switch Return in Mega Obby Final, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "Final Lobby",
-        "mood": "Focused Adventure",
+        "title": "เริ่มด่านรวม",
+        "scene": "EP10 scene 03: เริ่มด่านรวม",
+        "description": "เริ่มด่านรวม in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Mega Lobby",
+        "mood": "Playful Teamwork",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านเริ่มด่านรวม\nARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านเริ่มด่านรวม"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MINI พบเงื่อนงำเล็ก ๆ บนพื้น ส่วน MAX คอยกันทางและชี้ checkpoint ถัดไป",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Final Lobby. Scene beat: Minecart Switch Return. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Mega Obby Final. One clear action: MINI พบเงื่อนงำเล็ก ๆ บนพื้น ส่วน MAX คอยกันทางและชี้ checkpoint ถัดไป. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP ช่วยเปิดทางหลักของ Mega Lobby ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ เริ่มด่านรวม",
+        "mainAction": "C-SHARP ช่วยเปิดทางหลักของ Mega Lobby ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ เริ่มด่านรวม",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Lobby. Scene beat: เริ่มด่านรวม. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP ช่วยเปิดทางหลักของ Mega Lobby ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ เริ่มด่านรวม. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านเริ่มด่านรวม\" and \"ARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba10-004",
         "order": 4,
-        "title": "Sky Bridge Return",
-        "scene": "EP10 scene 04: Sky Bridge Return",
-        "description": "Sky Bridge Return in Mega Obby Final, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "Mega Obby Course",
-        "mood": "Focused Adventure",
+        "title": "ARI อ่านแพตเทิร์น",
+        "scene": "EP10 scene 04: ARI อ่านแพตเทิร์น",
+        "description": "ARI อ่านแพตเทิร์น in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Mega Lobby",
+        "mood": "Bright Challenge",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\nC-SHARP: ไปเลย ARI ทีมเราทำได้",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ไปเลย ARI ทีมเราทำได้"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MAX ช่วยยกหรือดัน prop หลักของด่าน เพื่อเปิดทางให้ MINI ผ่านไปก่อน",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Course. Scene beat: Sky Bridge Return. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Mega Obby Final. One clear action: MAX ช่วยยกหรือดัน prop หลักของด่าน เพื่อเปิดทางให้ MINI ผ่านไปก่อน. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI แก้จังหวะของ ARI อ่านแพตเทิร์น แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "mainAction": "ARI แก้จังหวะของ ARI อ่านแพตเทิร์น แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Lobby. Scene beat: ARI อ่านแพตเทิร์น. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI แก้จังหวะของ ARI อ่านแพตเทิร์น แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\" and \"C-SHARP: ไปเลย ARI ทีมเราทำได้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba10-005",
         "order": 5,
-        "title": "Flood Button Return",
-        "scene": "EP10 scene 05: Flood Button Return",
-        "description": "Flood Button Return in Mega Obby Final, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "Mega Obby Course",
-        "mood": "Focused Adventure",
+        "title": "C-SHARP นำกระโดด",
+        "scene": "EP10 scene 05: C-SHARP นำกระโดด",
+        "description": "C-SHARP นำกระโดด in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Mega Lobby",
+        "mood": "Cheerful",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI ถ้าเรากดพร้อมกัน C-SHARP นำกระโดด น่าจะปลดล็อก\nARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ถ้าเรากดพร้อมกัน C-SHARP นำกระโดด น่าจะปลดล็อก"
+          },
+          {
+            "speaker": "ARI",
+            "text": "เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MINI ใช้ความคล่องตัวแก้จังหวะ obstacle แล้วส่งสัญญาณให้พี่ตามมา",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Course. Scene beat: Flood Button Return. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Mega Obby Final. One clear action: MINI ใช้ความคล่องตัวแก้จังหวะ obstacle แล้วส่งสัญญาณให้พี่ตามมา. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน C-SHARP นำกระโดด โดยไม่เสียจังหวะของด่าน",
+        "mainAction": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน C-SHARP นำกระโดด โดยไม่เสียจังหวะของด่าน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Lobby. Scene beat: C-SHARP นำกระโดด. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน C-SHARP นำกระโดด โดยไม่เสียจังหวะของด่าน. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ถ้าเรากดพร้อมกัน C-SHARP นำกระโดด น่าจะปลดล็อก\" and \"ARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba10-006",
         "order": 6,
-        "title": "Castle Symbols Return",
-        "scene": "EP10 scene 06: Castle Symbols Return",
-        "description": "Castle Symbols Return in Mega Obby Final, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "Mega Obby Course",
+        "title": "รถรางสั้นกลับมา",
+        "scene": "EP10 scene 06: รถรางสั้นกลับมา",
+        "description": "รถรางสั้นกลับมา in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Mega Lobby",
         "mood": "Focused Adventure",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP ระวังจุดเด้งตรงรถรางสั้นกลับมานะครับ\nC-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ระวังจุดเด้งตรงรถรางสั้นกลับมานะครับ"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "ทั้งคู่ต้องทำงานพร้อมกัน กดปุ่มและขยับกลไกให้ไฟ checkpoint เปลี่ยนเป็นสีเขียว",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Course. Scene beat: Castle Symbols Return. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Mega Obby Final. One clear action: ทั้งคู่ต้องทำงานพร้อมกัน กดปุ่มและขยับกลไกให้ไฟ checkpoint เปลี่ยนเป็นสีเขียว. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ รถรางสั้นกลับมา อย่างปลอดภัย",
+        "mainAction": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ รถรางสั้นกลับมา อย่างปลอดภัย",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Lobby. Scene beat: รถรางสั้นกลับมา. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ รถรางสั้นกลับมา อย่างปลอดภัย. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ระวังจุดเด้งตรงรถรางสั้นกลับมานะครับ\" and \"C-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba10-007",
         "order": 7,
-        "title": "Race Boost Return",
-        "scene": "EP10 scene 07: Race Boost Return",
-        "description": "Race Boost Return in Mega Obby Final, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "Mega Obby Course",
-        "mood": "Focused Adventure",
+        "title": "เมฆลอยสลับทาง",
+        "scene": "EP10 scene 07: เมฆลอยสลับทาง",
+        "description": "เมฆลอยสลับทาง in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Mega Obby Tower",
+        "mood": "Playful Teamwork",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI เก่งมาก ใกล้ผ่านเมฆลอยสลับทางแล้ว\nARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI เก่งมาก ใกล้ผ่านเมฆลอยสลับทางแล้ว"
+          },
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "เกิดอุปสรรคสนุก ๆ กลางด่าน แต่ไม่มีอันตราย ทั้งคู่รีบปรับแผนด้วย teamwork",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Course. Scene beat: Race Boost Return. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Mega Obby Final. One clear action: เกิดอุปสรรคสนุก ๆ กลางด่าน แต่ไม่มีอันตราย ทั้งคู่รีบปรับแผนด้วย teamwork. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ เมฆลอยสลับทาง แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "mainAction": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ เมฆลอยสลับทาง แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Tower. Scene beat: เมฆลอยสลับทาง. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI มองเห็นทางลัดเล็ก ๆ ใกล้ เมฆลอยสลับทาง แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI เก่งมาก ใกล้ผ่านเมฆลอยสลับทางแล้ว\" and \"ARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba10-008",
         "order": 8,
-        "title": "Rescue and Robot Return",
-        "scene": "EP10 scene 08: Rescue and Robot Return",
-        "description": "Rescue and Robot Return in Mega Obby Final, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "Home Portal",
-        "mood": "Focused Adventure",
+        "title": "ปุ่มน้ำและสะพาน",
+        "scene": "EP10 scene 08: ปุ่มน้ำและสะพาน",
+        "description": "ปุ่มน้ำและสะพาน in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Mega Obby Tower",
+        "mood": "Bright Challenge",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของปุ่มน้ำและสะพาน\nC-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของปุ่มน้ำและสะพาน"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MAX และ MINI รวมของหรือชิ้นส่วนสุดท้าย เพื่อเปิดทางไปยังประตูปลายด่าน",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Home Portal. Scene beat: Rescue and Robot Return. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Mega Obby Final. One clear action: MAX และ MINI รวมของหรือชิ้นส่วนสุดท้าย เพื่อเปิดทางไปยังประตูปลายด่าน. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "สองพี่น้องรวมพลังที่ Mega Obby Tower เพื่อปลดล็อก ปุ่มน้ำและสะพาน และเข้าใกล้เส้นชัยของตอนนี้",
+        "mainAction": "สองพี่น้องรวมพลังที่ Mega Obby Tower เพื่อปลดล็อก ปุ่มน้ำและสะพาน และเข้าใกล้เส้นชัยของตอนนี้",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Tower. Scene beat: ปุ่มน้ำและสะพาน. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: สองพี่น้องรวมพลังที่ Mega Obby Tower เพื่อปลดล็อก ปุ่มน้ำและสะพาน และเข้าใกล้เส้นชัยของตอนนี้. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของปุ่มน้ำและสะพาน\" and \"C-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba10-009",
         "order": 9,
-        "title": "Pirate Key Return",
-        "scene": "EP10 scene 09: Pirate Key Return",
-        "description": "Pirate Key Return in Mega Obby Final, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "Home Portal",
-        "mood": "Focused Adventure",
+        "title": "ปริศนาแสงปราสาท",
+        "scene": "EP10 scene 09: ปริศนาแสงปราสาท",
+        "description": "ปริศนาแสงปราสาท in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Mega Obby Tower",
+        "mood": "Cheerful",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI ดูปริศนาแสงปราสาทตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\nARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ดูปริศนาแสงปราสาทตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "Portal ของตอนนี้เริ่มสว่าง ทั้งคู่ชนมือกันหลังผ่านบททดสอบสำเร็จ",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Home Portal. Scene beat: Pirate Key Return. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Mega Obby Final. One clear action: Portal ของตอนนี้เริ่มสว่าง ทั้งคู่ชนมือกันหลังผ่านบททดสอบสำเร็จ. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP เรียก ARI ให้ดู ปริศนาแสงปราสาท ใน Mega Obby Tower แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final",
+        "mainAction": "C-SHARP เรียก ARI ให้ดู ปริศนาแสงปราสาท ใน Mega Obby Tower แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Tower. Scene beat: ปริศนาแสงปราสาท. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP เรียก ARI ให้ดู ปริศนาแสงปราสาท ใน Mega Obby Tower แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Mega Obby Final. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ดูปริศนาแสงปราสาทตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\" and \"ARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba10-010",
         "order": 10,
-        "title": "Back Home",
-        "scene": "EP10 scene 10: Back Home",
-        "description": "Back Home in Mega Obby Final, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "Home Portal",
-        "mood": "Cheerful",
+        "title": "ทางแข่งจิ๋ว",
+        "scene": "EP10 scene 10: ทางแข่งจิ๋ว",
+        "description": "ทางแข่งจิ๋ว in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Mega Obby Tower",
+        "mood": "Focused Adventure",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP ผมเห็นทางตรงทางแข่งจิ๋ว น่าจะเป็นใบ้ของด่านนี้\nC-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ผมเห็นทางตรงทางแข่งจิ๋ว น่าจะเป็นใบ้ของด่านนี้"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "เยี่ยมมาก ARI พี่ตามแผนน้องเลย"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "สองพี่น้องก้าวเข้า Portal อย่างร่าเริง พร้อม hint ภาพเล็ก ๆ ของด่านถัดไป",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Home Portal. Scene beat: Back Home. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Mega Obby Final. One clear action: สองพี่น้องก้าวเข้า Portal อย่างร่าเริง พร้อม hint ภาพเล็ก ๆ ของด่านถัดไป. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI เรียก C-SHARP ให้สังเกต ทางแข่งจิ๋ว ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "mainAction": "ARI เรียก C-SHARP ให้สังเกต ทางแข่งจิ๋ว ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Tower. Scene beat: ทางแข่งจิ๋ว. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI เรียก C-SHARP ให้สังเกต ทางแข่งจิ๋ว ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ผมเห็นทางตรงทางแข่งจิ๋ว น่าจะเป็นใบ้ของด่านนี้\" and \"C-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba10-011",
+        "order": 11,
+        "title": "สัตว์บล็อกช่วยเปิดทาง",
+        "scene": "EP10 scene 11: สัตว์บล็อกช่วยเปิดทาง",
+        "description": "สัตว์บล็อกช่วยเปิดทาง in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Mega Obby Tower",
+        "mood": "Playful Teamwork",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านสัตว์บล็อกช่วยเปิดทาง\nARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านสัตว์บล็อกช่วยเปิดทาง"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "C-SHARP ช่วยเปิดทางหลักของ Mega Obby Tower ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ สัตว์บล็อกช่วยเปิดทาง",
+        "mainAction": "C-SHARP ช่วยเปิดทางหลักของ Mega Obby Tower ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ สัตว์บล็อกช่วยเปิดทาง",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Tower. Scene beat: สัตว์บล็อกช่วยเปิดทาง. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP ช่วยเปิดทางหลักของ Mega Obby Tower ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ สัตว์บล็อกช่วยเปิดทาง. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านสัตว์บล็อกช่วยเปิดทาง\" and \"ARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba10-012",
+        "order": 12,
+        "title": "หุ่นยนต์ยกแพลตฟอร์ม",
+        "scene": "EP10 scene 12: หุ่นยนต์ยกแพลตฟอร์ม",
+        "description": "หุ่นยนต์ยกแพลตฟอร์ม in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Mega Obby Tower",
+        "mood": "Bright Challenge",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\nC-SHARP: ไปเลย ARI ทีมเราทำได้",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ไปเลย ARI ทีมเราทำได้"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "ARI แก้จังหวะของ หุ่นยนต์ยกแพลตฟอร์ม แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "mainAction": "ARI แก้จังหวะของ หุ่นยนต์ยกแพลตฟอร์ม แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Mega Obby Tower. Scene beat: หุ่นยนต์ยกแพลตฟอร์ม. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI แก้จังหวะของ หุ่นยนต์ยกแพลตฟอร์ม แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\" and \"C-SHARP: ไปเลย ARI ทีมเราทำได้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba10-013",
+        "order": 13,
+        "title": "สมบัติกลายเป็นกุญแจ",
+        "scene": "EP10 scene 13: สมบัติกลายเป็นกุญแจ",
+        "description": "สมบัติกลายเป็นกุญแจ in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Portal Finale",
+        "mood": "Cheerful",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "C-SHARP: ARI ถ้าเรากดพร้อมกัน สมบัติกลายเป็นกุญแจ น่าจะปลดล็อก\nARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ถ้าเรากดพร้อมกัน สมบัติกลายเป็นกุญแจ น่าจะปลดล็อก"
+          },
+          {
+            "speaker": "ARI",
+            "text": "เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน สมบัติกลายเป็นกุญแจ โดยไม่เสียจังหวะของด่าน",
+        "mainAction": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน สมบัติกลายเป็นกุญแจ โดยไม่เสียจังหวะของด่าน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Portal Finale. Scene beat: สมบัติกลายเป็นกุญแจ. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน สมบัติกลายเป็นกุญแจ โดยไม่เสียจังหวะของด่าน. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ถ้าเรากดพร้อมกัน สมบัติกลายเป็นกุญแจ น่าจะปลดล็อก\" and \"ARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba10-014",
+        "order": 14,
+        "title": "ปีนหอสุดท้าย",
+        "scene": "EP10 scene 14: ปีนหอสุดท้าย",
+        "description": "ปีนหอสุดท้าย in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Portal Finale",
+        "mood": "Focused Adventure",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "ARI: C-SHARP ระวังจุดเด้งตรงปีนหอสุดท้ายนะครับ\nC-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ระวังจุดเด้งตรงปีนหอสุดท้ายนะครับ"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ปีนหอสุดท้าย อย่างปลอดภัย",
+        "mainAction": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ปีนหอสุดท้าย อย่างปลอดภัย",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Portal Finale. Scene beat: ปีนหอสุดท้าย. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ปีนหอสุดท้าย อย่างปลอดภัย. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ระวังจุดเด้งตรงปีนหอสุดท้ายนะครับ\" and \"C-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba10-015",
+        "order": 15,
+        "title": "Portal Finale เปิด",
+        "scene": "EP10 scene 15: Portal Finale เปิด",
+        "description": "Portal Finale เปิด in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Portal Finale",
+        "mood": "Playful Teamwork",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "C-SHARP: ARI เก่งมาก ใกล้ผ่านPortal Finale เปิดแล้ว\nARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI เก่งมาก ใกล้ผ่านPortal Finale เปิดแล้ว"
+          },
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ Portal Finale เปิด แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "mainAction": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ Portal Finale เปิด แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Portal Finale. Scene beat: Portal Finale เปิด. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: ARI มองเห็นทางลัดเล็ก ๆ ใกล้ Portal Finale เปิด แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI เก่งมาก ใกล้ผ่านPortal Finale เปิดแล้ว\" and \"ARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba10-016",
+        "order": 16,
+        "title": "C-SHARP กับ ARI ฉลองจบซีรีส์",
+        "scene": "EP10 scene 16: C-SHARP กับ ARI ฉลองจบซีรีส์",
+        "description": "C-SHARP กับ ARI ฉลองจบซีรีส์ in Mega Obby Final, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "Portal Finale",
+        "mood": "Bright Challenge",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของC-SHARP กับ ARI ฉลองจบซีรีส์\nC-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของC-SHARP กับ ARI ฉลองจบซีรีส์"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "สองพี่น้องรวมพลังที่ Portal Finale เพื่อปลดล็อก C-SHARP กับ ARI ฉลองจบซีรีส์ และเข้าใกล้เส้นชัยของตอนนี้",
+        "mainAction": "สองพี่น้องรวมพลังที่ Portal Finale เพื่อปลดล็อก C-SHARP กับ ARI ฉลองจบซีรีส์ และเข้าใกล้เส้นชัยของตอนนี้",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in Portal Finale. Scene beat: C-SHARP กับ ARI ฉลองจบซีรีส์. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Mega Obby Final. One clear action only: สองพี่น้องรวมพลังที่ Portal Finale เพื่อปลดล็อก C-SHARP กับ ARI ฉลองจบซีรีส์ และเข้าใกล้เส้นชัยของตอนนี้. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของC-SHARP กับ ARI ฉลองจบซีรีส์\" and \"C-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       }
     ],
     "characters": [
       {
-        "id": "big_brother_max",
-        "name": "MAX",
-        "thaiName": "แม็กซ์",
-        "role": "พี่ชาย นักลุยและคนปกป้องน้อง",
+        "id": "big_brother_csharp",
+        "name": "C-SHARP",
+        "thaiName": "ซีชาร์ป",
+        "role": "พี่ชาย นักวางแผน กล้าลุย และคอยปกป้องน้อง",
         "ageStyle": "stylized child game avatar, older sibling proportions",
-        "description": "Roblox-style blocky boy avatar inspired by the older child in the reference photo, without identifying the real person. Slightly taller than MINI, warm smile, brave posture, friendly rounded block proportions.",
-        "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband",
+        "description": "Roblox-style blocky boy avatar inspired broadly by the older child in the uploaded reference photo, without identifying the real person. Slightly taller than ARI, warm confident smile, brave posture, friendly rounded block proportions.",
+        "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband, square backpack with checkpoint badge",
         "colors": {
           "primary": "cream",
           "accent": "light green",
@@ -374,23 +720,40 @@
         "hair": "short dark-brown blocky hair, neat side sweep",
         "face": "simple cheerful game-avatar face, expressive eyebrows, no photorealism",
         "props": {
-          "personalProps": "small square backpack, green checkpoint badge"
+          "personalProps": "small square backpack, green checkpoint badge, green wristband"
         },
         "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
         "continuity": {
-          "continuityRules": "Keep MAX taller than MINI, same cream/light-green outfit, same short dark hair, same square backpack and green wristband in every scene and every episode.",
-          "appearingScenes": []
+          "continuityRules": "Keep C-SHARP taller than ARI, with the same cream/light-green outfit, short dark hair, square backpack, checkpoint badge, and green wristband in every scene and every episode.",
+          "appearingScenes": [
+            "rba10-001",
+            "rba10-002",
+            "rba10-003",
+            "rba10-004",
+            "rba10-005",
+            "rba10-006",
+            "rba10-007",
+            "rba10-008",
+            "rba10-009",
+            "rba10-010",
+            "rba10-011",
+            "rba10-012",
+            "rba10-013",
+            "rba10-014",
+            "rba10-015",
+            "rba10-016"
+          ]
         },
         "imageStatus": "idle"
       },
       {
-        "id": "little_brother_mini",
-        "name": "MINI",
-        "thaiName": "มินิ",
+        "id": "little_brother_ari",
+        "name": "ARI",
+        "thaiName": "อารี",
         "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
         "ageStyle": "stylized child game avatar, younger sibling proportions",
-        "description": "Roblox-style blocky boy avatar inspired by the younger child in the reference photo, without identifying the real person. Shorter than MAX, curious bright expression, quick energetic poses.",
-        "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch",
+        "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
+        "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch with compass charm",
         "colors": {
           "primary": "white",
           "accent": "bright blue",
@@ -404,23 +767,40 @@
         },
         "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
         "continuity": {
-          "continuityRules": "Keep MINI shorter than MAX, same white/blue outfit, same fluffy dark hair, same blue utility pouch and compass charm in every scene and every episode.",
-          "appearingScenes": []
+          "continuityRules": "Keep ARI shorter than C-SHARP, with the same white/blue outfit, fluffy dark hair, blue utility pouch, and compass charm in every scene and every episode.",
+          "appearingScenes": [
+            "rba10-001",
+            "rba10-002",
+            "rba10-003",
+            "rba10-004",
+            "rba10-005",
+            "rba10-006",
+            "rba10-007",
+            "rba10-008",
+            "rba10-009",
+            "rba10-010",
+            "rba10-011",
+            "rba10-012",
+            "rba10-013",
+            "rba10-014",
+            "rba10-015",
+            "rba10-016"
+          ]
         },
         "imageStatus": "idle"
       }
     ],
     "characterSheets": {
-      "seriesContinuity": "Use the same MAX and MINI designs across all 10 episodes. They are stylized game avatars inspired by the uploaded reference image, not realistic portraits and not identified as real people.",
+      "seriesContinuity": "Use the same C-SHARP and ARI designs across all 10 episodes. They are stylized game avatars inspired broadly by the uploaded reference image, not realistic portraits and not identified as real people. C-SHARP is always the older brother, ARI is always the younger brother.",
       "characters": [
         {
-          "id": "big_brother_max",
-          "name": "MAX",
-          "thaiName": "แม็กซ์",
-          "role": "พี่ชาย นักลุยและคนปกป้องน้อง",
+          "id": "big_brother_csharp",
+          "name": "C-SHARP",
+          "thaiName": "ซีชาร์ป",
+          "role": "พี่ชาย นักวางแผน กล้าลุย และคอยปกป้องน้อง",
           "ageStyle": "stylized child game avatar, older sibling proportions",
-          "description": "Roblox-style blocky boy avatar inspired by the older child in the reference photo, without identifying the real person. Slightly taller than MINI, warm smile, brave posture, friendly rounded block proportions.",
-          "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband",
+          "description": "Roblox-style blocky boy avatar inspired broadly by the older child in the uploaded reference photo, without identifying the real person. Slightly taller than ARI, warm confident smile, brave posture, friendly rounded block proportions.",
+          "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband, square backpack with checkpoint badge",
           "colors": {
             "primary": "cream",
             "accent": "light green",
@@ -430,23 +810,40 @@
           "hair": "short dark-brown blocky hair, neat side sweep",
           "face": "simple cheerful game-avatar face, expressive eyebrows, no photorealism",
           "props": {
-            "personalProps": "small square backpack, green checkpoint badge"
+            "personalProps": "small square backpack, green checkpoint badge, green wristband"
           },
           "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
           "continuity": {
-            "continuityRules": "Keep MAX taller than MINI, same cream/light-green outfit, same short dark hair, same square backpack and green wristband in every scene and every episode.",
-            "appearingScenes": []
+            "continuityRules": "Keep C-SHARP taller than ARI, with the same cream/light-green outfit, short dark hair, square backpack, checkpoint badge, and green wristband in every scene and every episode.",
+            "appearingScenes": [
+              "rba10-001",
+              "rba10-002",
+              "rba10-003",
+              "rba10-004",
+              "rba10-005",
+              "rba10-006",
+              "rba10-007",
+              "rba10-008",
+              "rba10-009",
+              "rba10-010",
+              "rba10-011",
+              "rba10-012",
+              "rba10-013",
+              "rba10-014",
+              "rba10-015",
+              "rba10-016"
+            ]
           },
           "imageStatus": "idle"
         },
         {
-          "id": "little_brother_mini",
-          "name": "MINI",
-          "thaiName": "มินิ",
+          "id": "little_brother_ari",
+          "name": "ARI",
+          "thaiName": "อารี",
           "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
           "ageStyle": "stylized child game avatar, younger sibling proportions",
-          "description": "Roblox-style blocky boy avatar inspired by the younger child in the reference photo, without identifying the real person. Shorter than MAX, curious bright expression, quick energetic poses.",
-          "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch",
+          "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
+          "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch with compass charm",
           "colors": {
             "primary": "white",
             "accent": "bright blue",
@@ -460,8 +857,25 @@
           },
           "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
           "continuity": {
-            "continuityRules": "Keep MINI shorter than MAX, same white/blue outfit, same fluffy dark hair, same blue utility pouch and compass charm in every scene and every episode.",
-            "appearingScenes": []
+            "continuityRules": "Keep ARI shorter than C-SHARP, with the same white/blue outfit, fluffy dark hair, blue utility pouch, and compass charm in every scene and every episode.",
+            "appearingScenes": [
+              "rba10-001",
+              "rba10-002",
+              "rba10-003",
+              "rba10-004",
+              "rba10-005",
+              "rba10-006",
+              "rba10-007",
+              "rba10-008",
+              "rba10-009",
+              "rba10-010",
+              "rba10-011",
+              "rba10-012",
+              "rba10-013",
+              "rba10-014",
+              "rba10-015",
+              "rba10-016"
+            ]
           },
           "imageStatus": "idle"
         }
@@ -470,45 +884,69 @@
     "atmosphereAssets": [
       {
         "id": "loc-01",
-        "title": "Final Lobby",
-        "description": "Bright Roblox-style game location: Final Lobby, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
-        "isInterior": "Yes",
-        "atmosphere": "Bright playful adventure",
-        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props",
+        "title": "Mega Lobby",
+        "description": "Bright Roblox-style game location for Mega Obby Final: Mega Lobby, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
+        "isInterior": "Mixed",
+        "atmosphere": "Bright playful adventure, short-form pacing, not dark",
+        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props, level-specific puzzle objects",
         "lighting": "cheerful daylight or clean arcade glow",
         "colorTone": "varied bright colors, blue accents, green accents, warm highlights",
-        "relatedScenes": [],
+        "relatedScenes": [
+          "rba10-001",
+          "rba10-002",
+          "rba10-003",
+          "rba10-004",
+          "rba10-005",
+          "rba10-006"
+        ],
         "status": "idle"
       },
       {
         "id": "loc-02",
-        "title": "Mega Obby Course",
-        "description": "Bright Roblox-style game location: Mega Obby Course, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
+        "title": "Mega Obby Tower",
+        "description": "Bright Roblox-style game location for Mega Obby Final: Mega Obby Tower, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
         "isInterior": "No",
-        "atmosphere": "Bright playful adventure",
-        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props",
+        "atmosphere": "Bright playful adventure, short-form pacing, not dark",
+        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props, level-specific puzzle objects",
         "lighting": "cheerful daylight or clean arcade glow",
         "colorTone": "varied bright colors, blue accents, green accents, warm highlights",
-        "relatedScenes": [],
+        "relatedScenes": [
+          "rba10-007",
+          "rba10-008",
+          "rba10-009",
+          "rba10-010",
+          "rba10-011",
+          "rba10-012"
+        ],
         "status": "idle"
       },
       {
         "id": "loc-03",
-        "title": "Home Portal",
-        "description": "Bright Roblox-style game location: Home Portal, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
-        "isInterior": "No",
-        "atmosphere": "Bright playful adventure",
-        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props",
+        "title": "Portal Finale",
+        "description": "Bright Roblox-style game location for Mega Obby Final: Portal Finale, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
+        "isInterior": "Yes",
+        "atmosphere": "Bright playful adventure, short-form pacing, not dark",
+        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props, level-specific puzzle objects",
         "lighting": "cheerful daylight or clean arcade glow",
         "colorTone": "varied bright colors, blue accents, green accents, warm highlights",
-        "relatedScenes": [],
+        "relatedScenes": [
+          "rba10-013",
+          "rba10-014",
+          "rba10-015",
+          "rba10-016"
+        ],
         "status": "idle"
       }
     ],
     "productAssets": [],
     "customGenre": "Roblox-style Family Adventure",
-    "productionDesignAnalyzed": true
+    "productionDesignAnalyzed": true,
+    "continuityRules": {
+      "names": "พี่ชายชื่อ C-SHARP, น้องชายชื่อ ARI. Scene dialogue must use these exact names naturally throughout each episode.",
+      "visualIdentity": "Keep C-SHARP and ARI visually consistent across all scenes and all 10 episodes using the same outfits, hair, proportions, props, and blocky stylized avatar style.",
+      "format": "9:16, short-form adventure, one main action per scene, 15-18 scenes per episode, one level per episode, ends in the episode, bright and not dark."
+    }
   },
   "currentStep": 6,
-  "updatedAt": "2026-08-24T09:00:00+07:00"
+  "updatedAt": "2026-08-25T19:45:00+07:00"
 }

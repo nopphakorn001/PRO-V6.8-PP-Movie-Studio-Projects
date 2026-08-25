@@ -3,26 +3,26 @@
   "settings": {
     "aspectRatio": "9:16",
     "language": "Thai",
-    "durationMode": "1m",
-    "targetSceneCount": 10,
+    "durationMode": "short-form-adventure",
+    "targetSceneCount": 16,
     "secondsPerScene": 8,
     "imageModel": "🍌 Nano Banana Pro",
     "videoModel": "veo-3-1-lite-lower-priority",
     "productionMode": "frame",
-    "audioType": "music_ambience_sfx",
-    "voiceGender": "none",
-    "voiceStyle": "ไม่มีบทพูด ไม่มีผู้บรรยาย ใช้ดนตรี บรรยากาศ และ SFX เล่าเรื่อง",
-    "voiceStyleId": "none",
+    "audioType": "music_ambience_sfx_dialogue",
+    "voiceGender": "child-friendly dialogue mix",
+    "voiceStyle": "บทสนทนาธรรมชาติระหว่างสองพี่น้อง เรียกชื่อ C-SHARP และ ARI เป็นระยะตลอดเรื่อง ไม่มีผู้บรรยาย",
+    "voiceStyleId": "natural-thai-kids-dialogue",
     "selectedProjectStyle": "custom-structure",
     "selectedProjectType": "custom-structure",
     "characterStyleCategory": "stylized game avatars",
-    "customCharacterStyle": "Consistent Roblox-style blocky child adventure avatars based on uploaded reference image, stylized only, no real identity, no photorealism.",
+    "customCharacterStyle": "Consistent Roblox-style blocky child adventure avatars based broadly on uploaded reference image, stylized only, no real identity, no photorealism.",
     "castingMode": "custom",
     "customCastingCount": 2,
     "locationMode": "custom",
     "customLocationCount": 3,
     "visualStyle": "Bright family-friendly Roblox-style adventure world with toy-like blocky avatars, colorful obstacle levels, clean readable shapes, cheerful daylight or arcade lighting. No dark horror, no realistic injury, no official logos, no copied UI, no photorealism.",
-    "customProjectStructure": "Silent vertical Roblox-style adventure, approximately 80 seconds, 10 scenes x 8 seconds. No long dialogue, no dialogue and no narration. Music, ambience and SFX only. One main action and one camera movement per scene.",
+    "customProjectStructure": "Vertical Roblox-style adventure, 16 scenes x 8 seconds. One level per episode, ends in this episode. Each scene has one main action, actionDescription, imageDescription, videoPrompt, and natural dialogue where C-SHARP and ARI call each other by name.",
     "visualStyleId": "custom",
     "customVisualStyle": "Colorful stylized game cinematic with blocky avatars, playful physics, glossy toy materials, vivid level design and strong visual storytelling."
   },
@@ -40,331 +40,677 @@
       "teamwork"
     ],
     "plotDetails": "",
-    "mainStoryPrompt": "Silent bright Roblox-style adventure for kids and family. MAX and MINI are two stylized brother game avatars inspired by the uploaded reference photo without identifying the real children. EP06: Racing World. MAX และ MINI ผจญภัยในด่าน Racing World แบบจบในตอน ต้องใช้ teamwork ระหว่างพี่ชายที่กล้าลุยกับน้องชายที่ช่างสังเกต ผ่าน 10 ฉากสั้น ๆ โดยไม่มีบทพูด เน้นภาพ ดนตรี ambience และ SFX. End in this episode while lightly hinting at the next level. No long dialogue, no speech, no narration. Visual storytelling only with upbeat music, ambience and SFX. Keep tone colorful, safe and not dark.",
-    "storySummary": "MAX และ MINI ผจญภัยในด่าน Racing World แบบจบในตอน ต้องใช้ teamwork ระหว่างพี่ชายที่กล้าลุยกับน้องชายที่ช่างสังเกต ผ่าน 10 ฉากสั้น ๆ โดยไม่มีบทพูด เน้นภาพ ดนตรี ambience และ SFX",
+    "mainStoryPrompt": "Bright Roblox-style adventure for kids and family. C-SHARP and ARI are two stylized brother game avatars inspired broadly by the uploaded reference photo without identifying the real children. EP06: Racing World. C-SHARP พี่ชาย และ ARI น้องชาย ผจญภัยหนึ่งด่านแบบจบในตอน ผ่าน 16 scenes สั้น ๆ พร้อมบทสนทนาเรียกชื่อกันตลอดเรื่องอย่างเป็นธรรมชาติ เน้น teamwork, music, ambience, SFX และ dialogue สั้น ๆ. Keep tone colorful, safe and not dark.",
+    "storySummary": "C-SHARP และ ARI ผจญภัยในด่าน Racing World แบบจบในตอน โดย C-SHARP คอยนำทางและปกป้อง ส่วน ARI ช่างสังเกตและช่วยแก้ปริศนา ทั้งคู่เรียกชื่อกันอย่างเป็นธรรมชาติในทุก scene ระหว่างผ่าน 16 ฉากสั้นแนวผจญภัยสดใส",
     "genreDetailPrompt": "",
     "storyTitle": "Roblox Brothers Adventure — 2 พี่น้องตะลุยโลกเกม EP06 — แข่งรถสุดป่วน",
     "scenes": [
       {
         "id": "rba06-001",
         "order": 1,
-        "title": "Choose Cars",
-        "scene": "EP06 scene 01: Choose Cars",
-        "description": "Choose Cars in Racing World, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "จุดสตาร์ตสนามแข่ง",
+        "title": "เลือก kart คู่ใจ",
+        "scene": "EP06 scene 01: เลือก kart คู่ใจ",
+        "description": "เลือก kart คู่ใจ in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "โรงรถเกม",
         "mood": "Cheerful",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI ดูเลือก kart คู่ใจตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\nARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ดูเลือก kart คู่ใจตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MAX และ MINI โผล่มาที่ จุดสตาร์ตสนามแข่ง และมองเห็นเป้าหมายของด่านนี้อย่างตื่นเต้น",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in จุดสตาร์ตสนามแข่ง. Scene beat: Choose Cars. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Racing World. One clear action: MAX และ MINI โผล่มาที่ จุดสตาร์ตสนามแข่ง และมองเห็นเป้าหมายของด่านนี้อย่างตื่นเต้น. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP เรียก ARI ให้ดู เลือก kart คู่ใจ ใน โรงรถเกม แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Racing World",
+        "mainAction": "C-SHARP เรียก ARI ให้ดู เลือก kart คู่ใจ ใน โรงรถเกม แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Racing World",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in โรงรถเกม. Scene beat: เลือก kart คู่ใจ. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: C-SHARP เรียก ARI ให้ดู เลือก kart คู่ใจ ใน โรงรถเกม แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Racing World. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ดูเลือก kart คู่ใจตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\" and \"ARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba06-002",
         "order": 2,
-        "title": "Start Lights",
-        "scene": "EP06 scene 02: Start Lights",
-        "description": "Start Lights in Racing World, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "จุดสตาร์ตสนามแข่ง",
+        "title": "ติดสติกเกอร์ทีม",
+        "scene": "EP06 scene 02: ติดสติกเกอร์ทีม",
+        "description": "ติดสติกเกอร์ทีม in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "โรงรถเกม",
         "mood": "Focused Adventure",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP ผมเห็นทางตรงติดสติกเกอร์ทีม น่าจะเป็นใบ้ของด่านนี้\nC-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ผมเห็นทางตรงติดสติกเกอร์ทีม น่าจะเป็นใบ้ของด่านนี้"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "เยี่ยมมาก ARI พี่ตามแผนน้องเลย"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "ทั้งคู่เริ่มเคลื่อนที่ผ่าน จุดสตาร์ตสนามแข่ง โดย MAX นำทางและ MINI สังเกตปุ่มหรือสัญลักษณ์สำคัญ",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in จุดสตาร์ตสนามแข่ง. Scene beat: Start Lights. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Racing World. One clear action: ทั้งคู่เริ่มเคลื่อนที่ผ่าน จุดสตาร์ตสนามแข่ง โดย MAX นำทางและ MINI สังเกตปุ่มหรือสัญลักษณ์สำคัญ. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI เรียก C-SHARP ให้สังเกต ติดสติกเกอร์ทีม ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "mainAction": "ARI เรียก C-SHARP ให้สังเกต ติดสติกเกอร์ทีม ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in โรงรถเกม. Scene beat: ติดสติกเกอร์ทีม. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: ARI เรียก C-SHARP ให้สังเกต ติดสติกเกอร์ทีม ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ผมเห็นทางตรงติดสติกเกอร์ทีม น่าจะเป็นใบ้ของด่านนี้\" and \"C-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba06-003",
         "order": 3,
-        "title": "Boost Pads",
-        "scene": "EP06 scene 03: Boost Pads",
-        "description": "Boost Pads in Racing World, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "จุดสตาร์ตสนามแข่ง",
-        "mood": "Focused Adventure",
+        "title": "ไฟนับถอยหลัง",
+        "scene": "EP06 scene 03: ไฟนับถอยหลัง",
+        "description": "ไฟนับถอยหลัง in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "โรงรถเกม",
+        "mood": "Playful Teamwork",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านไฟนับถอยหลัง\nARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านไฟนับถอยหลัง"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MINI พบเงื่อนงำเล็ก ๆ บนพื้น ส่วน MAX คอยกันทางและชี้ checkpoint ถัดไป",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in จุดสตาร์ตสนามแข่ง. Scene beat: Boost Pads. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Racing World. One clear action: MINI พบเงื่อนงำเล็ก ๆ บนพื้น ส่วน MAX คอยกันทางและชี้ checkpoint ถัดไป. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP ช่วยเปิดทางหลักของ โรงรถเกม ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ ไฟนับถอยหลัง",
+        "mainAction": "C-SHARP ช่วยเปิดทางหลักของ โรงรถเกม ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ ไฟนับถอยหลัง",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in โรงรถเกม. Scene beat: ไฟนับถอยหลัง. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: C-SHARP ช่วยเปิดทางหลักของ โรงรถเกม ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ ไฟนับถอยหลัง. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านไฟนับถอยหลัง\" and \"ARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba06-004",
         "order": 4,
-        "title": "Cone Trouble",
-        "scene": "EP06 scene 04: Cone Trouble",
-        "description": "Cone Trouble in Racing World, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "สนามโค้งและลูป",
-        "mood": "Focused Adventure",
+        "title": "ARI เห็นทางลัด",
+        "scene": "EP06 scene 04: ARI เห็นทางลัด",
+        "description": "ARI เห็นทางลัด in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "โรงรถเกม",
+        "mood": "Bright Challenge",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\nC-SHARP: ไปเลย ARI ทีมเราทำได้",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ไปเลย ARI ทีมเราทำได้"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MAX ช่วยยกหรือดัน prop หลักของด่าน เพื่อเปิดทางให้ MINI ผ่านไปก่อน",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สนามโค้งและลูป. Scene beat: Cone Trouble. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Racing World. One clear action: MAX ช่วยยกหรือดัน prop หลักของด่าน เพื่อเปิดทางให้ MINI ผ่านไปก่อน. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI แก้จังหวะของ ARI เห็นทางลัด แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "mainAction": "ARI แก้จังหวะของ ARI เห็นทางลัด แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in โรงรถเกม. Scene beat: ARI เห็นทางลัด. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: ARI แก้จังหวะของ ARI เห็นทางลัด แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\" and \"C-SHARP: ไปเลย ARI ทีมเราทำได้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba06-005",
         "order": 5,
-        "title": "Push Restart",
-        "scene": "EP06 scene 05: Push Restart",
-        "description": "Push Restart in Racing World, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "สนามโค้งและลูป",
-        "mood": "Focused Adventure",
+        "title": "C-SHARP เลี้ยวโค้งแรก",
+        "scene": "EP06 scene 05: C-SHARP เลี้ยวโค้งแรก",
+        "description": "C-SHARP เลี้ยวโค้งแรก in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "โรงรถเกม",
+        "mood": "Cheerful",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI ถ้าเรากดพร้อมกัน C-SHARP เลี้ยวโค้งแรก น่าจะปลดล็อก\nARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ถ้าเรากดพร้อมกัน C-SHARP เลี้ยวโค้งแรก น่าจะปลดล็อก"
+          },
+          {
+            "speaker": "ARI",
+            "text": "เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MINI ใช้ความคล่องตัวแก้จังหวะ obstacle แล้วส่งสัญญาณให้พี่ตามมา",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สนามโค้งและลูป. Scene beat: Push Restart. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Racing World. One clear action: MINI ใช้ความคล่องตัวแก้จังหวะ obstacle แล้วส่งสัญญาณให้พี่ตามมา. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน C-SHARP เลี้ยวโค้งแรก โดยไม่เสียจังหวะของด่าน",
+        "mainAction": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน C-SHARP เลี้ยวโค้งแรก โดยไม่เสียจังหวะของด่าน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in โรงรถเกม. Scene beat: C-SHARP เลี้ยวโค้งแรก. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน C-SHARP เลี้ยวโค้งแรก โดยไม่เสียจังหวะของด่าน. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ถ้าเรากดพร้อมกัน C-SHARP เลี้ยวโค้งแรก น่าจะปลดล็อก\" and \"ARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba06-006",
         "order": 6,
-        "title": "Loop Together",
-        "scene": "EP06 scene 06: Loop Together",
-        "description": "Loop Together in Racing World, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "สนามโค้งและลูป",
+        "title": "เก็บบูสต์สีเขียว",
+        "scene": "EP06 scene 06: เก็บบูสต์สีเขียว",
+        "description": "เก็บบูสต์สีเขียว in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "โรงรถเกม",
         "mood": "Focused Adventure",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP ระวังจุดเด้งตรงเก็บบูสต์สีเขียวนะครับ\nC-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ระวังจุดเด้งตรงเก็บบูสต์สีเขียวนะครับ"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "ทั้งคู่ต้องทำงานพร้อมกัน กดปุ่มและขยับกลไกให้ไฟ checkpoint เปลี่ยนเป็นสีเขียว",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สนามโค้งและลูป. Scene beat: Loop Together. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Racing World. One clear action: ทั้งคู่ต้องทำงานพร้อมกัน กดปุ่มและขยับกลไกให้ไฟ checkpoint เปลี่ยนเป็นสีเขียว. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ เก็บบูสต์สีเขียว อย่างปลอดภัย",
+        "mainAction": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ เก็บบูสต์สีเขียว อย่างปลอดภัย",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in โรงรถเกม. Scene beat: เก็บบูสต์สีเขียว. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ เก็บบูสต์สีเขียว อย่างปลอดภัย. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ระวังจุดเด้งตรงเก็บบูสต์สีเขียวนะครับ\" and \"C-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba06-007",
         "order": 7,
-        "title": "Bridge Ramp",
-        "scene": "EP06 scene 07: Bridge Ramp",
-        "description": "Bridge Ramp in Racing World, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "สนามโค้งและลูป",
-        "mood": "Focused Adventure",
+        "title": "ข้ามเนินกระโดด",
+        "scene": "EP06 scene 07: ข้ามเนินกระโดด",
+        "description": "ข้ามเนินกระโดด in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "สนามแข่งสีสด",
+        "mood": "Playful Teamwork",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI เก่งมาก ใกล้ผ่านข้ามเนินกระโดดแล้ว\nARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI เก่งมาก ใกล้ผ่านข้ามเนินกระโดดแล้ว"
+          },
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "เกิดอุปสรรคสนุก ๆ กลางด่าน แต่ไม่มีอันตราย ทั้งคู่รีบปรับแผนด้วย teamwork",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สนามโค้งและลูป. Scene beat: Bridge Ramp. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Racing World. One clear action: เกิดอุปสรรคสนุก ๆ กลางด่าน แต่ไม่มีอันตราย ทั้งคู่รีบปรับแผนด้วย teamwork. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ ข้ามเนินกระโดด แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "mainAction": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ ข้ามเนินกระโดด แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สนามแข่งสีสด. Scene beat: ข้ามเนินกระโดด. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: ARI มองเห็นทางลัดเล็ก ๆ ใกล้ ข้ามเนินกระโดด แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI เก่งมาก ใกล้ผ่านข้ามเนินกระโดดแล้ว\" and \"ARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba06-008",
         "order": 8,
-        "title": "Side by Side",
-        "scene": "EP06 scene 08: Side by Side",
-        "description": "Side by Side in Racing World, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "โพเดียมเส้นชัย",
-        "mood": "Focused Adventure",
+        "title": "หลบกรวยเด้ง",
+        "scene": "EP06 scene 08: หลบกรวยเด้ง",
+        "description": "หลบกรวยเด้ง in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "สนามแข่งสีสด",
+        "mood": "Bright Challenge",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของหลบกรวยเด้ง\nC-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของหลบกรวยเด้ง"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MAX และ MINI รวมของหรือชิ้นส่วนสุดท้าย เพื่อเปิดทางไปยังประตูปลายด่าน",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in โพเดียมเส้นชัย. Scene beat: Side by Side. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Racing World. One clear action: MAX และ MINI รวมของหรือชิ้นส่วนสุดท้าย เพื่อเปิดทางไปยังประตูปลายด่าน. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "สองพี่น้องรวมพลังที่ สนามแข่งสีสด เพื่อปลดล็อก หลบกรวยเด้ง และเข้าใกล้เส้นชัยของตอนนี้",
+        "mainAction": "สองพี่น้องรวมพลังที่ สนามแข่งสีสด เพื่อปลดล็อก หลบกรวยเด้ง และเข้าใกล้เส้นชัยของตอนนี้",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สนามแข่งสีสด. Scene beat: หลบกรวยเด้ง. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: สองพี่น้องรวมพลังที่ สนามแข่งสีสด เพื่อปลดล็อก หลบกรวยเด้ง และเข้าใกล้เส้นชัยของตอนนี้. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของหลบกรวยเด้ง\" and \"C-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba06-009",
         "order": 9,
-        "title": "Twin Finish",
-        "scene": "EP06 scene 09: Twin Finish",
-        "description": "Twin Finish in Racing World, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "โพเดียมเส้นชัย",
-        "mood": "Focused Adventure",
+        "title": "ทางแยกวงกลม",
+        "scene": "EP06 scene 09: ทางแยกวงกลม",
+        "description": "ทางแยกวงกลม in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "สนามแข่งสีสด",
+        "mood": "Cheerful",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI ดูทางแยกวงกลมตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\nARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ดูทางแยกวงกลมตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "Portal ของตอนนี้เริ่มสว่าง ทั้งคู่ชนมือกันหลังผ่านบททดสอบสำเร็จ",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in โพเดียมเส้นชัย. Scene beat: Twin Finish. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Racing World. One clear action: Portal ของตอนนี้เริ่มสว่าง ทั้งคู่ชนมือกันหลังผ่านบททดสอบสำเร็จ. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP เรียก ARI ให้ดู ทางแยกวงกลม ใน สนามแข่งสีสด แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Racing World",
+        "mainAction": "C-SHARP เรียก ARI ให้ดู ทางแยกวงกลม ใน สนามแข่งสีสด แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Racing World",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สนามแข่งสีสด. Scene beat: ทางแยกวงกลม. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: C-SHARP เรียก ARI ให้ดู ทางแยกวงกลม ใน สนามแข่งสีสด แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Racing World. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ดูทางแยกวงกลมตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\" and \"ARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba06-010",
         "order": 10,
-        "title": "Trophy Portal",
-        "scene": "EP06 scene 10: Trophy Portal",
-        "description": "Trophy Portal in Racing World, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "โพเดียมเส้นชัย",
-        "mood": "Cheerful",
+        "title": "ARI กดปุ่มสะพาน",
+        "scene": "EP06 scene 10: ARI กดปุ่มสะพาน",
+        "description": "ARI กดปุ่มสะพาน in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "สนามแข่งสีสด",
+        "mood": "Focused Adventure",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP ผมเห็นทางตรงARI กดปุ่มสะพาน น่าจะเป็นใบ้ของด่านนี้\nC-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ผมเห็นทางตรงARI กดปุ่มสะพาน น่าจะเป็นใบ้ของด่านนี้"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "เยี่ยมมาก ARI พี่ตามแผนน้องเลย"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "สองพี่น้องก้าวเข้า Portal อย่างร่าเริง พร้อม hint ภาพเล็ก ๆ ของด่านถัดไป",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in โพเดียมเส้นชัย. Scene beat: Trophy Portal. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Racing World. One clear action: สองพี่น้องก้าวเข้า Portal อย่างร่าเริง พร้อม hint ภาพเล็ก ๆ ของด่านถัดไป. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI เรียก C-SHARP ให้สังเกต ARI กดปุ่มสะพาน ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "mainAction": "ARI เรียก C-SHARP ให้สังเกต ARI กดปุ่มสะพาน ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สนามแข่งสีสด. Scene beat: ARI กดปุ่มสะพาน. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: ARI เรียก C-SHARP ให้สังเกต ARI กดปุ่มสะพาน ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ผมเห็นทางตรงARI กดปุ่มสะพาน น่าจะเป็นใบ้ของด่านนี้\" and \"C-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba06-011",
+        "order": 11,
+        "title": "C-SHARP พารถข้าม",
+        "scene": "EP06 scene 11: C-SHARP พารถข้าม",
+        "description": "C-SHARP พารถข้าม in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "สนามแข่งสีสด",
+        "mood": "Playful Teamwork",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านC-SHARP พารถข้าม\nARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านC-SHARP พารถข้าม"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "C-SHARP ช่วยเปิดทางหลักของ สนามแข่งสีสด ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ C-SHARP พารถข้าม",
+        "mainAction": "C-SHARP ช่วยเปิดทางหลักของ สนามแข่งสีสด ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ C-SHARP พารถข้าม",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สนามแข่งสีสด. Scene beat: C-SHARP พารถข้าม. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: C-SHARP ช่วยเปิดทางหลักของ สนามแข่งสีสด ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ C-SHARP พารถข้าม. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านC-SHARP พารถข้าม\" and \"ARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba06-012",
+        "order": 12,
+        "title": "รอบสุดท้ายเริ่ม",
+        "scene": "EP06 scene 12: รอบสุดท้ายเริ่ม",
+        "description": "รอบสุดท้ายเริ่ม in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "สนามแข่งสีสด",
+        "mood": "Bright Challenge",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\nC-SHARP: ไปเลย ARI ทีมเราทำได้",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ไปเลย ARI ทีมเราทำได้"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "ARI แก้จังหวะของ รอบสุดท้ายเริ่ม แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "mainAction": "ARI แก้จังหวะของ รอบสุดท้ายเริ่ม แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สนามแข่งสีสด. Scene beat: รอบสุดท้ายเริ่ม. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: ARI แก้จังหวะของ รอบสุดท้ายเริ่ม แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\" and \"C-SHARP: ไปเลย ARI ทีมเราทำได้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba06-013",
+        "order": 13,
+        "title": "บูสต์คู่หน้าเส้นชัย",
+        "scene": "EP06 scene 13: บูสต์คู่หน้าเส้นชัย",
+        "description": "บูสต์คู่หน้าเส้นชัย in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "เส้นชัยไฟนีออน",
+        "mood": "Cheerful",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "C-SHARP: ARI ถ้าเรากดพร้อมกัน บูสต์คู่หน้าเส้นชัย น่าจะปลดล็อก\nARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ถ้าเรากดพร้อมกัน บูสต์คู่หน้าเส้นชัย น่าจะปลดล็อก"
+          },
+          {
+            "speaker": "ARI",
+            "text": "เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน บูสต์คู่หน้าเส้นชัย โดยไม่เสียจังหวะของด่าน",
+        "mainAction": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน บูสต์คู่หน้าเส้นชัย โดยไม่เสียจังหวะของด่าน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เส้นชัยไฟนีออน. Scene beat: บูสต์คู่หน้าเส้นชัย. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน บูสต์คู่หน้าเส้นชัย โดยไม่เสียจังหวะของด่าน. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ถ้าเรากดพร้อมกัน บูสต์คู่หน้าเส้นชัย น่าจะปลดล็อก\" and \"ARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba06-014",
+        "order": 14,
+        "title": "ธงตาหมากรุกโบก",
+        "scene": "EP06 scene 14: ธงตาหมากรุกโบก",
+        "description": "ธงตาหมากรุกโบก in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "เส้นชัยไฟนีออน",
+        "mood": "Focused Adventure",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "ARI: C-SHARP ระวังจุดเด้งตรงธงตาหมากรุกโบกนะครับ\nC-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ระวังจุดเด้งตรงธงตาหมากรุกโบกนะครับ"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ธงตาหมากรุกโบก อย่างปลอดภัย",
+        "mainAction": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ธงตาหมากรุกโบก อย่างปลอดภัย",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เส้นชัยไฟนีออน. Scene beat: ธงตาหมากรุกโบก. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ธงตาหมากรุกโบก อย่างปลอดภัย. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ระวังจุดเด้งตรงธงตาหมากรุกโบกนะครับ\" and \"C-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba06-015",
+        "order": 15,
+        "title": "รับตรา Racing",
+        "scene": "EP06 scene 15: รับตรา Racing",
+        "description": "รับตรา Racing in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "เส้นชัยไฟนีออน",
+        "mood": "Playful Teamwork",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "C-SHARP: ARI เก่งมาก ใกล้ผ่านรับตรา Racingแล้ว\nARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI เก่งมาก ใกล้ผ่านรับตรา Racingแล้ว"
+          },
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ รับตรา Racing แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "mainAction": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ รับตรา Racing แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เส้นชัยไฟนีออน. Scene beat: รับตรา Racing. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: ARI มองเห็นทางลัดเล็ก ๆ ใกล้ รับตรา Racing แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI เก่งมาก ใกล้ผ่านรับตรา Racingแล้ว\" and \"ARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba06-016",
+        "order": 16,
+        "title": "จอดรถใน Lobby",
+        "scene": "EP06 scene 16: จอดรถใน Lobby",
+        "description": "จอดรถใน Lobby in Racing World, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "เส้นชัยไฟนีออน",
+        "mood": "Bright Challenge",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของจอดรถใน Lobby\nC-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของจอดรถใน Lobby"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "สองพี่น้องรวมพลังที่ เส้นชัยไฟนีออน เพื่อปลดล็อก จอดรถใน Lobby และเข้าใกล้เส้นชัยของตอนนี้",
+        "mainAction": "สองพี่น้องรวมพลังที่ เส้นชัยไฟนีออน เพื่อปลดล็อก จอดรถใน Lobby และเข้าใกล้เส้นชัยของตอนนี้",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เส้นชัยไฟนีออน. Scene beat: จอดรถใน Lobby. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Racing World. One clear action only: สองพี่น้องรวมพลังที่ เส้นชัยไฟนีออน เพื่อปลดล็อก จอดรถใน Lobby และเข้าใกล้เส้นชัยของตอนนี้. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของจอดรถใน Lobby\" and \"C-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       }
     ],
     "characters": [
       {
-        "id": "big_brother_max",
-        "name": "MAX",
-        "thaiName": "แม็กซ์",
-        "role": "พี่ชาย นักลุยและคนปกป้องน้อง",
+        "id": "big_brother_csharp",
+        "name": "C-SHARP",
+        "thaiName": "ซีชาร์ป",
+        "role": "พี่ชาย นักวางแผน กล้าลุย และคอยปกป้องน้อง",
         "ageStyle": "stylized child game avatar, older sibling proportions",
-        "description": "Roblox-style blocky boy avatar inspired by the older child in the reference photo, without identifying the real person. Slightly taller than MINI, warm smile, brave posture, friendly rounded block proportions.",
-        "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband",
+        "description": "Roblox-style blocky boy avatar inspired broadly by the older child in the uploaded reference photo, without identifying the real person. Slightly taller than ARI, warm confident smile, brave posture, friendly rounded block proportions.",
+        "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband, square backpack with checkpoint badge",
         "colors": {
           "primary": "cream",
           "accent": "light green",
@@ -374,23 +720,40 @@
         "hair": "short dark-brown blocky hair, neat side sweep",
         "face": "simple cheerful game-avatar face, expressive eyebrows, no photorealism",
         "props": {
-          "personalProps": "small square backpack, green checkpoint badge"
+          "personalProps": "small square backpack, green checkpoint badge, green wristband"
         },
         "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
         "continuity": {
-          "continuityRules": "Keep MAX taller than MINI, same cream/light-green outfit, same short dark hair, same square backpack and green wristband in every scene and every episode.",
-          "appearingScenes": []
+          "continuityRules": "Keep C-SHARP taller than ARI, with the same cream/light-green outfit, short dark hair, square backpack, checkpoint badge, and green wristband in every scene and every episode.",
+          "appearingScenes": [
+            "rba06-001",
+            "rba06-002",
+            "rba06-003",
+            "rba06-004",
+            "rba06-005",
+            "rba06-006",
+            "rba06-007",
+            "rba06-008",
+            "rba06-009",
+            "rba06-010",
+            "rba06-011",
+            "rba06-012",
+            "rba06-013",
+            "rba06-014",
+            "rba06-015",
+            "rba06-016"
+          ]
         },
         "imageStatus": "idle"
       },
       {
-        "id": "little_brother_mini",
-        "name": "MINI",
-        "thaiName": "มินิ",
+        "id": "little_brother_ari",
+        "name": "ARI",
+        "thaiName": "อารี",
         "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
         "ageStyle": "stylized child game avatar, younger sibling proportions",
-        "description": "Roblox-style blocky boy avatar inspired by the younger child in the reference photo, without identifying the real person. Shorter than MAX, curious bright expression, quick energetic poses.",
-        "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch",
+        "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
+        "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch with compass charm",
         "colors": {
           "primary": "white",
           "accent": "bright blue",
@@ -404,23 +767,40 @@
         },
         "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
         "continuity": {
-          "continuityRules": "Keep MINI shorter than MAX, same white/blue outfit, same fluffy dark hair, same blue utility pouch and compass charm in every scene and every episode.",
-          "appearingScenes": []
+          "continuityRules": "Keep ARI shorter than C-SHARP, with the same white/blue outfit, fluffy dark hair, blue utility pouch, and compass charm in every scene and every episode.",
+          "appearingScenes": [
+            "rba06-001",
+            "rba06-002",
+            "rba06-003",
+            "rba06-004",
+            "rba06-005",
+            "rba06-006",
+            "rba06-007",
+            "rba06-008",
+            "rba06-009",
+            "rba06-010",
+            "rba06-011",
+            "rba06-012",
+            "rba06-013",
+            "rba06-014",
+            "rba06-015",
+            "rba06-016"
+          ]
         },
         "imageStatus": "idle"
       }
     ],
     "characterSheets": {
-      "seriesContinuity": "Use the same MAX and MINI designs across all 10 episodes. They are stylized game avatars inspired by the uploaded reference image, not realistic portraits and not identified as real people.",
+      "seriesContinuity": "Use the same C-SHARP and ARI designs across all 10 episodes. They are stylized game avatars inspired broadly by the uploaded reference image, not realistic portraits and not identified as real people. C-SHARP is always the older brother, ARI is always the younger brother.",
       "characters": [
         {
-          "id": "big_brother_max",
-          "name": "MAX",
-          "thaiName": "แม็กซ์",
-          "role": "พี่ชาย นักลุยและคนปกป้องน้อง",
+          "id": "big_brother_csharp",
+          "name": "C-SHARP",
+          "thaiName": "ซีชาร์ป",
+          "role": "พี่ชาย นักวางแผน กล้าลุย และคอยปกป้องน้อง",
           "ageStyle": "stylized child game avatar, older sibling proportions",
-          "description": "Roblox-style blocky boy avatar inspired by the older child in the reference photo, without identifying the real person. Slightly taller than MINI, warm smile, brave posture, friendly rounded block proportions.",
-          "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband",
+          "description": "Roblox-style blocky boy avatar inspired broadly by the older child in the uploaded reference photo, without identifying the real person. Slightly taller than ARI, warm confident smile, brave posture, friendly rounded block proportions.",
+          "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband, square backpack with checkpoint badge",
           "colors": {
             "primary": "cream",
             "accent": "light green",
@@ -430,23 +810,40 @@
           "hair": "short dark-brown blocky hair, neat side sweep",
           "face": "simple cheerful game-avatar face, expressive eyebrows, no photorealism",
           "props": {
-            "personalProps": "small square backpack, green checkpoint badge"
+            "personalProps": "small square backpack, green checkpoint badge, green wristband"
           },
           "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
           "continuity": {
-            "continuityRules": "Keep MAX taller than MINI, same cream/light-green outfit, same short dark hair, same square backpack and green wristband in every scene and every episode.",
-            "appearingScenes": []
+            "continuityRules": "Keep C-SHARP taller than ARI, with the same cream/light-green outfit, short dark hair, square backpack, checkpoint badge, and green wristband in every scene and every episode.",
+            "appearingScenes": [
+              "rba06-001",
+              "rba06-002",
+              "rba06-003",
+              "rba06-004",
+              "rba06-005",
+              "rba06-006",
+              "rba06-007",
+              "rba06-008",
+              "rba06-009",
+              "rba06-010",
+              "rba06-011",
+              "rba06-012",
+              "rba06-013",
+              "rba06-014",
+              "rba06-015",
+              "rba06-016"
+            ]
           },
           "imageStatus": "idle"
         },
         {
-          "id": "little_brother_mini",
-          "name": "MINI",
-          "thaiName": "มินิ",
+          "id": "little_brother_ari",
+          "name": "ARI",
+          "thaiName": "อารี",
           "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
           "ageStyle": "stylized child game avatar, younger sibling proportions",
-          "description": "Roblox-style blocky boy avatar inspired by the younger child in the reference photo, without identifying the real person. Shorter than MAX, curious bright expression, quick energetic poses.",
-          "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch",
+          "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
+          "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch with compass charm",
           "colors": {
             "primary": "white",
             "accent": "bright blue",
@@ -460,8 +857,25 @@
           },
           "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
           "continuity": {
-            "continuityRules": "Keep MINI shorter than MAX, same white/blue outfit, same fluffy dark hair, same blue utility pouch and compass charm in every scene and every episode.",
-            "appearingScenes": []
+            "continuityRules": "Keep ARI shorter than C-SHARP, with the same white/blue outfit, fluffy dark hair, blue utility pouch, and compass charm in every scene and every episode.",
+            "appearingScenes": [
+              "rba06-001",
+              "rba06-002",
+              "rba06-003",
+              "rba06-004",
+              "rba06-005",
+              "rba06-006",
+              "rba06-007",
+              "rba06-008",
+              "rba06-009",
+              "rba06-010",
+              "rba06-011",
+              "rba06-012",
+              "rba06-013",
+              "rba06-014",
+              "rba06-015",
+              "rba06-016"
+            ]
           },
           "imageStatus": "idle"
         }
@@ -470,45 +884,69 @@
     "atmosphereAssets": [
       {
         "id": "loc-01",
-        "title": "จุดสตาร์ตสนามแข่ง",
-        "description": "Bright Roblox-style game location: จุดสตาร์ตสนามแข่ง, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
-        "isInterior": "No",
-        "atmosphere": "Bright playful adventure",
-        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props",
+        "title": "โรงรถเกม",
+        "description": "Bright Roblox-style game location for Racing World: โรงรถเกม, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
+        "isInterior": "Mixed",
+        "atmosphere": "Bright playful adventure, short-form pacing, not dark",
+        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props, level-specific puzzle objects",
         "lighting": "cheerful daylight or clean arcade glow",
         "colorTone": "varied bright colors, blue accents, green accents, warm highlights",
-        "relatedScenes": [],
+        "relatedScenes": [
+          "rba06-001",
+          "rba06-002",
+          "rba06-003",
+          "rba06-004",
+          "rba06-005",
+          "rba06-006"
+        ],
         "status": "idle"
       },
       {
         "id": "loc-02",
-        "title": "สนามโค้งและลูป",
-        "description": "Bright Roblox-style game location: สนามโค้งและลูป, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
+        "title": "สนามแข่งสีสด",
+        "description": "Bright Roblox-style game location for Racing World: สนามแข่งสีสด, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
         "isInterior": "No",
-        "atmosphere": "Bright playful adventure",
-        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props",
+        "atmosphere": "Bright playful adventure, short-form pacing, not dark",
+        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props, level-specific puzzle objects",
         "lighting": "cheerful daylight or clean arcade glow",
         "colorTone": "varied bright colors, blue accents, green accents, warm highlights",
-        "relatedScenes": [],
+        "relatedScenes": [
+          "rba06-007",
+          "rba06-008",
+          "rba06-009",
+          "rba06-010",
+          "rba06-011",
+          "rba06-012"
+        ],
         "status": "idle"
       },
       {
         "id": "loc-03",
-        "title": "โพเดียมเส้นชัย",
-        "description": "Bright Roblox-style game location: โพเดียมเส้นชัย, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
-        "isInterior": "No",
-        "atmosphere": "Bright playful adventure",
-        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props",
+        "title": "เส้นชัยไฟนีออน",
+        "description": "Bright Roblox-style game location for Racing World: เส้นชัยไฟนีออน, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
+        "isInterior": "Yes",
+        "atmosphere": "Bright playful adventure, short-form pacing, not dark",
+        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props, level-specific puzzle objects",
         "lighting": "cheerful daylight or clean arcade glow",
         "colorTone": "varied bright colors, blue accents, green accents, warm highlights",
-        "relatedScenes": [],
+        "relatedScenes": [
+          "rba06-013",
+          "rba06-014",
+          "rba06-015",
+          "rba06-016"
+        ],
         "status": "idle"
       }
     ],
     "productAssets": [],
     "customGenre": "Roblox-style Family Adventure",
-    "productionDesignAnalyzed": true
+    "productionDesignAnalyzed": true,
+    "continuityRules": {
+      "names": "พี่ชายชื่อ C-SHARP, น้องชายชื่อ ARI. Scene dialogue must use these exact names naturally throughout each episode.",
+      "visualIdentity": "Keep C-SHARP and ARI visually consistent across all scenes and all 10 episodes using the same outfits, hair, proportions, props, and blocky stylized avatar style.",
+      "format": "9:16, short-form adventure, one main action per scene, 15-18 scenes per episode, one level per episode, ends in the episode, bright and not dark."
+    }
   },
   "currentStep": 6,
-  "updatedAt": "2026-08-24T09:00:00+07:00"
+  "updatedAt": "2026-08-25T19:45:00+07:00"
 }

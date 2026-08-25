@@ -4,21 +4,24 @@
   "format": {
     "aspectRatio": "9:16",
     "secondsPerScene": 8,
-    "defaultSceneCount": 10,
-    "approxDurationSeconds": 80,
-    "dialogue": false,
+    "defaultSceneCount": 16,
+    "sceneCountRange": "15-18",
+    "approxDurationSeconds": 128,
+    "dialogue": true,
     "narration": false,
-    "audio": "music + ambience + SFX",
+    "audio": "dialogue + music + ambience + SFX",
     "tone": "bright, playful, family-friendly, not dark"
   },
   "status": "STEP6_READY",
   "characterSheets": "ROBLOX-BROTHERS-ADVENTURE/CHARACTER_SHEETS.json",
+  "continuity": "C-SHARP is the older brother and ARI is the younger brother. Keep their stylized Roblox/game-avatar visual identity consistent across all 10 EP and use their exact names naturally in every scene dialogue.",
   "episodes": [
     {
       "episode": 1,
       "titleTH": "ประตูสู่ Beginner Obby",
       "titleEN": "Beginner Obby Portal",
       "level": "Beginner Obby / Portal",
+      "sceneCount": 16,
       "path": "ROBLOX-BROTHERS-ADVENTURE/EP01-Beginner-Obby-Portal/STEP6.json",
       "status": "STEP6_READY",
       "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP01-Beginner-Obby-Portal/metadata.json"
@@ -28,6 +31,7 @@
       "titleTH": "รถรางเหมืองสุดป่วน",
       "titleEN": "Minecart Adventure",
       "level": "Minecart Adventure",
+      "sceneCount": 16,
       "path": "ROBLOX-BROTHERS-ADVENTURE/EP02-Minecart-Adventure/STEP6.json",
       "status": "STEP6_READY",
       "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP02-Minecart-Adventure/metadata.json"
@@ -37,6 +41,7 @@
       "titleTH": "เกาะลอยฟ้า",
       "titleEN": "Sky Islands",
       "level": "Sky Islands",
+      "sceneCount": 16,
       "path": "ROBLOX-BROTHERS-ADVENTURE/EP03-Sky-Islands/STEP6.json",
       "status": "STEP6_READY",
       "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP03-Sky-Islands/metadata.json"
@@ -46,6 +51,7 @@
       "titleTH": "เมืองน้ำท่วม",
       "titleEN": "Flood Escape",
       "level": "Flood Escape",
+      "sceneCount": 16,
       "path": "ROBLOX-BROTHERS-ADVENTURE/EP04-Flood-Escape/STEP6.json",
       "status": "STEP6_READY",
       "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP04-Flood-Escape/metadata.json"
@@ -55,6 +61,7 @@
       "titleTH": "ปราสาทปริศนา",
       "titleEN": "Puzzle Castle",
       "level": "Puzzle Castle",
+      "sceneCount": 16,
       "path": "ROBLOX-BROTHERS-ADVENTURE/EP05-Puzzle-Castle/STEP6.json",
       "status": "STEP6_READY",
       "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP05-Puzzle-Castle/metadata.json"
@@ -64,6 +71,7 @@
       "titleTH": "แข่งรถสุดป่วน",
       "titleEN": "Racing World",
       "level": "Racing World",
+      "sceneCount": 16,
       "path": "ROBLOX-BROTHERS-ADVENTURE/EP06-Racing-World/STEP6.json",
       "status": "STEP6_READY",
       "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP06-Racing-World/metadata.json"
@@ -73,6 +81,7 @@
       "titleTH": "สวนสัตว์หลุดกรง",
       "titleEN": "Animal Rescue",
       "level": "Animal Rescue",
+      "sceneCount": 16,
       "path": "ROBLOX-BROTHERS-ADVENTURE/EP07-Animal-Rescue/STEP6.json",
       "status": "STEP6_READY",
       "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP07-Animal-Rescue/metadata.json"
@@ -82,6 +91,7 @@
       "titleTH": "โรงงานหุ่นยนต์วุ่นวาย",
       "titleEN": "Robot Factory",
       "level": "Robot Factory",
+      "sceneCount": 16,
       "path": "ROBLOX-BROTHERS-ADVENTURE/EP08-Robot-Factory/STEP6.json",
       "status": "STEP6_READY",
       "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP08-Robot-Factory/metadata.json"
@@ -91,6 +101,7 @@
       "titleTH": "โจรสลัดแห่งเกาะสมบัติ",
       "titleEN": "Pirate Island",
       "level": "Pirate Island",
+      "sceneCount": 16,
       "path": "ROBLOX-BROTHERS-ADVENTURE/EP09-Pirate-Island/STEP6.json",
       "status": "STEP6_READY",
       "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP09-Pirate-Island/metadata.json"
@@ -100,9 +111,11 @@
       "titleTH": "Mega Obby Final",
       "titleEN": "Mega Obby Final",
       "level": "Mega Obby Final",
+      "sceneCount": 16,
       "path": "ROBLOX-BROTHERS-ADVENTURE/EP10-Mega-Obby-Final/STEP6.json",
       "status": "STEP6_READY",
       "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP10-Mega-Obby-Final/metadata.json"
     }
-  ]
+  ],
+  "updatedAt": "2026-08-25T19:45:00+07:00"
 }

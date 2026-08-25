@@ -3,26 +3,26 @@
   "settings": {
     "aspectRatio": "9:16",
     "language": "Thai",
-    "durationMode": "1m",
-    "targetSceneCount": 10,
+    "durationMode": "short-form-adventure",
+    "targetSceneCount": 16,
     "secondsPerScene": 8,
     "imageModel": "🍌 Nano Banana Pro",
     "videoModel": "veo-3-1-lite-lower-priority",
     "productionMode": "frame",
-    "audioType": "music_ambience_sfx",
-    "voiceGender": "none",
-    "voiceStyle": "ไม่มีบทพูด ไม่มีผู้บรรยาย ใช้ดนตรี บรรยากาศ และ SFX เล่าเรื่อง",
-    "voiceStyleId": "none",
+    "audioType": "music_ambience_sfx_dialogue",
+    "voiceGender": "child-friendly dialogue mix",
+    "voiceStyle": "บทสนทนาธรรมชาติระหว่างสองพี่น้อง เรียกชื่อ C-SHARP และ ARI เป็นระยะตลอดเรื่อง ไม่มีผู้บรรยาย",
+    "voiceStyleId": "natural-thai-kids-dialogue",
     "selectedProjectStyle": "custom-structure",
     "selectedProjectType": "custom-structure",
     "characterStyleCategory": "stylized game avatars",
-    "customCharacterStyle": "Consistent Roblox-style blocky child adventure avatars based on uploaded reference image, stylized only, no real identity, no photorealism.",
+    "customCharacterStyle": "Consistent Roblox-style blocky child adventure avatars based broadly on uploaded reference image, stylized only, no real identity, no photorealism.",
     "castingMode": "custom",
     "customCastingCount": 2,
     "locationMode": "custom",
     "customLocationCount": 3,
     "visualStyle": "Bright family-friendly Roblox-style adventure world with toy-like blocky avatars, colorful obstacle levels, clean readable shapes, cheerful daylight or arcade lighting. No dark horror, no realistic injury, no official logos, no copied UI, no photorealism.",
-    "customProjectStructure": "Silent vertical Roblox-style adventure, approximately 80 seconds, 10 scenes x 8 seconds. No long dialogue, no dialogue and no narration. Music, ambience and SFX only. One main action and one camera movement per scene.",
+    "customProjectStructure": "Vertical Roblox-style adventure, 16 scenes x 8 seconds. One level per episode, ends in this episode. Each scene has one main action, actionDescription, imageDescription, videoPrompt, and natural dialogue where C-SHARP and ARI call each other by name.",
     "visualStyleId": "custom",
     "customVisualStyle": "Colorful stylized game cinematic with blocky avatars, playful physics, glossy toy materials, vivid level design and strong visual storytelling."
   },
@@ -40,331 +40,677 @@
       "teamwork"
     ],
     "plotDetails": "",
-    "mainStoryPrompt": "Silent bright Roblox-style adventure for kids and family. MAX and MINI are two stylized brother game avatars inspired by the uploaded reference photo without identifying the real children. EP09: Pirate Island. MAX และ MINI ผจญภัยในด่าน Pirate Island แบบจบในตอน ต้องใช้ teamwork ระหว่างพี่ชายที่กล้าลุยกับน้องชายที่ช่างสังเกต ผ่าน 10 ฉากสั้น ๆ โดยไม่มีบทพูด เน้นภาพ ดนตรี ambience และ SFX. End in this episode while lightly hinting at the next level. No long dialogue, no speech, no narration. Visual storytelling only with upbeat music, ambience and SFX. Keep tone colorful, safe and not dark.",
-    "storySummary": "MAX และ MINI ผจญภัยในด่าน Pirate Island แบบจบในตอน ต้องใช้ teamwork ระหว่างพี่ชายที่กล้าลุยกับน้องชายที่ช่างสังเกต ผ่าน 10 ฉากสั้น ๆ โดยไม่มีบทพูด เน้นภาพ ดนตรี ambience และ SFX",
+    "mainStoryPrompt": "Bright Roblox-style adventure for kids and family. C-SHARP and ARI are two stylized brother game avatars inspired broadly by the uploaded reference photo without identifying the real children. EP09: Pirate Island. C-SHARP พี่ชาย และ ARI น้องชาย ผจญภัยหนึ่งด่านแบบจบในตอน ผ่าน 16 scenes สั้น ๆ พร้อมบทสนทนาเรียกชื่อกันตลอดเรื่องอย่างเป็นธรรมชาติ เน้น teamwork, music, ambience, SFX และ dialogue สั้น ๆ. Keep tone colorful, safe and not dark.",
+    "storySummary": "C-SHARP และ ARI ผจญภัยในด่าน Pirate Island แบบจบในตอน โดย C-SHARP คอยนำทางและปกป้อง ส่วน ARI ช่างสังเกตและช่วยแก้ปริศนา ทั้งคู่เรียกชื่อกันอย่างเป็นธรรมชาติในทุก scene ระหว่างผ่าน 16 ฉากสั้นแนวผจญภัยสดใส",
     "genreDetailPrompt": "",
     "storyTitle": "Roblox Brothers Adventure — 2 พี่น้องตะลุยโลกเกม EP09 — โจรสลัดแห่งเกาะสมบัติ",
     "scenes": [
       {
         "id": "rba09-001",
         "order": 1,
-        "title": "Map Bottle",
-        "scene": "EP09 scene 01: Map Bottle",
-        "description": "Map Bottle in Pirate Island, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "ชายหาดโจรสลัด",
+        "title": "ขวดแผนที่ลอยมา",
+        "scene": "EP09 scene 01: ขวดแผนที่ลอยมา",
+        "description": "ขวดแผนที่ลอยมา in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ชายหาดเกาะสมบัติ",
         "mood": "Cheerful",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI ดูขวดแผนที่ลอยมาตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\nARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ดูขวดแผนที่ลอยมาตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MAX และ MINI โผล่มาที่ ชายหาดโจรสลัด และมองเห็นเป้าหมายของด่านนี้อย่างตื่นเต้น",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ชายหาดโจรสลัด. Scene beat: Map Bottle. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Pirate Island. One clear action: MAX และ MINI โผล่มาที่ ชายหาดโจรสลัด และมองเห็นเป้าหมายของด่านนี้อย่างตื่นเต้น. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP เรียก ARI ให้ดู ขวดแผนที่ลอยมา ใน ชายหาดเกาะสมบัติ แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Pirate Island",
+        "mainAction": "C-SHARP เรียก ARI ให้ดู ขวดแผนที่ลอยมา ใน ชายหาดเกาะสมบัติ แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Pirate Island",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ชายหาดเกาะสมบัติ. Scene beat: ขวดแผนที่ลอยมา. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: C-SHARP เรียก ARI ให้ดู ขวดแผนที่ลอยมา ใน ชายหาดเกาะสมบัติ แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Pirate Island. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ดูขวดแผนที่ลอยมาตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\" and \"ARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba09-002",
         "order": 2,
-        "title": "Palm Clue",
-        "scene": "EP09 scene 02: Palm Clue",
-        "description": "Palm Clue in Pirate Island, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "ชายหาดโจรสลัด",
+        "title": "เดินขึ้นชายหาด",
+        "scene": "EP09 scene 02: เดินขึ้นชายหาด",
+        "description": "เดินขึ้นชายหาด in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ชายหาดเกาะสมบัติ",
         "mood": "Focused Adventure",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP ผมเห็นทางตรงเดินขึ้นชายหาด น่าจะเป็นใบ้ของด่านนี้\nC-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ผมเห็นทางตรงเดินขึ้นชายหาด น่าจะเป็นใบ้ของด่านนี้"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "เยี่ยมมาก ARI พี่ตามแผนน้องเลย"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "ทั้งคู่เริ่มเคลื่อนที่ผ่าน ชายหาดโจรสลัด โดย MAX นำทางและ MINI สังเกตปุ่มหรือสัญลักษณ์สำคัญ",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ชายหาดโจรสลัด. Scene beat: Palm Clue. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Pirate Island. One clear action: ทั้งคู่เริ่มเคลื่อนที่ผ่าน ชายหาดโจรสลัด โดย MAX นำทางและ MINI สังเกตปุ่มหรือสัญลักษณ์สำคัญ. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI เรียก C-SHARP ให้สังเกต เดินขึ้นชายหาด ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "mainAction": "ARI เรียก C-SHARP ให้สังเกต เดินขึ้นชายหาด ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ชายหาดเกาะสมบัติ. Scene beat: เดินขึ้นชายหาด. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: ARI เรียก C-SHARP ให้สังเกต เดินขึ้นชายหาด ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ผมเห็นทางตรงเดินขึ้นชายหาด น่าจะเป็นใบ้ของด่านนี้\" and \"C-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba09-003",
         "order": 3,
-        "title": "Coconut Button",
-        "scene": "EP09 scene 03: Coconut Button",
-        "description": "Coconut Button in Pirate Island, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "ชายหาดโจรสลัด",
-        "mood": "Focused Adventure",
+        "title": "ARI อ่านกากบาท",
+        "scene": "EP09 scene 03: ARI อ่านกากบาท",
+        "description": "ARI อ่านกากบาท in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ชายหาดเกาะสมบัติ",
+        "mood": "Playful Teamwork",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านARI อ่านกากบาท\nARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านARI อ่านกากบาท"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MINI พบเงื่อนงำเล็ก ๆ บนพื้น ส่วน MAX คอยกันทางและชี้ checkpoint ถัดไป",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ชายหาดโจรสลัด. Scene beat: Coconut Button. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Pirate Island. One clear action: MINI พบเงื่อนงำเล็ก ๆ บนพื้น ส่วน MAX คอยกันทางและชี้ checkpoint ถัดไป. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP ช่วยเปิดทางหลักของ ชายหาดเกาะสมบัติ ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ ARI อ่านกากบาท",
+        "mainAction": "C-SHARP ช่วยเปิดทางหลักของ ชายหาดเกาะสมบัติ ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ ARI อ่านกากบาท",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ชายหาดเกาะสมบัติ. Scene beat: ARI อ่านกากบาท. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: C-SHARP ช่วยเปิดทางหลักของ ชายหาดเกาะสมบัติ ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ ARI อ่านกากบาท. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านARI อ่านกากบาท\" and \"ARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba09-004",
         "order": 4,
-        "title": "Shell Cave Glow",
-        "scene": "EP09 scene 04: Shell Cave Glow",
-        "description": "Shell Cave Glow in Pirate Island, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "ถ้ำเปลือกหอย",
-        "mood": "Focused Adventure",
+        "title": "C-SHARP ขุดจุดแรก",
+        "scene": "EP09 scene 04: C-SHARP ขุดจุดแรก",
+        "description": "C-SHARP ขุดจุดแรก in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ชายหาดเกาะสมบัติ",
+        "mood": "Bright Challenge",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\nC-SHARP: ไปเลย ARI ทีมเราทำได้",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ไปเลย ARI ทีมเราทำได้"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MAX ช่วยยกหรือดัน prop หลักของด่าน เพื่อเปิดทางให้ MINI ผ่านไปก่อน",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ถ้ำเปลือกหอย. Scene beat: Shell Cave Glow. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Pirate Island. One clear action: MAX ช่วยยกหรือดัน prop หลักของด่าน เพื่อเปิดทางให้ MINI ผ่านไปก่อน. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI แก้จังหวะของ C-SHARP ขุดจุดแรก แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "mainAction": "ARI แก้จังหวะของ C-SHARP ขุดจุดแรก แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ชายหาดเกาะสมบัติ. Scene beat: C-SHARP ขุดจุดแรก. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: ARI แก้จังหวะของ C-SHARP ขุดจุดแรก แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\" and \"C-SHARP: ไปเลย ARI ทีมเราทำได้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba09-005",
         "order": 5,
-        "title": "Echo Puzzle",
-        "scene": "EP09 scene 05: Echo Puzzle",
-        "description": "Echo Puzzle in Pirate Island, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "ถ้ำเปลือกหอย",
-        "mood": "Focused Adventure",
+        "title": "สะพานไม้เปิด",
+        "scene": "EP09 scene 05: สะพานไม้เปิด",
+        "description": "สะพานไม้เปิด in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ชายหาดเกาะสมบัติ",
+        "mood": "Cheerful",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI ถ้าเรากดพร้อมกัน สะพานไม้เปิด น่าจะปลดล็อก\nARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ถ้าเรากดพร้อมกัน สะพานไม้เปิด น่าจะปลดล็อก"
+          },
+          {
+            "speaker": "ARI",
+            "text": "เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MINI ใช้ความคล่องตัวแก้จังหวะ obstacle แล้วส่งสัญญาณให้พี่ตามมา",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ถ้ำเปลือกหอย. Scene beat: Echo Puzzle. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Pirate Island. One clear action: MINI ใช้ความคล่องตัวแก้จังหวะ obstacle แล้วส่งสัญญาณให้พี่ตามมา. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน สะพานไม้เปิด โดยไม่เสียจังหวะของด่าน",
+        "mainAction": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน สะพานไม้เปิด โดยไม่เสียจังหวะของด่าน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ชายหาดเกาะสมบัติ. Scene beat: สะพานไม้เปิด. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน สะพานไม้เปิด โดยไม่เสียจังหวะของด่าน. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ถ้าเรากดพร้อมกัน สะพานไม้เปิด น่าจะปลดล็อก\" and \"ARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba09-006",
         "order": 6,
-        "title": "Bridge of Planks",
-        "scene": "EP09 scene 06: Bridge of Planks",
-        "description": "Bridge of Planks in Pirate Island, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "ถ้ำเปลือกหอย",
+        "title": "ขึ้นเรือของเล่น",
+        "scene": "EP09 scene 06: ขึ้นเรือของเล่น",
+        "description": "ขึ้นเรือของเล่น in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ชายหาดเกาะสมบัติ",
         "mood": "Focused Adventure",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP ระวังจุดเด้งตรงขึ้นเรือของเล่นนะครับ\nC-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ระวังจุดเด้งตรงขึ้นเรือของเล่นนะครับ"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "ทั้งคู่ต้องทำงานพร้อมกัน กดปุ่มและขยับกลไกให้ไฟ checkpoint เปลี่ยนเป็นสีเขียว",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ถ้ำเปลือกหอย. Scene beat: Bridge of Planks. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Pirate Island. One clear action: ทั้งคู่ต้องทำงานพร้อมกัน กดปุ่มและขยับกลไกให้ไฟ checkpoint เปลี่ยนเป็นสีเขียว. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ขึ้นเรือของเล่น อย่างปลอดภัย",
+        "mainAction": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ขึ้นเรือของเล่น อย่างปลอดภัย",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ชายหาดเกาะสมบัติ. Scene beat: ขึ้นเรือของเล่น. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ขึ้นเรือของเล่น อย่างปลอดภัย. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ระวังจุดเด้งตรงขึ้นเรือของเล่นนะครับ\" and \"C-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba09-007",
         "order": 7,
-        "title": "Toy Ship Reveal",
-        "scene": "EP09 scene 07: Toy Ship Reveal",
-        "description": "Toy Ship Reveal in Pirate Island, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "ถ้ำเปลือกหอย",
-        "mood": "Focused Adventure",
+        "title": "หมุนพวงมาลัย",
+        "scene": "EP09 scene 07: หมุนพวงมาลัย",
+        "description": "หมุนพวงมาลัย in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "เรือโจรสลัดของเล่น",
+        "mood": "Playful Teamwork",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI เก่งมาก ใกล้ผ่านหมุนพวงมาลัยแล้ว\nARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI เก่งมาก ใกล้ผ่านหมุนพวงมาลัยแล้ว"
+          },
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "เกิดอุปสรรคสนุก ๆ กลางด่าน แต่ไม่มีอันตราย ทั้งคู่รีบปรับแผนด้วย teamwork",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ถ้ำเปลือกหอย. Scene beat: Toy Ship Reveal. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Pirate Island. One clear action: เกิดอุปสรรคสนุก ๆ กลางด่าน แต่ไม่มีอันตราย ทั้งคู่รีบปรับแผนด้วย teamwork. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ หมุนพวงมาลัย แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "mainAction": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ หมุนพวงมาลัย แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เรือโจรสลัดของเล่น. Scene beat: หมุนพวงมาลัย. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: ARI มองเห็นทางลัดเล็ก ๆ ใกล้ หมุนพวงมาลัย แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI เก่งมาก ใกล้ผ่านหมุนพวงมาลัยแล้ว\" and \"ARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba09-008",
         "order": 8,
-        "title": "Treasure Wheel",
-        "scene": "EP09 scene 08: Treasure Wheel",
-        "description": "Treasure Wheel in Pirate Island, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "เรือสมบัติ",
-        "mood": "Focused Adventure",
+        "title": "ปืนใหญ่ยิงลูกปา",
+        "scene": "EP09 scene 08: ปืนใหญ่ยิงลูกปา",
+        "description": "ปืนใหญ่ยิงลูกปา in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "เรือโจรสลัดของเล่น",
+        "mood": "Bright Challenge",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของปืนใหญ่ยิงลูกปา\nC-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของปืนใหญ่ยิงลูกปา"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MAX และ MINI รวมของหรือชิ้นส่วนสุดท้าย เพื่อเปิดทางไปยังประตูปลายด่าน",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เรือสมบัติ. Scene beat: Treasure Wheel. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Pirate Island. One clear action: MAX และ MINI รวมของหรือชิ้นส่วนสุดท้าย เพื่อเปิดทางไปยังประตูปลายด่าน. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "สองพี่น้องรวมพลังที่ เรือโจรสลัดของเล่น เพื่อปลดล็อก ปืนใหญ่ยิงลูกปา และเข้าใกล้เส้นชัยของตอนนี้",
+        "mainAction": "สองพี่น้องรวมพลังที่ เรือโจรสลัดของเล่น เพื่อปลดล็อก ปืนใหญ่ยิงลูกปา และเข้าใกล้เส้นชัยของตอนนี้",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เรือโจรสลัดของเล่น. Scene beat: ปืนใหญ่ยิงลูกปา. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: สองพี่น้องรวมพลังที่ เรือโจรสลัดของเล่น เพื่อปลดล็อก ปืนใหญ่ยิงลูกปา และเข้าใกล้เส้นชัยของตอนนี้. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของปืนใหญ่ยิงลูกปา\" and \"C-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba09-009",
         "order": 9,
-        "title": "Chest Portal",
-        "scene": "EP09 scene 09: Chest Portal",
-        "description": "Chest Portal in Pirate Island, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "เรือสมบัติ",
-        "mood": "Focused Adventure",
+        "title": "เก็บไข่มุกสามสี",
+        "scene": "EP09 scene 09: เก็บไข่มุกสามสี",
+        "description": "เก็บไข่มุกสามสี in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "เรือโจรสลัดของเล่น",
+        "mood": "Cheerful",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI ดูเก็บไข่มุกสามสีตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\nARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ดูเก็บไข่มุกสามสีตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "Portal ของตอนนี้เริ่มสว่าง ทั้งคู่ชนมือกันหลังผ่านบททดสอบสำเร็จ",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เรือสมบัติ. Scene beat: Chest Portal. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Pirate Island. One clear action: Portal ของตอนนี้เริ่มสว่าง ทั้งคู่ชนมือกันหลังผ่านบททดสอบสำเร็จ. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP เรียก ARI ให้ดู เก็บไข่มุกสามสี ใน เรือโจรสลัดของเล่น แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Pirate Island",
+        "mainAction": "C-SHARP เรียก ARI ให้ดู เก็บไข่มุกสามสี ใน เรือโจรสลัดของเล่น แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Pirate Island",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เรือโจรสลัดของเล่น. Scene beat: เก็บไข่มุกสามสี. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: C-SHARP เรียก ARI ให้ดู เก็บไข่มุกสามสี ใน เรือโจรสลัดของเล่น แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Pirate Island. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ดูเก็บไข่มุกสามสีตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\" and \"ARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba09-010",
         "order": 10,
-        "title": "Sail Away",
-        "scene": "EP09 scene 10: Sail Away",
-        "description": "Sail Away in Pirate Island, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "เรือสมบัติ",
-        "mood": "Cheerful",
+        "title": "ถ้ำสมบัติเปิด",
+        "scene": "EP09 scene 10: ถ้ำสมบัติเปิด",
+        "description": "ถ้ำสมบัติเปิด in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "เรือโจรสลัดของเล่น",
+        "mood": "Focused Adventure",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP ผมเห็นทางตรงถ้ำสมบัติเปิด น่าจะเป็นใบ้ของด่านนี้\nC-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ผมเห็นทางตรงถ้ำสมบัติเปิด น่าจะเป็นใบ้ของด่านนี้"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "เยี่ยมมาก ARI พี่ตามแผนน้องเลย"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "สองพี่น้องก้าวเข้า Portal อย่างร่าเริง พร้อม hint ภาพเล็ก ๆ ของด่านถัดไป",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เรือสมบัติ. Scene beat: Sail Away. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Pirate Island. One clear action: สองพี่น้องก้าวเข้า Portal อย่างร่าเริง พร้อม hint ภาพเล็ก ๆ ของด่านถัดไป. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI เรียก C-SHARP ให้สังเกต ถ้ำสมบัติเปิด ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "mainAction": "ARI เรียก C-SHARP ให้สังเกต ถ้ำสมบัติเปิด ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เรือโจรสลัดของเล่น. Scene beat: ถ้ำสมบัติเปิด. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: ARI เรียก C-SHARP ให้สังเกต ถ้ำสมบัติเปิด ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ผมเห็นทางตรงถ้ำสมบัติเปิด น่าจะเป็นใบ้ของด่านนี้\" and \"C-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba09-011",
+        "order": 11,
+        "title": "ARI จับคู่เหรียญ",
+        "scene": "EP09 scene 11: ARI จับคู่เหรียญ",
+        "description": "ARI จับคู่เหรียญ in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "เรือโจรสลัดของเล่น",
+        "mood": "Playful Teamwork",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านARI จับคู่เหรียญ\nARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านARI จับคู่เหรียญ"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "C-SHARP ช่วยเปิดทางหลักของ เรือโจรสลัดของเล่น ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ ARI จับคู่เหรียญ",
+        "mainAction": "C-SHARP ช่วยเปิดทางหลักของ เรือโจรสลัดของเล่น ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ ARI จับคู่เหรียญ",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เรือโจรสลัดของเล่น. Scene beat: ARI จับคู่เหรียญ. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: C-SHARP ช่วยเปิดทางหลักของ เรือโจรสลัดของเล่น ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ ARI จับคู่เหรียญ. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านARI จับคู่เหรียญ\" and \"ARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba09-012",
+        "order": 12,
+        "title": "C-SHARP ยกหีบ",
+        "scene": "EP09 scene 12: C-SHARP ยกหีบ",
+        "description": "C-SHARP ยกหีบ in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "เรือโจรสลัดของเล่น",
+        "mood": "Bright Challenge",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\nC-SHARP: ไปเลย ARI ทีมเราทำได้",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ไปเลย ARI ทีมเราทำได้"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "ARI แก้จังหวะของ C-SHARP ยกหีบ แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "mainAction": "ARI แก้จังหวะของ C-SHARP ยกหีบ แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in เรือโจรสลัดของเล่น. Scene beat: C-SHARP ยกหีบ. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: ARI แก้จังหวะของ C-SHARP ยกหีบ แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\" and \"C-SHARP: ไปเลย ARI ทีมเราทำได้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba09-013",
+        "order": 13,
+        "title": "แสงสมบัติพุ่งขึ้น",
+        "scene": "EP09 scene 13: แสงสมบัติพุ่งขึ้น",
+        "description": "แสงสมบัติพุ่งขึ้น in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ถ้ำสมบัติ",
+        "mood": "Cheerful",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "C-SHARP: ARI ถ้าเรากดพร้อมกัน แสงสมบัติพุ่งขึ้น น่าจะปลดล็อก\nARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ถ้าเรากดพร้อมกัน แสงสมบัติพุ่งขึ้น น่าจะปลดล็อก"
+          },
+          {
+            "speaker": "ARI",
+            "text": "เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน แสงสมบัติพุ่งขึ้น โดยไม่เสียจังหวะของด่าน",
+        "mainAction": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน แสงสมบัติพุ่งขึ้น โดยไม่เสียจังหวะของด่าน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ถ้ำสมบัติ. Scene beat: แสงสมบัติพุ่งขึ้น. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน แสงสมบัติพุ่งขึ้น โดยไม่เสียจังหวะของด่าน. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ถ้าเรากดพร้อมกัน แสงสมบัติพุ่งขึ้น น่าจะปลดล็อก\" and \"ARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba09-014",
+        "order": 14,
+        "title": "แบ่งเหรียญให้เกาะ",
+        "scene": "EP09 scene 14: แบ่งเหรียญให้เกาะ",
+        "description": "แบ่งเหรียญให้เกาะ in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ถ้ำสมบัติ",
+        "mood": "Focused Adventure",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "ARI: C-SHARP ระวังจุดเด้งตรงแบ่งเหรียญให้เกาะนะครับ\nC-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ระวังจุดเด้งตรงแบ่งเหรียญให้เกาะนะครับ"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ แบ่งเหรียญให้เกาะ อย่างปลอดภัย",
+        "mainAction": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ แบ่งเหรียญให้เกาะ อย่างปลอดภัย",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ถ้ำสมบัติ. Scene beat: แบ่งเหรียญให้เกาะ. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ แบ่งเหรียญให้เกาะ อย่างปลอดภัย. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ระวังจุดเด้งตรงแบ่งเหรียญให้เกาะนะครับ\" and \"C-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba09-015",
+        "order": 15,
+        "title": "รับตรา Pirate",
+        "scene": "EP09 scene 15: รับตรา Pirate",
+        "description": "รับตรา Pirate in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ถ้ำสมบัติ",
+        "mood": "Playful Teamwork",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "C-SHARP: ARI เก่งมาก ใกล้ผ่านรับตรา Pirateแล้ว\nARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI เก่งมาก ใกล้ผ่านรับตรา Pirateแล้ว"
+          },
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ รับตรา Pirate แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "mainAction": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ รับตรา Pirate แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ถ้ำสมบัติ. Scene beat: รับตรา Pirate. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: ARI มองเห็นทางลัดเล็ก ๆ ใกล้ รับตรา Pirate แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI เก่งมาก ใกล้ผ่านรับตรา Pirateแล้ว\" and \"ARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba09-016",
+        "order": 16,
+        "title": "เรือพากลับ Lobby",
+        "scene": "EP09 scene 16: เรือพากลับ Lobby",
+        "description": "เรือพากลับ Lobby in Pirate Island, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ถ้ำสมบัติ",
+        "mood": "Bright Challenge",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของเรือพากลับ Lobby\nC-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของเรือพากลับ Lobby"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "สองพี่น้องรวมพลังที่ ถ้ำสมบัติ เพื่อปลดล็อก เรือพากลับ Lobby และเข้าใกล้เส้นชัยของตอนนี้",
+        "mainAction": "สองพี่น้องรวมพลังที่ ถ้ำสมบัติ เพื่อปลดล็อก เรือพากลับ Lobby และเข้าใกล้เส้นชัยของตอนนี้",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ถ้ำสมบัติ. Scene beat: เรือพากลับ Lobby. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Pirate Island. One clear action only: สองพี่น้องรวมพลังที่ ถ้ำสมบัติ เพื่อปลดล็อก เรือพากลับ Lobby และเข้าใกล้เส้นชัยของตอนนี้. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของเรือพากลับ Lobby\" and \"C-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       }
     ],
     "characters": [
       {
-        "id": "big_brother_max",
-        "name": "MAX",
-        "thaiName": "แม็กซ์",
-        "role": "พี่ชาย นักลุยและคนปกป้องน้อง",
+        "id": "big_brother_csharp",
+        "name": "C-SHARP",
+        "thaiName": "ซีชาร์ป",
+        "role": "พี่ชาย นักวางแผน กล้าลุย และคอยปกป้องน้อง",
         "ageStyle": "stylized child game avatar, older sibling proportions",
-        "description": "Roblox-style blocky boy avatar inspired by the older child in the reference photo, without identifying the real person. Slightly taller than MINI, warm smile, brave posture, friendly rounded block proportions.",
-        "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband",
+        "description": "Roblox-style blocky boy avatar inspired broadly by the older child in the uploaded reference photo, without identifying the real person. Slightly taller than ARI, warm confident smile, brave posture, friendly rounded block proportions.",
+        "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband, square backpack with checkpoint badge",
         "colors": {
           "primary": "cream",
           "accent": "light green",
@@ -374,23 +720,40 @@
         "hair": "short dark-brown blocky hair, neat side sweep",
         "face": "simple cheerful game-avatar face, expressive eyebrows, no photorealism",
         "props": {
-          "personalProps": "small square backpack, green checkpoint badge"
+          "personalProps": "small square backpack, green checkpoint badge, green wristband"
         },
         "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
         "continuity": {
-          "continuityRules": "Keep MAX taller than MINI, same cream/light-green outfit, same short dark hair, same square backpack and green wristband in every scene and every episode.",
-          "appearingScenes": []
+          "continuityRules": "Keep C-SHARP taller than ARI, with the same cream/light-green outfit, short dark hair, square backpack, checkpoint badge, and green wristband in every scene and every episode.",
+          "appearingScenes": [
+            "rba09-001",
+            "rba09-002",
+            "rba09-003",
+            "rba09-004",
+            "rba09-005",
+            "rba09-006",
+            "rba09-007",
+            "rba09-008",
+            "rba09-009",
+            "rba09-010",
+            "rba09-011",
+            "rba09-012",
+            "rba09-013",
+            "rba09-014",
+            "rba09-015",
+            "rba09-016"
+          ]
         },
         "imageStatus": "idle"
       },
       {
-        "id": "little_brother_mini",
-        "name": "MINI",
-        "thaiName": "มินิ",
+        "id": "little_brother_ari",
+        "name": "ARI",
+        "thaiName": "อารี",
         "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
         "ageStyle": "stylized child game avatar, younger sibling proportions",
-        "description": "Roblox-style blocky boy avatar inspired by the younger child in the reference photo, without identifying the real person. Shorter than MAX, curious bright expression, quick energetic poses.",
-        "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch",
+        "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
+        "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch with compass charm",
         "colors": {
           "primary": "white",
           "accent": "bright blue",
@@ -404,23 +767,40 @@
         },
         "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
         "continuity": {
-          "continuityRules": "Keep MINI shorter than MAX, same white/blue outfit, same fluffy dark hair, same blue utility pouch and compass charm in every scene and every episode.",
-          "appearingScenes": []
+          "continuityRules": "Keep ARI shorter than C-SHARP, with the same white/blue outfit, fluffy dark hair, blue utility pouch, and compass charm in every scene and every episode.",
+          "appearingScenes": [
+            "rba09-001",
+            "rba09-002",
+            "rba09-003",
+            "rba09-004",
+            "rba09-005",
+            "rba09-006",
+            "rba09-007",
+            "rba09-008",
+            "rba09-009",
+            "rba09-010",
+            "rba09-011",
+            "rba09-012",
+            "rba09-013",
+            "rba09-014",
+            "rba09-015",
+            "rba09-016"
+          ]
         },
         "imageStatus": "idle"
       }
     ],
     "characterSheets": {
-      "seriesContinuity": "Use the same MAX and MINI designs across all 10 episodes. They are stylized game avatars inspired by the uploaded reference image, not realistic portraits and not identified as real people.",
+      "seriesContinuity": "Use the same C-SHARP and ARI designs across all 10 episodes. They are stylized game avatars inspired broadly by the uploaded reference image, not realistic portraits and not identified as real people. C-SHARP is always the older brother, ARI is always the younger brother.",
       "characters": [
         {
-          "id": "big_brother_max",
-          "name": "MAX",
-          "thaiName": "แม็กซ์",
-          "role": "พี่ชาย นักลุยและคนปกป้องน้อง",
+          "id": "big_brother_csharp",
+          "name": "C-SHARP",
+          "thaiName": "ซีชาร์ป",
+          "role": "พี่ชาย นักวางแผน กล้าลุย และคอยปกป้องน้อง",
           "ageStyle": "stylized child game avatar, older sibling proportions",
-          "description": "Roblox-style blocky boy avatar inspired by the older child in the reference photo, without identifying the real person. Slightly taller than MINI, warm smile, brave posture, friendly rounded block proportions.",
-          "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband",
+          "description": "Roblox-style blocky boy avatar inspired broadly by the older child in the uploaded reference photo, without identifying the real person. Slightly taller than ARI, warm confident smile, brave posture, friendly rounded block proportions.",
+          "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband, square backpack with checkpoint badge",
           "colors": {
             "primary": "cream",
             "accent": "light green",
@@ -430,23 +810,40 @@
           "hair": "short dark-brown blocky hair, neat side sweep",
           "face": "simple cheerful game-avatar face, expressive eyebrows, no photorealism",
           "props": {
-            "personalProps": "small square backpack, green checkpoint badge"
+            "personalProps": "small square backpack, green checkpoint badge, green wristband"
           },
           "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
           "continuity": {
-            "continuityRules": "Keep MAX taller than MINI, same cream/light-green outfit, same short dark hair, same square backpack and green wristband in every scene and every episode.",
-            "appearingScenes": []
+            "continuityRules": "Keep C-SHARP taller than ARI, with the same cream/light-green outfit, short dark hair, square backpack, checkpoint badge, and green wristband in every scene and every episode.",
+            "appearingScenes": [
+              "rba09-001",
+              "rba09-002",
+              "rba09-003",
+              "rba09-004",
+              "rba09-005",
+              "rba09-006",
+              "rba09-007",
+              "rba09-008",
+              "rba09-009",
+              "rba09-010",
+              "rba09-011",
+              "rba09-012",
+              "rba09-013",
+              "rba09-014",
+              "rba09-015",
+              "rba09-016"
+            ]
           },
           "imageStatus": "idle"
         },
         {
-          "id": "little_brother_mini",
-          "name": "MINI",
-          "thaiName": "มินิ",
+          "id": "little_brother_ari",
+          "name": "ARI",
+          "thaiName": "อารี",
           "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
           "ageStyle": "stylized child game avatar, younger sibling proportions",
-          "description": "Roblox-style blocky boy avatar inspired by the younger child in the reference photo, without identifying the real person. Shorter than MAX, curious bright expression, quick energetic poses.",
-          "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch",
+          "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
+          "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch with compass charm",
           "colors": {
             "primary": "white",
             "accent": "bright blue",
@@ -460,8 +857,25 @@
           },
           "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
           "continuity": {
-            "continuityRules": "Keep MINI shorter than MAX, same white/blue outfit, same fluffy dark hair, same blue utility pouch and compass charm in every scene and every episode.",
-            "appearingScenes": []
+            "continuityRules": "Keep ARI shorter than C-SHARP, with the same white/blue outfit, fluffy dark hair, blue utility pouch, and compass charm in every scene and every episode.",
+            "appearingScenes": [
+              "rba09-001",
+              "rba09-002",
+              "rba09-003",
+              "rba09-004",
+              "rba09-005",
+              "rba09-006",
+              "rba09-007",
+              "rba09-008",
+              "rba09-009",
+              "rba09-010",
+              "rba09-011",
+              "rba09-012",
+              "rba09-013",
+              "rba09-014",
+              "rba09-015",
+              "rba09-016"
+            ]
           },
           "imageStatus": "idle"
         }
@@ -470,45 +884,69 @@
     "atmosphereAssets": [
       {
         "id": "loc-01",
-        "title": "ชายหาดโจรสลัด",
-        "description": "Bright Roblox-style game location: ชายหาดโจรสลัด, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
-        "isInterior": "No",
-        "atmosphere": "Bright playful adventure",
-        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props",
+        "title": "ชายหาดเกาะสมบัติ",
+        "description": "Bright Roblox-style game location for Pirate Island: ชายหาดเกาะสมบัติ, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
+        "isInterior": "Mixed",
+        "atmosphere": "Bright playful adventure, short-form pacing, not dark",
+        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props, level-specific puzzle objects",
         "lighting": "cheerful daylight or clean arcade glow",
         "colorTone": "varied bright colors, blue accents, green accents, warm highlights",
-        "relatedScenes": [],
+        "relatedScenes": [
+          "rba09-001",
+          "rba09-002",
+          "rba09-003",
+          "rba09-004",
+          "rba09-005",
+          "rba09-006"
+        ],
         "status": "idle"
       },
       {
         "id": "loc-02",
-        "title": "ถ้ำเปลือกหอย",
-        "description": "Bright Roblox-style game location: ถ้ำเปลือกหอย, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
-        "isInterior": "Yes",
-        "atmosphere": "Bright playful adventure",
-        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props",
+        "title": "เรือโจรสลัดของเล่น",
+        "description": "Bright Roblox-style game location for Pirate Island: เรือโจรสลัดของเล่น, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
+        "isInterior": "No",
+        "atmosphere": "Bright playful adventure, short-form pacing, not dark",
+        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props, level-specific puzzle objects",
         "lighting": "cheerful daylight or clean arcade glow",
         "colorTone": "varied bright colors, blue accents, green accents, warm highlights",
-        "relatedScenes": [],
+        "relatedScenes": [
+          "rba09-007",
+          "rba09-008",
+          "rba09-009",
+          "rba09-010",
+          "rba09-011",
+          "rba09-012"
+        ],
         "status": "idle"
       },
       {
         "id": "loc-03",
-        "title": "เรือสมบัติ",
-        "description": "Bright Roblox-style game location: เรือสมบัติ, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
-        "isInterior": "No",
-        "atmosphere": "Bright playful adventure",
-        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props",
+        "title": "ถ้ำสมบัติ",
+        "description": "Bright Roblox-style game location for Pirate Island: ถ้ำสมบัติ, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
+        "isInterior": "Yes",
+        "atmosphere": "Bright playful adventure, short-form pacing, not dark",
+        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props, level-specific puzzle objects",
         "lighting": "cheerful daylight or clean arcade glow",
         "colorTone": "varied bright colors, blue accents, green accents, warm highlights",
-        "relatedScenes": [],
+        "relatedScenes": [
+          "rba09-013",
+          "rba09-014",
+          "rba09-015",
+          "rba09-016"
+        ],
         "status": "idle"
       }
     ],
     "productAssets": [],
     "customGenre": "Roblox-style Family Adventure",
-    "productionDesignAnalyzed": true
+    "productionDesignAnalyzed": true,
+    "continuityRules": {
+      "names": "พี่ชายชื่อ C-SHARP, น้องชายชื่อ ARI. Scene dialogue must use these exact names naturally throughout each episode.",
+      "visualIdentity": "Keep C-SHARP and ARI visually consistent across all scenes and all 10 episodes using the same outfits, hair, proportions, props, and blocky stylized avatar style.",
+      "format": "9:16, short-form adventure, one main action per scene, 15-18 scenes per episode, one level per episode, ends in the episode, bright and not dark."
+    }
   },
   "currentStep": 6,
-  "updatedAt": "2026-08-24T09:00:00+07:00"
+  "updatedAt": "2026-08-25T19:45:00+07:00"
 }

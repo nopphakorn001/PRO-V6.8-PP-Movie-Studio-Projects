@@ -3,26 +3,26 @@
   "settings": {
     "aspectRatio": "9:16",
     "language": "Thai",
-    "durationMode": "1m",
-    "targetSceneCount": 10,
+    "durationMode": "short-form-adventure",
+    "targetSceneCount": 16,
     "secondsPerScene": 8,
     "imageModel": "🍌 Nano Banana Pro",
     "videoModel": "veo-3-1-lite-lower-priority",
     "productionMode": "frame",
-    "audioType": "music_ambience_sfx",
-    "voiceGender": "none",
-    "voiceStyle": "ไม่มีบทพูด ไม่มีผู้บรรยาย ใช้ดนตรี บรรยากาศ และ SFX เล่าเรื่อง",
-    "voiceStyleId": "none",
+    "audioType": "music_ambience_sfx_dialogue",
+    "voiceGender": "child-friendly dialogue mix",
+    "voiceStyle": "บทสนทนาธรรมชาติระหว่างสองพี่น้อง เรียกชื่อ C-SHARP และ ARI เป็นระยะตลอดเรื่อง ไม่มีผู้บรรยาย",
+    "voiceStyleId": "natural-thai-kids-dialogue",
     "selectedProjectStyle": "custom-structure",
     "selectedProjectType": "custom-structure",
     "characterStyleCategory": "stylized game avatars",
-    "customCharacterStyle": "Consistent Roblox-style blocky child adventure avatars based on uploaded reference image, stylized only, no real identity, no photorealism.",
+    "customCharacterStyle": "Consistent Roblox-style blocky child adventure avatars based broadly on uploaded reference image, stylized only, no real identity, no photorealism.",
     "castingMode": "custom",
     "customCastingCount": 2,
     "locationMode": "custom",
     "customLocationCount": 3,
     "visualStyle": "Bright family-friendly Roblox-style adventure world with toy-like blocky avatars, colorful obstacle levels, clean readable shapes, cheerful daylight or arcade lighting. No dark horror, no realistic injury, no official logos, no copied UI, no photorealism.",
-    "customProjectStructure": "Silent vertical Roblox-style adventure, approximately 80 seconds, 10 scenes x 8 seconds. No long dialogue, no dialogue and no narration. Music, ambience and SFX only. One main action and one camera movement per scene.",
+    "customProjectStructure": "Vertical Roblox-style adventure, 16 scenes x 8 seconds. One level per episode, ends in this episode. Each scene has one main action, actionDescription, imageDescription, videoPrompt, and natural dialogue where C-SHARP and ARI call each other by name.",
     "visualStyleId": "custom",
     "customVisualStyle": "Colorful stylized game cinematic with blocky avatars, playful physics, glossy toy materials, vivid level design and strong visual storytelling."
   },
@@ -40,331 +40,677 @@
       "teamwork"
     ],
     "plotDetails": "",
-    "mainStoryPrompt": "Silent bright Roblox-style adventure for kids and family. MAX and MINI are two stylized brother game avatars inspired by the uploaded reference photo without identifying the real children. EP08: Robot Factory. MAX และ MINI ผจญภัยในด่าน Robot Factory แบบจบในตอน ต้องใช้ teamwork ระหว่างพี่ชายที่กล้าลุยกับน้องชายที่ช่างสังเกต ผ่าน 10 ฉากสั้น ๆ โดยไม่มีบทพูด เน้นภาพ ดนตรี ambience และ SFX. End in this episode while lightly hinting at the next level. No long dialogue, no speech, no narration. Visual storytelling only with upbeat music, ambience and SFX. Keep tone colorful, safe and not dark.",
-    "storySummary": "MAX และ MINI ผจญภัยในด่าน Robot Factory แบบจบในตอน ต้องใช้ teamwork ระหว่างพี่ชายที่กล้าลุยกับน้องชายที่ช่างสังเกต ผ่าน 10 ฉากสั้น ๆ โดยไม่มีบทพูด เน้นภาพ ดนตรี ambience และ SFX",
+    "mainStoryPrompt": "Bright Roblox-style adventure for kids and family. C-SHARP and ARI are two stylized brother game avatars inspired broadly by the uploaded reference photo without identifying the real children. EP08: Robot Factory. C-SHARP พี่ชาย และ ARI น้องชาย ผจญภัยหนึ่งด่านแบบจบในตอน ผ่าน 16 scenes สั้น ๆ พร้อมบทสนทนาเรียกชื่อกันตลอดเรื่องอย่างเป็นธรรมชาติ เน้น teamwork, music, ambience, SFX และ dialogue สั้น ๆ. Keep tone colorful, safe and not dark.",
+    "storySummary": "C-SHARP และ ARI ผจญภัยในด่าน Robot Factory แบบจบในตอน โดย C-SHARP คอยนำทางและปกป้อง ส่วน ARI ช่างสังเกตและช่วยแก้ปริศนา ทั้งคู่เรียกชื่อกันอย่างเป็นธรรมชาติในทุก scene ระหว่างผ่าน 16 ฉากสั้นแนวผจญภัยสดใส",
     "genreDetailPrompt": "",
     "storyTitle": "Roblox Brothers Adventure — 2 พี่น้องตะลุยโลกเกม EP08 — โรงงานหุ่นยนต์วุ่นวาย",
     "scenes": [
       {
         "id": "rba08-001",
         "order": 1,
-        "title": "Factory Arrival",
-        "scene": "EP08 scene 01: Factory Arrival",
-        "description": "Factory Arrival in Robot Factory, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "พื้นโรงงาน",
+        "title": "ประตูโรงงานเปิด",
+        "scene": "EP08 scene 01: ประตูโรงงานเปิด",
+        "description": "ประตูโรงงานเปิด in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "หน้าโรงงานหุ่นยนต์",
         "mood": "Cheerful",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI ดูประตูโรงงานเปิดตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\nARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ดูประตูโรงงานเปิดตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MAX และ MINI โผล่มาที่ พื้นโรงงาน และมองเห็นเป้าหมายของด่านนี้อย่างตื่นเต้น",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in พื้นโรงงาน. Scene beat: Factory Arrival. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Robot Factory. One clear action: MAX และ MINI โผล่มาที่ พื้นโรงงาน และมองเห็นเป้าหมายของด่านนี้อย่างตื่นเต้น. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP เรียก ARI ให้ดู ประตูโรงงานเปิด ใน หน้าโรงงานหุ่นยนต์ แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Robot Factory",
+        "mainAction": "C-SHARP เรียก ARI ให้ดู ประตูโรงงานเปิด ใน หน้าโรงงานหุ่นยนต์ แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Robot Factory",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in หน้าโรงงานหุ่นยนต์. Scene beat: ประตูโรงงานเปิด. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: C-SHARP เรียก ARI ให้ดู ประตูโรงงานเปิด ใน หน้าโรงงานหุ่นยนต์ แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Robot Factory. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ดูประตูโรงงานเปิดตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\" and \"ARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba08-002",
         "order": 2,
-        "title": "Conveyor Hop",
-        "scene": "EP08 scene 02: Conveyor Hop",
-        "description": "Conveyor Hop in Robot Factory, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "พื้นโรงงาน",
+        "title": "หุ่นยนต์ทักผิดจังหวะ",
+        "scene": "EP08 scene 02: หุ่นยนต์ทักผิดจังหวะ",
+        "description": "หุ่นยนต์ทักผิดจังหวะ in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "หน้าโรงงานหุ่นยนต์",
         "mood": "Focused Adventure",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP ผมเห็นทางตรงหุ่นยนต์ทักผิดจังหวะ น่าจะเป็นใบ้ของด่านนี้\nC-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ผมเห็นทางตรงหุ่นยนต์ทักผิดจังหวะ น่าจะเป็นใบ้ของด่านนี้"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "เยี่ยมมาก ARI พี่ตามแผนน้องเลย"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "ทั้งคู่เริ่มเคลื่อนที่ผ่าน พื้นโรงงาน โดย MAX นำทางและ MINI สังเกตปุ่มหรือสัญลักษณ์สำคัญ",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in พื้นโรงงาน. Scene beat: Conveyor Hop. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Robot Factory. One clear action: ทั้งคู่เริ่มเคลื่อนที่ผ่าน พื้นโรงงาน โดย MAX นำทางและ MINI สังเกตปุ่มหรือสัญลักษณ์สำคัญ. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI เรียก C-SHARP ให้สังเกต หุ่นยนต์ทักผิดจังหวะ ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "mainAction": "ARI เรียก C-SHARP ให้สังเกต หุ่นยนต์ทักผิดจังหวะ ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in หน้าโรงงานหุ่นยนต์. Scene beat: หุ่นยนต์ทักผิดจังหวะ. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: ARI เรียก C-SHARP ให้สังเกต หุ่นยนต์ทักผิดจังหวะ ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ผมเห็นทางตรงหุ่นยนต์ทักผิดจังหวะ น่าจะเป็นใบ้ของด่านนี้\" and \"C-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba08-003",
         "order": 3,
-        "title": "Bot Signal",
-        "scene": "EP08 scene 03: Bot Signal",
-        "description": "Bot Signal in Robot Factory, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "พื้นโรงงาน",
-        "mood": "Focused Adventure",
+        "title": "ARI อ่านแผงไฟ",
+        "scene": "EP08 scene 03: ARI อ่านแผงไฟ",
+        "description": "ARI อ่านแผงไฟ in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "หน้าโรงงานหุ่นยนต์",
+        "mood": "Playful Teamwork",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านARI อ่านแผงไฟ\nARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านARI อ่านแผงไฟ"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MINI พบเงื่อนงำเล็ก ๆ บนพื้น ส่วน MAX คอยกันทางและชี้ checkpoint ถัดไป",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in พื้นโรงงาน. Scene beat: Bot Signal. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Robot Factory. One clear action: MINI พบเงื่อนงำเล็ก ๆ บนพื้น ส่วน MAX คอยกันทางและชี้ checkpoint ถัดไป. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP ช่วยเปิดทางหลักของ หน้าโรงงานหุ่นยนต์ ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ ARI อ่านแผงไฟ",
+        "mainAction": "C-SHARP ช่วยเปิดทางหลักของ หน้าโรงงานหุ่นยนต์ ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ ARI อ่านแผงไฟ",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in หน้าโรงงานหุ่นยนต์. Scene beat: ARI อ่านแผงไฟ. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: C-SHARP ช่วยเปิดทางหลักของ หน้าโรงงานหุ่นยนต์ ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ ARI อ่านแผงไฟ. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านARI อ่านแผงไฟ\" and \"ARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba08-004",
         "order": 4,
-        "title": "Red Switch",
-        "scene": "EP08 scene 04: Red Switch",
-        "description": "Red Switch in Robot Factory, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "แท่นสวิตช์ 3 จุด",
-        "mood": "Focused Adventure",
+        "title": "C-SHARP หยุดสายพาน",
+        "scene": "EP08 scene 04: C-SHARP หยุดสายพาน",
+        "description": "C-SHARP หยุดสายพาน in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "หน้าโรงงานหุ่นยนต์",
+        "mood": "Bright Challenge",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\nC-SHARP: ไปเลย ARI ทีมเราทำได้",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ไปเลย ARI ทีมเราทำได้"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MAX ช่วยยกหรือดัน prop หลักของด่าน เพื่อเปิดทางให้ MINI ผ่านไปก่อน",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in แท่นสวิตช์ 3 จุด. Scene beat: Red Switch. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Robot Factory. One clear action: MAX ช่วยยกหรือดัน prop หลักของด่าน เพื่อเปิดทางให้ MINI ผ่านไปก่อน. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI แก้จังหวะของ C-SHARP หยุดสายพาน แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "mainAction": "ARI แก้จังหวะของ C-SHARP หยุดสายพาน แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in หน้าโรงงานหุ่นยนต์. Scene beat: C-SHARP หยุดสายพาน. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: ARI แก้จังหวะของ C-SHARP หยุดสายพาน แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\" and \"C-SHARP: ไปเลย ARI ทีมเราทำได้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba08-005",
         "order": 5,
-        "title": "Blue Switch",
-        "scene": "EP08 scene 05: Blue Switch",
-        "description": "Blue Switch in Robot Factory, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "แท่นสวิตช์ 3 จุด",
-        "mood": "Focused Adventure",
+        "title": "เก็บเฟืองสีฟ้า",
+        "scene": "EP08 scene 05: เก็บเฟืองสีฟ้า",
+        "description": "เก็บเฟืองสีฟ้า in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "หน้าโรงงานหุ่นยนต์",
+        "mood": "Cheerful",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI ถ้าเรากดพร้อมกัน เก็บเฟืองสีฟ้า น่าจะปลดล็อก\nARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ถ้าเรากดพร้อมกัน เก็บเฟืองสีฟ้า น่าจะปลดล็อก"
+          },
+          {
+            "speaker": "ARI",
+            "text": "เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MINI ใช้ความคล่องตัวแก้จังหวะ obstacle แล้วส่งสัญญาณให้พี่ตามมา",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in แท่นสวิตช์ 3 จุด. Scene beat: Blue Switch. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Robot Factory. One clear action: MINI ใช้ความคล่องตัวแก้จังหวะ obstacle แล้วส่งสัญญาณให้พี่ตามมา. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน เก็บเฟืองสีฟ้า โดยไม่เสียจังหวะของด่าน",
+        "mainAction": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน เก็บเฟืองสีฟ้า โดยไม่เสียจังหวะของด่าน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in หน้าโรงงานหุ่นยนต์. Scene beat: เก็บเฟืองสีฟ้า. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน เก็บเฟืองสีฟ้า โดยไม่เสียจังหวะของด่าน. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ถ้าเรากดพร้อมกัน เก็บเฟืองสีฟ้า น่าจะปลดล็อก\" and \"ARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba08-006",
         "order": 6,
-        "title": "Yellow Switch",
-        "scene": "EP08 scene 06: Yellow Switch",
-        "description": "Yellow Switch in Robot Factory, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "แท่นสวิตช์ 3 จุด",
+        "title": "ต่อสายไฟปลอดภัย",
+        "scene": "EP08 scene 06: ต่อสายไฟปลอดภัย",
+        "description": "ต่อสายไฟปลอดภัย in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "หน้าโรงงานหุ่นยนต์",
         "mood": "Focused Adventure",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP ระวังจุดเด้งตรงต่อสายไฟปลอดภัยนะครับ\nC-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ระวังจุดเด้งตรงต่อสายไฟปลอดภัยนะครับ"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "ทั้งคู่ต้องทำงานพร้อมกัน กดปุ่มและขยับกลไกให้ไฟ checkpoint เปลี่ยนเป็นสีเขียว",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in แท่นสวิตช์ 3 จุด. Scene beat: Yellow Switch. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Robot Factory. One clear action: ทั้งคู่ต้องทำงานพร้อมกัน กดปุ่มและขยับกลไกให้ไฟ checkpoint เปลี่ยนเป็นสีเขียว. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ต่อสายไฟปลอดภัย อย่างปลอดภัย",
+        "mainAction": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ต่อสายไฟปลอดภัย อย่างปลอดภัย",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in หน้าโรงงานหุ่นยนต์. Scene beat: ต่อสายไฟปลอดภัย. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ ต่อสายไฟปลอดภัย อย่างปลอดภัย. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ระวังจุดเด้งตรงต่อสายไฟปลอดภัยนะครับ\" and \"C-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba08-007",
         "order": 7,
-        "title": "Box Sorting",
-        "scene": "EP08 scene 07: Box Sorting",
-        "description": "Box Sorting in Robot Factory, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "แท่นสวิตช์ 3 จุด",
-        "mood": "Focused Adventure",
+        "title": "หลบแขนกลโยก",
+        "scene": "EP08 scene 07: หลบแขนกลโยก",
+        "description": "หลบแขนกลโยก in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "สายพานกลไก",
+        "mood": "Playful Teamwork",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI เก่งมาก ใกล้ผ่านหลบแขนกลโยกแล้ว\nARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI เก่งมาก ใกล้ผ่านหลบแขนกลโยกแล้ว"
+          },
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "เกิดอุปสรรคสนุก ๆ กลางด่าน แต่ไม่มีอันตราย ทั้งคู่รีบปรับแผนด้วย teamwork",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in แท่นสวิตช์ 3 จุด. Scene beat: Box Sorting. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Robot Factory. One clear action: เกิดอุปสรรคสนุก ๆ กลางด่าน แต่ไม่มีอันตราย ทั้งคู่รีบปรับแผนด้วย teamwork. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ หลบแขนกลโยก แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "mainAction": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ หลบแขนกลโยก แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สายพานกลไก. Scene beat: หลบแขนกลโยก. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: ARI มองเห็นทางลัดเล็ก ๆ ใกล้ หลบแขนกลโยก แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI เก่งมาก ใกล้ผ่านหลบแขนกลโยกแล้ว\" and \"ARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba08-008",
         "order": 8,
-        "title": "Core Reset",
-        "scene": "EP08 scene 08: Core Reset",
-        "description": "Core Reset in Robot Factory, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "แกนควบคุมโรงงาน",
-        "mood": "Focused Adventure",
+        "title": "กดปุ่มพร้อมกัน",
+        "scene": "EP08 scene 08: กดปุ่มพร้อมกัน",
+        "description": "กดปุ่มพร้อมกัน in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "สายพานกลไก",
+        "mood": "Bright Challenge",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของกดปุ่มพร้อมกัน\nC-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของกดปุ่มพร้อมกัน"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "MAX และ MINI รวมของหรือชิ้นส่วนสุดท้าย เพื่อเปิดทางไปยังประตูปลายด่าน",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in แกนควบคุมโรงงาน. Scene beat: Core Reset. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Robot Factory. One clear action: MAX และ MINI รวมของหรือชิ้นส่วนสุดท้าย เพื่อเปิดทางไปยังประตูปลายด่าน. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "สองพี่น้องรวมพลังที่ สายพานกลไก เพื่อปลดล็อก กดปุ่มพร้อมกัน และเข้าใกล้เส้นชัยของตอนนี้",
+        "mainAction": "สองพี่น้องรวมพลังที่ สายพานกลไก เพื่อปลดล็อก กดปุ่มพร้อมกัน และเข้าใกล้เส้นชัยของตอนนี้",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สายพานกลไก. Scene beat: กดปุ่มพร้อมกัน. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: สองพี่น้องรวมพลังที่ สายพานกลไก เพื่อปลดล็อก กดปุ่มพร้อมกัน และเข้าใกล้เส้นชัยของตอนนี้. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของกดปุ่มพร้อมกัน\" and \"C-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba08-009",
         "order": 9,
-        "title": "Robot Thanks",
-        "scene": "EP08 scene 09: Robot Thanks",
-        "description": "Robot Thanks in Robot Factory, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "แกนควบคุมโรงงาน",
-        "mood": "Focused Adventure",
+        "title": "หุ่นยนต์เรียงแถว",
+        "scene": "EP08 scene 09: หุ่นยนต์เรียงแถว",
+        "description": "หุ่นยนต์เรียงแถว in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "สายพานกลไก",
+        "mood": "Cheerful",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "C-SHARP: ARI ดูหุ่นยนต์เรียงแถวตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\nARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ดูหุ่นยนต์เรียงแถวตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "Portal ของตอนนี้เริ่มสว่าง ทั้งคู่ชนมือกันหลังผ่านบททดสอบสำเร็จ",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in แกนควบคุมโรงงาน. Scene beat: Robot Thanks. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Robot Factory. One clear action: Portal ของตอนนี้เริ่มสว่าง ทั้งคู่ชนมือกันหลังผ่านบททดสอบสำเร็จ. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "C-SHARP เรียก ARI ให้ดู หุ่นยนต์เรียงแถว ใน สายพานกลไก แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Robot Factory",
+        "mainAction": "C-SHARP เรียก ARI ให้ดู หุ่นยนต์เรียงแถว ใน สายพานกลไก แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Robot Factory",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สายพานกลไก. Scene beat: หุ่นยนต์เรียงแถว. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: C-SHARP เรียก ARI ให้ดู หุ่นยนต์เรียงแถว ใน สายพานกลไก แล้วทั้งคู่เริ่มวางแผนผ่านด่าน Robot Factory. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ดูหุ่นยนต์เรียงแถวตรงนั้น พี่ว่าเราผ่านได้ถ้าขยับพร้อมกัน\" and \"ARI: ได้เลย C-SHARP ผมจะนับจังหวะให้พี่เอง\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       },
       {
         "id": "rba08-010",
         "order": 10,
-        "title": "Gear Portal",
-        "scene": "EP08 scene 10: Gear Portal",
-        "description": "Gear Portal in Robot Factory, a bright Roblox-style adventure moment with MAX and MINI.",
-        "location": "แกนควบคุมโรงงาน",
-        "mood": "Cheerful",
+        "title": "ARI ป้อนรหัสสี",
+        "scene": "EP08 scene 10: ARI ป้อนรหัสสี",
+        "description": "ARI ป้อนรหัสสี in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "สายพานกลไก",
+        "mood": "Focused Adventure",
         "sceneCharacters": [
           {
-            "id": "big_brother_max",
-            "name": "MAX"
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
           },
           {
-            "id": "little_brother_mini",
-            "name": "MINI"
+            "id": "little_brother_ari",
+            "name": "ARI"
           }
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "",
-        "dialogues": [],
+        "script": "ARI: C-SHARP ผมเห็นทางตรงARI ป้อนรหัสสี น่าจะเป็นใบ้ของด่านนี้\nC-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ผมเห็นทางตรงARI ป้อนรหัสสี น่าจะเป็นใบ้ของด่านนี้"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "เยี่ยมมาก ARI พี่ตามแผนน้องเลย"
+          }
+        ],
         "isGenerating": false,
         "generationProgress": 0,
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
-        "actionDescription": "สองพี่น้องก้าวเข้า Portal อย่างร่าเริง พร้อม hint ภาพเล็ก ๆ ของด่านถัดไป",
-        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in แกนควบคุมโรงงาน. Scene beat: Gear Portal. Keep MAX taller, cream/light-green outfit, short dark-brown hair, square backpack. Keep MINI shorter, white/blue outfit, fluffy dark-brown hair, blue utility pouch. Stylized game avatars inspired by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no game UI, colorful family-friendly tone, not dark.",
-        "videoPrompt": "8-second vertical shot for Robot Factory. One clear action: สองพี่น้องก้าวเข้า Portal อย่างร่าเริง พร้อม hint ภาพเล็ก ๆ ของด่านถัดไป. Camera: smooth playful push-in, side track, or small crane move. Audio only: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle. No dialogue, no narration, no speech, no scary tone, no violence.",
+        "actionDescription": "ARI เรียก C-SHARP ให้สังเกต ARI ป้อนรหัสสี ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "mainAction": "ARI เรียก C-SHARP ให้สังเกต ARI ป้อนรหัสสี ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สายพานกลไก. Scene beat: ARI ป้อนรหัสสี. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: ARI เรียก C-SHARP ให้สังเกต ARI ป้อนรหัสสี ก่อนที่ทั้งคู่จะขยับไปยังจุดปลอดภัยถัดไป. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ผมเห็นทางตรงARI ป้อนรหัสสี น่าจะเป็นใบ้ของด่านนี้\" and \"C-SHARP: เยี่ยมมาก ARI พี่ตามแผนน้องเลย\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba08-011",
+        "order": 11,
+        "title": "C-SHARP หมุนคันโยก",
+        "scene": "EP08 scene 11: C-SHARP หมุนคันโยก",
+        "description": "C-SHARP หมุนคันโยก in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "สายพานกลไก",
+        "mood": "Playful Teamwork",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านC-SHARP หมุนคันโยก\nARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านC-SHARP หมุนคันโยก"
+          },
+          {
+            "speaker": "ARI",
+            "text": "ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "C-SHARP ช่วยเปิดทางหลักของ สายพานกลไก ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ C-SHARP หมุนคันโยก",
+        "mainAction": "C-SHARP ช่วยเปิดทางหลักของ สายพานกลไก ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ C-SHARP หมุนคันโยก",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สายพานกลไก. Scene beat: C-SHARP หมุนคันโยก. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: C-SHARP ช่วยเปิดทางหลักของ สายพานกลไก ขณะ ARI เช็กสัญลักษณ์ที่นำไปสู่ C-SHARP หมุนคันโยก. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI อยู่ใกล้พี่ไว้นะ เดี๋ยวพี่เปิดทางผ่านC-SHARP หมุนคันโยก\" and \"ARI: ครับ C-SHARP ผมจะดูปุ่มข้างหน้าให้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba08-012",
+        "order": 12,
+        "title": "ระบบเริ่มนิ่ง",
+        "scene": "EP08 scene 12: ระบบเริ่มนิ่ง",
+        "description": "ระบบเริ่มนิ่ง in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "สายพานกลไก",
+        "mood": "Bright Challenge",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\nC-SHARP: ไปเลย ARI ทีมเราทำได้",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ไปเลย ARI ทีมเราทำได้"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "ARI แก้จังหวะของ ระบบเริ่มนิ่ง แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "mainAction": "ARI แก้จังหวะของ ระบบเริ่มนิ่ง แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in สายพานกลไก. Scene beat: ระบบเริ่มนิ่ง. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: ARI แก้จังหวะของ ระบบเริ่มนิ่ง แล้วส่งสัญญาณให้ C-SHARP ตามมาทันที. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP รอจังหวะนี้นะ สาม สอง หนึ่ง ไป\" and \"C-SHARP: ไปเลย ARI ทีมเราทำได้\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba08-013",
+        "order": 13,
+        "title": "ห้องควบคุมสว่าง",
+        "scene": "EP08 scene 13: ห้องควบคุมสว่าง",
+        "description": "ห้องควบคุมสว่าง in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ห้องควบคุมหลัก",
+        "mood": "Cheerful",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "C-SHARP: ARI ถ้าเรากดพร้อมกัน ห้องควบคุมสว่าง น่าจะปลดล็อก\nARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI ถ้าเรากดพร้อมกัน ห้องควบคุมสว่าง น่าจะปลดล็อก"
+          },
+          {
+            "speaker": "ARI",
+            "text": "เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน ห้องควบคุมสว่าง โดยไม่เสียจังหวะของด่าน",
+        "mainAction": "C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน ห้องควบคุมสว่าง โดยไม่เสียจังหวะของด่าน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ห้องควบคุมหลัก. Scene beat: ห้องควบคุมสว่าง. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: C-SHARP และ ARI ทำงานพร้อมกันเพื่อผ่าน ห้องควบคุมสว่าง โดยไม่เสียจังหวะของด่าน. Camera: smooth playful push-in. Include natural Thai kid dialogue with names: \"C-SHARP: ARI ถ้าเรากดพร้อมกัน ห้องควบคุมสว่าง น่าจะปลดล็อก\" and \"ARI: เข้าใจแล้ว C-SHARP ผมพร้อมแล้ว\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba08-014",
+        "order": 14,
+        "title": "หุ่นยนต์เต้นขอบคุณ",
+        "scene": "EP08 scene 14: หุ่นยนต์เต้นขอบคุณ",
+        "description": "หุ่นยนต์เต้นขอบคุณ in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ห้องควบคุมหลัก",
+        "mood": "Focused Adventure",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "ARI: C-SHARP ระวังจุดเด้งตรงหุ่นยนต์เต้นขอบคุณนะครับ\nC-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ระวังจุดเด้งตรงหุ่นยนต์เต้นขอบคุณนะครับ"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ หุ่นยนต์เต้นขอบคุณ อย่างปลอดภัย",
+        "mainAction": "C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ หุ่นยนต์เต้นขอบคุณ อย่างปลอดภัย",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ห้องควบคุมหลัก. Scene beat: หุ่นยนต์เต้นขอบคุณ. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: C-SHARP คอยกันทางให้ ARI ทดลองปุ่มหรือกลไกของ หุ่นยนต์เต้นขอบคุณ อย่างปลอดภัย. Camera: gentle side track. Include natural Thai kid dialogue with names: \"ARI: C-SHARP ระวังจุดเด้งตรงหุ่นยนต์เต้นขอบคุณนะครับ\" and \"C-SHARP: ขอบใจ ARI พี่เห็นแล้ว เราไปทางปลอดภัยกัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba08-015",
+        "order": 15,
+        "title": "รับตรา Robot",
+        "scene": "EP08 scene 15: รับตรา Robot",
+        "description": "รับตรา Robot in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ห้องควบคุมหลัก",
+        "mood": "Playful Teamwork",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "C-SHARP: ARI เก่งมาก ใกล้ผ่านรับตรา Robotแล้ว\nARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ",
+        "dialogues": [
+          {
+            "speaker": "C-SHARP",
+            "text": "ARI เก่งมาก ใกล้ผ่านรับตรา Robotแล้ว"
+          },
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ รับตรา Robot แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "mainAction": "ARI มองเห็นทางลัดเล็ก ๆ ใกล้ รับตรา Robot แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ห้องควบคุมหลัก. Scene beat: รับตรา Robot. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: ARI มองเห็นทางลัดเล็ก ๆ ใกล้ รับตรา Robot แล้ว C-SHARP พาทั้งคู่เคลื่อนที่ตามแผน. Camera: small crane lift. Include natural Thai kid dialogue with names: \"C-SHARP: ARI เก่งมาก ใกล้ผ่านรับตรา Robotแล้ว\" and \"ARI: C-SHARP ก็ช่วยผมตลอดเลย ไปต่อกันครับ\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
+        "narrationText": ""
+      },
+      {
+        "id": "rba08-016",
+        "order": 16,
+        "title": "ออกจากโรงงานอย่างสดใส",
+        "scene": "EP08 scene 16: ออกจากโรงงานอย่างสดใส",
+        "description": "ออกจากโรงงานอย่างสดใส in Robot Factory, a bright Roblox-style short-form adventure moment with C-SHARP and ARI calling each other by name naturally.",
+        "location": "ห้องควบคุมหลัก",
+        "mood": "Bright Challenge",
+        "sceneCharacters": [
+          {
+            "id": "big_brother_csharp",
+            "name": "C-SHARP"
+          },
+          {
+            "id": "little_brother_ari",
+            "name": "ARI"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 8,
+        "script": "ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของออกจากโรงงานอย่างสดใส\nC-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน",
+        "dialogues": [
+          {
+            "speaker": "ARI",
+            "text": "C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของออกจากโรงงานอย่างสดใส"
+          },
+          {
+            "speaker": "C-SHARP",
+            "text": "ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "สองพี่น้องรวมพลังที่ ห้องควบคุมหลัก เพื่อปลดล็อก ออกจากโรงงานอย่างสดใส และเข้าใกล้เส้นชัยของตอนนี้",
+        "mainAction": "สองพี่น้องรวมพลังที่ ห้องควบคุมหลัก เพื่อปลดล็อก ออกจากโรงงานอย่างสดใส และเข้าใกล้เส้นชัยของตอนนี้",
+        "imageDescription": "Vertical 9:16 bright Roblox-style adventure scene in ห้องควบคุมหลัก. Scene beat: ออกจากโรงงานอย่างสดใส. Keep C-SHARP taller, cream hoodie, light-green adventure vest, tan shorts, white sneakers, short dark-brown side-swept blocky hair, square backpack, green wristband. Keep ARI shorter, white shirt, blue adventure hoodie, navy shorts, blue-and-white sneakers, fluffy dark-brown blocky hair, blue utility pouch with compass charm. Stylized game avatars inspired broadly by the uploaded reference image only; no real-person identity, no photorealism, no official logos, no copied UI, colorful family-friendly tone, not dark.",
+        "videoPrompt": "8-second vertical 9:16 shot for Robot Factory. One clear action only: สองพี่น้องรวมพลังที่ ห้องควบคุมหลัก เพื่อปลดล็อก ออกจากโรงงานอย่างสดใส และเข้าใกล้เส้นชัยของตอนนี้. Camera: dynamic follow shot. Include natural Thai kid dialogue with names: \"ARI: C-SHARP นี่น่าจะเป็นชิ้นสุดท้ายของออกจากโรงงานอย่างสดใส\" and \"C-SHARP: ใช่เลย ARI เอามารวมกันแล้วจบด่านนี้กัน\". Audio: upbeat adventure music, location ambience, footsteps, soft cartoon SFX, checkpoint sparkle, clean dialogue mix. No narration, no scary tone, no realistic violence.",
         "narrationText": ""
       }
     ],
     "characters": [
       {
-        "id": "big_brother_max",
-        "name": "MAX",
-        "thaiName": "แม็กซ์",
-        "role": "พี่ชาย นักลุยและคนปกป้องน้อง",
+        "id": "big_brother_csharp",
+        "name": "C-SHARP",
+        "thaiName": "ซีชาร์ป",
+        "role": "พี่ชาย นักวางแผน กล้าลุย และคอยปกป้องน้อง",
         "ageStyle": "stylized child game avatar, older sibling proportions",
-        "description": "Roblox-style blocky boy avatar inspired by the older child in the reference photo, without identifying the real person. Slightly taller than MINI, warm smile, brave posture, friendly rounded block proportions.",
-        "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband",
+        "description": "Roblox-style blocky boy avatar inspired broadly by the older child in the uploaded reference photo, without identifying the real person. Slightly taller than ARI, warm confident smile, brave posture, friendly rounded block proportions.",
+        "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband, square backpack with checkpoint badge",
         "colors": {
           "primary": "cream",
           "accent": "light green",
@@ -374,23 +720,40 @@
         "hair": "short dark-brown blocky hair, neat side sweep",
         "face": "simple cheerful game-avatar face, expressive eyebrows, no photorealism",
         "props": {
-          "personalProps": "small square backpack, green checkpoint badge"
+          "personalProps": "small square backpack, green checkpoint badge, green wristband"
         },
         "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
         "continuity": {
-          "continuityRules": "Keep MAX taller than MINI, same cream/light-green outfit, same short dark hair, same square backpack and green wristband in every scene and every episode.",
-          "appearingScenes": []
+          "continuityRules": "Keep C-SHARP taller than ARI, with the same cream/light-green outfit, short dark hair, square backpack, checkpoint badge, and green wristband in every scene and every episode.",
+          "appearingScenes": [
+            "rba08-001",
+            "rba08-002",
+            "rba08-003",
+            "rba08-004",
+            "rba08-005",
+            "rba08-006",
+            "rba08-007",
+            "rba08-008",
+            "rba08-009",
+            "rba08-010",
+            "rba08-011",
+            "rba08-012",
+            "rba08-013",
+            "rba08-014",
+            "rba08-015",
+            "rba08-016"
+          ]
         },
         "imageStatus": "idle"
       },
       {
-        "id": "little_brother_mini",
-        "name": "MINI",
-        "thaiName": "มินิ",
+        "id": "little_brother_ari",
+        "name": "ARI",
+        "thaiName": "อารี",
         "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
         "ageStyle": "stylized child game avatar, younger sibling proportions",
-        "description": "Roblox-style blocky boy avatar inspired by the younger child in the reference photo, without identifying the real person. Shorter than MAX, curious bright expression, quick energetic poses.",
-        "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch",
+        "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
+        "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch with compass charm",
         "colors": {
           "primary": "white",
           "accent": "bright blue",
@@ -404,23 +767,40 @@
         },
         "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
         "continuity": {
-          "continuityRules": "Keep MINI shorter than MAX, same white/blue outfit, same fluffy dark hair, same blue utility pouch and compass charm in every scene and every episode.",
-          "appearingScenes": []
+          "continuityRules": "Keep ARI shorter than C-SHARP, with the same white/blue outfit, fluffy dark hair, blue utility pouch, and compass charm in every scene and every episode.",
+          "appearingScenes": [
+            "rba08-001",
+            "rba08-002",
+            "rba08-003",
+            "rba08-004",
+            "rba08-005",
+            "rba08-006",
+            "rba08-007",
+            "rba08-008",
+            "rba08-009",
+            "rba08-010",
+            "rba08-011",
+            "rba08-012",
+            "rba08-013",
+            "rba08-014",
+            "rba08-015",
+            "rba08-016"
+          ]
         },
         "imageStatus": "idle"
       }
     ],
     "characterSheets": {
-      "seriesContinuity": "Use the same MAX and MINI designs across all 10 episodes. They are stylized game avatars inspired by the uploaded reference image, not realistic portraits and not identified as real people.",
+      "seriesContinuity": "Use the same C-SHARP and ARI designs across all 10 episodes. They are stylized game avatars inspired broadly by the uploaded reference image, not realistic portraits and not identified as real people. C-SHARP is always the older brother, ARI is always the younger brother.",
       "characters": [
         {
-          "id": "big_brother_max",
-          "name": "MAX",
-          "thaiName": "แม็กซ์",
-          "role": "พี่ชาย นักลุยและคนปกป้องน้อง",
+          "id": "big_brother_csharp",
+          "name": "C-SHARP",
+          "thaiName": "ซีชาร์ป",
+          "role": "พี่ชาย นักวางแผน กล้าลุย และคอยปกป้องน้อง",
           "ageStyle": "stylized child game avatar, older sibling proportions",
-          "description": "Roblox-style blocky boy avatar inspired by the older child in the reference photo, without identifying the real person. Slightly taller than MINI, warm smile, brave posture, friendly rounded block proportions.",
-          "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband",
+          "description": "Roblox-style blocky boy avatar inspired broadly by the older child in the uploaded reference photo, without identifying the real person. Slightly taller than ARI, warm confident smile, brave posture, friendly rounded block proportions.",
+          "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband, square backpack with checkpoint badge",
           "colors": {
             "primary": "cream",
             "accent": "light green",
@@ -430,23 +810,40 @@
           "hair": "short dark-brown blocky hair, neat side sweep",
           "face": "simple cheerful game-avatar face, expressive eyebrows, no photorealism",
           "props": {
-            "personalProps": "small square backpack, green checkpoint badge"
+            "personalProps": "small square backpack, green checkpoint badge, green wristband"
           },
           "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
           "continuity": {
-            "continuityRules": "Keep MAX taller than MINI, same cream/light-green outfit, same short dark hair, same square backpack and green wristband in every scene and every episode.",
-            "appearingScenes": []
+            "continuityRules": "Keep C-SHARP taller than ARI, with the same cream/light-green outfit, short dark hair, square backpack, checkpoint badge, and green wristband in every scene and every episode.",
+            "appearingScenes": [
+              "rba08-001",
+              "rba08-002",
+              "rba08-003",
+              "rba08-004",
+              "rba08-005",
+              "rba08-006",
+              "rba08-007",
+              "rba08-008",
+              "rba08-009",
+              "rba08-010",
+              "rba08-011",
+              "rba08-012",
+              "rba08-013",
+              "rba08-014",
+              "rba08-015",
+              "rba08-016"
+            ]
           },
           "imageStatus": "idle"
         },
         {
-          "id": "little_brother_mini",
-          "name": "MINI",
-          "thaiName": "มินิ",
+          "id": "little_brother_ari",
+          "name": "ARI",
+          "thaiName": "อารี",
           "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
           "ageStyle": "stylized child game avatar, younger sibling proportions",
-          "description": "Roblox-style blocky boy avatar inspired by the younger child in the reference photo, without identifying the real person. Shorter than MAX, curious bright expression, quick energetic poses.",
-          "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch",
+          "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
+          "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch with compass charm",
           "colors": {
             "primary": "white",
             "accent": "bright blue",
@@ -460,8 +857,25 @@
           },
           "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
           "continuity": {
-            "continuityRules": "Keep MINI shorter than MAX, same white/blue outfit, same fluffy dark hair, same blue utility pouch and compass charm in every scene and every episode.",
-            "appearingScenes": []
+            "continuityRules": "Keep ARI shorter than C-SHARP, with the same white/blue outfit, fluffy dark hair, blue utility pouch, and compass charm in every scene and every episode.",
+            "appearingScenes": [
+              "rba08-001",
+              "rba08-002",
+              "rba08-003",
+              "rba08-004",
+              "rba08-005",
+              "rba08-006",
+              "rba08-007",
+              "rba08-008",
+              "rba08-009",
+              "rba08-010",
+              "rba08-011",
+              "rba08-012",
+              "rba08-013",
+              "rba08-014",
+              "rba08-015",
+              "rba08-016"
+            ]
           },
           "imageStatus": "idle"
         }
@@ -470,45 +884,69 @@
     "atmosphereAssets": [
       {
         "id": "loc-01",
-        "title": "พื้นโรงงาน",
-        "description": "Bright Roblox-style game location: พื้นโรงงาน, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
-        "isInterior": "Yes",
-        "atmosphere": "Bright playful adventure",
-        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props",
+        "title": "หน้าโรงงานหุ่นยนต์",
+        "description": "Bright Roblox-style game location for Robot Factory: หน้าโรงงานหุ่นยนต์, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
+        "isInterior": "Mixed",
+        "atmosphere": "Bright playful adventure, short-form pacing, not dark",
+        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props, level-specific puzzle objects",
         "lighting": "cheerful daylight or clean arcade glow",
         "colorTone": "varied bright colors, blue accents, green accents, warm highlights",
-        "relatedScenes": [],
+        "relatedScenes": [
+          "rba08-001",
+          "rba08-002",
+          "rba08-003",
+          "rba08-004",
+          "rba08-005",
+          "rba08-006"
+        ],
         "status": "idle"
       },
       {
         "id": "loc-02",
-        "title": "แท่นสวิตช์ 3 จุด",
-        "description": "Bright Roblox-style game location: แท่นสวิตช์ 3 จุด, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
+        "title": "สายพานกลไก",
+        "description": "Bright Roblox-style game location for Robot Factory: สายพานกลไก, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
         "isInterior": "No",
-        "atmosphere": "Bright playful adventure",
-        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props",
+        "atmosphere": "Bright playful adventure, short-form pacing, not dark",
+        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props, level-specific puzzle objects",
         "lighting": "cheerful daylight or clean arcade glow",
         "colorTone": "varied bright colors, blue accents, green accents, warm highlights",
-        "relatedScenes": [],
+        "relatedScenes": [
+          "rba08-007",
+          "rba08-008",
+          "rba08-009",
+          "rba08-010",
+          "rba08-011",
+          "rba08-012"
+        ],
         "status": "idle"
       },
       {
         "id": "loc-03",
-        "title": "แกนควบคุมโรงงาน",
-        "description": "Bright Roblox-style game location: แกนควบคุมโรงงาน, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
+        "title": "ห้องควบคุมหลัก",
+        "description": "Bright Roblox-style game location for Robot Factory: ห้องควบคุมหลัก, colorful toy-like geometry, readable obstacle layout, safe family-friendly props.",
         "isInterior": "Yes",
-        "atmosphere": "Bright playful adventure",
-        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props",
+        "atmosphere": "Bright playful adventure, short-form pacing, not dark",
+        "keyProps": "checkpoints, buttons, platforms, portal particles, colorful game props, level-specific puzzle objects",
         "lighting": "cheerful daylight or clean arcade glow",
         "colorTone": "varied bright colors, blue accents, green accents, warm highlights",
-        "relatedScenes": [],
+        "relatedScenes": [
+          "rba08-013",
+          "rba08-014",
+          "rba08-015",
+          "rba08-016"
+        ],
         "status": "idle"
       }
     ],
     "productAssets": [],
     "customGenre": "Roblox-style Family Adventure",
-    "productionDesignAnalyzed": true
+    "productionDesignAnalyzed": true,
+    "continuityRules": {
+      "names": "พี่ชายชื่อ C-SHARP, น้องชายชื่อ ARI. Scene dialogue must use these exact names naturally throughout each episode.",
+      "visualIdentity": "Keep C-SHARP and ARI visually consistent across all scenes and all 10 episodes using the same outfits, hair, proportions, props, and blocky stylized avatar style.",
+      "format": "9:16, short-form adventure, one main action per scene, 15-18 scenes per episode, one level per episode, ends in the episode, bright and not dark."
+    }
   },
   "currentStep": 6,
-  "updatedAt": "2026-08-24T09:00:00+07:00"
+  "updatedAt": "2026-08-25T19:45:00+07:00"
 }
