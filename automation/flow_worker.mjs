@@ -184,6 +184,11 @@ async function accessKeyGateVisible(cdp, contextMap) {
   return false;
 }
 
+async function studioReady(cdp, contextMap) {
+  const text = await visibleText(cdp, contextMap);
+  return /STEP\s*01|สไตล์หนัง/i.test(text) && /STEP\s*06|สร้างหนัง/i.test(text);
+}
+
 async function guard(cdp, contextMap) {
   const text = [];
   for (const scope of contextMap) {
@@ -354,9 +359,9 @@ try {
   }
   const joined = bodyTexts.join("\n");
   if (/sign in|เข้าสู่ระบบ/i.test(joined) && !/STEP 01|สไตล์หนัง/i.test(joined)) { await result("BLOCKED_GOOGLE_SIGN_IN_REQUIRED", { profile }); cdp.close(); process.exit(3); }
-  const studioEntered = await enterStudio(cdp, contextMap);
+  const studioEntered = await studioReady(cdp, contextMap) || await enterStudio(cdp, contextMap);
   contextMap = await allContexts(cdp);
-  if (!studioEntered || await accessKeyGateVisible(cdp, contextMap)) {
+  if (!await studioReady(cdp, contextMap) && (!studioEntered || await accessKeyGateVisible(cdp, contextMap))) {
     throw new Error("FLOW_ACCESS_KEY_ENTRY_NOT_CONFIRMED");
   }
   const imported = await importStep6(cdp, contextMap);

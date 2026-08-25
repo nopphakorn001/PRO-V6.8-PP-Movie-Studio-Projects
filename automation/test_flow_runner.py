@@ -43,6 +43,7 @@ class FlowRunnerTests(unittest.TestCase):
         self.assertIn("button.dispatchEvent(new PointerEvent('pointerdown'", worker)
         self.assertIn("FLOW_ACCESS_KEY_ENTRY_NOT_CONFIRMED", worker)
         self.assertIn("accessKeyGateVisible", worker)
+        self.assertIn("studioReady", worker)
         self.assertIn("new InputEvent('input'", worker)
         self.assertIn('Input.insertText', worker)
         self.assertIn("value.length!==expectedLength", worker)
