@@ -222,6 +222,7 @@ async function guard(cdp, contextMap) {
     if (visibleChallenge) throw new Error("BLOCKED_CAPTCHA");
   }
   if (/buy credits|purchase credits|ซื้อเครดิต|เครดิตไม่เพียงพอ/i.test(joined)) throw new Error("BLOCKED_CREDIT_PURCHASE_REQUIRED");
+  if (/unusual activity|กิจกรรมที่ผิดปกติ|Please visit the Help Center/i.test(joined)) throw new Error("BLOCKED_GOOGLE_UNUSUAL_ACTIVITY");
   return joined;
 }
 
