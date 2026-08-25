@@ -105,11 +105,58 @@ async function enterStudio(cdp, contextMap) {
   const key = (await fs.readFile(request.access_key_path, "utf8")).trim();
   if (!key) throw new Error("FLOW_ACCESS_KEY_EMPTY");
   for (const scope of contextMap) {
-    const handled = await evaluate(cdp, scope, `(() => { const input=[...document.querySelectorAll('input')].find(x=>/ENTER ACCESS KEY/i.test(x.placeholder||x.getAttribute('aria-label')||'')); if(!input)return false; const setter=Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,'value').set; setter.call(input,${JSON.stringify(key)}); input.dispatchEvent(new Event('input',{bubbles:true})); input.dispatchEvent(new Event('change',{bubbles:true})); const button=[...document.querySelectorAll('button')].find(x=>/เข้าสู่สตูดิโอ|enter studio/i.test(x.innerText||x.getAttribute('aria-label')||'')); if(!button)return false; button.click(); return true; })()`).catch(() => false);
+    const handled = await evaluate(cdp, scope, `(() => {
+      const key=${JSON.stringify(key)};
+      const inputSelector='input,textarea,[contenteditable="true"]';
+      const labelOf=(x)=>[
+        x.placeholder,
+        x.getAttribute('aria-label'),
+        x.getAttribute('title'),
+        x.name,
+        x.id,
+        x.closest('label')?.innerText,
+        x.parentElement?.innerText,
+      ].filter(Boolean).join(' ').replace(/\\s+/g,' ').trim();
+      const visible=(x)=>{ const r=x.getBoundingClientRect(); const s=getComputedStyle(x); return r.width>20&&r.height>10&&s.visibility!=='hidden'&&s.display!=='none'; };
+      const candidates=[...document.querySelectorAll(inputSelector)].filter(x=>visible(x)&&!x.disabled&&x.getAttribute('aria-disabled')!=='true');
+      const input=candidates.find(x=>/ENTER ACCESS KEY|access key|รหัส/i.test(labelOf(x))) || (candidates.length===1?candidates[0]:null);
+      if(!input)return false;
+      input.scrollIntoView({block:'center',inline:'center'});
+      input.focus();
+      const setter=Object.getOwnPropertyDescriptor(input instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype,'value')?.set;
+      if(setter) setter.call(input,key); else input.textContent=key;
+      input.dispatchEvent(new KeyboardEvent('keydown',{bubbles:true,composed:true,key:'a',ctrlKey:true}));
+      input.dispatchEvent(new InputEvent('beforeinput',{bubbles:true,composed:true,inputType:'insertText',data:key}));
+      input.dispatchEvent(new InputEvent('input',{bubbles:true,composed:true,inputType:'insertText',data:key}));
+      input.dispatchEvent(new Event('change',{bubbles:true,composed:true}));
+      const controls=[...document.querySelectorAll('button,[role="button"],input[type="button"],input[type="submit"],a,[tabindex]:not([tabindex="-1"])')];
+      const ctlLabel=(x)=>[x.innerText,x.value,x.getAttribute('aria-label'),x.getAttribute('title'),x.textContent].filter(Boolean).join(' ').replace(/\\s+/g,' ').trim();
+      const enabled=(x)=>!x.disabled&&x.getAttribute('aria-disabled')!=='true'&&!/disabled/i.test(x.className||'');
+      const button=controls.find(x=>visible(x)&&enabled(x)&&/เข้าสู่สตูดิโอ|enter studio/i.test(ctlLabel(x)));
+      if(!button)return {key_entered:true,clicked:false};
+      button.scrollIntoView({block:'center',inline:'center'});
+      button.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,composed:true}));
+      button.dispatchEvent(new MouseEvent('mousedown',{bubbles:true,composed:true}));
+      button.click();
+      button.dispatchEvent(new MouseEvent('mouseup',{bubbles:true,composed:true}));
+      button.dispatchEvent(new PointerEvent('pointerup',{bubbles:true,composed:true}));
+      return {key_entered:true,clicked:true,label:ctlLabel(button)};
+    })()`).catch(() => false);
     if (handled) {
       await new Promise(resolve => setTimeout(resolve, 2500));
       return true;
     }
+  }
+  return false;
+}
+
+async function accessKeyGateVisible(cdp, contextMap) {
+  for (const scope of contextMap) {
+    const visible = await evaluate(cdp, scope, `(() => {
+      const text=(document.body?.innerText||'')+' '+[...document.querySelectorAll('input,textarea')].map(x=>x.placeholder||x.getAttribute('aria-label')||'').join(' ');
+      return /ENTER ACCESS KEY|เข้าสู่สตูดิโอ|access key/i.test(text);
+    })()`).catch(() => false);
+    if (visible) return true;
   }
   return false;
 }
@@ -129,9 +176,39 @@ async function guard(cdp, contextMap) {
   return joined;
 }
 
+const interactiveSelector = [
+  "button",
+  "[role='button']",
+  "input[type='button']",
+  "input[type='submit']",
+  "a",
+  "[tabindex]:not([tabindex='-1'])",
+].join(",");
+
 async function clickButton(cdp, contextMap, pattern, label) {
   for (const scope of contextMap) {
-    const clicked = await evaluate(cdp, scope, `(() => { const rx=new RegExp(${JSON.stringify(pattern)},'i'); const items=[...document.querySelectorAll('button')]; const button=items.find(x=>!x.disabled&&rx.test((x.innerText||x.getAttribute('aria-label')||'').trim())); if(!button)return false; button.click(); return true; })()`).catch(() => false);
+    const clicked = await evaluate(cdp, scope, `(() => {
+      const rx=new RegExp(${JSON.stringify(pattern)},'i');
+      const items=[...document.querySelectorAll(${JSON.stringify(interactiveSelector)})];
+      const labelOf=(x)=>[
+        x.innerText,
+        x.value,
+        x.getAttribute('aria-label'),
+        x.getAttribute('title'),
+        x.textContent,
+      ].filter(Boolean).join(' ').replace(/\\s+/g,' ').trim();
+      const visible=(x)=>{ const r=x.getBoundingClientRect(); const s=getComputedStyle(x); return r.width>2&&r.height>2&&s.visibility!=='hidden'&&s.display!=='none'&&s.pointerEvents!=='none'; };
+      const enabled=(x)=>!x.disabled&&x.getAttribute('aria-disabled')!=='true'&&!/disabled/i.test(x.className||'');
+      const button=items.find(x=>visible(x)&&enabled(x)&&rx.test(labelOf(x)));
+      if(!button)return false;
+      button.scrollIntoView({block:'center',inline:'center'});
+      button.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,composed:true}));
+      button.dispatchEvent(new MouseEvent('mousedown',{bubbles:true,composed:true}));
+      button.click();
+      button.dispatchEvent(new MouseEvent('mouseup',{bubbles:true,composed:true}));
+      button.dispatchEvent(new PointerEvent('pointerup',{bubbles:true,composed:true}));
+      return {ok:true,label:labelOf(button),tag:button.tagName,role:button.getAttribute('role')||''};
+    })()`).catch(() => false);
     if (clicked) return true;
   }
   throw new Error(`BLOCKED_UI_CONTRACT_MISMATCH:${label}`);
@@ -140,7 +217,17 @@ async function clickButton(cdp, contextMap, pattern, label) {
 async function enabledButtonCount(cdp, contextMap, pattern, rejectPattern = "") {
   let count = 0;
   for (const scope of contextMap) {
-    count += Number(await evaluate(cdp, scope, `(() => { const rx=new RegExp(${JSON.stringify(pattern)},'i'); const reject=${JSON.stringify(rejectPattern)}?new RegExp(${JSON.stringify(rejectPattern)},'i'):null; return [...document.querySelectorAll('button')].filter(x=>{ const label=(x.innerText||x.getAttribute('aria-label')||'').trim(); return !x.disabled&&rx.test(label)&&(!reject||!reject.test(label)); }).length; })()`).catch(() => 0));
+    count += Number(await evaluate(cdp, scope, `(() => {
+      const rx=new RegExp(${JSON.stringify(pattern)},'i');
+      const reject=${JSON.stringify(rejectPattern)}?new RegExp(${JSON.stringify(rejectPattern)},'i'):null;
+      const labelOf=(x)=>[x.innerText,x.value,x.getAttribute('aria-label'),x.getAttribute('title'),x.textContent].filter(Boolean).join(' ').replace(/\\s+/g,' ').trim();
+      const visible=(x)=>{ const r=x.getBoundingClientRect(); const s=getComputedStyle(x); return r.width>2&&r.height>2&&s.visibility!=='hidden'&&s.display!=='none'; };
+      const enabled=(x)=>!x.disabled&&x.getAttribute('aria-disabled')!=='true'&&!/disabled/i.test(x.className||'');
+      return [...document.querySelectorAll(${JSON.stringify(interactiveSelector)})].filter(x=>{
+        const label=labelOf(x);
+        return visible(x)&&enabled(x)&&rx.test(label)&&(!reject||!reject.test(label));
+      }).length;
+    })()`).catch(() => 0));
   }
   return count;
 }
@@ -190,31 +277,38 @@ async function runAction(cdp, contextMap) {
   if (["FLOW_CREATE_ALL_IMAGES", "FLOW_RUN_TO_EXPORT"].includes(action)) {
     await clickButton(cdp, contextMap, "STEP\\s*06|สร้างหนัง", "STEP_06");
     await new Promise(resolve => setTimeout(resolve, 1500));
+    contextMap = await allContexts(cdp);
     await clickButton(cdp, contextMap, "สร้างรูปทั้งหมด|create all images", "CREATE_ALL_IMAGES");
     await waitForIdle(cdp, contextMap, "IMAGE_GENERATION", 30 * 60 * 1000);
+    contextMap = await allContexts(cdp);
     await verifyImagesReady(cdp, contextMap);
     if (action === "FLOW_CREATE_ALL_IMAGES") return "IMAGES_COMPLETE";
   }
   if (["FLOW_GENERATE_ALL_VIDEOS", "FLOW_RUN_TO_EXPORT"].includes(action)) {
     await clickButton(cdp, contextMap, "STEP\\s*06|สร้างหนัง", "STEP_06");
     await new Promise(resolve => setTimeout(resolve, 1500));
+    contextMap = await allContexts(cdp);
     if (action === "FLOW_GENERATE_ALL_VIDEOS") await verifyImagesReady(cdp, contextMap);
     await clickButton(cdp, contextMap, "สร้างวิดีโอทั้งหมด|generate all videos", "GENERATE_ALL_VIDEOS");
     await waitForIdle(cdp, contextMap, "VIDEO_GENERATION", 60 * 60 * 1000);
+    contextMap = await allContexts(cdp);
     await verifyVideosReadyForExport(cdp, contextMap);
     if (action === "FLOW_GENERATE_ALL_VIDEOS") return "VIDEOS_COMPLETE";
   }
   if (["FLOW_CREATE_COVER", "FLOW_RUN_TO_EXPORT"].includes(action)) {
     await clickButton(cdp, contextMap, "STEP\\s*07|ส่งออก", "STEP_07");
     await new Promise(resolve => setTimeout(resolve, 1500));
+    contextMap = await allContexts(cdp);
     await verifyVideosReadyForExport(cdp, contextMap);
     await clickButton(cdp, contextMap, "สร้างปกใหม่|create new cover", "CREATE_COVER");
     await waitForIdle(cdp, contextMap, "COVER_GENERATION", 20 * 60 * 1000);
+    contextMap = await allContexts(cdp);
     if (action === "FLOW_CREATE_COVER") return "COVER_COMPLETE";
   }
   if (["FLOW_EXPORT_1080P", "FLOW_RUN_TO_EXPORT"].includes(action)) {
     await clickButton(cdp, contextMap, "STEP\\s*07|ส่งออก", "STEP_07").catch(() => true);
     await new Promise(resolve => setTimeout(resolve, 1000));
+    contextMap = await allContexts(cdp);
     await verifyVideosReadyForExport(cdp, contextMap);
     await clickButton(cdp, contextMap, "1080P|1080p", "EXPORT_1080P");
     return "EXPORT_STARTED";
@@ -227,7 +321,7 @@ try {
   const target = await findFlowTarget();
   const cdp = new Cdp(target.webSocketDebuggerUrl);
   await cdp.open();
-  const contextMap = await allContexts(cdp);
+  let contextMap = await allContexts(cdp);
   const bodyTexts = [];
   for (const scope of contextMap) {
     if (/google\.com/i.test(String(scope.context.origin || scope.context.name || ""))) continue;
@@ -235,9 +329,14 @@ try {
   }
   const joined = bodyTexts.join("\n");
   if (/sign in|เข้าสู่ระบบ/i.test(joined) && !/STEP 01|สไตล์หนัง/i.test(joined)) { await result("BLOCKED_GOOGLE_SIGN_IN_REQUIRED", { profile }); cdp.close(); process.exit(3); }
-  await enterStudio(cdp, contextMap);
+  const studioEntered = await enterStudio(cdp, contextMap);
+  contextMap = await allContexts(cdp);
+  if (!studioEntered || await accessKeyGateVisible(cdp, contextMap)) {
+    throw new Error("FLOW_ACCESS_KEY_ENTRY_NOT_CONFIRMED");
+  }
   const imported = await importStep6(cdp, contextMap);
   await new Promise(resolve => setTimeout(resolve, 1500));
+  contextMap = await allContexts(cdp);
   const completed = await runAction(cdp, contextMap);
   await result(completed, { imported, output_path: request.output_path });
   cdp.close();
