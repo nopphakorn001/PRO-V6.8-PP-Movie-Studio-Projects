@@ -32,6 +32,28 @@ The objective is not constant action. The objective is to make the viewer feel p
 - Camera motion should feel like a real tired human body: weight, hesitation, balance shifts, uneven breathing, natural head movement and brief stillness.
 - Preserve physical continuity: wetness, dust, snow, mud, damaged equipment, fatigue and lighting should carry from scene to scene.
 
+## Faction-lock policy
+Faction continuity is mandatory. **One episode = one POV faction.** The immediate friendly environment must never become a random mixture of Allied and Axis troops.
+
+- The POV soldier and all nearby friendly soldiers must belong to the same selected friendly faction for the full episode.
+- Uniforms, helmets, weapons, web gear, vehicles, fortifications and movement direction around the POV must match that friendly force and historical setting.
+- Enemy troops may appear, but they must read clearly as the opposing force through distance, direction, cover, trench line, bunker, ridge, tree line, street frontage or attack axis.
+- Do not place friendly and enemy troops side by side in the same local formation unless the documented historical story explicitly requires surrender, prisoners or a mixed situation. Set 01 does not require this.
+- Do not visually imply that friendly troops are firing from inside the enemy formation or that enemy troops casually occupy the friendly position.
+- If an enemy charge or attack enters the frame, the opposing uniform/equipment and approach direction must make the hostile side immediately understandable.
+- When the scene does not require a visible enemy, prefer no enemy in frame rather than ambiguous mixed soldiers.
+- Quiet and recovery scenes must preserve faction continuity exactly the same as combat scenes.
+- Historical plausibility and faction readability take priority over adding extra soldiers, weapons or spectacle.
+
+Canonical per-episode faction definitions are stored in `FACTION_LOCKS.json` and should be applied to all future prompt revisions, generation passes and automation.
+
+## Set 01 faction locks
+1. **D-Day — Omaha Beach:** Allied POV / U.S. Army infantry vs German defenders.
+2. **Stalingrad:** Allied POV / Soviet Red Army vs German Sixth Army / Axis forces.
+3. **Second Battle of El Alamein:** Allied POV / British Eighth Army and historically appropriate Allied desert forces vs German/Italian Axis forces.
+4. **Bastogne:** Allied POV / U.S. airborne and U.S. defending forces vs German attacking forces.
+5. **Iwo Jima:** Allied POV / U.S. Marines vs Japanese defenders.
+
 ## Sensory detail standard
 Each `imageDescription` and `videoPrompt` should describe concrete physical details that help the viewer feel present: surface texture, temperature, moisture, wind direction, smoke density, visibility, light quality, distance of sounds, equipment weight, fabric movement, breath, footsteps and the immediate space around the soldier.
 
