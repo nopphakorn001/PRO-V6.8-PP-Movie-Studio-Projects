@@ -10,7 +10,11 @@ Immersive first-person historical reenactment shorts for PRO V6.8 P&P Movie Stud
 - Vertical 9:16
 - English project language for global distribution
 - Fictional composite soldier POV inside real historical events
-- Minimal natural battlefield dialogue; no invented famous quotations
+- No spoken dialogue
+- No narrator
+- No intelligible human speech
+- Human audio is limited to breathing and nonverbal exertion
+- Environmental audio and SFX only: wind, rain/snow/surf, footsteps, equipment, vehicles, aircraft, artillery, distant battlefield ambience and scene-appropriate effects
 - Non-graphic historical combat depiction
 - 1 scene = 1 shot + 1 primary action + 1 camera movement
 
@@ -22,6 +26,9 @@ Immersive first-person historical reenactment shorts for PRO V6.8 P&P Movie Stud
 5. Iwo Jima — landings and early advance, February 1945
 
 Each episode contains `STEP6.json` and an English `metadata.json` prepared for future automated publishing to YouTube, YouTube Shorts, TikTok and Facebook Reels.
+
+## Audio policy
+The POV experience must be understandable without speech. All `script` fields remain empty and all `dialogues` arrays remain empty. Video prompts must not request spoken orders, shouted commands, narration, radio dialogue or intelligible words. Human presence is conveyed through breathing, movement and nonverbal exertion while the environment carries the story through sound.
 
 ## Publishing policy
 Metadata is optimized for global discoverability but does not claim guaranteed virality or trend placement. Titles and descriptions clearly identify the videos as cinematic historical reenactments rather than real archival footage.
