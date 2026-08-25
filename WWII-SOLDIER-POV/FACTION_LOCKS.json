@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0",
+  "seriesId": "wwii-soldier-pov",
+  "policy": {
+    "oneEpisodeOnePOVFaction": true,
+    "nearbyFriendlyMustMatchPOVFaction": true,
+    "enemyMustRemainSpatiallySeparated": true,
+    "mixedLocalFormationForbidden": true,
+    "capturedEnemyEquipmentAsFriendlyDefaultForbidden": true,
+    "uniformCrossFactionMixForbidden": true,
+    "weaponCrossFactionMixForbidden": true,
+    "vehicleCrossFactionMixForbidden": true,
+    "friendlyFireVisualAmbiguityForbidden": true,
+    "rules": [
+      "Each episode locks to exactly one point-of-view faction for its full runtime.",
+      "The POV soldier and every nearby friendly soldier must belong to the selected friendly faction.",
+      "Nearby friendly uniforms, helmets, weapons, web gear, vehicles, defensive positions and movement direction must be historically consistent with that faction and episode.",
+      "Enemy troops may appear only as the clearly opposing force and must be separated by battlefield geography, distance, direction of movement, cover, trench line, bunker, ridge, tree line, street frontage or attack axis.",
+      "Do not place Allied and Axis soldiers side by side in the same local formation unless the historical story explicitly requires surrender, prisoners or a documented mixed situation. Set 01 does not require such scenes.",
+      "Never visually imply that friendly soldiers are firing from inside the enemy formation or that enemy soldiers are casually occupying the friendly position.",
+      "When enemy attackers enter the frame, their approach direction, uniforms, equipment and spatial relationship must make them readable as the opposing side.",
+      "If the enemy is not clearly needed in a scene, prefer no visible enemy at all rather than ambiguous mixed soldiers.",
+      "Quiet, recovery and observation scenes must preserve the same faction continuity even when no combat occurs.",
+      "Historical plausibility and faction readability take priority over adding more soldiers, weapons or action to the frame."
+    ]
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "folder": "EP01-D-Day-Omaha-Beach",
+      "povFaction": "Allied",
+      "friendlyForce": "U.S. Army infantry",
+      "friendlyVisualIdentity": "1944 U.S. Army infantry uniforms, M1 helmets, U.S. web gear, M1 rifles and period U.S. landing equipment",
+      "enemyFaction": "Axis",
+      "enemyForce": "German defenders",
+      "enemyVisualIdentity": "German defensive troops positioned separately in bunkers, strongpoints, bluff positions or distant opposing firing locations",
+      "battlefieldGeometry": "Friendly troops move from landing craft and beach inland toward the bluffs. Enemy defenders remain on or beyond opposing defensive positions above and inland from the beach.",
+      "generationLock": "POV and nearby troops are U.S. Army only. German troops, if visible, are separate opposing defenders. Never mix U.S. and German soldiers side by side in the friendly beach group."
+    },
+    {
+      "episode": 2,
+      "folder": "EP02-Stalingrad",
+      "povFaction": "Allied",
+      "friendlyForce": "Soviet Red Army",
+      "friendlyVisualIdentity": "1942 Soviet winter uniforms, Soviet helmets and greatcoats where appropriate, Mosin-Nagant rifles and Soviet field equipment",
+      "enemyFaction": "Axis",
+      "enemyForce": "German Sixth Army / Axis forces",
+      "enemyVisualIdentity": "German or Axis troops appear only across streets, in opposing ruins, behind separate cover, at distance or advancing from a clearly hostile direction",
+      "battlefieldGeometry": "Friendly Soviet positions occupy the immediate ruined rooms, basements, factory sectors and river-facing supply areas. Enemy presence is across or beyond opposing urban positions.",
+      "generationLock": "POV and all nearby comrades are Soviet Red Army only. German/Axis soldiers must never appear casually inside the Soviet local group."
+    },
+    {
+      "episode": 3,
+      "folder": "EP03-El-Alamein",
+      "povFaction": "Allied",
+      "friendlyForce": "British Eighth Army / historically appropriate Allied desert forces",
+      "friendlyVisualIdentity": "1942 British desert uniforms, British webbing, steel helmets, Lee-Enfield rifles and historically appropriate Allied vehicles",
+      "enemyFaction": "Axis",
+      "enemyForce": "German Afrika Korps and Italian Axis forces",
+      "enemyVisualIdentity": "Axis troops, positions and vehicles appear beyond minefield belts, on opposing defensive lines or withdrawing west from the broken defensive zone",
+      "battlefieldGeometry": "Friendly forces advance through marked minefield lanes from east toward Axis defensive belts and continue west after the breakthrough. Opposing Axis forces remain beyond or retreat away from the Allied advance axis.",
+      "generationLock": "POV and nearby troops are British/Allied desert forces only. Axis uniforms, weapons and vehicles must remain visually separated on the opposing side."
+    },
+    {
+      "episode": 4,
+      "folder": "EP04-Bastogne",
+      "povFaction": "Allied",
+      "friendlyForce": "U.S. airborne infantry / U.S. forces defending Bastogne",
+      "friendlyVisualIdentity": "1944 U.S. airborne winter field gear, M1 helmets, U.S. web gear, M1 rifles and period U.S. vehicles",
+      "enemyFaction": "Axis",
+      "enemyForce": "German attacking forces",
+      "enemyVisualIdentity": "German troops and armored silhouettes appear beyond U.S. foxholes, across fields, through fog, from tree lines or from clearly opposing road approaches",
+      "battlefieldGeometry": "Immediate foxholes, perimeter woods, supply positions and Bastogne friendly traffic belong to U.S. forces. German attackers remain outside the friendly perimeter until depicted as an unmistakable incoming hostile attack.",
+      "generationLock": "POV and nearby defenders are U.S. forces only. German troops or armor must be separated across the perimeter or approaching from the hostile side."
+    },
+    {
+      "episode": 5,
+      "folder": "EP05-Iwo-Jima",
+      "povFaction": "Allied",
+      "friendlyForce": "U.S. Marines",
+      "friendlyVisualIdentity": "1945 USMC field uniforms, helmet covers, U.S. web gear, M1 rifles and period Marine landing equipment",
+      "enemyFaction": "Axis",
+      "enemyForce": "Japanese defenders",
+      "enemyVisualIdentity": "Japanese defenders appear only from separate cave mouths, pillboxes, ridges, concealed opposing positions or clearly hostile movement from the opposite direction",
+      "battlefieldGeometry": "Immediate landing craft, beach groups, crater positions, airfield movement and northward advancing squad are U.S. Marine positions. Japanese defenders remain in separate concealed or opposing defensive terrain.",
+      "generationLock": "POV and nearby troops are U.S. Marines only. Japanese defenders, if visible, must be clearly separate and hostile; never blend them into the Marine formation."
+    }
+  ]
+}
