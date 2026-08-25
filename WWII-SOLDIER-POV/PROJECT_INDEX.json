@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.1",
+  "schemaVersion": "1.2",
   "series": {
     "id": "wwii-soldier-pov",
     "name": "WWII SOLDIER POV",
@@ -84,7 +84,14 @@
       "Confirm exactly one POV faction for the episode.",
       "Confirm all nearby friendly uniforms, weapons, vehicles and positions match the friendly force.",
       "Confirm any visible enemy is spatially and visually separated as the opposing force.",
-      "Reject generation prompts that ambiguously mix Allied and Axis soldiers in the same local formation."
+      "Reject generation prompts that ambiguously mix Allied and Axis soldiers in the same local formation.",
+      "Do not center a visible weapon in every scene; vary ready, lowered, slung, resting, partial-frame and off-frame weapon states according to the action.",
+      "Reject consecutive scenes that repeat the same forward-facing eye-level POV unless continuity specifically requires it.",
+      "Ensure each episode contains exploration or observation scenes, quiet recovery scenes, and cinematic reveal or scale moments in addition to action scenes.",
+      "Ensure camera behavior remains physically human while composition and timing remain cinematic.",
+      "Use tension through contrast: quiet waiting, environmental discovery and distant threat should alternate naturally with short bursts of movement or danger.",
+      "Avoid game-like FPS framing, constant camera shake, constant explosions and continuous gunfire.",
+      "Do not copy an identifiable shot from a specific film; use general cinematic war-film language only."
     ],
     "disclosureRequired": true,
     "disclosureText": "AI-generated cinematic historical reenactment. Not archival footage."
