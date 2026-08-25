@@ -1,0 +1,15 @@
+{
+  "schemaVersion":"1.0","series":"WWII SOLDIER POV","set":"Set 01","episode":2,"slug":"stalingrad-encirclement-pov",
+  "title":"WWII Soldier POV: Stalingrad — The Encirclement Begins","shortTitle":"Stalingrad Soldier POV",
+  "hook":"You are holding a ruined building in Stalingrad when the artillery suddenly shifts far beyond the city.",
+  "shortDescription":"Experience Stalingrad from the first-person perspective of a fictional Soviet rifleman as Operation Uranus begins in November 1942. Cinematic historical reenactment, not archival footage.",
+  "longDescription":"Enter an immersive first-person historical reenactment set in Stalingrad during 19–23 November 1942. A fictional composite Soviet Red Army rifleman holds a shattered urban position while the massive Soviet counteroffensive known as Operation Uranus develops beyond the city. The episode focuses on rubble, cold, supply runs, short movements between positions and the shift in morale as news of the encirclement arrives. AI-generated cinematic reenactment, not real wartime footage.",
+  "historicalEvent":{"name":"Battle of Stalingrad — Operation Uranus phase","dateRange":"1942-11-19 to 1942-11-23","location":"Stalingrad, Soviet Union","perspective":"Fictional composite Soviet Red Army rifleman"},
+  "disclosure":"AI-generated cinematic historical reenactment. Not archival footage.","language":"English","aspectRatio":"9:16","durationTargetSeconds":120,"audience":"Global history, WWII, military history and cinematic POV audiences","contentRating":"Non-graphic historical combat",
+  "thumbnailText":["STALINGRAD","1942","SOLDIER POV"],
+  "keywords":["Stalingrad","Battle of Stalingrad","Operation Uranus","World War II","WWII POV","Eastern Front","Soviet Red Army","history short","cinematic history","soldier POV","military history"],
+  "tags":["WWII","World War 2","Stalingrad","Operation Uranus","Eastern Front","Red Army","History","Military History","POV","History Shorts","Cinematic History"],
+  "hashtags":["#WWII","#WorldWar2","#Stalingrad","#EasternFront","#OperationUranus","#History","#MilitaryHistory","#POV","#HistoryShorts","#CinematicHistory"],
+  "platformCaptions":{"youtube":"WWII Soldier POV: Stalingrad — The Encirclement Begins","youtubeShorts":"POV: Stalingrad, November 1942. The artillery shifts — something huge is happening beyond the city. #Stalingrad #WWII #HistoryShorts","tiktok":"POV: You are a Soviet rifleman in Stalingrad as Operation Uranus begins. Cinematic reenactment. #WWII #Stalingrad #POV #HistoryTok","facebookReels":"Step into Stalingrad during the opening of Operation Uranus in this immersive WWII soldier POV reenactment. #WWII #History #Stalingrad"},
+  "cta":"Follow for the next immersive WWII Soldier POV episode.","status":"READY_FOR_PRODUCTION","step6Path":"WWII-SOLDIER-POV/EP02-Stalingrad/STEP6.json","outputs":{"video":"","thumbnail":"","subtitle":""}
+}
