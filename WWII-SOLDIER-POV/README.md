@@ -32,6 +32,32 @@ The objective is not constant action. The objective is to make the viewer feel p
 - Camera motion should feel like a real tired human body: weight, hesitation, balance shifts, uneven breathing, natural head movement and brief stillness.
 - Preserve physical continuity: wetness, dust, snow, mud, damaged equipment, fatigue and lighting should carry from scene to scene.
 
+## Cinematic realism and shot-variety policy
+The visual feeling should be cinematic and exciting like a grounded war film, but it must still feel like a real person physically present in a real historical place. Use cinematic language, tension, timing and reveal without copying an identifiable shot from a specific movie.
+
+- The weapon is a tool, **not the center of every frame**. The POV soldier does not need to hold the weapon visibly in every scene.
+- Across an episode, vary weapon presentation naturally: carried ready when danger requires it, lowered, slung, held one-handed, resting against cover, partly visible at the edge of frame, or completely outside the frame during observation, rest, exploration, map reading, drinking, climbing, digging or equipment handling.
+- Avoid the repeated FPS-game composition of rifle centered at the bottom of every image.
+- Use different body states and viewing heights: standing, walking slowly, crouching, kneeling, sitting, lying low, leaning from cover, climbing, looking through a doorway, looking from a trench, looking down at hands or ground, looking upward, looking over the shoulder and stopping to listen.
+- Do not repeat the same forward-facing eye-level angle in consecutive scenes unless continuity requires it.
+- Every episode should include environmental exploration: move through or inspect historically plausible spaces such as a ruined room, trench, foxhole, beach obstacle, farm lane, desert track, bunker exterior, crater, supply point or battlefield aftermath area.
+- Include scale/reveal moments where the camera discovers a larger environment after passing through a confined space or cover.
+- Include at least one deliberate still or near-still scene where tension comes from waiting, distant sound or something slowly becoming visible.
+- Include at least one sudden movement beat after a quieter scene: a short dash, duck behind cover, quick turn toward a sound, or rapid move across exposed ground. The contrast creates excitement.
+- Use near-miss tension sparingly and realistically: dirt, brick dust, snow, sand, water or debris may react to distant impacts, but do not make every scene a close explosion.
+- After intense sound, allow realistic auditory recovery: muffled ambience, ringing-like dullness, breath and environmental sound before full battlefield volume returns.
+- Human behavior matters more than spectacle: fatigue, hesitation, checking surroundings, gripping cold metal, wiping moisture, adjusting straps, drinking, catching breath and waiting should appear throughout the episode.
+- The camera should behave like a human body, while framing and timing remain cinematic: deliberate reveal, foreground depth, layered background action, natural occlusion and meaningful pauses.
+
+A useful pacing balance for a 15-scene episode is approximately:
+- 4 scenes tension/contact/action
+- 3 scenes movement/repositioning
+- 3 scenes exploration/observation
+- 3 scenes quiet/recovery/human detail
+- 2 scenes reveal/climax/aftermath
+
+This is a directing balance, not a rigid formula. Historical events and location logic take priority.
+
 ## Faction-lock policy
 Faction continuity is mandatory. **One episode = one POV faction.** The immediate friendly environment must never become a random mixture of Allied and Axis troops.
 
