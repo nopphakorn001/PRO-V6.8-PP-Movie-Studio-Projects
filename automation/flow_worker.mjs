@@ -265,6 +265,8 @@ async function visibleText(cdp, contextMap) {
 }
 
 async function verifyImagesReady(cdp, contextMap) {
+  const allVideoButtons = await enabledButtonCount(cdp, contextMap, "สร้างวิดีโอทั้งหมด|generate all videos");
+  if (allVideoButtons > 0) return true;
   const videoButtons = await enabledButtonCount(cdp, contextMap, "สร้างวิดีโอ|generate video", "ทั้งหมด|all");
   if (videoButtons <= 0) throw new Error("FLOW_IMAGES_NOT_READY_FOR_VIDEO");
   return true;

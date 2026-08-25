@@ -37,6 +37,8 @@ class FlowRunnerTests(unittest.TestCase):
         self.assertIn("FLOW_VIDEOS_NOT_READY_FOR_EXPORT", worker)
         self.assertIn('"สร้างวิดีโอ|generate video", "ทั้งหมด|all"', worker)
         self.assertIn('"ส่งออกรวมคลิป|export full clip|export clip"', worker)
+        self.assertIn('"สร้างวิดีโอทั้งหมด|generate all videos"', worker)
+        self.assertIn("allVideoButtons > 0", worker)
         self.assertIn("[role='button']", worker)
         self.assertIn("button.dispatchEvent(new PointerEvent('pointerdown'", worker)
         self.assertIn("FLOW_ACCESS_KEY_ENTRY_NOT_CONFIRMED", worker)
