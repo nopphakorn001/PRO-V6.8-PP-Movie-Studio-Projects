@@ -61,6 +61,61 @@ def relative(path: Path) -> str:
     return path.relative_to(ROOT).as_posix()
 
 
+def _slugify(value: str) -> str:
+    slug = "".join(ch.lower() if ch.isalnum() else "-" for ch in value.strip())
+    return "-".join(part for part in slug.split("-") if part)
+
+
+def _series_id_from_path(path: Path) -> str:
+    return _slugify(path.parent.parent.name)
+
+
+def _content_id_from_path(path: Path, metadata: dict[str, Any]) -> str:
+    series_id = str(metadata.get("SERIES_ID") or _series_id_from_path(path))
+    episode = int(metadata.get("EPISODE") or metadata.get("episode") or 0)
+    if not episode:
+        raise AutoPostError(f"{relative(path)} missing valid episode")
+    return f"{series_id}-ep{episode:02d}"
+
+
+def _normalize_platform_captions(metadata: dict[str, Any]) -> dict[str, str]:
+    captions = metadata.get("PLATFORM_CAPTIONS")
+    if isinstance(captions, dict):
+        return captions
+    source = metadata.get("platformCaptions")
+    if not isinstance(source, dict):
+        return {}
+    return {
+        "YOUTUBE": str(source.get("youtube") or source.get("YOUTUBE") or ""),
+        "YOUTUBE_SHORTS": str(source.get("youtubeShorts") or source.get("youtube_shorts") or source.get("YOUTUBE_SHORTS") or ""),
+        "TIKTOK": str(source.get("tiktok") or source.get("TIKTOK") or ""),
+        "FACEBOOK_REELS": str(source.get("facebookReels") or source.get("facebook_reels") or source.get("FACEBOOK_REELS") or ""),
+    }
+
+
+def normalize_metadata(path: Path, metadata: dict[str, Any]) -> dict[str, Any]:
+    """Accept the legacy uppercase contract and the newer creator lowercase draft."""
+
+    normalized = dict(metadata)
+    normalized.setdefault("SERIES_ID", _series_id_from_path(path))
+    normalized.setdefault("EPISODE", metadata.get("episode"))
+    normalized.setdefault("CONTENT_ID", metadata.get("content_id") or _content_id_from_path(path, normalized))
+    normalized.setdefault("TITLE_TH", metadata.get("title") or metadata.get("shortTitle") or normalized["CONTENT_ID"])
+    normalized.setdefault("PLATFORM_CAPTIONS", _normalize_platform_captions(metadata))
+    normalized.setdefault(
+        "AUTOMATION_NOTES",
+        {
+            "READY_FOR_AUTO_POST": False,
+            "CAPTION_REVIEWED": bool(normalized["PLATFORM_CAPTIONS"]),
+            "RIGHTS_NOTES": str(metadata.get("disclosure") or "AI-generated media; owner review required before publication."),
+        },
+    )
+    normalized.setdefault("GITHUB_PATH", relative(path.parent))
+    normalized.setdefault("STATUS", metadata.get("status") or "READY_FOR_PRODUCTION")
+    normalized.setdefault("OUTPUT_REFERENCES", metadata.get("outputs") or {})
+    return normalized
+
+
 def load_config() -> tuple[dict[str, Any], dict[str, Any]]:
     channels = load_json(CHANNELS_FILE)
     platforms = load_json(PLATFORMS_FILE)
@@ -74,7 +129,7 @@ def load_config() -> tuple[dict[str, Any], dict[str, Any]]:
 def discover_metadata() -> list[tuple[Path, dict[str, Any]]]:
     found: list[tuple[Path, dict[str, Any]]] = []
     for path in sorted(ROOT.glob("*/EP*/metadata.json")):
-        metadata = load_json(path)
+        metadata = normalize_metadata(path, load_json(path))
         missing = sorted(REQUIRED_METADATA - metadata.keys())
         if missing:
             raise AutoPostError(f"{relative(path)} missing: {', '.join(missing)}")

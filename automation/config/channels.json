@@ -36,10 +36,12 @@
       "youtube_channel_id": "UCd0cD2MqJ_w5bkrg6AOF42A",
       "youtube_url": "https://www.youtube.com/@WarHistoryVault-l3d",
       "series_ids": [
-        "wwii-untold-stories"
+        "wwii-untold-stories",
+        "wwii-soldier-pov"
       ],
       "series_priority": [
-        "wwii-untold-stories"
+        "wwii-untold-stories",
+        "wwii-soldier-pov"
       ],
       "daily_publish_time": "20:00",
       "audience": "general_history",

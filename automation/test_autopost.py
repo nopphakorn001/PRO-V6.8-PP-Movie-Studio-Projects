@@ -12,13 +12,21 @@ class AutoPostSmokeTests(unittest.TestCase):
         cls.queue = autopost.build_queue()
 
     def test_discovers_all_episodes(self) -> None:
-        self.assertEqual(len(self.queue["jobs"]), 36)
+        self.assertEqual(len(self.queue["jobs"]), 41)
 
     def test_channel_split(self) -> None:
         kid = [job for job in self.queue["jobs"] if job["channel_group"] == "kid"]
         history = [job for job in self.queue["jobs"] if job["channel_group"] == "history"]
         self.assertEqual(len(kid), 26)
-        self.assertEqual(len(history), 10)
+        self.assertEqual(len(history), 15)
+
+    def test_lowercase_wwii_soldier_metadata_is_normalized(self) -> None:
+        jobs = {job["job_id"]: job for job in self.queue["jobs"]}
+        job = jobs["history-wwii-soldier-pov-ep01"]
+        self.assertEqual(job["series_id"], "wwii-soldier-pov")
+        self.assertEqual(job["episode"], 1)
+        self.assertEqual(job["title_th"], "WWII Soldier POV: D-Day at Omaha Beach")
+        self.assertEqual(set(job["platform_runs"]), {"youtube", "youtube_shorts"})
 
     def test_every_job_targets_only_approved_platforms(self) -> None:
         expected = {"youtube", "youtube_shorts"}
