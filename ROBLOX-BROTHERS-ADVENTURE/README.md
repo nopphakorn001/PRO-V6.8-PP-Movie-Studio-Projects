@@ -7,96 +7,111 @@
 - 10 EP / 1 ด่านต่อ 1 EP / จบในตอน
 - 15-18 scenes ต่อ EP; เวอร์ชันปัจจุบันใช้ 16 scenes
 - 8 วินาทีต่อ scene; ประมาณ 128 วินาทีต่อ EP
-- แนวตั้ง 9:16 เหมาะกับ short-form adventure
+- แนวตั้ง 9:16
 - ไม่มีผู้บรรยาย
-- เน้น dialogue + music + ambience + SFX + visual storytelling
+- dialogue + music + ambience + SFX + visual storytelling
 - โทนสดใส ผจญภัย ครอบครัว ไม่ dark/horror
-- Roblox-style เท่านั้น: ไม่มี official logo, ไม่มี copied UI, ไม่มี copied branded map หรือ asset
-- ทุก scene มี actionDescription, mainAction, imageDescription, videoPrompt, dialogues และหนึ่ง action หลัก
+- Roblox-style เท่านั้น: ไม่มี official logo, copied UI หรือ branded map/asset
 
-## Character Continuity
+## Character Identity Lock
 
 ดู `CHARACTER_SHEETS.json`
 
 - **C-SHARP / ซีชาร์ป** — พี่ชาย ตัวสูงกว่า เด็กผู้ชายเอเชีย ผิวขาว/สว่าง ผมสีน้ำตาลเข้ม ชุด cream + light green
 - **ARI / อาริ** — น้องชาย ตัวเล็กกว่า เด็กผู้ชายเอเชีย ผิวขาว/สว่าง ผมสีน้ำตาลเข้ม ชุด white + blue
-- ต้องคงใบหน้า สีผิว ทรงผม ชุด props และสัดส่วนเดิมตลอดทั้งตอนและทุก EP
-- ห้ามเปลี่ยนให้ตัวละครดูเป็นผู้ใหญ่ ห้ามสลับความสูงของพี่กับน้อง
+- ใบหน้าต้องเป็น face design เดิมตลอดทั้ง scene และข้าม EP: ห้ามเปลี่ยน eye shape, eyebrows, nose, cheek fullness, face width, age, skin tone หรือ hair silhouette
+- C-SHARP ใช้หน้าทรง rounded-square; ARI ใช้หน้ากลมกว่าและตาใหญ่กว่าเล็กน้อย
+- ห้ามสลับความสูง ชุด ทรงผม หรือ props
 
-## No Nameplate / No Overhead UI
+## Critical Prompt Rule: Use Roles, Not Literal Names
 
-ห้ามสร้างชื่อบนหัวตัวละครทุกกรณี ไม่ว่าจะเป็น `C-SHARP`, `ARI`, username, display name, label, chat bubble, health bar, score, badge หรือข้อความ UI ลอยเหนือหัว
+เพื่อกัน AI สร้างชื่อบนหัว:
 
-ใน generated image/video ห้ามมี subtitle, caption หรือ text overlay โดยไม่จำเป็น และห้ามใช้ชื่อ C-SHARP/ARI เป็นข้อความที่มองเห็นในฉาก เว้นแต่มีเหตุผลของเนื้อเรื่องโดยตรง
+- ใน `imageDescription` และ `videoPrompt` ให้เรียกตัวละครว่า **older brother** และ **younger brother**
+- หลีกเลี่ยงการใส่ literal `C-SHARP` หรือ `ARI` ลงใน visual prompt
+- `C-SHARP` / `ARI` ใช้ได้ใน metadata, IDs และ `sceneCharacters` เท่านั้น
+- badge, charm, checkpoint และ props ต้องไม่มีตัวอักษรหรือชื่อคน
+
+## No Nameplate / No Overhead UI — STRICT
+
+ห้ามสร้างทุกกรณี:
+
+- character name / username / display name
+- floating label / overhead tag
+- chat bubble
+- health bar / score
+- subtitle / caption
+- readable UI ใกล้ตัวละคร
+- ชื่อ `C-SHARP`, `ARI`, `ซีชาร์ป`, `อาริ` เป็นข้อความบนหัวหรือบนเสื้อ
+
+ถ้า scene ไม่จำเป็นต้องมีข้อความ ให้ **ไม่มี readable text ใน frame เลย**
 
 ## Dialogue / Voice QA
 
-เพื่อป้องกันเสียงสลับคน, lip-sync ผิดตัว หรือบทพูดไม่ทัน 8 วินาที:
-
-- ใช้ **หนึ่งคนพูดต่อหนึ่ง scene** เป็นมาตรฐาน
-- สลับ scene พูดระหว่าง C-SHARP และ ARI เมื่อเหมาะสม
-- ตัวละครที่ไม่ได้พูดต้องเงียบ ปากปิด และแสดง reaction ตามธรรมชาติ
-- ประโยคต้องสั้นและพูดจบสบาย ๆ ภายใน 8 วินาที
-- ชื่อระบบ/metadata คงเป็น `C-SHARP` และ `ARI`
-- เวลาพูดภาษาไทยให้ใช้ `ซีชาร์ป` และ `อาริ`
-- `ARI` pronunciation = `อาริ` / `Ah-ree`
-
-EP01 ถูก refactor แล้วให้ C-SHARP และ ARI สลับกันพูดทีละ scene
+- 1 scene = 1 speaker
+- ตัวละครอีกคนต้องปากปิดและ reaction อย่างเดียว
+- ประโยคสั้น พูดจบใน 8 วินาที
+- system/display name คง `C-SHARP` และ `ARI`
+- spoken name ของพี่ = `ซีชาร์ป`
+- spoken name ของน้อง = `อาริ`
+- **ห้ามส่งตัวอักษร `ARI` เข้า TTS เป็น spoken text** เพราะอาจอ่านผิด
+- `อาริ` อ่าน `Ah-ree` สองพยางค์
 
 ## Previous Scene Reference / Smooth Continuity
 
-ตั้งแต่ Scene 2 เป็นต้นไป ถ้า scene ต่อเนื่องด้าน location/time/action ให้ใช้ **ภาพ generated ของ scene ก่อนหน้าเป็น primary reference ใน PRO V6.8** ก่อนสร้าง scene ถัดไป
+ตั้งแต่ Scene 2 เป็นต้นไป ถ้า location/time/action ต่อกัน ให้ใช้ **ภาพ generated ของ scene ก่อนหน้าเป็น primary visual reference** ก่อนสร้าง scene ถัดไป
 
-สิ่งที่ต้องรักษาจาก previous scene:
+ต้องรักษา:
 
-- ใบหน้าและสีผิว
-- ทรงผมและชุด
-- props
-- ความสูง C-SHARP > ARI
-- ตำแหน่งตัวละคร ณ ตอนจบ scene ก่อนหน้า
-- screen direction / ทิศทางการเดิน
-- สถานะของ obstacle เช่น ประตูเปิดแล้วต้องยังเปิด, checkpoint ที่ติดแล้วไม่ควร reset
-- lighting และ environment state
+- exact face design
+- fair/light skin tone
+- hair silhouette
+- outfits / props
+- C-SHARP taller than ARI
+- screen direction
+- ตำแหน่งปลาย scene ก่อนหน้า
+- obstacle state
+- lighting / environment state
 
-ถ้ามีการเปลี่ยน location/time อย่างชัดเจน ให้ใช้ Character Sheet เป็น identity reference หลัก และใช้ previous scene เฉพาะส่วนที่จำเป็นต่อ transition
+Character identity ห้าม reset ระหว่าง scene
 
 ## Camera / Motion QA
 
-- หลีกเลี่ยงมุมซ้ำและ camera move ซ้ำทุก scene
-- สลับ wide reveal, medium two-shot, low side follow, over-shoulder, three-quarter view, gentle arc และ static reaction shot
+- หลีกเลี่ยง camera angle ซ้ำหลาย scene ต่อกัน
+- สลับ wide reveal, medium two-shot, low side follow, over-shoulder, rear follow, three-quarter view, gentle arc และ static reaction
 - 1 scene = 1 action หลัก + 1 camera movement หลัก
-- ห้าม teleport ตัวละครระหว่างแท่น
-- ห้าม duplicate ตัวละครหรือสร้างพี่/น้องเกินหนึ่งคน
-- การกระโดดต้องมีต้นทาง → mid motion → landing ที่เข้าใจได้
-- ตัวละครที่กำลังวิ่ง/กระโดดไม่ควรพูดประโยคยาว; ให้พูดก่อนเริ่มหรือหลังลงถึงพื้น
+- ห้าม teleport / duplicate ตัวละคร
+- jump ต้องเห็นต้นทางและ landing ชัด
+- วิ่งหรือกระโดดไม่ควรพูดประโยคยาว
 
 ## EP01 Final-Render QA Corrections
 
-EP01 `Beginner Obby Portal` ได้แก้ STEP6 จากปัญหาเชิงโครงสร้างที่มีโอกาสทำให้ final render ผิดปกติ:
+EP01 ถูก refactor รอบล่าสุดเพื่อแก้ root cause เพิ่มเติม:
 
-- เดิมสองคนพูดใน scene เดียวเกือบทุก scene → เปลี่ยนเป็นหนึ่งคนพูดต่อ scene
-- เดิมบทพูดบางประโยคไม่สัมพันธ์กับ action เช่นเตือน “จุดเด้ง” ในฉาก High-five → เขียนบทใหม่ให้ตรง action
-- เดิม camera pattern วนซ้ำ push-in / side-track / crane / follow → กระจายมุมใหม่
-- เดิมไม่ได้ห้าม nameplate/UI อย่างชัดเจน → เพิ่ม negative instruction ทุก scene
-- เดิมไม่ได้กำหนดรูปลักษณ์เอเชียและสีผิวชัด → ล็อก East Asian + fair/light skin ทั้งสองคน
-- เดิม scene continuity พึ่ง prompt แต่ไม่กำชับ previous image → เพิ่มคำสั่งให้ใช้ previous generated scene reference ใน scene ต่อเนื่อง
-- ปรับ story progression ใหม่ให้ Portal → start → obstacles → checkpoint → final portal → finish → return Lobby ต่อเนื่องกว่าเดิม
+- ล็อก face geometry ของเด็กทั้งสองอย่างละเอียด
+- ย้าย literal character names ออกจาก visual prompts และใช้ older brother / younger brother แทน
+- บังคับ no readable text / no nameplate ทุก scene
+- `ARI` เป็น metadata เท่านั้น; spoken dialogue ใช้ `อาริ` เท่านั้น
+- 1 speaker ต่อ 1 scene
+- previous scene image เป็น continuity reference ตั้งแต่ Scene 2
+- props/badges ไม่มีตัวหนังสือ
+- story progression และ camera angle ถูกจัดใหม่ให้ smooth ขึ้น
 
 ## Episodes
 
-1. **EP01 — ประตูสู่ Beginner Obby** — Beginner Obby / Portal — 16 scenes — QA REVISED
-2. **EP02 — รถรางเหมืองสุดป่วน** — Minecart Adventure — 16 scenes
-3. **EP03 — เกาะลอยฟ้า** — Sky Islands — 16 scenes
-4. **EP04 — เมืองน้ำท่วม** — Flood Escape — 16 scenes
-5. **EP05 — ปราสาทปริศนา** — Puzzle Castle — 16 scenes
-6. **EP06 — แข่งรถสุดป่วน** — Racing World — 16 scenes
-7. **EP07 — สวนสัตว์หลุดกรง** — Animal Rescue — 16 scenes
-8. **EP08 — โรงงานหุ่นยนต์วุ่นวาย** — Robot Factory — 16 scenes
-9. **EP09 — โจรสลัดแห่งเกาะสมบัติ** — Pirate Island — 16 scenes
-10. **EP10 — Mega Obby Final** — Mega Obby Final — 16 scenes
+1. **EP01 — ประตูสู่ Beginner Obby** — 16 scenes — QA REVISED V2
+2. **EP02 — รถรางเหมืองสุดป่วน** — 16 scenes
+3. **EP03 — เกาะลอยฟ้า** — 16 scenes
+4. **EP04 — เมืองน้ำท่วม** — 16 scenes
+5. **EP05 — ปราสาทปริศนา** — 16 scenes
+6. **EP06 — แข่งรถสุดป่วน** — 16 scenes
+7. **EP07 — สวนสัตว์หลุดกรง** — 16 scenes
+8. **EP08 — โรงงานหุ่นยนต์วุ่นวาย** — 16 scenes
+9. **EP09 — โจรสลัดแห่งเกาะสมบัติ** — 16 scenes
+10. **EP10 — Mega Obby Final** — 16 scenes
 
 ## Import
 
-เปิดโฟลเดอร์ของ EP ที่ต้องการแล้วใช้ไฟล์ `STEP6.json`
+เปิดโฟลเดอร์ EP แล้วใช้ `STEP6.json`
 
-`PROJECT_INDEX.json` รวม path ของทุก EP และ `metadata.json` ของแต่ละตอนสำหรับระบบ auto-post ในอนาคต
+`PROJECT_INDEX.json` รวม path ทุก EP และ `metadata.json` สำหรับระบบ auto-post ในอนาคต
