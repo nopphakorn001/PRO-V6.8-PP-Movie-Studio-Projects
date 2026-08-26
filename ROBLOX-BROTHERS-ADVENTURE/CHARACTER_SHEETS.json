@@ -1,32 +1,23 @@
 {
   "seriesId": "roblox-brothers-adventure",
   "seriesName": "Roblox Brothers Adventure — 2 พี่น้องตะลุยโลกเกม",
-  "referencePolicy": "Use the uploaded image only as a broad visual reference for two stylized child game avatars. Do not identify real people, do not generate photoreal portraits, and keep the designs consistent across all scenes and episodes.",
+  "referencePolicy": "Use the uploaded image only as a broad visual reference for two stylized child game avatars. Do not identify real people. Keep both boys visibly East Asian with fair/light skin, dark-brown hair, child proportions, and consistent facial features across all scenes and episodes. Do not generate photoreal portraits.",
   "characters": [
     {
       "id": "big_brother_csharp",
       "name": "C-SHARP",
       "thaiName": "ซีชาร์ป",
       "role": "พี่ชาย นักวางแผน กล้าลุย และคอยปกป้องน้อง",
-      "ageStyle": "stylized child game avatar, older sibling proportions",
-      "description": "Roblox-style blocky boy avatar inspired broadly by the older child in the uploaded reference photo, without identifying the real person. Slightly taller than ARI, warm confident smile, brave posture, friendly rounded block proportions.",
+      "ageStyle": "stylized East Asian child game avatar, older sibling proportions",
+      "description": "Roblox-style blocky East Asian boy avatar inspired broadly by the older child in the uploaded reference photo, without identifying the real person. Fair/light skin, short dark-brown hair, warm confident expression, slightly taller and older-looking than ARI, friendly child proportions.",
       "mainOutfit": "cream hoodie with light green adventure vest, tan shorts, white sneakers, small green wristband, square backpack with checkpoint badge",
-      "colors": {
-        "primary": "cream",
-        "accent": "light green",
-        "secondary": "tan",
-        "shoes": "white"
-      },
+      "colors": {"primary":"cream","accent":"light green","secondary":"tan","shoes":"white","skin":"fair/light"},
       "hair": "short dark-brown blocky hair, neat side sweep",
-      "face": "simple cheerful game-avatar face, expressive eyebrows, no photorealism",
-      "props": {
-        "personalProps": "small square backpack, green checkpoint badge, green wristband"
-      },
+      "face": "consistent stylized East Asian child facial features, fair/light skin, expressive eyebrows, friendly rounded game-avatar face, no adult features, no photorealism",
+      "props": {"personalProps":"small square backpack, green checkpoint badge, green wristband"},
       "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
-      "continuity": {
-        "continuityRules": "Keep C-SHARP taller than ARI, with the same cream/light-green outfit, short dark hair, square backpack, checkpoint badge, and green wristband in every scene and every episode.",
-        "appearingScenes": []
-      },
+      "voiceProfile": {"spokenName":"ซีชาร์ป","voice":"older brother child voice, slightly lower and steadier than ARI","rule":"Only C-SHARP lip-syncs in scenes assigned to C-SHARP. Do not let ARI speak in the same scene."},
+      "continuity": {"continuityRules":"Keep C-SHARP taller than ARI, with the same fair/light skin tone, East Asian child facial features, cream/light-green outfit, short dark hair, square backpack, checkpoint badge, and green wristband in every scene and every episode. Never display a floating name, username, label, chat bubble, health bar, or text above his head.","appearingScenes":[]},
       "imageStatus": "idle"
     },
     {
@@ -34,25 +25,16 @@
       "name": "ARI",
       "thaiName": "อาริ",
       "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
-      "ageStyle": "stylized child game avatar, younger sibling proportions",
-      "description": "Roblox-style blocky boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Shorter than C-SHARP, curious bright expression, quick energetic poses.",
+      "ageStyle": "stylized East Asian child game avatar, younger sibling proportions",
+      "description": "Roblox-style blocky East Asian boy avatar inspired broadly by the younger child in the uploaded reference photo, without identifying the real person. Fair/light skin, short dark-brown hair, curious bright expression, visibly shorter and younger-looking than C-SHARP, friendly child proportions.",
       "mainOutfit": "white shirt with blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch with compass charm",
-      "colors": {
-        "primary": "white",
-        "accent": "bright blue",
-        "secondary": "navy",
-        "shoes": "blue-white"
-      },
+      "colors": {"primary":"white","accent":"bright blue","secondary":"navy","shoes":"blue-white","skin":"fair/light"},
       "hair": "short dark-brown blocky hair, slightly fluffy front",
-      "face": "simple cheerful game-avatar face, curious eyes, no photorealism",
-      "props": {
-        "personalProps": "blue utility pouch, tiny compass charm"
-      },
+      "face": "consistent stylized East Asian child facial features, fair/light skin, curious eyes, friendly rounded game-avatar face, no adult features, no photorealism",
+      "props": {"personalProps":"blue utility pouch, tiny compass charm"},
       "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like body, family-friendly, no copied branded logo or UI.",
-      "continuity": {
-        "continuityRules": "Keep ARI shorter than C-SHARP, with the same white/blue outfit, fluffy dark hair, blue utility pouch, and compass charm in every scene and every episode.",
-        "appearingScenes": []
-      },
+      "voiceProfile": {"spokenName":"อาริ","voice":"younger brother child voice, slightly higher and lighter than C-SHARP","rule":"Only ARI lip-syncs in scenes assigned to ARI. Do not let C-SHARP speak in the same scene."},
+      "continuity": {"continuityRules":"Keep ARI shorter than C-SHARP, with the same fair/light skin tone, East Asian child facial features, white/blue outfit, fluffy dark hair, blue utility pouch, and compass charm in every scene and every episode. Never display a floating name, username, label, chat bubble, health bar, or text above his head.","appearingScenes":[]},
       "imageStatus": "idle",
       "pronunciation": "อาริ",
       "phonetic": "Ah-ree",
@@ -60,10 +42,12 @@
     }
   ],
   "continuityRules": {
-    "names": "พี่ชื่อ C-SHARP, น้องชื่อ ARI. Keep ARI in metadata/system fields, character sheets, sceneCharacters.name, IDs, summaries, README, PROJECT_INDEX, and publishing metadata; use อาริ whenever the name is spoken in dialogue.",
-    "dialogue": "Every scene must include short natural dialogue. Use อาริ for every spoken call of ARI so Thai TTS reads the name correctly; speaker/name/id metadata remains ARI.",
-    "visualIdentity": "C-SHARP and ARI keep the same stylized Roblox/game-avatar identity across all 10 EP: same height relationship, outfits, hair, props, cheerful blocky proportions, no photorealism.",
-    "dialoguePronunciation": "Pronounce ARI as อาริ (Ah-ree), two syllables."
+    "names": "System/display names remain C-SHARP and ARI. Spoken dialogue should use ซีชาร์ป and อาริ for reliable Thai TTS.",
+    "noNameplates": "Never render names, usernames, labels, chat bubbles, health bars, overhead UI, subtitles, captions, or text above either child's head. Do not render C-SHARP or ARI as visible text inside the generated scene unless a story prop explicitly requires unrelated text.",
+    "dialogue": "Use one speaking character per scene. Alternate speaking scenes between C-SHARP and ARI when practical. The non-speaking brother stays silent with a closed mouth or natural reaction. Keep each line short enough for one 8-second scene.",
+    "visualIdentity": "Both brothers are stylized East Asian boys with fair/light skin and dark-brown hair. C-SHARP is consistently taller/older; ARI is consistently shorter/younger. Keep the same outfits, hair, face design, skin tone, props and proportions across all 10 EP.",
+    "previousSceneReference": "For scene 2 onward, when PRO V6.8 allows scene references, use the immediately previous generated scene image as the primary continuity reference when the location/time/action continues. Preserve faces, skin tone, outfits, props, relative height, screen direction, obstacle state and lighting. Do not use previous-scene reference when the story intentionally jumps to a clearly different location or time unless needed only for character identity.",
+    "dialoguePronunciation": "Pronounce ARI as อาริ (Ah-ree), two syllables; pronounce C-SHARP as ซีชาร์ป in spoken Thai dialogue."
   },
-  "updatedAt": "2026-08-25T19:45:00+07:00"
+  "updatedAt": "2026-08-26T16:44:00+07:00"
 }
