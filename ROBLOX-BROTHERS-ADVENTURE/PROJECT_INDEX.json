@@ -9,119 +9,40 @@
     "approxDurationSeconds": 128,
     "dialogue": true,
     "narration": false,
-    "audio": "dialogue + music + ambience + SFX",
+    "audio": "single-speaker dialogue + music + ambience + SFX",
     "tone": "bright, playful, family-friendly, not dark"
   },
   "status": "STEP6_READY",
   "characterSheets": "ROBLOX-BROTHERS-ADVENTURE/CHARACTER_SHEETS.json",
-  "continuity": "C-SHARP is the older brother and ARI is the younger brother. Keep ARI in metadata/system name and ID fields; write อาริ whenever the name is spoken in dialogue. Keep both stylized game-avatar identities consistent across all 10 EP.",
+  "continuity": "C-SHARP is the older brother and ARI is the younger brother. Both are stylized East Asian boys with fair/light skin and dark-brown hair. Keep faces, skin tone, outfits, props and relative height consistent. Never show floating character names or overhead UI. System names remain C-SHARP and ARI; spoken Thai names are ซีชาร์ป and อาริ.",
+  "generationQA": {
+    "noNameplates": true,
+    "noOverheadUsernames": true,
+    "noChatBubbles": true,
+    "noHealthBars": true,
+    "noUnrequestedSubtitles": true,
+    "oneSpeakerPerScene": true,
+    "alternateSpeakersWhenPractical": true,
+    "nonSpeakerNoLipSync": true,
+    "previousSceneReference": "Use the immediately previous generated scene image as the primary continuity reference in PRO V6.8 when location/time/action continues. Preserve face, skin tone, outfit, props, height relationship, screen direction, obstacle state and lighting.",
+    "cameraVariation": "Avoid repeating the same camera move in consecutive scenes; vary wide reveal, medium, low side follow, over-shoulder, three-quarter, gentle arc and static reaction shots.",
+    "motionContinuity": "No teleporting, duplicate characters, impossible platform positions or sudden obstacle resets."
+  },
   "episodes": [
-    {
-      "episode": 1,
-      "titleTH": "ประตูสู่ Beginner Obby",
-      "titleEN": "Beginner Obby Portal",
-      "level": "Beginner Obby / Portal",
-      "sceneCount": 16,
-      "path": "ROBLOX-BROTHERS-ADVENTURE/EP01-Beginner-Obby-Portal/STEP6.json",
-      "status": "STEP6_READY",
-      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP01-Beginner-Obby-Portal/metadata.json"
-    },
-    {
-      "episode": 2,
-      "titleTH": "รถรางเหมืองสุดป่วน",
-      "titleEN": "Minecart Adventure",
-      "level": "Minecart Adventure",
-      "sceneCount": 16,
-      "path": "ROBLOX-BROTHERS-ADVENTURE/EP02-Minecart-Adventure/STEP6.json",
-      "status": "STEP6_READY",
-      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP02-Minecart-Adventure/metadata.json"
-    },
-    {
-      "episode": 3,
-      "titleTH": "เกาะลอยฟ้า",
-      "titleEN": "Sky Islands",
-      "level": "Sky Islands",
-      "sceneCount": 16,
-      "path": "ROBLOX-BROTHERS-ADVENTURE/EP03-Sky-Islands/STEP6.json",
-      "status": "STEP6_READY",
-      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP03-Sky-Islands/metadata.json"
-    },
-    {
-      "episode": 4,
-      "titleTH": "เมืองน้ำท่วม",
-      "titleEN": "Flood Escape",
-      "level": "Flood Escape",
-      "sceneCount": 16,
-      "path": "ROBLOX-BROTHERS-ADVENTURE/EP04-Flood-Escape/STEP6.json",
-      "status": "STEP6_READY",
-      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP04-Flood-Escape/metadata.json"
-    },
-    {
-      "episode": 5,
-      "titleTH": "ปราสาทปริศนา",
-      "titleEN": "Puzzle Castle",
-      "level": "Puzzle Castle",
-      "sceneCount": 16,
-      "path": "ROBLOX-BROTHERS-ADVENTURE/EP05-Puzzle-Castle/STEP6.json",
-      "status": "STEP6_READY",
-      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP05-Puzzle-Castle/metadata.json"
-    },
-    {
-      "episode": 6,
-      "titleTH": "แข่งรถสุดป่วน",
-      "titleEN": "Racing World",
-      "level": "Racing World",
-      "sceneCount": 16,
-      "path": "ROBLOX-BROTHERS-ADVENTURE/EP06-Racing-World/STEP6.json",
-      "status": "STEP6_READY",
-      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP06-Racing-World/metadata.json"
-    },
-    {
-      "episode": 7,
-      "titleTH": "สวนสัตว์หลุดกรง",
-      "titleEN": "Animal Rescue",
-      "level": "Animal Rescue",
-      "sceneCount": 16,
-      "path": "ROBLOX-BROTHERS-ADVENTURE/EP07-Animal-Rescue/STEP6.json",
-      "status": "STEP6_READY",
-      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP07-Animal-Rescue/metadata.json"
-    },
-    {
-      "episode": 8,
-      "titleTH": "โรงงานหุ่นยนต์วุ่นวาย",
-      "titleEN": "Robot Factory",
-      "level": "Robot Factory",
-      "sceneCount": 16,
-      "path": "ROBLOX-BROTHERS-ADVENTURE/EP08-Robot-Factory/STEP6.json",
-      "status": "STEP6_READY",
-      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP08-Robot-Factory/metadata.json"
-    },
-    {
-      "episode": 9,
-      "titleTH": "โจรสลัดแห่งเกาะสมบัติ",
-      "titleEN": "Pirate Island",
-      "level": "Pirate Island",
-      "sceneCount": 16,
-      "path": "ROBLOX-BROTHERS-ADVENTURE/EP09-Pirate-Island/STEP6.json",
-      "status": "STEP6_READY",
-      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP09-Pirate-Island/metadata.json"
-    },
-    {
-      "episode": 10,
-      "titleTH": "Mega Obby Final",
-      "titleEN": "Mega Obby Final",
-      "level": "Mega Obby Final",
-      "sceneCount": 16,
-      "path": "ROBLOX-BROTHERS-ADVENTURE/EP10-Mega-Obby-Final/STEP6.json",
-      "status": "STEP6_READY",
-      "metadata": "ROBLOX-BROTHERS-ADVENTURE/EP10-Mega-Obby-Final/metadata.json"
-    }
+    {"episode":1,"titleTH":"ประตูสู่ Beginner Obby","titleEN":"Beginner Obby Portal","level":"Beginner Obby / Portal","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP01-Beginner-Obby-Portal/STEP6.json","status":"QA_REVISED_FROM_FINAL_RENDER","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP01-Beginner-Obby-Portal/metadata.json"},
+    {"episode":2,"titleTH":"รถรางเหมืองสุดป่วน","titleEN":"Minecart Adventure","level":"Minecart Adventure","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP02-Minecart-Adventure/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP02-Minecart-Adventure/metadata.json"},
+    {"episode":3,"titleTH":"เกาะลอยฟ้า","titleEN":"Sky Islands","level":"Sky Islands","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP03-Sky-Islands/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP03-Sky-Islands/metadata.json"},
+    {"episode":4,"titleTH":"เมืองน้ำท่วม","titleEN":"Flood Escape","level":"Flood Escape","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP04-Flood-Escape/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP04-Flood-Escape/metadata.json"},
+    {"episode":5,"titleTH":"ปราสาทปริศนา","titleEN":"Puzzle Castle","level":"Puzzle Castle","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP05-Puzzle-Castle/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP05-Puzzle-Castle/metadata.json"},
+    {"episode":6,"titleTH":"แข่งรถสุดป่วน","titleEN":"Racing World","level":"Racing World","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP06-Racing-World/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP06-Racing-World/metadata.json"},
+    {"episode":7,"titleTH":"สวนสัตว์หลุดกรง","titleEN":"Animal Rescue","level":"Animal Rescue","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP07-Animal-Rescue/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP07-Animal-Rescue/metadata.json"},
+    {"episode":8,"titleTH":"โรงงานหุ่นยนต์วุ่นวาย","titleEN":"Robot Factory","level":"Robot Factory","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP08-Robot-Factory/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP08-Robot-Factory/metadata.json"},
+    {"episode":9,"titleTH":"โจรสลัดแห่งเกาะสมบัติ","titleEN":"Pirate Island","level":"Pirate Island","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP09-Pirate-Island/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP09-Pirate-Island/metadata.json"},
+    {"episode":10,"titleTH":"Mega Obby Final","titleEN":"Mega Obby Final","level":"Mega Obby Final","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP10-Mega-Obby-Final/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP10-Mega-Obby-Final/metadata.json"}
   ],
-  "updatedAt": "2026-08-25T19:45:00+07:00",
+  "updatedAt": "2026-08-26T16:44:00+07:00",
   "namePronunciation": {
-    "systemName": "ARI",
-    "spokenName": "อาริ",
-    "phonetic": "Ah-ree",
-    "instruction": "Pronounce ARI as อาริ (Ah-ree), two syllables."
+    "C-SHARP": {"systemName":"C-SHARP","spokenName":"ซีชาร์ป","instruction":"Pronounce C-SHARP as ซีชาร์ป in Thai dialogue."},
+    "ARI": {"systemName":"ARI","spokenName":"อาริ","phonetic":"Ah-ree","instruction":"Pronounce ARI as อาริ (Ah-ree), two syllables."}
   }
 }
