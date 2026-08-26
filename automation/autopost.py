@@ -112,6 +112,7 @@ def normalize_metadata(path: Path, metadata: dict[str, Any]) -> dict[str, Any]:
     )
     normalized.setdefault("GITHUB_PATH", relative(path.parent))
     normalized.setdefault("STATUS", metadata.get("status") or "READY_FOR_PRODUCTION")
+    normalized.setdefault("SOURCE_PROJECT_FILE", metadata.get("step6Path") or "")
     normalized.setdefault("OUTPUT_REFERENCES", metadata.get("outputs") or {})
     return normalized
 

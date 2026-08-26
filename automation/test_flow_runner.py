@@ -21,6 +21,14 @@ class FlowRunnerTests(unittest.TestCase):
         self.assertEqual(Path(contract["source_path"]).name, "STEP6.json")
         self.assertEqual(contract["channel_group"], "kid")
 
+    def test_lowercase_soldier_contract_uses_normalized_step6_path(self) -> None:
+        contract = flow_runner._job_contract("history-wwii-soldier-pov-ep01")
+        source = Path(contract["source_path"])
+        self.assertEqual(contract["content_id"], "wwii-soldier-pov-ep01")
+        self.assertEqual(source.name, "STEP6.json")
+        self.assertEqual(source.parent.name, "EP01-D-Day-Omaha-Beach")
+        self.assertEqual(contract["channel_group"], "history")
+
     def test_flow_url_targets_the_ppmovie_studio_tool(self) -> None:
         self.assertIn("/project/7c7bdbb9-b431-4ad8-a2d7-0597f685b5fe/", flow_runner.FLOW_URL)
         self.assertIn("/tool-version/c137fec7-6ff7-41eb-8d93-784d1d54c03c", flow_runner.FLOW_URL)

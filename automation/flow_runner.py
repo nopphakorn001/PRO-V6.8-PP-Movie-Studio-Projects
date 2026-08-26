@@ -85,7 +85,10 @@ def _job_contract(job_id: str) -> dict[str, object]:
     if not job:
         raise FlowRunnerError("PPMOVIE_FLOW_JOB_NOT_FOUND")
     metadata_path = _safe_path(str(job["metadata_file"]))
-    metadata = json.loads(metadata_path.read_text(encoding="utf-8-sig"))
+    metadata = autopost.normalize_metadata(
+        metadata_path,
+        json.loads(metadata_path.read_text(encoding="utf-8-sig")),
+    )
     source_value = str(metadata.get("SOURCE_PROJECT_FILE") or "")
     source_path = _safe_path(source_value)
     if source_path.name.lower() != "step6.json" or not source_path.is_file():

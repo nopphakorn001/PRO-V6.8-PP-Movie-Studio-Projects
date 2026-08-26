@@ -27,6 +27,12 @@ class AutoPostSmokeTests(unittest.TestCase):
         self.assertEqual(job["episode"], 1)
         self.assertEqual(job["title_th"], "WWII Soldier POV: D-Day at Omaha Beach")
         self.assertEqual(set(job["platform_runs"]), {"youtube", "youtube_shorts"})
+        metadata_path = autopost.ROOT / job["metadata_file"]
+        normalized = autopost.normalize_metadata(metadata_path, autopost.load_json(metadata_path))
+        self.assertEqual(
+            normalized["SOURCE_PROJECT_FILE"],
+            "WWII-SOLDIER-POV/EP01-D-Day-Omaha-Beach/STEP6.json",
+        )
 
     def test_every_job_targets_only_approved_platforms(self) -> None:
         expected = {"youtube", "youtube_shorts"}
