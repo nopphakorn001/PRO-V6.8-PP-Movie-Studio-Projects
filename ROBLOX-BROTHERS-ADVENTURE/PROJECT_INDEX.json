@@ -14,22 +14,27 @@
   },
   "status": "STEP6_READY",
   "characterSheets": "ROBLOX-BROTHERS-ADVENTURE/CHARACTER_SHEETS.json",
-  "continuity": "C-SHARP is the older brother and ARI is the younger brother. Both are stylized East Asian boys with fair/light skin and dark-brown hair. Keep faces, skin tone, outfits, props and relative height consistent. Never show floating character names or overhead UI. System names remain C-SHARP and ARI; spoken Thai names are ซีชาร์ป and อาริ.",
+  "continuity": "C-SHARP is the older brother and ARI is the younger brother. Both are stylized East Asian boys with fair/light skin and dark-brown hair. Exact face geometry is locked. System names remain C-SHARP and ARI; spoken Thai names are ซีชาร์ป and อาริ. Literal system names must not be used as visible text or visual prompt labels.",
   "generationQA": {
+    "faceIdentityLock": "Keep exact eye shape, eyebrows, nose, cheek fullness, face width, skin tone, age, hair silhouette, outfit and relative height across scenes. Use Character Sheets plus previous scene image reference.",
+    "visualPromptRoleNames": "In imageDescription/videoPrompt use older brother and younger brother instead of literal C-SHARP/ARI wherever possible to reduce accidental text/nameplates.",
     "noNameplates": true,
     "noOverheadUsernames": true,
     "noChatBubbles": true,
     "noHealthBars": true,
     "noUnrequestedSubtitles": true,
+    "noReadableBadges": true,
     "oneSpeakerPerScene": true,
     "alternateSpeakersWhenPractical": true,
     "nonSpeakerNoLipSync": true,
-    "previousSceneReference": "Use the immediately previous generated scene image as the primary continuity reference in PRO V6.8 when location/time/action continues. Preserve face, skin tone, outfit, props, height relationship, screen direction, obstacle state and lighting.",
-    "cameraVariation": "Avoid repeating the same camera move in consecutive scenes; vary wide reveal, medium, low side follow, over-shoulder, three-quarter, gentle arc and static reaction shots.",
+    "ariTtsAliasStrict": "ARI is metadata only. Never send A-R-I as spoken text. Spoken name must always be อาริ (Ah-ree).",
+    "csharpTtsAlias": "Use ซีชาร์ป in spoken Thai dialogue.",
+    "previousSceneReference": "Use the immediately previous generated scene image as the primary continuity reference in PRO V6.8 when location/time/action continues. Preserve exact face, skin tone, outfit, props, height relationship, screen direction, obstacle state and lighting.",
+    "cameraVariation": "Avoid repeating the same camera move in consecutive scenes; vary wide reveal, medium, low side follow, over-shoulder, rear follow, three-quarter, gentle arc and static reaction shots.",
     "motionContinuity": "No teleporting, duplicate characters, impossible platform positions or sudden obstacle resets."
   },
   "episodes": [
-    {"episode":1,"titleTH":"ประตูสู่ Beginner Obby","titleEN":"Beginner Obby Portal","level":"Beginner Obby / Portal","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP01-Beginner-Obby-Portal/STEP6.json","status":"QA_REVISED_FROM_FINAL_RENDER","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP01-Beginner-Obby-Portal/metadata.json"},
+    {"episode":1,"titleTH":"ประตูสู่ Beginner Obby","titleEN":"Beginner Obby Portal","level":"Beginner Obby / Portal","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP01-Beginner-Obby-Portal/STEP6.json","status":"QA_REVISED_V2_FACE_TTS_NAMEPLATE","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP01-Beginner-Obby-Portal/metadata.json"},
     {"episode":2,"titleTH":"รถรางเหมืองสุดป่วน","titleEN":"Minecart Adventure","level":"Minecart Adventure","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP02-Minecart-Adventure/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP02-Minecart-Adventure/metadata.json"},
     {"episode":3,"titleTH":"เกาะลอยฟ้า","titleEN":"Sky Islands","level":"Sky Islands","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP03-Sky-Islands/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP03-Sky-Islands/metadata.json"},
     {"episode":4,"titleTH":"เมืองน้ำท่วม","titleEN":"Flood Escape","level":"Flood Escape","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP04-Flood-Escape/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP04-Flood-Escape/metadata.json"},
@@ -40,9 +45,9 @@
     {"episode":9,"titleTH":"โจรสลัดแห่งเกาะสมบัติ","titleEN":"Pirate Island","level":"Pirate Island","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP09-Pirate-Island/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP09-Pirate-Island/metadata.json"},
     {"episode":10,"titleTH":"Mega Obby Final","titleEN":"Mega Obby Final","level":"Mega Obby Final","sceneCount":16,"path":"ROBLOX-BROTHERS-ADVENTURE/EP10-Mega-Obby-Final/STEP6.json","status":"STEP6_READY","metadata":"ROBLOX-BROTHERS-ADVENTURE/EP10-Mega-Obby-Final/metadata.json"}
   ],
-  "updatedAt": "2026-08-26T16:44:00+07:00",
+  "updatedAt": "2026-08-26T17:53:00+07:00",
   "namePronunciation": {
-    "C-SHARP": {"systemName":"C-SHARP","spokenName":"ซีชาร์ป","instruction":"Pronounce C-SHARP as ซีชาร์ป in Thai dialogue."},
-    "ARI": {"systemName":"ARI","spokenName":"อาริ","phonetic":"Ah-ree","instruction":"Pronounce ARI as อาริ (Ah-ree), two syllables."}
+    "C-SHARP": {"systemName":"C-SHARP","spokenName":"ซีชาร์ป","instruction":"Use ซีชาร์ป in Thai spoken dialogue."},
+    "ARI": {"systemName":"ARI","spokenName":"อาริ","phonetic":"Ah-ree","instruction":"ARI is metadata only; spoken name must always be อาริ (Ah-ree), two syllables. Never speak the letters A-R-I."}
   }
 }
