@@ -124,3 +124,5 @@ python automation/youtube_publisher.py upload-private --job-id kid-block-tales-e
 `--auth-url-file` supports a controlled browser handoff when the normal desktop browser cannot be automated. The file contains only a short-lived authorization URL, is stored outside Git, and is deleted after the OAuth callback completes.
 
 One vertical upload is recorded as both the YouTube video and YouTube Short result with the same remote ID; no duplicate upload is created. Public visibility is not implemented by this command.
+
+AICompanyOS may explicitly select either configured destination (`kid` / CubeLoom Adventures or `history` / War & History Vault). The bridge accepts the channel group together with the exact configured channel ID and name, rejects arbitrary or mismatched identities before OAuth, applies the selected channel's category and made-for-kids policy, and compares the live OAuth channel ID again before any upload bytes are sent. One upload batch must target only one YouTube channel.

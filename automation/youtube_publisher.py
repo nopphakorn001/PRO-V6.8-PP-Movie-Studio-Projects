@@ -69,12 +69,16 @@ def load_credentials(path: Path = SECRET_FILE) -> dict[str, Any]:
 def credential_status(path: Path = SECRET_FILE) -> dict[str, Any]:
     try:
         value = load_credentials(path)
-        return {
+        status = {
             "configured": True,
             "refresh_token_configured": True,
             "scopes": list(value.get("scopes") or SCOPES),
             "secret_location": "WINDOWS_USER_PROFILE",
         }
+        if str(value.get("authorized_channel_id", "")).strip():
+            status["authorized_channel_id"] = str(value["authorized_channel_id"])
+            status["authorized_channel_title"] = str(value.get("authorized_channel_title", ""))
+        return status
     except (OSError, ValueError, YouTubePublisherError):
         return {
             "configured": False,
@@ -176,7 +180,12 @@ def authorize(
     refresh_token = str(token.get("refresh_token", "")).strip()
     if not refresh_token:
         raise YouTubePublisherError("YOUTUBE_OAUTH_REFRESH_TOKEN_MISSING")
-    _save_credentials({**client, "refresh_token": refresh_token, "scopes": list(SCOPES)}, store)
+    access_token = str(token.get("access_token", "")).strip()
+    channel = authenticated_channel(access_token) if access_token else {"id": "", "title": ""}
+    _save_credentials({
+        **client, "refresh_token": refresh_token, "scopes": list(SCOPES),
+        "authorized_channel_id": channel["id"], "authorized_channel_title": channel["title"],
+    }, store)
     return credential_status(store)
 
 
@@ -252,19 +261,42 @@ def _upload_resumable(access_token: str, payload: dict[str, Any]) -> dict[str, A
         raise YouTubePublisherError(f"YOUTUBE_UPLOAD_HTTP_{exc.code}") from exc
 
 
-def publish_private(job_id: str, *, store: Path = SECRET_FILE) -> dict[str, Any]:
+def publish_private(
+    job_id: str,
+    *,
+    target_channel_group: str = "",
+    target_youtube_channel_id: str = "",
+    target_youtube_channel_name: str = "",
+    store: Path = SECRET_FILE,
+) -> dict[str, Any]:
     queue = autopost.load_queue()
     job = autopost.find_job(queue, job_id)
     if job.get("status") not in {"READY", "CLAIMED"}:
         raise YouTubePublisherError("YOUTUBE_JOB_NOT_READY")
+    channels, _platforms = autopost.load_config()
+    resolved_group = target_channel_group.strip() or str(job["channel_group"])
+    target = channels.get("channels", {}).get(resolved_group)
+    if not isinstance(target, dict):
+        raise YouTubePublisherError("YOUTUBE_TARGET_CHANNEL_NOT_CONFIGURED")
+    expected = str(target.get("youtube_channel_id", "")).strip()
+    expected_name = str(target.get("display_name", "")).strip()
+    if (not expected or (target_youtube_channel_id and target_youtube_channel_id.strip() != expected)
+            or (target_youtube_channel_name and target_youtube_channel_name.strip() != expected_name)):
+        raise YouTubePublisherError("YOUTUBE_TARGET_CHANNEL_CONTRACT_MISMATCH")
     payload = autopost.build_publish_payload(job_id, "youtube_shorts")
+    policy = dict(target.get("publishing_policy") or {})
+    payload["channel_group"] = resolved_group
+    payload["options"] = {
+        **dict(payload.get("options") or {}),
+        "category_id": policy.get("youtube_category_id", "22"),
+        "self_declared_made_for_kids": bool(policy.get("youtube_made_for_kids", False)),
+        "contains_synthetic_media": bool(policy.get("contains_synthetic_media", True)),
+    }
     if str((payload.get("options") or {}).get("privacy_status")) != "private":
         raise YouTubePublisherError("YOUTUBE_PRIVATE_ONLY")
     credentials = load_credentials(store)
     token = refresh_access_token(credentials)
     channel = authenticated_channel(token)
-    channels, _platforms = autopost.load_config()
-    expected = str(channels["channels"][job["channel_group"]].get("youtube_channel_id", ""))
     if not expected or channel["id"] != expected:
         raise YouTubePublisherError("YOUTUBE_CHANNEL_SCOPE_MISMATCH")
     if job.get("status") == "READY":
@@ -280,7 +312,7 @@ def publish_private(job_id: str, *, store: Path = SECRET_FILE) -> dict[str, Any]
         completed = autopost.record_platform_result(job_id, "youtube_shorts", "PUBLISHED", video_id, url)
         return {
             "ok": True, "job_id": job_id, "privacy_status": "private",
-            "channel_id": expected, "channel_title": channel["title"],
+            "channel_group": resolved_group, "channel_id": expected, "channel_title": channel["title"],
             "video_id": video_id, "url": url, "job_status": completed["status"],
         }
     except Exception as exc:

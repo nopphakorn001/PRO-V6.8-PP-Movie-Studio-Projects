@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "service": "ai-company-os-autopost",
   "base_url": "http://127.0.0.1:8787/v1",
   "authentication": {
@@ -35,7 +35,7 @@
     "POST /jobs/{job_id}/claim": "Claim a READY job with body {agent_id}.",
     "POST /jobs/{job_id}/status": "Set status with body {status, message}.",
     "POST /jobs/{job_id}/platform-result": "Record {platform, status, remote_id, url, error}; successful IDs and URLs are written back to episode metadata."
-    ,"POST /jobs/{job_id}/youtube-private": "Upload one approved vertical asset through the official YouTube API with privacy forced to private, verify channel identity, and persist the returned video ID."
+    ,"POST /jobs/{job_id}/youtube-private": "Upload one approved vertical asset with body {requested_by,target_channel_group,target_youtube_channel_id,target_youtube_channel_name}; resolve the target only from allowlisted channel config, apply that channel policy, force private visibility, verify the live OAuth channel identity, and persist the returned video ID."
   },
   "job_statuses": [
     "WAITING_ASSETS",

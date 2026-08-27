@@ -146,7 +146,7 @@ class BridgeHandler(BaseHTTPRequestHandler):
                 self.send_json(HTTPStatus.OK, {"ok": True, "payload": payload})
                 return
             self.send_json(HTTPStatus.NOT_FOUND, {"ok": False, "error": "not_found"})
-        except (autopost.AutoPostError, ValueError) as exc:
+        except (autopost.AutoPostError, youtube_publisher.YouTubePublisherError, ValueError) as exc:
             self.send_json(HTTPStatus.BAD_REQUEST, {"ok": False, "error": str(exc)})
 
     def do_POST(self) -> None:
@@ -207,11 +207,16 @@ class BridgeHandler(BaseHTTPRequestHandler):
                             str(body.get("error", "")),
                         )
                     else:
-                        job = youtube_publisher.publish_private(job_id)
+                        job = youtube_publisher.publish_private(
+                            job_id,
+                            target_channel_group=str(body.get("target_channel_group", "")),
+                            target_youtube_channel_id=str(body.get("target_youtube_channel_id", "")),
+                            target_youtube_channel_name=str(body.get("target_youtube_channel_name", "")),
+                        )
                     self.send_json(HTTPStatus.OK, {"ok": True, "job": job})
                     return
             self.send_json(HTTPStatus.NOT_FOUND, {"ok": False, "error": "not_found"})
-        except (autopost.AutoPostError, ValueError) as exc:
+        except (autopost.AutoPostError, youtube_publisher.YouTubePublisherError, ValueError) as exc:
             self.send_json(HTTPStatus.BAD_REQUEST, {"ok": False, "error": str(exc)})
 
 
