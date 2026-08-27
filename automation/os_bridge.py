@@ -100,7 +100,7 @@ class BridgeHandler(BaseHTTPRequestHandler):
                 self.send_json(HTTPStatus.OK, flow_runner.status())
                 return
             if route.path == "/v1/youtube/status":
-                self.send_json(HTTPStatus.OK, youtube_publisher.credential_status())
+                self.send_json(HTTPStatus.OK, youtube_publisher.credential_profiles_status())
                 return
             if not self.require_auth():
                 return
@@ -165,6 +165,18 @@ class BridgeHandler(BaseHTTPRequestHandler):
                     self.send_json(
                         HTTPStatus.OK if result["ok"] else HTTPStatus.UNPROCESSABLE_ENTITY,
                         result,
+                    )
+                    return
+                if route.path == "/v1/youtube/verify":
+                    self.send_json(HTTPStatus.OK, youtube_publisher.verify_legacy_credential())
+                    return
+                if route.path == "/v1/youtube/authorize":
+                    channel_group = str(body.get("channel_group", "")).strip()
+                    if not channel_group:
+                        raise autopost.AutoPostError("channel_group is required")
+                    self.send_json(
+                        HTTPStatus.OK,
+                        youtube_publisher.authorize_profile(channel_group, timeout_seconds=300),
                     )
                     return
                 if route.path == "/v1/flow/jobs":

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "service": "ai-company-os-autopost",
   "base_url": "http://127.0.0.1:8787/v1",
   "authentication": {
@@ -12,6 +12,8 @@
     "POST /validate",
     "GET /flow/status",
     "GET /youtube/status",
+    "POST /youtube/verify",
+    "POST /youtube/authorize",
     "POST /flow/jobs",
     "GET /jobs/next?channel=kid",
     "GET /jobs/{job_id}/publish-payload?platform=youtube",
@@ -34,7 +36,9 @@
     "POST /jobs/{job_id}/approve": "Check required assets and approve with body {approved_by}; writes approval and local asset references to episode metadata.",
     "POST /jobs/{job_id}/claim": "Claim a READY job with body {agent_id}.",
     "POST /jobs/{job_id}/status": "Set status with body {status, message}.",
-    "POST /jobs/{job_id}/platform-result": "Record {platform, status, remote_id, url, error}; successful IDs and URLs are written back to episode metadata."
+    "POST /jobs/{job_id}/platform-result": "Record {platform, status, remote_id, url, error}; successful IDs and URLs are written back to episode metadata.",
+    "POST /youtube/verify": "Inspect the existing local OAuth account, match its live channel ID to an allowlisted channel, and assign it to that local account profile without exposing secrets.",
+    "POST /youtube/authorize": "Open Google account selection for one allowlisted channel_group and store a verified per-channel OAuth profile outside Git."
     ,"POST /jobs/{job_id}/youtube-private": "Upload one approved vertical asset with body {requested_by,target_channel_group,target_youtube_channel_id,target_youtube_channel_name}; resolve the target only from allowlisted channel config, apply that channel policy, force private visibility, verify the live OAuth channel identity, and persist the returned video ID."
   },
   "job_statuses": [

@@ -14,6 +14,41 @@ class YouTubePublisherTests(unittest.TestCase):
         self.assertNotIn("client_secret", status)
         self.assertNotIn("refresh_token", status)
 
+    def test_profile_status_reports_each_channel_without_secret_values(self) -> None:
+        channels = {"channels": {
+            "kid": {"display_name": "CubeLoom Adventures", "youtube_channel_id": "KID"},
+            "history": {"display_name": "War & History Vault", "youtube_channel_id": "HISTORY"},
+        }}
+        statuses = {
+            "kid": {"configured": True, "authorized_channel_id": "KID", "authorized_channel_title": "CubeLoom Adventures"},
+            "history": {"configured": False},
+            "legacy": {"configured": True},
+        }
+        with patch.object(youtube_publisher.autopost, "load_config", return_value=(channels, {})), patch.object(
+            youtube_publisher, "profile_store", side_effect=lambda group: Path(group)
+        ), patch.object(
+            youtube_publisher, "credential_status", side_effect=lambda path: statuses.get(path.name, statuses["legacy"])
+        ):
+            result = youtube_publisher.credential_profiles_status()
+        self.assertTrue(result["profiles"][0]["identity_verified"])
+        self.assertFalse(result["profiles"][1]["identity_verified"])
+        self.assertNotIn("refresh_token", str(result))
+
+    def test_verify_legacy_credential_assigns_matching_profile(self) -> None:
+        channels = {"channels": {"history": {"youtube_channel_id": "HISTORY"}}}
+        with patch.object(youtube_publisher, "load_credentials", return_value={"client_id": "id"}), patch.object(
+            youtube_publisher, "refresh_access_token", return_value="access"
+        ), patch.object(
+            youtube_publisher, "authenticated_channel", return_value={"id": "HISTORY", "title": "War & History Vault"}
+        ), patch.object(youtube_publisher.autopost, "load_config", return_value=(channels, {})), patch.object(
+            youtube_publisher, "profile_store", return_value=Path("history-profile.json")
+        ), patch.object(youtube_publisher, "_save_credentials") as save, patch.object(
+            youtube_publisher, "credential_profiles_status", return_value={"profiles": []}
+        ):
+            result = youtube_publisher.verify_legacy_credential()
+        self.assertEqual(result["matched_channel_group"], "history")
+        self.assertEqual(save.call_args.args[1], Path("history-profile.json"))
+
     def test_channel_mismatch_blocks_before_upload(self) -> None:
         job = {"status": "READY", "channel_group": "kid"}
         payload = {"options": {"privacy_status": "private"}}

@@ -41,6 +41,12 @@ class YouTubePublisherError(RuntimeError):
     pass
 
 
+def profile_store(channel_group: str) -> Path:
+    if channel_group not in {"kid", "history"}:
+        raise YouTubePublisherError("YOUTUBE_TARGET_CHANNEL_NOT_CONFIGURED")
+    return SECRET_FILE.with_name(f"ppmoviestudio_youtube_{channel_group}.json")
+
+
 def _read_json_response(response: Any) -> dict[str, Any]:
     value = json.loads(response.read().decode("utf-8"))
     if not isinstance(value, dict):
@@ -88,6 +94,48 @@ def credential_status(path: Path = SECRET_FILE) -> dict[str, Any]:
         }
 
 
+def credential_profiles_status() -> dict[str, Any]:
+    channels, _platforms = autopost.load_config()
+    profiles: list[dict[str, Any]] = []
+    for group, channel in channels.get("channels", {}).items():
+        status = credential_status(profile_store(group))
+        profiles.append({
+            "channel_group": group,
+            "display_name": str(channel.get("display_name", "")),
+            "youtube_channel_id": str(channel.get("youtube_channel_id", "")),
+            "configured": bool(status.get("configured")),
+            "authorized_channel_id": str(status.get("authorized_channel_id", "")),
+            "authorized_channel_title": str(status.get("authorized_channel_title", "")),
+            "identity_verified": bool(
+                status.get("authorized_channel_id")
+                and status.get("authorized_channel_id") == channel.get("youtube_channel_id")
+            ),
+        })
+    legacy = credential_status(SECRET_FILE)
+    return {
+        "configured": any(profile["configured"] for profile in profiles) or bool(legacy.get("configured")),
+        "profiles": profiles,
+        "legacy_account_unassigned": bool(legacy.get("configured")) and not any(profile["configured"] for profile in profiles),
+        "scopes": list(SCOPES),
+        "secret_location": "WINDOWS_USER_PROFILE",
+    }
+
+
+def verify_legacy_credential() -> dict[str, Any]:
+    credentials = load_credentials(SECRET_FILE)
+    channel = authenticated_channel(refresh_access_token(credentials))
+    channels, _platforms = autopost.load_config()
+    for group, configured in channels.get("channels", {}).items():
+        if channel["id"] == str(configured.get("youtube_channel_id", "")):
+            _save_credentials({
+                **credentials,
+                "authorized_channel_id": channel["id"],
+                "authorized_channel_title": channel["title"],
+            }, profile_store(group))
+            return {"ok": True, "matched_channel_group": group, "channel_id": channel["id"], "channel_title": channel["title"], **credential_profiles_status()}
+    raise YouTubePublisherError("YOUTUBE_CHANNEL_SCOPE_MISMATCH")
+
+
 def _post_form(url: str, values: dict[str, str]) -> dict[str, Any]:
     request = urllib.request.Request(
         url,
@@ -114,15 +162,15 @@ def _oauth_client(path: Path) -> dict[str, str]:
     return {"client_id": client_id, "client_secret": client_secret}
 
 
-def authorize(
-    client_secrets: Path,
+def _authorize_client(
+    client: dict[str, str],
     *,
     timeout_seconds: int = 300,
     store: Path = SECRET_FILE,
     auth_url_file: Path | None = None,
+    expected_channel_id: str = "",
 ) -> dict[str, Any]:
     """Run the desktop-app loopback OAuth flow and persist only in the user profile."""
-    client = _oauth_client(client_secrets)
     state = secrets.token_urlsafe(32)
     verifier = secrets.token_urlsafe(64)
     challenge = base64.urlsafe_b64encode(hashlib.sha256(verifier.encode("ascii")).digest()).rstrip(b"=").decode("ascii")
@@ -157,7 +205,7 @@ def authorize(
         "client_id": client["client_id"], "redirect_uri": redirect_uri,
         "response_type": "code", "scope": " ".join(SCOPES), "state": state,
         "code_challenge": challenge, "code_challenge_method": "S256",
-        "access_type": "offline", "prompt": "consent",
+        "access_type": "offline", "prompt": "select_account consent",
     })
     authorization_url = AUTH_URI + "?" + query
     if auth_url_file is None:
@@ -182,11 +230,49 @@ def authorize(
         raise YouTubePublisherError("YOUTUBE_OAUTH_REFRESH_TOKEN_MISSING")
     access_token = str(token.get("access_token", "")).strip()
     channel = authenticated_channel(access_token) if access_token else {"id": "", "title": ""}
+    if expected_channel_id and channel["id"] != expected_channel_id:
+        raise YouTubePublisherError("YOUTUBE_CHANNEL_SCOPE_MISMATCH")
     _save_credentials({
         **client, "refresh_token": refresh_token, "scopes": list(SCOPES),
         "authorized_channel_id": channel["id"], "authorized_channel_title": channel["title"],
     }, store)
     return credential_status(store)
+
+
+def authorize(
+    client_secrets: Path,
+    *,
+    timeout_seconds: int = 300,
+    store: Path = SECRET_FILE,
+    auth_url_file: Path | None = None,
+) -> dict[str, Any]:
+    return _authorize_client(
+        _oauth_client(client_secrets), timeout_seconds=timeout_seconds, store=store,
+        auth_url_file=auth_url_file,
+    )
+
+
+def authorize_profile(channel_group: str, *, timeout_seconds: int = 300) -> dict[str, Any]:
+    channels, _platforms = autopost.load_config()
+    channel = channels.get("channels", {}).get(channel_group)
+    if not isinstance(channel, dict):
+        raise YouTubePublisherError("YOUTUBE_TARGET_CHANNEL_NOT_CONFIGURED")
+    credentials: dict[str, Any] | None = None
+    for candidate in (profile_store(channel_group), SECRET_FILE, profile_store("kid"), profile_store("history")):
+        try:
+            credentials = load_credentials(candidate)
+            break
+        except YouTubePublisherError:
+            continue
+    if credentials is None:
+        raise YouTubePublisherError("YOUTUBE_OAUTH_CLIENT_NOT_CONFIGURED")
+    status = _authorize_client(
+        {"client_id": str(credentials["client_id"]), "client_secret": str(credentials["client_secret"])},
+        timeout_seconds=timeout_seconds,
+        store=profile_store(channel_group),
+        expected_channel_id=str(channel.get("youtube_channel_id", "")),
+    )
+    return {"ok": True, "channel_group": channel_group, **status, **credential_profiles_status()}
 
 
 def refresh_access_token(credentials: dict[str, Any]) -> str:
@@ -267,7 +353,7 @@ def publish_private(
     target_channel_group: str = "",
     target_youtube_channel_id: str = "",
     target_youtube_channel_name: str = "",
-    store: Path = SECRET_FILE,
+    store: Path | None = None,
 ) -> dict[str, Any]:
     queue = autopost.load_queue()
     job = autopost.find_job(queue, job_id)
@@ -294,7 +380,8 @@ def publish_private(
     }
     if str((payload.get("options") or {}).get("privacy_status")) != "private":
         raise YouTubePublisherError("YOUTUBE_PRIVATE_ONLY")
-    credentials = load_credentials(store)
+    credential_store = store or (profile_store(resolved_group) if profile_store(resolved_group).is_file() else SECRET_FILE)
+    credentials = load_credentials(credential_store)
     token = refresh_access_token(credentials)
     channel = authenticated_channel(token)
     if not expected or channel["id"] != expected:
