@@ -43,6 +43,8 @@ class FlowRunnerTests(unittest.TestCase):
         self.assertNotIn('"STEP\\\\s*05|ตัวละคร", "STEP_05"', worker)
         self.assertIn("FLOW_IMAGES_NOT_READY_FOR_VIDEO", worker)
         self.assertIn("FLOW_VIDEOS_NOT_READY_FOR_EXPORT", worker)
+        self.assertIn("verifyVideosGenerated", worker)
+        self.assertIn('"ดาวน์โหลดวิดีโอ|download video"', worker)
         self.assertIn('"สร้างวิดีโอ|generate video", "ทั้งหมด|all"', worker)
         self.assertIn('"ส่งออกรวมคลิป|export full clip|export clip"', worker)
         self.assertIn('"สร้างวิดีโอทั้งหมด|generate all videos"', worker)
@@ -61,7 +63,8 @@ class FlowRunnerTests(unittest.TestCase):
         self.assertIn("process.exit(0);", worker)
         self.assertIn("process.exit(1);", worker)
         self.assertLess(worker.index("await verifyImagesReady(cdp, contextMap);"), worker.index("GENERATE_ALL_VIDEOS"))
-        self.assertLess(worker.index("await verifyVideosReadyForExport(cdp, contextMap);"), worker.index("CREATE_COVER"))
+        self.assertLess(worker.index("await verifyVideosGenerated(cdp, contextMap);"), worker.index("CREATE_COVER"))
+        self.assertLess(worker.index("await verifyVideosGenerated(cdp, contextMap);"), worker.index("STEP_07"))
 
     def test_status_marks_stale_active_job_failed(self) -> None:
         with TemporaryDirectory() as temp:

@@ -301,6 +301,16 @@ async function verifyImagesReady(cdp, contextMap) {
   return true;
 }
 
+async function verifyVideosGenerated(cdp, contextMap) {
+  const text = await visibleText(cdp, contextMap);
+  if (/ยังไม่มีวิดีโอที่พร้อมตัดต่อ|no videos? ready/i.test(text)) {
+    throw new Error("FLOW_VIDEOS_NOT_READY_FOR_EXPORT");
+  }
+  const downloadButtons = await enabledButtonCount(cdp, contextMap, "ดาวน์โหลดวิดีโอ|download video");
+  if (downloadButtons <= 0) throw new Error("FLOW_VIDEOS_NOT_READY_FOR_EXPORT");
+  return true;
+}
+
 async function verifyVideosReadyForExport(cdp, contextMap) {
   const text = await visibleText(cdp, contextMap);
   if (/ยังไม่มีวิดีโอที่พร้อมตัดต่อ|no videos? ready/i.test(text)) {
@@ -346,7 +356,7 @@ async function runAction(cdp, contextMap) {
     await clickButton(cdp, contextMap, "สร้างวิดีโอทั้งหมด|generate all videos", "GENERATE_ALL_VIDEOS");
     await waitForIdle(cdp, contextMap, "VIDEO_GENERATION", 60 * 60 * 1000);
     contextMap = await allContexts(cdp);
-    await verifyVideosReadyForExport(cdp, contextMap);
+    await verifyVideosGenerated(cdp, contextMap);
     if (action === "FLOW_GENERATE_ALL_VIDEOS") return "VIDEOS_COMPLETE";
   }
   if (["FLOW_CREATE_COVER", "FLOW_RUN_TO_EXPORT"].includes(action)) {
