@@ -224,6 +224,8 @@ class BridgeHandler(BaseHTTPRequestHandler):
                             target_channel_group=str(body.get("target_channel_group", "")),
                             target_youtube_channel_id=str(body.get("target_youtube_channel_id", "")),
                             target_youtube_channel_name=str(body.get("target_youtube_channel_name", "")),
+                            verified_asset_path=str(body.get("verified_asset_path", "")),
+                            approved_by=str(body.get("requested_by", "")),
                         )
                     self.send_json(HTTPStatus.OK, {"ok": True, "job": job})
                     return

@@ -167,12 +167,74 @@ def expected_assets(channel_id: str, metadata: dict[str, Any]) -> dict[str, str]
     folder = output_folder(channel_id, metadata)
     master = folder / "master.mp4"
     short = folder / "short.mp4"
+    references = dict(metadata.get("OUTPUT_REFERENCES") or {})
+
+    def verified_reference(key: str, fallback: Path) -> str:
+        value = str(references.get(key) or "").strip().replace("\\", "/")
+        if not value or value.startswith("/") or ".." in Path(value).parts:
+            return relative(fallback)
+        candidate = (ROOT / value).resolve()
+        try:
+            candidate.relative_to(ROOT.resolve())
+        except ValueError:
+            return relative(fallback)
+        return value if candidate.is_file() else relative(fallback)
+
     return {
-        "master_video": relative(master),
-        "short_video": relative(short),
+        "master_video": verified_reference("VIDEO_FILE", master),
+        "short_video": verified_reference("SHORT_VIDEO_FILE", short),
         "thumbnail": relative(folder / "thumbnail.jpg"),
         "subtitle": relative(folder / "subtitle.srt"),
     }
+
+
+def prepare_verified_asset(job_id: str, asset_path: str, approved_by: str) -> dict[str, Any]:
+    """Adopt one locally verified video for an owner-confirmed Private upload."""
+
+    if not approved_by.strip():
+        raise AutoPostError("UPLOAD_APPROVER_REQUIRED")
+    normalized_path = asset_path.strip().replace("\\", "/")
+    if not normalized_path or normalized_path.startswith("/") or ".." in Path(normalized_path).parts:
+        raise AutoPostError("VERIFIED_ASSET_PATH_INVALID")
+    asset = (ROOT / normalized_path).resolve()
+    try:
+        asset.relative_to(ROOT.resolve())
+    except ValueError as exc:
+        raise AutoPostError("VERIFIED_ASSET_OUTSIDE_WORKSPACE") from exc
+    if not asset.is_file() or asset.suffix.lower() != ".mp4" or asset.stat().st_size < 1024:
+        raise AutoPostError("VERIFIED_ASSET_NOT_USABLE")
+
+    queue = load_queue()
+    job = find_job(queue, job_id)
+    metadata_path = (ROOT / str(job["metadata_file"])).resolve()
+    try:
+        metadata_path.relative_to(ROOT.resolve())
+    except ValueError as exc:
+        raise AutoPostError("METADATA_PATH_OUTSIDE_WORKSPACE") from exc
+    metadata = normalize_metadata(metadata_path, load_json(metadata_path))
+    captions = dict(metadata.get("PLATFORM_CAPTIONS") or {})
+    if not str(captions.get("YOUTUBE") or "").strip() or not str(captions.get("YOUTUBE_SHORTS") or "").strip():
+        raise AutoPostError("YOUTUBE_CAPTION_NOT_READY")
+
+    approved_at = iso_now()
+    metadata.setdefault("AUTOMATION_NOTES", {}).update({
+        "READY_FOR_AUTO_POST": True,
+        "CAPTION_REVIEWED": True,
+        "AUTO_POST_STATUS": "APPROVED",
+        "APPROVED_BY": approved_by.strip(),
+        "APPROVED_AT": approved_at,
+    })
+    metadata.setdefault("OUTPUT_REFERENCES", {}).update({
+        "VIDEO_FILE": normalized_path,
+        "SHORT_VIDEO_FILE": normalized_path,
+    })
+    metadata["UPDATED_AT"] = approved_at
+    write_json_atomic(metadata_path, metadata)
+    refreshed = build_queue()
+    prepared = find_job(refreshed, job_id)
+    if prepared.get("status") != "READY":
+        raise AutoPostError("VERIFIED_ASSET_PREFLIGHT_FAILED:" + ",".join(prepared.get("readiness", {}).get("blockers", [])))
+    return prepared
 
 
 def assess_readiness(

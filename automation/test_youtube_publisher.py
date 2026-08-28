@@ -66,6 +66,30 @@ class YouTubePublisherTests(unittest.TestCase):
                 youtube_publisher.publish_private("job")
         upload.assert_not_called()
 
+    def test_verified_local_asset_prepares_a_waiting_job_before_upload_checks(self) -> None:
+        waiting = {"status": "WAITING_ASSETS", "channel_group": "kid"}
+        prepared = {"status": "READY", "channel_group": "kid"}
+        channels = {"channels": {"kid": {"youtube_channel_id": "EXPECTED"}}}
+        with patch.object(youtube_publisher.autopost, "load_queue", return_value={}), patch.object(
+            youtube_publisher.autopost, "find_job", return_value=waiting
+        ), patch.object(
+            youtube_publisher.autopost, "prepare_verified_asset", return_value=prepared
+        ) as prepare, patch.object(
+            youtube_publisher.autopost, "build_publish_payload", return_value={"options": {"privacy_status": "private"}}
+        ), patch.object(
+            youtube_publisher, "load_credentials", return_value={"client_id": "id", "client_secret": "secret", "refresh_token": "refresh"}
+        ), patch.object(youtube_publisher, "refresh_access_token", return_value="access"), patch.object(
+            youtube_publisher, "authenticated_channel", return_value={"id": "OTHER", "title": "Wrong"}
+        ), patch.object(youtube_publisher.autopost, "load_config", return_value=(channels, {})), patch.object(
+            youtube_publisher, "_upload_resumable"
+        ) as upload:
+            with self.assertRaisesRegex(youtube_publisher.YouTubePublisherError, "YOUTUBE_CHANNEL_SCOPE_MISMATCH"):
+                youtube_publisher.publish_private(
+                    "job", verified_asset_path="WWII-SOLDIER-POV/EP02-Stalingrad/render.mp4", approved_by="owner"
+                )
+        prepare.assert_called_once_with("job", "WWII-SOLDIER-POV/EP02-Stalingrad/render.mp4", "owner")
+        upload.assert_not_called()
+
     def test_success_records_one_video_for_youtube_and_shorts(self) -> None:
         job = {"status": "READY", "channel_group": "kid"}
         payload = {"options": {"privacy_status": "private"}}

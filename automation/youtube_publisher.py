@@ -353,10 +353,14 @@ def publish_private(
     target_channel_group: str = "",
     target_youtube_channel_id: str = "",
     target_youtube_channel_name: str = "",
+    verified_asset_path: str = "",
+    approved_by: str = "",
     store: Path | None = None,
 ) -> dict[str, Any]:
     queue = autopost.load_queue()
     job = autopost.find_job(queue, job_id)
+    if job.get("status") not in {"READY", "CLAIMED"} and verified_asset_path:
+        job = autopost.prepare_verified_asset(job_id, verified_asset_path, approved_by)
     if job.get("status") not in {"READY", "CLAIMED"}:
         raise YouTubePublisherError("YOUTUBE_JOB_NOT_READY")
     channels, _platforms = autopost.load_config()
