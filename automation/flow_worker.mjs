@@ -91,12 +91,23 @@ async function evaluate(cdp, scope, expression) {
 }
 
 async function importStep6(cdp, contextMap) {
-  const bytes = await fs.readFile(request.source_path);
-  const base64 = bytes.toString("base64");
   for (const scope of contextMap) {
-    const present = await evaluate(cdp, scope, `Boolean([...document.querySelectorAll('input[type=file]')].find(x=>/\\.json|application\\/json/i.test(x.accept||'')))`).catch(() => false);
-    if (!present) continue;
-    return evaluate(cdp, scope, `(() => { const input=[...document.querySelectorAll('input[type=file]')].find(x=>/\\.json|application\\/json/i.test(x.accept||'')); if(!input)return false; const raw=atob(${JSON.stringify(base64)}); const bytes=Uint8Array.from(raw,c=>c.charCodeAt(0)); const file=new File([bytes],'STEP6.json',{type:'application/json'}); const dt=new DataTransfer(); dt.items.add(file); input.files=dt.files; input.dispatchEvent(new Event('input',{bubbles:true,composed:true})); input.dispatchEvent(new Event('change',{bubbles:true,composed:true})); return {ok:true,name:file.name,size:file.size,accept:input.accept}; })()`);
+    const reply = await cdp.send("Runtime.evaluate", {
+      contextId: scope.contextId,
+      expression: `([...document.querySelectorAll('input[type=file]')].find(x=>/\\.json|application\\/json/i.test(x.accept||''))||null)`,
+      returnByValue: false,
+      userGesture: true,
+    }, scope.sessionId).catch(() => null);
+    const objectId = reply?.result?.objectId;
+    if (!objectId) continue;
+    await cdp.send("DOM.setFileInputFiles", { files: [request.source_path], objectId }, scope.sessionId);
+    await cdp.send("Runtime.callFunctionOn", {
+      objectId,
+      functionDeclaration: "function(){this.dispatchEvent(new Event('input',{bubbles:true,composed:true}));this.dispatchEvent(new Event('change',{bubbles:true,composed:true}));return {ok:true,name:this.files?.[0]?.name||'',size:this.files?.[0]?.size||0};}",
+      returnByValue: true,
+      userGesture: true,
+    }, scope.sessionId);
+    return true;
   }
   throw new Error("FLOW_FILE_INPUT_NOT_FOUND");
 }
@@ -194,15 +205,30 @@ async function expectedSceneCount() {
   }
 }
 
+async function expectedProjectMarkers() {
+  try {
+    const source = JSON.parse(await fs.readFile(request.source_path, "utf8"));
+    const sceneTitles = Array.isArray(source?.movie?.scenes)
+      ? source.movie.scenes.slice(0, 3).map(scene => String(scene?.title || "").trim()).filter(Boolean)
+      : [];
+    return [String(source?.movie?.storyTitle || "").trim(), ...sceneTitles].filter(Boolean);
+  } catch {
+    return [];
+  }
+}
+
 async function readyImageCount(cdp, contextMap) {
   let count = 0;
   for (const scope of contextMap) {
-    count += Number(await evaluate(cdp, scope, `(() => {
+    const scopeCount = Number(await evaluate(cdp, scope, `(() => {
       const visible=(x)=>{ const r=x.getBoundingClientRect(); const s=getComputedStyle(x); return r.width>100&&r.height>100&&s.visibility!=='hidden'&&s.display!=='none'; };
       return [...document.querySelectorAll('img')].filter(x=>visible(x)&&/(^data:image|flow-content\\.google\\/image)/i.test(x.currentSrc||x.src||'')).length;
     })()`).catch(() => 0));
+    count = Math.max(count, scopeCount);
   }
-  return count;
+  const downloadButtons = await enabledButtonCount(cdp, contextMap, "ดาวน์โหลดรูป|download image");
+  const visibleLabels = await visibleLabelCount(cdp, contextMap, "ดาวน์โหลดรูป|download image");
+  return Math.max(count, downloadButtons, visibleLabels);
 }
 
 async function studioReady(cdp, contextMap) {
@@ -267,7 +293,7 @@ async function clickButton(cdp, contextMap, pattern, label) {
 async function enabledButtonCount(cdp, contextMap, pattern, rejectPattern = "") {
   let count = 0;
   for (const scope of contextMap) {
-    count += Number(await evaluate(cdp, scope, `(() => {
+    const scopeCount = Number(await evaluate(cdp, scope, `(() => {
       const rx=new RegExp(${JSON.stringify(pattern)},'i');
       const reject=${JSON.stringify(rejectPattern)}?new RegExp(${JSON.stringify(rejectPattern)},'i'):null;
       const labelOf=(x)=>[x.innerText,x.value,x.getAttribute('aria-label'),x.getAttribute('title'),x.textContent].filter(Boolean).join(' ').replace(/\\s+/g,' ').trim();
@@ -278,6 +304,19 @@ async function enabledButtonCount(cdp, contextMap, pattern, rejectPattern = "") 
         return visible(x)&&enabled(x)&&rx.test(label)&&(!reject||!reject.test(label));
       }).length;
     })()`).catch(() => 0));
+    count = Math.max(count, scopeCount);
+  }
+  return count;
+}
+
+async function visibleLabelCount(cdp, contextMap, pattern) {
+  let count = 0;
+  for (const scope of contextMap) {
+    const scopeCount = Number(await evaluate(cdp, scope, `(() => {
+      const rx=new RegExp(${JSON.stringify(pattern)},'i');
+      return (document.body?.innerText||'').split(/\n+/).map(x=>x.trim()).filter(x=>rx.test(x)).length;
+    })()`).catch(() => 0));
+    count = Math.max(count, scopeCount);
   }
   return count;
 }
@@ -291,6 +330,21 @@ async function visibleText(cdp, contextMap) {
   return chunks.join("\n");
 }
 
+async function pageMatchesExpectedProject(cdp, contextMap) {
+  const markers = await expectedProjectMarkers();
+  if (!markers.length) return false;
+  const normalize = value => String(value).toLocaleLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+  const page = normalize(await visibleText(cdp, contextMap));
+  const matches = markers.map(normalize).filter(Boolean).filter(marker => page.includes(marker));
+  return matches.length >= Math.min(2, markers.length);
+}
+
+async function readyVideoCount(cdp, contextMap) {
+  const buttons = await enabledButtonCount(cdp, contextMap, "ดาวน์โหลดวิดีโอ|download video");
+  const visibleLabels = await visibleLabelCount(cdp, contextMap, "ดาวน์โหลดวิดีโอ|download video");
+  return Math.max(buttons, visibleLabels);
+}
+
 async function verifyImagesReady(cdp, contextMap) {
   const expected = await expectedSceneCount();
   const ready = await readyImageCount(cdp, contextMap);
@@ -302,12 +356,13 @@ async function verifyImagesReady(cdp, contextMap) {
 }
 
 async function verifyVideosGenerated(cdp, contextMap) {
+  const expected = await expectedSceneCount();
   const text = await visibleText(cdp, contextMap);
   if (/ยังไม่มีวิดีโอที่พร้อมตัดต่อ|no videos? ready/i.test(text)) {
     throw new Error("FLOW_VIDEOS_NOT_READY_FOR_EXPORT");
   }
-  const downloadButtons = await enabledButtonCount(cdp, contextMap, "ดาวน์โหลดวิดีโอ|download video");
-  if (downloadButtons <= 0) throw new Error("FLOW_VIDEOS_NOT_READY_FOR_EXPORT");
+  const ready = await readyVideoCount(cdp, contextMap);
+  if (ready <= 0 || (expected > 0 && ready < expected)) throw new Error("FLOW_VIDEOS_NOT_READY_FOR_EXPORT");
   return true;
 }
 
@@ -337,14 +392,21 @@ async function waitForIdle(cdp, contextMap, phase, timeoutMs) {
 
 async function runAction(cdp, contextMap) {
   const action = request.action;
+  const expected = await expectedSceneCount();
   if (action === "FLOW_IMPORT_STEP6") return "IMPORTED";
   if (["FLOW_CREATE_ALL_IMAGES", "FLOW_RUN_TO_EXPORT"].includes(action)) {
     await clickButton(cdp, contextMap, "STEP\\s*06|สร้างหนัง", "STEP_06");
     await new Promise(resolve => setTimeout(resolve, 1500));
     contextMap = await allContexts(cdp);
-    await clickButton(cdp, contextMap, "สร้างรูปทั้งหมด|create all images", "CREATE_ALL_IMAGES");
-    await waitForIdle(cdp, contextMap, "IMAGE_GENERATION", 30 * 60 * 1000);
-    contextMap = await allContexts(cdp);
+    const readyImages = await readyImageCount(cdp, contextMap);
+    await result("RUNNING", { phase: "IMAGE_READINESS_CHECK", ready: readyImages, expected });
+    if (expected <= 0 || readyImages < expected) {
+      await clickButton(cdp, contextMap, "สร้างรูปทั้งหมด|create all images", "CREATE_ALL_IMAGES");
+      await waitForIdle(cdp, contextMap, "IMAGE_GENERATION", 30 * 60 * 1000);
+      contextMap = await allContexts(cdp);
+    } else {
+      await result("RUNNING", { phase: "RESUME_IMAGES_COMPLETE", ready: readyImages, expected });
+    }
     await verifyImagesReady(cdp, contextMap);
     if (action === "FLOW_CREATE_ALL_IMAGES") return "IMAGES_COMPLETE";
   }
@@ -352,10 +414,16 @@ async function runAction(cdp, contextMap) {
     await clickButton(cdp, contextMap, "STEP\\s*06|สร้างหนัง", "STEP_06");
     await new Promise(resolve => setTimeout(resolve, 1500));
     contextMap = await allContexts(cdp);
-    if (action === "FLOW_GENERATE_ALL_VIDEOS") await verifyImagesReady(cdp, contextMap);
-    await clickButton(cdp, contextMap, "สร้างวิดีโอทั้งหมด|generate all videos", "GENERATE_ALL_VIDEOS");
-    await waitForIdle(cdp, contextMap, "VIDEO_GENERATION", 60 * 60 * 1000);
-    contextMap = await allContexts(cdp);
+    await verifyImagesReady(cdp, contextMap);
+    const readyVideos = await readyVideoCount(cdp, contextMap);
+    await result("RUNNING", { phase: "VIDEO_READINESS_CHECK", ready: readyVideos, expected });
+    if (expected <= 0 || readyVideos < expected) {
+      await clickButton(cdp, contextMap, "สร้างวิดีโอทั้งหมด|generate all videos", "GENERATE_ALL_VIDEOS");
+      await waitForIdle(cdp, contextMap, "VIDEO_GENERATION", 60 * 60 * 1000);
+      contextMap = await allContexts(cdp);
+    } else {
+      await result("RUNNING", { phase: "RESUME_VIDEOS_COMPLETE", ready: readyVideos, expected });
+    }
     await verifyVideosGenerated(cdp, contextMap);
     if (action === "FLOW_GENERATE_ALL_VIDEOS") return "VIDEOS_COMPLETE";
   }
@@ -399,11 +467,13 @@ try {
     throw new Error("FLOW_ACCESS_KEY_ENTRY_NOT_CONFIRMED");
   }
   let imported = false;
-  const mayContinueExistingStudio = ["FLOW_GENERATE_ALL_VIDEOS", "FLOW_CREATE_COVER", "FLOW_EXPORT_1080P"].includes(request.action);
-  if (!mayContinueExistingStudio || await readyImageCount(cdp, contextMap) < await expectedSceneCount()) {
+  const mayContinueExistingStudio = ["FLOW_GENERATE_ALL_VIDEOS", "FLOW_CREATE_COVER", "FLOW_EXPORT_1080P", "FLOW_RUN_TO_EXPORT"].includes(request.action);
+  const matchingExistingProject = mayContinueExistingStudio && await pageMatchesExpectedProject(cdp, contextMap);
+  if (!matchingExistingProject) {
     imported = await importStep6(cdp, contextMap);
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise(resolve => setTimeout(resolve, 2500));
     contextMap = await allContexts(cdp);
+    if (!await pageMatchesExpectedProject(cdp, contextMap)) throw new Error("FLOW_IMPORT_NOT_CONFIRMED");
   }
   const completed = await runAction(cdp, contextMap);
   await result(completed, { imported, output_path: request.output_path });

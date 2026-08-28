@@ -51,6 +51,11 @@ class FlowRunnerTests(unittest.TestCase):
         self.assertIn("expectedSceneCount", worker)
         self.assertIn("readyImageCount", worker)
         self.assertIn("ready < expected", worker)
+        self.assertIn("readyVideoCount", worker)
+        self.assertIn("RESUME_IMAGES_COMPLETE", worker)
+        self.assertIn("RESUME_VIDEOS_COMPLETE", worker)
+        self.assertIn("pageMatchesExpectedProject", worker)
+        self.assertIn('"FLOW_EXPORT_1080P", "FLOW_RUN_TO_EXPORT"', worker)
         self.assertIn("[role='button']", worker)
         self.assertIn("button.dispatchEvent(new PointerEvent('pointerdown'", worker)
         self.assertIn("FLOW_ACCESS_KEY_ENTRY_NOT_CONFIRMED", worker)
@@ -87,6 +92,43 @@ class FlowRunnerTests(unittest.TestCase):
                 report = flow_runner.status()
             self.assertEqual(report["jobs"][0]["status"], "FAILED")
             self.assertEqual(report["jobs"][0]["detail"]["error"], "PPMOVIE_FLOW_STALE_ACTIVE_JOB")
+
+    def test_dispatch_blocks_a_second_job_from_sharing_the_flow_browser(self) -> None:
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            state_file = root / "flow_jobs.json"
+            worker = root / "flow_worker.mjs"
+            key_file = root / "Access_Key.txt"
+            worker.write_text("// test", encoding="utf-8")
+            key_file.write_text("configured", encoding="utf-8")
+            now = datetime.now(timezone.utc).isoformat()
+            state_file.write_text(json.dumps({
+                "schema_version": "1.0.0",
+                "jobs": [{
+                    "run_id": "flowrun_active",
+                    "job_id": "history-wwii-soldier-pov-ep03",
+                    "content_id": "wwii-soldier-pov-ep03",
+                    "action": "FLOW_RUN_TO_EXPORT",
+                    "status": "RUNNING",
+                    "result_path": str(root / "missing.result.json"),
+                    "created_at": now,
+                    "updated_at": now,
+                }],
+            }), encoding="utf-8")
+            with (
+                patch.object(flow_runner, "STATE_FILE", state_file),
+                patch.object(flow_runner, "WORKER", worker),
+                patch.object(flow_runner, "ACCESS_KEY_FILE", key_file),
+                patch.object(flow_runner, "_job_contract", return_value={
+                    "job_id": "history-wwii-soldier-pov-ep04",
+                    "content_id": "wwii-soldier-pov-ep04",
+                    "source_path": "STEP6.json",
+                    "output_path": "master.mp4",
+                    "channel_group": "history",
+                }),
+            ):
+                with self.assertRaisesRegex(flow_runner.FlowRunnerError, "PPMOVIE_FLOW_BROWSER_BUSY"):
+                    flow_runner.dispatch("history-wwii-soldier-pov-ep04", "FLOW_RUN_TO_EXPORT")
 
 
 if __name__ == "__main__":

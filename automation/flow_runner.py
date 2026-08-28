@@ -152,6 +152,9 @@ def dispatch(job_id: str, action: str) -> dict[str, object]:
     active = next((item for item in reversed(state["jobs"]) if item["job_id"] == job_id and item["status"] in {"QUEUED", "RUNNING"}), None)
     if active:
         return active
+    other_active = next((item for item in reversed(state["jobs"]) if item["status"] in {"QUEUED", "RUNNING"}), None)
+    if other_active:
+        raise FlowRunnerError("PPMOVIE_FLOW_BROWSER_BUSY:" + str(other_active["job_id"]))
     run_id = "flowrun_" + uuid4().hex
     request_path = STATE_FILE.parent / f"{run_id}.request.json"
     result_path = STATE_FILE.parent / f"{run_id}.result.json"
