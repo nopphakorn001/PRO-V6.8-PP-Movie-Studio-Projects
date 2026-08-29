@@ -1,6 +1,6 @@
 {
   "project": "ต้าวอ้วน Universe",
-  "workflow": "PPMovieProject",
+  "workflow": "PPMovieProject / PRO V6.8 STEP6",
   "format": "9:16",
   "language": "Thai",
   "targetDurationSeconds": 90,
@@ -13,54 +13,66 @@
   },
   "visualStyle": "High-quality Pixar-inspired stylized 3D family animation, cinematic, colorful, warm Thai countryside atmosphere",
   "characterLock": ["ต้าวอ้วน", "น้องชาย", "ยายอ่าง"],
+  "voiceLock": {
+    "ต้าวอ้วน": "Thai male child voice",
+    "น้องชาย": "younger Thai male child voice",
+    "ยายอ่าง": "Thai elderly female voice"
+  },
   "episodes": [
     {
       "episode": 4,
       "title": "สงกรานต์ไปวัด",
-      "path": "EP04-Songkran-Temple/PPMOVIEPROJECT_PROMPT.md",
-      "status": "prompt_ready",
+      "promptPath": "EP04-Songkran-Temple/PPMOVIEPROJECT_PROMPT.md",
+      "step6Path": "EP04-Songkran-Temple/STEP6.json",
+      "status": "step6_import_ready",
       "next": 5
     },
     {
       "episode": 5,
       "title": "สงกรานต์หน้าบ้าน",
-      "path": "EP05-Water-Play-at-Home/PPMOVIEPROJECT_PROMPT.md",
-      "status": "prompt_ready",
+      "promptPath": "EP05-Water-Play-at-Home/PPMOVIEPROJECT_PROMPT.md",
+      "step6Path": "EP05-Water-Play-at-Home/STEP6.json",
+      "status": "step6_import_ready",
       "next": 6
     },
     {
       "episode": 6,
       "title": "ตามหาขันน้ำลายดอกไม้",
-      "path": "EP06-Lost-Floral-Water-Bowl/PPMOVIEPROJECT_PROMPT.md",
-      "status": "prompt_ready",
+      "promptPath": "EP06-Lost-Floral-Water-Bowl/PPMOVIEPROJECT_PROMPT.md",
+      "step6Path": "EP06-Lost-Floral-Water-Bowl/STEP6.json",
+      "status": "step6_import_ready",
       "next": 7
     },
     {
       "episode": 7,
       "title": "ภารกิจไอติมกลางสงกรานต์",
-      "path": "EP07-Ice-Cream-Mission/PPMOVIEPROJECT_PROMPT.md",
-      "status": "prompt_ready",
+      "promptPath": "EP07-Ice-Cream-Mission/PPMOVIEPROJECT_PROMPT.md",
+      "step6Path": "EP07-Ice-Cream-Mission/STEP6.json",
+      "status": "step6_import_ready",
       "next": 8
     },
     {
       "episode": 8,
       "title": "ขบวนแห่หมู่บ้าน",
-      "path": "EP08-Village-Parade/PPMOVIEPROJECT_PROMPT.md",
-      "status": "prompt_ready",
+      "promptPath": "EP08-Village-Parade/PPMOVIEPROJECT_PROMPT.md",
+      "step6Path": "EP08-Village-Parade/STEP6.json",
+      "status": "step6_import_ready",
       "next": 9
     },
     {
       "episode": 9,
       "title": "เจดีย์ทรายของสองพี่น้อง",
-      "path": "EP09-Sand-Stupa/PPMOVIEPROJECT_PROMPT.md",
-      "status": "prompt_ready",
+      "promptPath": "EP09-Sand-Stupa/PPMOVIEPROJECT_PROMPT.md",
+      "step6Path": "EP09-Sand-Stupa/STEP6.json",
+      "status": "step6_import_ready",
       "next": 10
     },
     {
       "episode": 10,
       "title": "รดน้ำยายอ่าง",
-      "path": "EP10-Grandma-Blessing/PPMOVIEPROJECT_PROMPT.md",
-      "status": "prompt_ready",
+      "promptPath": "EP10-Grandma-Blessing/PPMOVIEPROJECT_PROMPT.md",
+      "step6Path": "EP10-Grandma-Blessing/STEP6.json",
+      "status": "step6_import_ready",
       "next": null
     }
   ]
