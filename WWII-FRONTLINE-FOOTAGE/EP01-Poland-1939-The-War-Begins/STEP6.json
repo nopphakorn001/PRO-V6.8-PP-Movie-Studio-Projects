@@ -17,19 +17,43 @@
     "customCastingCount": 1,
     "locationMode": "custom",
     "customLocationCount": 4,
-    "visualStyle": "Grounded World War II frontline historical reenactment, Poland September 1939, 35mm wartime field-film aesthetic, slightly faded low-saturation color, restrained film grain, practical smoke and dust, natural overcast-to-afternoon light, handheld camera operated by a war correspondent close to the infantry. Period-correct uniforms, rifles, trucks, light armored vehicles, village architecture and field equipment. Non-graphic combat, no modern objects, no game-like framing, no heroic glamour.",
-    "customProjectStructure": "15 connected scenes x 8 seconds, approximately 120 seconds. Third-person / embedded-cameraman frontline footage rather than first-person shooter POV. One primary action and one dominant camera movement per scene. No spoken dialogue, no narrator and no intelligible commands. Tell the episode using marching, battlefield movement, visual reactions, environmental sound, gunfire, engines, wind, mud, debris and brief human recovery beats. Preserve uniform, mud, smoke, daylight and equipment continuity from the previous scene.",
+    "visualStyle": "AI-generated historical reenactment styled as late-1930s World War II field newsreel footage, Poland September 1939. Monochrome black-and-white 35mm wartime film look, coarse but readable film grain, slight gate weave, frame jitter, occasional dust and fine scratches, subtle exposure breathing, soft period optics, mild highlight bloom, imperfect focus, restrained motion blur and realistic handheld field-camera movement. Period-correct 1939 uniforms, steel helmets, bolt-action rifles, leather field gear, military trucks, light armored vehicles, telegraph poles, muddy roads, Polish village architecture and autumn farmland. Non-graphic combat only. No modern objects, no modern camera polish, no HDR, no drone shots, no glossy cinematic lighting, no video-game framing and no heroic glamour.",
+    "customProjectStructure": "15 connected scenes x 8 seconds, approximately 120 seconds. Third-person embedded wartime cameraman footage rather than first-person shooter POV. One primary action and one dominant camera movement per scene. No spoken dialogue, no narrator, no subtitles generated inside the clip and no music. Tell the episode using synchronized diegetic battlefield sound only: boots in mud, fabric and leather gear, engines, wind, distant aircraft, rifle fire, artillery, falling debris and nonverbal breathing. Preserve the same soldier identity, uniform, rifle, pack, mud level, smoke direction, weather, daylight progression and battlefield geography from scene to scene.",
     "visualStyleId": "custom",
-    "customVisualStyle": "1939 European frontline field-film look: shoulder-height handheld photography, imperfect focus pulls, modest gate weave, realistic motion blur, muted greens/browns/greys, wet roads, autumn fields, smoke-stained plaster and restrained explosions. Do not simulate damaged archival film so heavily that faces or actions become unreadable."
+    "customVisualStyle": "1939 European wartime newsreel reconstruction. Black-and-white 35mm field-film texture with moderate grain, subtle scratches and dust, low contrast in mist, slightly crushed blacks, soft highlights, occasional focus breathing and small exposure fluctuations. Camera behaves like a heavy shoulder/hand-operated period field camera: imperfect horizon, short reactive pans, modest shake while walking, brief settling after sudden movement, no gimbal smoothness. Keep faces and actions readable; archival defects must never obscure the scene. Strictly period-accurate equipment and clothing.",
+    "archivalLookLock": {
+      "presentation": "AI-generated reenactment presented with archival-style visual treatment; never claim the generated images are genuine historical footage.",
+      "filmFormat": "35mm black-and-white wartime newsreel aesthetic",
+      "imageArtifacts": [
+        "moderate film grain",
+        "subtle gate weave",
+        "fine dust and scratches",
+        "light frame flicker",
+        "soft period-lens focus",
+        "imperfect exposure",
+        "restrained motion blur"
+      ],
+      "forbiddenModernLook": [
+        "HDR",
+        "ultra-clean digital sharpness",
+        "drone shots",
+        "gimbal movement",
+        "anamorphic flare",
+        "teal-orange grade",
+        "hero posing",
+        "FPS weapon framing"
+      ],
+      "audioPolicy": "No music, no narration and no intelligible dialogue. Diegetic battlefield sound only."
+    }
   },
   "movie": {
     "genre": "Historical Battlefield Footage",
-    "selectedGenres": ["history", "war", "documentary-style", "cinematic"],
+    "selectedGenres": ["history", "war", "documentary-style", "archival-style"],
     "selectedVisualMoods": ["uncertain", "tense", "urgent", "fatigued", "somber"],
-    "plotDetails": "A fictional composite frontline rifleman serves only as a continuity anchor inside a real 1939 Polish campaign environment. The story does not claim to recreate one documented platoon or exact camera reel.",
-    "mainStoryPrompt": "Create an immersive two-minute historical war-film episode set during the 1939 invasion of Poland. Follow one fictional composite frontline rifleman and his nearby infantry section from a muddy dawn road march, through the first sight of smoke, cautious deployment into fields, first contact at a village edge, a brief street fight, a field flanking movement, light armored support, a quiet aftermath beat, and the column moving onward toward a smoke-filled horizon. The emotional progression is uncertainty → first shock → focused movement → brief intensity → fatigue → realization that the war is only beginning. Keep all violence non-graphic. Do not show celebratory propaganda or triumphant posing. No dialogue or narration. The visual language should feel like a 1939 embedded field camera, not modern action cinema and not a video game.",
+    "plotDetails": "A fictional composite frontline rifleman serves only as a continuity anchor inside a historically plausible September 1939 Polish campaign environment. The episode is an AI-generated reenactment with a wartime newsreel aesthetic and does not claim to reproduce a specific historical platoon, combat reel or real archival recording.",
+    "mainStoryPrompt": "Create an immersive two-minute AI-generated historical reenactment styled as black-and-white 1939 wartime field-newsreel footage during the invasion of Poland. Follow one fictional composite frontline rifleman and his nearby infantry section from a muddy dawn road march, to the first sight of smoke, cautious deployment through wet fields, first contact at a village edge, a brief confused street fight, a hedgerow flanking movement, light armored support, a quiet aftermath beat and the column moving onward toward multiple smoke columns on the horizon. Emotional progression: uncertainty → first shock → focused movement → brief combat intensity → fatigue → realization that the wider war is only beginning. Keep violence non-graphic and historically grounded. Do not show celebratory propaganda, triumphant posing or clean modern action-cinema compositions. No dialogue, narration or music. Every scene must look captured by a nearby 1939 war correspondent using a heavy field camera, with monochrome film grain, light scratches, frame weave, imperfect focus and exposure, while preserving clear readable action and period-correct uniforms, weapons, vehicles and terrain.",
     "storySummary": "In September 1939, a fictional infantry rifleman marches with his section along a muddy Polish country road. Smoke ahead forces the column to leave the road and deploy into wet fields. First contact at a village edge turns into a short, confusing fight through walls, lanes and hedges. Light armored vehicles move up as the immediate resistance fades. The rifleman passes a wounded comrade, reforms with the column, and continues toward multiple smoke columns on the horizon. The episode ends without victory language: one village is behind them, but the wider war has only begun.",
-    "genreDetailPrompt": "Historical reenactment clearly framed as generated cinematic reconstruction rather than genuine archival footage.",
+    "genreDetailPrompt": "AI-generated historical reenactment with an archival wartime-film aesthetic. It must look period-authentic without being represented as genuine archival footage.",
     "storyTitle": "WWII FRONTLINE FOOTAGE EP01 — Poland 1939: The War Begins",
     "scenes": [
       {
@@ -44,11 +68,12 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman walks at a steady pace with the section, adjusting one shoulder strap while trucks crawl behind the marching column.",
-        "imageDescription": "Vertical 9:16 embedded war-correspondent frame, September 1939 Polish countryside at dawn, muddy unpaved road with wagon ruts, wet grass, telegraph poles fading into mist, early-war infantry in historically plausible field uniforms and steel helmets, the same fictional rifleman mid-column with rifle carried low at the shoulder, military trucks behind, no combat yet, subdued 35mm field-film color, realistic grain and moisture on boots.",
-        "videoPrompt": "Walk beside the infantry at shoulder height with mild handheld bounce, letting boots and muddy ruts fill the lower frame before drifting up to the rifleman. Audio: synchronized boots in mud, leather and metal gear creaks, idling truck engines, faint wind, distant aircraft hum, no speech, no music for the first seconds.",
+        "actionDescription": "The rifleman walks steadily mid-column, shoulders slightly hunched under the field pack, while the men behind keep formation and period military trucks crawl through the same deep mud ruts.",
+        "imageDescription": "Vertical 9:16 crop composed like a 1939 war-correspondent newsreel frame. Polish countryside at cold dawn: deeply rutted muddy road, wet grass, wooden telegraph poles fading into fog, autumn fields, a long column of historically plausible 1939 infantry wearing period steel helmets and field uniforms, bolt-action rifles carried naturally, leather ammunition pouches and packs, military trucks following behind. Same fictional lead rifleman mid-column, no heroic pose, no combat yet. Pure black-and-white 35mm film look, moderate coarse grain, slight gate weave, fine dust and scratches, soft period optics, low-contrast mist, imperfect focus and exposure. No modern equipment, no clean digital sharpness.",
+        "videoPrompt": "Embedded 1939 war-cameraman footage. Walk parallel to the marching infantry at shoulder height with a heavy period field-camera feel: mild step bounce, tiny horizon drift and a brief imperfect refocus. Let muddy boots and wheel ruts dominate the lower frame before drifting up to the lead rifleman and trucks. Keep motion unpolished and documentary-like, not gimbal smooth. Black-and-white 35mm newsreel texture with visible grain, faint scratches, dust, subtle flicker and gate weave. Audio only: synchronized boots sucking through mud, leather straps, metal gear creaks, truck engines, cold wind and a very distant aircraft hum. No music, no narration, no intelligible speech.",
         "narrationText": "",
-        "audioDirection": "Foreground boots and gear; mid-ground engines; background wind and distant aircraft. No intelligible voices."
+        "audioDirection": "Strict diegetic sound only. Foreground boots and gear; mid-ground truck engines; background wind and distant aircraft. No music and no intelligible voices.",
+        "continuityEndFrame": "The lead rifleman remains mid-column on the muddy road; trucks are still directly behind; mist and wet-road state carry into Scene 02."
       },
       {
         "id": "ep01-s02",
@@ -62,11 +87,12 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman stops and turns his head toward the smoke while men behind him compress the marching formation and wait.",
-        "imageDescription": "Same rifleman, same uniform and mud level, stopped on the same country road; autumn field opens toward a low Polish village with a single dark smoke plume, soldiers study the horizon, trucks idle behind them, morning haze beginning to thin, restrained wartime-film color and grain.",
-        "videoPrompt": "Start close on boots stopping in mud, tilt to the rifleman, then make one slow pan across the field to the distant smoke. Audio: boots stop, engines idle, light wind through grass, faint distant rumble, no intelligible speech.",
+        "actionDescription": "The rifleman stops in the same road rut and turns toward the smoke while the marching line compresses behind him and the trucks settle to idle.",
+        "imageDescription": "Direct visual continuation of Scene 01: same rifleman, same helmet, rifle, pack and lightly mud-stained uniform, same rural road and telegraph poles. The dawn mist is thinner and a low Polish village is now visible across wet autumn fields with one dark smoke column rising behind its roofs. Soldiers stop and stare toward the horizon while trucks idle behind. Archival-style black-and-white 35mm newsreel image, grain, light scratches, slight frame weave, soft contrast and imperfect focus. No modern cinematic polish.",
+        "videoPrompt": "Begin on the same muddy boots stopping in the road. Tilt upward to the rifleman, allow a tiny focus hunt, then make one slow imperfect hand-operated pan across the field until the distant smoke plume fills the upper frame. Keep the camera heavy and slightly late to the action. Black-and-white wartime newsreel texture, moderate grain, dust, scratches, subtle flicker and gate weave. Audio only: boots stop, engines idle unevenly, light wind through wet grass and a faint distant rumble. No music, narration or intelligible speech.",
         "narrationText": "",
-        "audioDirection": "Let the sound become quieter than Scene 1 to create anticipation."
+        "audioDirection": "Diegetic only. Reduce overall loudness compared with Scene 01 to create anticipation; leave audible gaps between distant sounds.",
+        "continuityEndFrame": "Camera ends on smoke over the village; infantry remain stopped on the road and prepare to leave it in Scene 03."
       },
       {
         "id": "ep01-s03",
@@ -80,11 +106,12 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman ducks through tall wet grass beside a hedge as nearby soldiers widen their spacing.",
-        "imageDescription": "Wet autumn grass, dark hedge roots, shallow drainage ditch, infantry moving away from the road in a loose line, same lead rifleman with damp trousers and muddy boots, village roofs partly visible ahead through light haze, historically plausible 1939 rifles and web gear.",
-        "videoPrompt": "Use one low lateral tracking move through wet grass, briefly letting leaves obscure the lens before revealing the rifleman advancing behind the hedge. Audio: grass brushing fabric, mud suction, gear rattle, one very distant gunshot, no speech.",
+        "actionDescription": "The same rifleman steps down from the road into tall wet grass and moves along the hedge as nearby soldiers widen their spacing and keep low.",
+        "imageDescription": "Historically plausible September 1939 Polish field edge directly beside the previous road: wet autumn grass, dark hedge roots, shallow drainage ditch, infantry moving in a loose line, same lead rifleman with damp trouser cuffs and muddy boots, rifle held low and close, village roofs partly visible through thinning mist. Black-and-white period field-film look, soft lens, grain, light scratches and subtle gate weave. No modern tactical gear and no game-like formation.",
+        "videoPrompt": "Use one low lateral hand-operated tracking move through wet grass. Let leaves briefly obscure the lens as if the wartime cameraman is squeezing along the hedge, then reveal the rifleman passing through frame. Slight frame jitter and imperfect focus are allowed. Audio only: grass scraping fabric, mud suction, leather and metal gear, wind and one very distant rifle crack. No music, narration or understandable speech.",
         "narrationText": "",
-        "audioDirection": "Environmental detail dominates; combat remains distant."
+        "audioDirection": "Environmental detail dominates. Combat remains distant and sparse.",
+        "continuityEndFrame": "The rifleman reaches the shallow hedge-side ditch with the village edge ahead; his trousers and knees are visibly wetter for Scene 04."
       },
       {
         "id": "ep01-s04",
@@ -98,11 +125,12 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman drops hard behind a damp stone wall while two nearby soldiers flatten beside him and fragments of plaster flick from a building corner ahead.",
-        "imageDescription": "Village-edge stone wall, whitewashed house with dark tiled roof, drifting smoke, wet road, same rifleman suddenly low behind cover, no visible blood, chips of plaster and dust indicating incoming fire, authentic early-war equipment, handheld documentary framing.",
-        "videoPrompt": "Begin at standing shoulder height, then make one abrupt human-operated drop behind the wall as nearby impacts chip masonry. Do not center the rifle. Audio: sharp rifle cracks, stone chips, hard breathing, distant engine, no shouted words.",
+        "actionDescription": "The rifleman reaches the first damp stone wall at the village edge when incoming fire snaps nearby; he drops hard behind it with two comrades while plaster chips kick from a corner farther ahead.",
+        "imageDescription": "Village-edge stone wall, whitewashed rural house with dark tiled roof, wet road, wooden gate and thin smoke. Same rifleman suddenly low behind cover with the same rifle, helmet and field pack; trouser knees now wet and muddy. Two nearby friendly soldiers flatten beside him. Small non-graphic plaster chips indicate incoming fire; no visible wound or gore. Black-and-white 35mm wartime field-film appearance with grain, slight blur, dust, scratches and exposure breathing.",
+        "videoPrompt": "Start at shoulder height just behind the advancing men, then execute one abrupt reactive drop behind the stone wall as incoming rounds chip masonry ahead. The cameraman should feel physically startled: a small frame jolt, momentary soft focus, then quick settling. Do not center the rifle like an FPS game. Audio only: several sharp rifle cracks, stone and plaster chips, sudden heavy breathing, a distant engine and low wind. No music, narration or intelligible commands.",
         "narrationText": "",
-        "audioDirection": "First major loudness spike of the episode. Keep voices nonverbal and indistinct."
+        "audioDirection": "First major loudness spike. Keep human voices absent or only indistinct nonverbal reactions.",
+        "continuityEndFrame": "All three men remain pressed behind the same damp wall; smoke drifts left to right and the lead rifleman prepares to return fire in Scene 05."
       },
       {
         "id": "ep01-s05",
@@ -116,11 +144,12 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman rises just enough above the wall to fire several controlled shots, then lowers again while another soldier watches the lane.",
-        "imageDescription": "Same damp stone wall and village edge, rifleman partially exposed with rifle offset from center, light muzzle smoke, tiled roofs and narrow lane ahead, smoke drifting left to right, realistic recoil posture, no visible enemy required, non-graphic battlefield reconstruction.",
-        "videoPrompt": "One restrained over-shoulder handheld composition; the rifleman rises, fires controlled shots, then drops back behind cover. Audio: three to four rifle reports, echoes between houses, brass and gear sounds, distant answering fire, no speech.",
+        "actionDescription": "From the exact wall position left by Scene 04, the rifleman rises only enough to fire several controlled bolt-action shots down the lane, then lowers himself again while a nearby comrade watches the opposite side.",
+        "imageDescription": "Same damp stone wall and same village geometry as Scene 04. Lead rifleman partially exposed with rifle deliberately offset from frame center, realistic bolt-action posture, faint muzzle smoke, tiled roofs and narrow lane farther ahead, smoke still drifting left to right. Opposing troops do not need to be visible. Non-graphic historical reenactment, black-and-white 35mm newsreel grain, minor scratches, flicker and imperfect focus.",
+        "videoPrompt": "Hold a restrained over-shoulder embedded-camera angle. The rifleman rises, fires a short series of controlled bolt-action shots with visible manual cycling, then drops back behind cover. Keep the shot imperfect: slight recoil-related camera twitch and tiny focus breathing. Audio only: three distinct rifle reports, bolt cycling, echoes between houses, small gear sounds and distant answering fire. No automatic-fire wall, no music, narration or speech.",
         "narrationText": "",
-        "audioDirection": "Keep shots discrete rather than continuous automatic fire."
+        "audioDirection": "Shots must be discrete and period-appropriate. Preserve quiet gaps between reports.",
+        "continuityEndFrame": "Rifleman crouches behind the wall again; unit begins shifting toward a nearby lane crossing used in Scene 06."
       },
       {
         "id": "ep01-s06",
@@ -134,17 +163,18 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman makes one short run across wet cobblestones and presses against a smoke-stained plaster wall beside the rest of his section.",
-        "imageDescription": "Narrow Polish village lane, wet cobblestones, damaged plaster, wooden gate, broken cart near curb, smoke-stained houses, same rifleman sprinting with rifle held low, nearby soldiers reaching the same wall, no graphic injuries.",
-        "videoPrompt": "Follow behind the rifleman in one short handheld dash across the lane and stop hard at the wall. Audio: boots slapping wet stones, gear bounce, two distant cracks, falling plaster, breathing. No speech.",
+        "actionDescription": "The rifleman makes one short sprint across wet cobblestones from the stone wall to a smoke-stained plaster house and presses against the wall beside his section.",
+        "imageDescription": "Narrow Polish village lane consistent with the edge location: wet cobblestones, chipped plaster, wooden gate, broken farm cart near the curb, smoke-stained houses and light debris. Same rifleman sprinting with rifle carried low rather than aiming, uniform dirtier but unchanged, nearby soldiers reaching the same wall. Black-and-white wartime newsreel look with grain, frame jitter, soft focus and faint scratches. No gore.",
+        "videoPrompt": "Follow several steps behind the rifleman in one short reactive handheld dash across the lane. Heavy wartime camera motion should bounce naturally but remain readable, then stop hard when the operator reaches the plaster wall. Let the image briefly blur during the sprint before settling. Audio only: boots slapping wet cobbles, gear bounce, two distant rifle cracks, a little falling plaster and hard breathing. No music, narration or intelligible speech.",
         "narrationText": "",
-        "audioDirection": "Brief high-energy movement, then immediate compression of sound at cover."
+        "audioDirection": "Brief high-energy movement followed by a rapid drop in volume when the group reaches cover.",
+        "continuityEndFrame": "The rifleman and section are pressed against the damaged house beside a farm courtyard; the same smoke-stained wall leads directly into Scene 07."
       },
       {
         "id": "ep01-s07",
         "order": 7,
         "title": "Pinned in the Courtyard",
-        "description": "A burst of fire halts movement inside a small courtyard as a nearby support team prepares its weapon.",
+        "description": "A burst of fire halts movement inside a small farm courtyard as a nearby support team prepares its period weapon.",
         "location": "Village Street",
         "mood": "Pressured",
         "sceneCharacters": [{"id": "lead-rifleman", "name": "Frontline Rifleman"}],
@@ -152,11 +182,12 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman crouches behind stacked timber while a two-man support team sets up nearby; nobody advances during this beat.",
-        "imageDescription": "Small farm courtyard opening off the street, stacked timber, low stone trough, smoke haze, same rifleman crouched and breathing, period support weapon being prepared by nearby infantry, restrained tension, historically grounded equipment, no enemy visible.",
-        "videoPrompt": "Mostly still embedded-camera shot from behind timber with a small nervous reframe toward the support team. Audio: intermittent incoming fire, wood splinters, metallic setup sounds, breathing; no intelligible commands.",
+        "actionDescription": "The rifleman crouches behind stacked timber in the courtyard while a two-man support team prepares a historically plausible early-war light machine gun; everyone holds position during this beat.",
+        "imageDescription": "Small Polish farm courtyard opening from the same village street, stacked timber, low stone trough, chipped plaster and smoke haze. Same lead rifleman crouches behind wood with muddy knees and unchanged field gear. A nearby two-man support team handles a period-correct light machine gun; no enemy visible. Monochrome 35mm war-newsreel image, moderate grain, dust, fine scratches and slightly uneven exposure.",
+        "videoPrompt": "Mostly static embedded-camera footage from behind the timber. Make one small nervous reframe from the rifleman toward the support team as they prepare the weapon, then hold. No heroic posing and no dramatic dolly. Audio only: intermittent incoming rifle cracks, wood splinters, metallic weapon handling, fabric movement and breathing. No music or intelligible voices.",
         "narrationText": "",
-        "audioDirection": "Use gaps between gunshots so tension comes from waiting."
+        "audioDirection": "Use long gaps between incoming shots. Waiting and equipment sounds create the tension.",
+        "continuityEndFrame": "The blocked courtyard remains smoky; the rifleman turns toward a field-side exit, establishing the flank route for Scene 08."
       },
       {
         "id": "ep01-s08",
@@ -170,11 +201,12 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman crawls through wet grass beside a shallow ditch, using the hedge to remain below the village sightline.",
-        "imageDescription": "Return to same hedgerow environment but now dirtier and smokier, rifleman prone in wet grass, sleeves damp and knees muddy, two soldiers spaced behind, village roofline partly concealed by hedge, rifle carried close to body.",
-        "videoPrompt": "Ground-level lateral crawl shot through blades of wet grass, ending as the rifleman reaches the ditch. Audio: grass, wet soil, fabric friction, distant fire muffled by terrain, no speech.",
+        "actionDescription": "The rifleman crawls through the same wet hedgerow terrain seen earlier, using a shallow ditch to stay below the village sightline while two comrades follow at realistic spacing.",
+        "imageDescription": "Return to the established Hedgerow Field, now with more smoke drifting above the village. Same rifleman prone in wet grass, sleeves damp, knees and elbows more heavily muddy, same rifle and pack. Two friendly soldiers remain spaced behind. Village roofline partly concealed by hedge. Black-and-white field-film grain, light scratches, lens softness and subtle gate weave; no clean modern detail.",
+        "videoPrompt": "Ground-level lateral crawl footage through wet grass. The camera operator moves awkwardly at low height, letting foreground blades cross the lens and briefly throw focus soft before recovering on the rifleman. One movement only, ending when he reaches the ditch. Audio only: grass, wet soil, fabric friction, gear scrape and distant muffled rifle fire. No music, narration or speech.",
         "narrationText": "",
-        "audioDirection": "Deliberately quieter after Scene 7."
+        "audioDirection": "Deliberately quieter than Scene 07. Terrain muffles the distant battle.",
+        "continuityEndFrame": "Rifleman settles at the ditch lip with his rifle ready; two comrades remain behind him for Scene 09."
       },
       {
         "id": "ep01-s09",
@@ -188,11 +220,12 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman rises onto one elbow and fires from the ditch lip while earth flicks up farther across the field.",
-        "imageDescription": "Shallow muddy drainage ditch, autumn field, low smoke drifting across stubble, same rifleman firing from prone, nearby friendly rifleman offset behind, opposing force remains distant and spatially separate, non-graphic combat.",
-        "videoPrompt": "Low over-shoulder shot from ditch level, one short firing sequence followed by the rifleman lowering his head. Audio: controlled rifle shots, wind, distant answering fire, soil impacts farther away. No speech.",
+        "actionDescription": "From the end position of Scene 08, the rifleman rises onto one elbow and fires a short controlled sequence across the field while soil flicks up farther away; he then lowers back into the ditch.",
+        "imageDescription": "Shallow muddy drainage ditch in the established autumn field, stubble and low smoke drifting over the ground. Same rifleman fires from prone with historically plausible bolt-action rifle; one friendly rifleman is offset farther behind. Opposing force remains distant and spatially separate or offscreen. No graphic injuries. Black-and-white archival-style film, coarse grain, light scratches, jitter and soft wartime optics.",
+        "videoPrompt": "Low embedded-camera view from ditch level. The rifleman lifts onto one elbow, fires a brief controlled sequence with realistic manual bolt cycling, then drops his head back below the ditch lip. Camera twitch is small and reactive, never videogame-like. Audio only: distinct rifle shots, bolt action, wind, distant answering fire and soil impacts well beyond the friendly ditch. No music, narration or intelligible speech.",
         "narrationText": "",
-        "audioDirection": "Strong but brief combat beat; do not turn into continuous gunfire."
+        "audioDirection": "Strong but short combat peak. Avoid continuous gunfire and oversized explosion effects.",
+        "continuityEndFrame": "Rifleman remains low in the ditch as firing slackens; distant engine and track noise begins, motivating Scene 10."
       },
       {
         "id": "ep01-s10",
@@ -206,11 +239,12 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman returns to the road edge and watches period light armor pass through mud toward the village.",
-        "imageDescription": "Same countryside road later in the morning, deeper ruts and more mud, tired infantry standing aside, historically plausible early-war light armored vehicles moving toward smoke, lead rifleman with dirtier uniform watching them pass, no triumph pose.",
-        "videoPrompt": "One side pan following the vehicles as they pass from foreground toward the village, keeping the rifleman at the edge of frame. Audio: engines, tracks, mud, gear, battle now more distant. No speech.",
+        "actionDescription": "The rifleman returns to the road edge and stands aside while historically plausible early-war light armored vehicles move through the deep mud toward the smoke-marked village.",
+        "imageDescription": "Same countryside road later in the morning: deeper wheel ruts, churned mud, thinning mist, tired infantry at the verge and period-appropriate 1939 light armored vehicles moving toward the village. Same rifleman now visibly muddier than Scene 01 watches from the edge, rifle lowered naturally, no celebratory pose. Black-and-white 35mm newsreel grain, soft focus, gate weave, dust and faint scratches.",
+        "videoPrompt": "Use one imperfect side pan following the armored vehicles from near foreground toward the village while keeping the lead rifleman at the frame edge. Heavy field camera lags slightly behind the first vehicle and catches up. Audio only: period engine rumble, tracks or tires in mud, gear movement, low wind and distant battle noise. No music, narration or speech.",
         "narrationText": "",
-        "audioDirection": "Mechanical sound replaces gunfire as the dominant layer."
+        "audioDirection": "Vehicle engines become the dominant sound layer; gunfire recedes to the background.",
+        "continuityEndFrame": "Vehicles continue toward the village; the rifleman turns back toward the same street entered earlier, leading to Scene 11."
       },
       {
         "id": "ep01-s11",
@@ -224,17 +258,18 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman walks slowly through the lane, stepping around debris while checking windows and doorways.",
-        "imageDescription": "Same village architecture as earlier, smoke thinner, cracked plaster, broken glass, damaged cart, rifleman walking cautiously with weapon lowered but ready, several exhausted comrades behind, no civilians shown, no graphic casualties.",
-        "videoPrompt": "Slow shoulder-height walking shot a few meters behind the rifleman, with one gentle focus shift from rubble foreground to his silhouette. Audio: boots on glass and stones, small fires, distant artillery, wind. No speech.",
+        "actionDescription": "The rifleman walks slowly through the previously contested lane, stepping around masonry and broken glass while checking windows and doorways with his rifle lowered but ready.",
+        "imageDescription": "Same village architecture and street geometry as Scenes 06-07: wet cobbles, damaged plaster, broken cart, scattered glass, smoke thinner but still present, same rifleman walking cautiously with unchanged gear and heavier dirt, several exhausted comrades behind him. No civilians and no graphic casualties. Monochrome wartime field-film look with grain, scratches, slight flicker and soft focus.",
+        "videoPrompt": "Slow shoulder-height handheld walk several meters behind the rifleman. Make one gentle imperfect focus shift from rubble in the foreground to his silhouette, then remain on him as he advances. Audio only: boots on glass and stone, small fires, distant artillery, occasional debris settling and wind. No music, narration or intelligible speech.",
         "narrationText": "",
-        "audioDirection": "Reduce combat volume significantly to create emotional space."
+        "audioDirection": "Reduce combat volume significantly. Let footsteps, debris and small environmental sounds dominate.",
+        "continuityEndFrame": "Rifleman pauses as two comrades begin guiding a wounded soldier into the same lane, setting Scene 12."
       },
       {
         "id": "ep01-s12",
         "order": 12,
         "title": "A Wounded Comrade",
-        "description": "Two soldiers help an injured comrade away from the street as the rifleman pauses for a moment.",
+        "description": "Two soldiers help a conscious injured comrade away from the street as the rifleman pauses for a moment.",
         "location": "Village Street",
         "mood": "Somber",
         "sceneCharacters": [{"id": "lead-rifleman", "name": "Frontline Rifleman"}],
@@ -242,17 +277,18 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman lowers his rifle slightly and watches two comrades support a conscious wounded soldier past him.",
-        "imageDescription": "Non-graphic aftermath in the village, conscious wounded soldier supported under both arms, no visible open wounds, rifleman standing aside with exhausted expression, smoke and damaged walls in background, historically grounded uniforms.",
-        "videoPrompt": "Use a gentle push-in from the rifleman to the passing trio, then stop. Audio: strained breathing, slow boots, cloth and gear, distant guns; no intelligible speech or crying.",
+        "actionDescription": "The rifleman lowers his weapon slightly and watches two comrades support a conscious wounded soldier under both arms as they pass through the smoky lane.",
+        "imageDescription": "Non-graphic aftermath in the established village street. A conscious wounded soldier is supported under both arms by two comrades, with no open wound, blood spray or graphic injury visible. Same lead rifleman stands aside with an exhausted expression, weapon lowered, muddy unchanged uniform, smoke and damaged walls behind. Black-and-white 35mm newsreel texture, grain, slight frame jitter, scratches and soft exposure.",
+        "videoPrompt": "Make one gentle handheld push from the lead rifleman toward the three passing soldiers and stop. The period cameraman does not dramatize the injury; the shot remains observational. Audio only: strained breathing, slow boots, cloth and equipment movement, distant muted artillery and wind. No crying dialogue, narration or music.",
         "narrationText": "",
-        "audioDirection": "Human movement and breathing dominate."
+        "audioDirection": "Human movement and breathing dominate; battlefield noise remains distant and subdued.",
+        "continuityEndFrame": "The wounded group exits frame; the lead rifleman turns toward the road where the section is regrouping for Scene 13."
       },
       {
         "id": "ep01-s13",
         "order": 13,
         "title": "Reform the Column",
-        "description": "The section gathers beside the muddy road, checks gear and prepares to move again.",
+        "description": "The section gathers beside the muddy road, checks field gear and prepares to move again.",
         "location": "Polish Countryside Road",
         "mood": "Exhausted",
         "sceneCharacters": [{"id": "lead-rifleman", "name": "Frontline Rifleman"}],
@@ -260,11 +296,12 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman tightens his pack strap, wipes mud from one hand and falls back into the marching line.",
-        "imageDescription": "Late-morning roadside regrouping, same muddy road, rifleman noticeably dirtier than Scene 1, troops checking packs and rifles, smoke from village behind, vehicles farther ahead, muted wartime color.",
-        "videoPrompt": "Begin close on muddy hand tightening a strap, then pull back as the rifleman steps into line. Audio: fabric, metal buckle, boots restarting, engines farther ahead. No speech.",
+        "actionDescription": "The rifleman tightens the same pack strap seen at the beginning, wipes mud from one hand onto his trouser leg, then steps back into the marching line.",
+        "imageDescription": "Late-morning roadside regrouping on the established muddy road, smoke from the village behind, vehicles farther ahead. Same rifleman is recognizably the same man but dirtier: mud on boots, knees, sleeves and lower coat; same helmet, rifle, pack and pouch layout. Nearby infantry check rifles and straps without posing. Black-and-white period newsreel grain, dust, scratches, soft optics and slight exposure breathing.",
+        "videoPrompt": "Begin close on the rifleman's muddy hand tightening the leather pack strap, allow a small imperfect refocus to the buckle, then pull back by the cameraman stepping backward as the rifleman rejoins the moving line. Audio only: fabric, buckle clink, boots restarting, engines farther ahead and wind. No music, narration or intelligible speech.",
         "narrationText": "",
-        "audioDirection": "Quiet transition beat with marching rhythm returning."
+        "audioDirection": "Quiet transition. Marching rhythm gradually returns without score.",
+        "continuityEndFrame": "The column is moving again; the rifleman approaches a low rise overlooking the fields for Scene 14."
       },
       {
         "id": "ep01-s14",
@@ -278,17 +315,18 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman stops on the field edge and looks toward multiple distant smoke columns before turning back toward the road.",
-        "imageDescription": "Wide vertical landscape from low autumn rise, hedges and farmland leading to several distant smoke columns, same tired rifleman foreground profile, muddy uniform and rifle carried low, no active firing nearby, subdued afternoon light.",
-        "videoPrompt": "One slow panoramic reveal from the rifleman to the wide smoke-marked horizon, then hold. Audio: wind over grass, faint engines, very distant artillery, no close gunfire and no speech.",
+        "actionDescription": "The rifleman stops at the field edge and studies multiple distant smoke columns for several seconds before turning back toward the road.",
+        "imageDescription": "Wide vertical wartime field-camera view from a low autumn rise: hedges, farmland and muddy tracks leading toward several separated smoke columns on the horizon. Same tired rifleman in foreground profile, field uniform heavily muddied but unchanged, rifle carried low, no firing nearby. Late-day light rendered in black-and-white with moderate grain, fine scratches, subtle flicker, soft haze and gate weave.",
+        "videoPrompt": "Start close behind the rifleman's shoulder and make one slow hand-operated panoramic reveal from him to the smoke-marked countryside. Let the pan be slightly uneven like a heavy 1939 field camera, then hold on the horizon with minimal jitter. Audio only: wind across grass, faint engines, very distant artillery and sparse rifle fire far away. No music, narration or speech.",
         "narrationText": "",
-        "audioDirection": "Near-silence creates scale and reflection."
+        "audioDirection": "Near-silence establishes scale. Keep all battle sounds far in the distance.",
+        "continuityEndFrame": "Camera holds the distant smoke; the rifleman turns back toward the same road and rejoins the receding column in Scene 15."
       },
       {
         "id": "ep01-s15",
         "order": 15,
         "title": "The War Has Begun",
-        "description": "The column disappears along the road toward the next horizon as the smoke behind and ahead remains visible.",
+        "description": "The column disappears along the road toward the next horizon as smoke behind and ahead remains visible.",
         "location": "Polish Countryside Road",
         "mood": "Somber Ending",
         "sceneCharacters": [{"id": "lead-rifleman", "name": "Frontline Rifleman"}],
@@ -296,11 +334,12 @@
         "duration": 8,
         "script": "",
         "dialogues": [],
-        "actionDescription": "The rifleman continues walking with the column until he becomes one small figure among many moving away from the camera.",
-        "imageDescription": "Long muddy Polish road receding into late-day haze, infantry column walking away, lead rifleman recognizable by same gear and silhouette but now small in frame, smoke columns across distant countryside, no victory gesture, 1939 field-film aesthetic.",
-        "videoPrompt": "Hold a long rear field-camera shot as the marching column gradually recedes; allow slight imperfect handheld drift rather than a polished dolly. Audio: diminishing boots, engines, wind, distant artillery. End without dialogue or triumphant music.",
+        "actionDescription": "The rifleman continues walking with the same column until he becomes one small figure among many moving away from the camera through late-day haze.",
+        "imageDescription": "Long muddy Polish road receding into late-day haze, infantry column walking away, same lead rifleman recognizable by helmet, pack and silhouette but deliberately small in frame, vehicles dispersed farther ahead, multiple smoke columns across distant countryside. No flag waving, no victory gesture and no propaganda composition. Black-and-white 35mm wartime newsreel aesthetic with grain, dust, fine scratches, subtle gate weave, low contrast and imperfect period focus.",
+        "videoPrompt": "Hold one long rear field-camera shot as the marching column gradually recedes. The camera remains mostly stationary but drifts slightly as a real operator shifts weight; no polished dolly or digital stabilization. Keep the black-and-white archival-style grain, dust, faint scratches and gentle flicker throughout. Audio only: diminishing boots in mud, distant engines, wind, far artillery and occasional rifle crack becoming quieter. End on environmental sound with no music, narration or intelligible speech.",
         "narrationText": "",
-        "audioDirection": "Resolve with environmental sound only or a very low restrained score tail."
+        "audioDirection": "Strict diegetic ending. Let boots and engines fade naturally into wind and distant artillery; no score tail.",
+        "continuityEndFrame": "Final archival-style wide frame: column small on the road, smoke visible on the horizon, no triumphant ending."
       }
     ],
     "characters": [
@@ -308,72 +347,101 @@
         "id": "lead-rifleman",
         "name": "Frontline Rifleman",
         "role": "Fictional composite continuity anchor",
-        "description": "Anonymous young adult European infantry rifleman represented as a fictional composite, not a named historical person. Lean-average build, weathered face, short hair under a period steel helmet, early-war field uniform, leather boots, ammunition pouches, field pack and period rifle.",
-        "mainOutfit": "1939 period-correct field uniform, steel helmet, leather boots, web/leather field gear and rifle",
+        "description": "Anonymous young adult European infantry rifleman represented as a fictional composite, not a named historical person. Lean-average build, weathered face, short hair beneath a period steel helmet, early-war field uniform, leather boots, ammunition pouches, field pack, canteen and historically plausible bolt-action rifle.",
+        "mainOutfit": "1939 period-correct field uniform, steel helmet, leather boots, leather/web field gear and bolt-action rifle",
         "imageStatus": "idle",
-        "style": "Grounded historical reenactment",
+        "style": "Grounded AI-generated historical reenactment with black-and-white wartime-newsreel treatment",
         "continuity": {
-          "continuityRules": "Keep the same face, helmet, uniform cut, rifle, pack and pouch layout through all scenes. Mud begins light in Scenes 1–3, becomes heavier after field and village combat, and stays visible through Scene 15. No random costume changes or cross-faction equipment.",
+          "continuityRules": "Keep the same face, helmet shape, uniform cut, rifle, pack, canteen and pouch layout through all 15 scenes. Mud begins light in Scenes 01-03, becomes heavier after field and village movement, and remains visible through Scene 15. Sleeves and knees become progressively damp and dirty. Do not introduce equipment from a different faction, later year or modern era. Never redesign the soldier between scenes.",
           "appearingScenes": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
         },
-        "props": {"personalProps": "period rifle, steel helmet, field pack, ammunition pouches, canteen"},
-        "audioProfile": {"speech": "none", "humanSounds": "breathing and nonverbal exertion only"}
+        "props": {
+          "personalProps": "period-correct bolt-action rifle, steel helmet, field pack, ammunition pouches and canteen"
+        },
+        "audioProfile": {
+          "speech": "none",
+          "humanSounds": "breathing, boots and nonverbal exertion only",
+          "music": "none"
+        }
       }
     ],
     "atmosphereAssets": [
       {
         "id": "loc-road",
         "title": "Polish Countryside Road",
-        "description": "Unpaved rural road with deep wagon ruts, wet autumn grass, telegraph poles, fields and distant low villages.",
+        "description": "Unpaved rural road with deep wagon ruts, wet autumn grass, wooden telegraph poles, open fields and distant low villages. The road begins pale and misty at dawn and becomes more churned and muddy after troop and vehicle movement.",
         "isInterior": "No",
         "atmosphere": "Uncertain early-war movement",
-        "keyProps": "mud, telegraph poles, trucks, marching infantry, field edges",
-        "lighting": "pale dawn progressing to subdued late morning and afternoon",
-        "colorTone": "muted green, brown, grey",
+        "keyProps": "mud, wooden telegraph poles, period military trucks, marching infantry, field edges, wagon ruts",
+        "lighting": "pale dawn progressing through subdued late morning into hazy afternoon",
+        "colorTone": "black-and-white, low-contrast mist, moderate 35mm grain",
         "relatedScenes": ["ep01-s01","ep01-s02","ep01-s10","ep01-s13","ep01-s15"],
         "status": "idle"
       },
       {
         "id": "loc-hedge",
         "title": "Hedgerow Field",
-        "description": "Wet autumn field edge with tall grass, low hedge, shallow drainage ditch and partial view toward village roofs.",
+        "description": "Wet autumn field edge with tall grass, low hedge, shallow drainage ditch and partial sightline toward village roofs. Grass becomes flattened and muddier where soldiers crawl through it.",
         "isInterior": "No",
-        "atmosphere": "Low visibility and cautious movement",
-        "keyProps": "wet grass, hedge roots, shallow ditch, field stubble",
-        "lighting": "soft overcast daylight",
-        "colorTone": "olive green, wet brown, smoke grey",
+        "atmosphere": "Low visibility, cautious movement and muffled distant combat",
+        "keyProps": "wet grass, hedge roots, drainage ditch, field stubble, smoke haze",
+        "lighting": "soft overcast daylight progressing toward subdued afternoon",
+        "colorTone": "black-and-white with soft midtones, grain and light haze",
         "relatedScenes": ["ep01-s03","ep01-s08","ep01-s09","ep01-s14"],
         "status": "idle"
       },
       {
         "id": "loc-edge",
         "title": "Village Edge",
-        "description": "Low stone walls, tiled roofs, damp plaster houses and a narrow approach road at the edge of a small Polish village.",
+        "description": "Low damp stone walls, tiled roofs, whitewashed plaster houses, wooden gates and a narrow approach road at the edge of a small Polish village. Smoke consistently drifts left to right during the first contact sequence.",
         "isInterior": "No",
-        "atmosphere": "First contact and confusion",
-        "keyProps": "stone wall, plaster fragments, gates, tiled roofs, smoke",
-        "lighting": "soft morning daylight through haze",
-        "colorTone": "grey plaster, dark roof tile, smoke brown",
+        "atmosphere": "First contact, uncertainty and brief controlled rifle fire",
+        "keyProps": "stone wall, chipped plaster, wooden gates, tiled roofs, smoke, wet road",
+        "lighting": "soft morning daylight filtered through haze",
+        "colorTone": "black-and-white, slightly harder contrast during combat, visible grain",
         "relatedScenes": ["ep01-s04","ep01-s05"],
         "status": "idle"
       },
       {
         "id": "loc-street",
         "title": "Village Street",
-        "description": "Narrow cobbled lane and farm courtyard with damaged plaster, timber, broken cart, glass and lingering smoke.",
+        "description": "Narrow wet cobbled lane and attached farm courtyard with damaged plaster, stacked timber, broken cart, glass fragments, masonry debris and lingering smoke. Later scenes revisit the exact same architecture with reduced smoke and increased debris.",
         "isInterior": "No",
         "atmosphere": "Compressed street combat followed by quiet aftermath",
-        "keyProps": "wet cobblestones, stacked timber, broken cart, masonry debris, smoke",
-        "lighting": "late morning diffused daylight",
-        "colorTone": "earth brown, plaster grey, faded red tile",
+        "keyProps": "wet cobblestones, stacked timber, broken cart, stone trough, masonry debris, glass and smoke",
+        "lighting": "late-morning diffused daylight with smoke-softened contrast",
+        "colorTone": "black-and-white 35mm newsreel texture, grain, scratches and mild flicker",
         "relatedScenes": ["ep01-s06","ep01-s07","ep01-s11","ep01-s12"],
         "status": "idle"
       }
     ],
     "productAssets": [],
-    "customGenre": "WWII Frontline Historical Reenactment",
-    "productionDesignAnalyzed": true
+    "customGenre": "WWII Frontline Archival-Style Historical Reenactment",
+    "productionDesignAnalyzed": true,
+    "generationGuardrails": {
+      "historicalAccuracy": [
+        "Use uniforms, helmets, rifles, field gear, vehicles and architecture plausible for Poland in September 1939.",
+        "Do not introduce modern tactical equipment, optics, synthetic gear, modern roads, contemporary vehicles or post-war weapons.",
+        "Keep the same friendly-force visual identity throughout the episode and keep any opposing force spatially separate or offscreen when not needed."
+      ],
+      "archivalConsistency": [
+        "Every scene must use the same black-and-white 35mm wartime newsreel treatment.",
+        "Film defects remain moderate and readable, never extreme damage that hides faces or actions.",
+        "No modern smooth camera moves, drone perspectives, gimbal movement or glossy digital color grade."
+      ],
+      "audioConsistency": [
+        "No music in any scene.",
+        "No narration in any scene.",
+        "No intelligible spoken dialogue or radio speech.",
+        "Use diegetic boots, gear, wind, vehicles, rifle fire, artillery, debris and breathing only."
+      ],
+      "combatPresentation": [
+        "Keep violence non-graphic.",
+        "Use realistic restrained explosions and gunfire rather than constant spectacle.",
+        "Do not stage heroic poses or propaganda-style victory compositions."
+      ]
+    }
   },
   "currentStep": 6,
-  "updatedAt": "2026-09-10T20:58:00+07:00"
+  "updatedAt": "2026-09-10T21:10:00+07:00"
 }
