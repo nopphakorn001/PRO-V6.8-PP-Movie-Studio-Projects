@@ -1,0 +1,17 @@
+{
+  "schemaVersion":"1.0",
+  "series":"WWII FRONTLINE FOOTAGE",
+  "episode":9,
+  "title":"WWII FRONTLINE FOOTAGE EP09 — Bastogne 1944: Surrounded in Snow",
+  "historicalSetting":"Bastogne, Battle of the Bulge, December 1944",
+  "perspective":"Third-person embedded field-camera reenactment following a fictional composite U.S. defender",
+  "disclosure":"AI-generated cinematic historical reenactment. Not archival footage.",
+  "aspectRatio":"9:16",
+  "sceneCount":15,
+  "secondsPerScene":8,
+  "durationTargetSeconds":120,
+  "audio":"No dialogue or narrator; winter wind, artillery, rifle fire, breathing and restrained score only",
+  "contentRating":"Non-graphic historical combat",
+  "status":"STEP6_IMPORT_READY",
+  "step6Path":"WWII-FRONTLINE-FOOTAGE/EP09-Bastogne-1944-Surrounded-in-Snow/STEP6.json"
+}
