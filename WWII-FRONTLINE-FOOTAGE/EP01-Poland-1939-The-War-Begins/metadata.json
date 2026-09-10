@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "series": "WWII FRONTLINE FOOTAGE",
+  "episode": 1,
+  "title": "WWII FRONTLINE FOOTAGE EP01 — Poland 1939: The War Begins",
+  "historicalSetting": "Poland, September 1939",
+  "perspective": "Third-person embedded field-camera reenactment following a fictional composite infantry rifleman",
+  "disclosure": "AI-generated cinematic historical reenactment. Not archival footage.",
+  "aspectRatio": "9:16",
+  "sceneCount": 15,
+  "secondsPerScene": 8,
+  "durationTargetSeconds": 120,
+  "audio": "No dialogue or narrator; battlefield ambience, nonverbal human exertion and restrained score only",
+  "contentRating": "Non-graphic historical combat",
+  "status": "STEP6_IMPORT_READY",
+  "step6Path": "WWII-FRONTLINE-FOOTAGE/EP01-Poland-1939-The-War-Begins/STEP6.json"
+}
