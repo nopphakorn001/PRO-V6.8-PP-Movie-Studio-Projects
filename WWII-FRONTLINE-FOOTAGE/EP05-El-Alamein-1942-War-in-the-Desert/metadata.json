@@ -1,0 +1,17 @@
+{
+  "schemaVersion":"1.0",
+  "series":"WWII FRONTLINE FOOTAGE",
+  "episode":5,
+  "title":"WWII FRONTLINE FOOTAGE EP05 — El Alamein 1942: War in the Desert",
+  "historicalSetting":"Second Battle of El Alamein, 1942",
+  "perspective":"Third-person embedded field-camera reenactment following a fictional composite British infantryman",
+  "disclosure":"AI-generated cinematic historical reenactment. Not archival footage.",
+  "aspectRatio":"9:16",
+  "sceneCount":15,
+  "secondsPerScene":8,
+  "durationTargetSeconds":120,
+  "audio":"No dialogue or narrator; desert wind, armor, artillery, gunfire, breathing and restrained score only",
+  "contentRating":"Non-graphic historical combat",
+  "status":"STEP6_IMPORT_READY",
+  "step6Path":"WWII-FRONTLINE-FOOTAGE/EP05-El-Alamein-1942-War-in-the-Desert/STEP6.json"
+}
