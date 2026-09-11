@@ -1,54 +1,86 @@
 {
   "seriesId": "roblox-brothers-adventure",
   "seriesName": "Roblox Brothers Adventure — 2 พี่น้องตะลุยโลกเกม",
-  "referencePolicy": "Use the uploaded image only as a broad visual reference for two stylized child game avatars. Do not identify real people. Both boys must remain visibly East Asian with fair/light skin, dark-brown hair, child proportions, and the same facial design across all scenes and episodes. No photorealism.",
+  "schemaVersion": "3.0",
+  "referencePolicy": "Use the canonical Character Sheets as the identity source of truth. Scene 1 uses Character Sheets as the primary identity reference. Scene 2 onward MUST use both Character Sheets for identity and the immediately previous generated scene image for pose, location state, lighting, props, obstacle state and screen direction. Character identity has higher priority than pose variation or cinematic novelty.",
   "characters": [
     {
       "id": "big_brother_csharp",
       "name": "C-SHARP",
       "thaiName": "ซีชาร์ป",
+      "visualPromptName": "older brother",
+      "identitySignature": "RBA_OLDER_V3",
       "role": "พี่ชาย นักวางแผน กล้าลุย และคอยปกป้องน้อง",
+      "relativeHeight": 1.0,
       "ageStyle": "stylized East Asian child game avatar, older sibling proportions",
-      "description": "Stylized blocky East Asian boy avatar inspired broadly by the older child in the reference image. Fair/light skin. Slightly taller and older-looking than the younger brother. Rounded-square child face, dark-brown almond-shaped eyes, straight dark eyebrows, small rounded nose, soft cheeks, small warm smile, short dark-brown hair with a neat side sweep. Keep this exact face design unchanged across all scenes and episodes.",
+      "description": "Stylized blocky East Asian boy avatar. Fair/light skin. Always taller and slightly older-looking than the younger brother. Rounded-square child face, dark-brown almond-shaped eyes, straight dark eyebrows, small rounded nose, soft cheeks, small warm smile, short dark-brown hair with a neat side sweep.",
       "mainOutfit": "cream hoodie, light-green adventure vest, tan shorts, white sneakers, small green wristband, square backpack with a plain checkpoint-shaped badge without letters or readable text",
       "colors": {"primary":"cream","accent":"light green","secondary":"tan","shoes":"white","skin":"fair/light"},
       "hair": "short dark-brown blocky hair with the same neat side-swept silhouette in every scene",
-      "face": "LOCKED FACE: rounded-square East Asian child face, fair/light skin, dark-brown almond-shaped eyes, straight dark eyebrows, small rounded nose, soft cheeks, small warm smile. Do not change eye shape, eyebrow shape, nose, cheek fullness, face width, age, skin tone, or hairstyle between scenes.",
+      "face": "HARD LOCK: rounded-square East Asian child face, fair/light skin, dark-brown almond-shaped eyes, straight dark eyebrows, small rounded nose, soft cheeks, fixed face width and cheek fullness. Never change eye shape, eyebrow shape, nose, face width, age, skin tone or hairstyle.",
       "props": {"personalProps":"square backpack, plain checkpoint-shaped badge with no letters, green wristband"},
       "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like child body, family-friendly, no copied branded logo or UI.",
       "voiceProfile": {"spokenName":"ซีชาร์ป","voice":"older brother child voice, slightly lower and steadier than younger brother","rule":"Only the older brother lip-syncs in scenes assigned to him. Never make the younger brother speak in the same scene."},
-      "continuity": {"continuityRules":"Keep the exact same locked face, fair/light skin, height, cream/light-green outfit, dark-brown side-swept hair, square backpack and green wristband in every scene. Never display a floating name, username, character label, chat bubble, health bar, subtitle, caption or any readable text above or near his head.","appearingScenes":[]},
+      "continuity": {
+        "continuityRules": "Keep exact same face geometry, fair/light skin, taller height, cream/light-green outfit, dark-brown side-swept hair, square backpack and green wristband in every scene and episode. Never swap any of these with the younger brother.",
+        "immutable": ["face geometry","skin tone","older age role","taller height","hair silhouette","cream/light-green outfit","square backpack","green wristband"],
+        "appearingScenes": []
+      },
       "imageStatus": "idle"
     },
     {
       "id": "little_brother_ari",
       "name": "ARI",
       "thaiName": "อาริ",
+      "visualPromptName": "younger brother",
+      "identitySignature": "RBA_YOUNGER_V3",
       "role": "น้องชาย ช่างสังเกต คล่องตัว และเก่งแก้ปริศนา",
+      "relativeHeight": 0.86,
       "ageStyle": "stylized East Asian child game avatar, younger sibling proportions",
-      "description": "Stylized blocky East Asian boy avatar inspired broadly by the younger child in the reference image. Fair/light skin. Clearly shorter and younger-looking than the older brother. Rounder child face, slightly larger dark-brown almond-shaped eyes, straight dark eyebrows, small rounded nose, fuller soft cheeks, curious gentle smile, short dark-brown hair with a slightly fluffy front. Keep this exact face design unchanged across all scenes and episodes.",
+      "description": "Stylized blocky East Asian boy avatar. Fair/light skin. Always clearly shorter and younger-looking than the older brother. Rounder child face, slightly larger dark-brown almond-shaped eyes, straight dark eyebrows, small rounded nose, fuller soft cheeks, curious gentle smile, short dark-brown hair with a slightly fluffy front.",
       "mainOutfit": "white shirt, bright-blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch with a plain compass-shaped charm without letters or readable text",
       "colors": {"primary":"white","accent":"bright blue","secondary":"navy","shoes":"blue-white","skin":"fair/light"},
       "hair": "short dark-brown blocky hair with the same slightly fluffy front silhouette in every scene",
-      "face": "LOCKED FACE: rounder East Asian child face, fair/light skin, slightly larger dark-brown almond-shaped eyes, straight dark eyebrows, small rounded nose, fuller soft cheeks, curious gentle smile. Do not change eye shape, eyebrow shape, nose, cheek fullness, face width, age, skin tone, or hairstyle between scenes.",
+      "face": "HARD LOCK: rounder East Asian child face, fair/light skin, slightly larger dark-brown almond-shaped eyes, straight dark eyebrows, small rounded nose, fuller soft cheeks, fixed face width and cheek fullness. Never change eye shape, eyebrow shape, nose, face width, age, skin tone or hairstyle.",
       "props": {"personalProps":"blue utility pouch, plain compass-shaped charm with no letters"},
       "style": "Bright stylized Roblox-inspired game avatar, blocky toy-like child body, family-friendly, no copied branded logo or UI.",
       "voiceProfile": {"spokenName":"อาริ","voice":"younger brother child voice, slightly higher and lighter than older brother","rule":"Only the younger brother lip-syncs in scenes assigned to him. Never make the older brother speak in the same scene."},
-      "continuity": {"continuityRules":"Keep the exact same locked face, fair/light skin, shorter height, white/blue outfit, dark-brown fluffy-front hair, blue pouch and compass charm in every scene. Never display a floating name, username, character label, chat bubble, health bar, subtitle, caption or any readable text above or near his head.","appearingScenes":[]},
+      "continuity": {
+        "continuityRules": "Keep exact same face geometry, fair/light skin, shorter height, white/blue outfit, dark-brown fluffy-front hair, blue pouch and compass charm in every scene and episode. Never swap any of these with the older brother.",
+        "immutable": ["face geometry","skin tone","younger age role","shorter height","hair silhouette","white/blue outfit","blue utility pouch","compass charm"],
+        "appearingScenes": []
+      },
       "imageStatus": "idle",
       "pronunciation": "อาริ",
       "phonetic": "Ah-ree",
-      "pronunciationInstruction": "The display/system name is ARI, but ALL spoken dialogue must say อาริ. Never send the letters A-R-I to TTS as spoken text. Pronounce อาริ as Ah-ree, two syllables."
+      "pronunciationInstruction": "ARI is metadata only. ALL spoken dialogue must say อาริ. Never send A-R-I to TTS as spoken text."
     }
   ],
-  "continuityRules": {
-    "names": "System/display names remain C-SHARP and ARI only in metadata. Spoken Thai uses ซีชาร์ป and อาริ. Never place the literal strings C-SHARP or ARI inside image prompts as visible character labels.",
-    "promptRoleNames": "Inside imageDescription and videoPrompt, refer to them as older brother and younger brother rather than literal character names. This reduces accidental nameplates and text rendering.",
-    "noNameplates": "STRICT: no character names, usernames, floating labels, overhead tags, chat bubbles, health bars, score text, subtitles, captions, badges with letters, or readable UI anywhere near the characters. Prefer no readable text anywhere in frame unless the story absolutely requires a prop sign.",
-    "dialogue": "Use one speaking character per scene. The non-speaking brother must keep his mouth closed and react naturally. Keep each line short enough for one 8-second scene.",
-    "visualIdentity": "Both brothers are stylized East Asian boys with fair/light skin and dark-brown hair. The older brother is consistently taller with a rounded-square face; the younger brother is consistently shorter with a rounder face and slightly larger eyes. Keep the exact same face geometry, outfit, skin tone, hair silhouette, props and body proportions across all 10 EP.",
-    "previousSceneReference": "For scene 2 onward, when location/time/action continues, use the immediately previous generated scene image as the primary visual continuity reference. Preserve the exact face design, skin tone, hair silhouette, outfit, props, relative height, screen direction, obstacle state and lighting. Character identity must not reset between scenes.",
-    "dialoguePronunciation": "ARI is metadata only. Spoken name must always be อาริ (Ah-ree), two syllables. Never put ARI as spoken text. Spoken C-SHARP should be ซีชาร์ป in Thai dialogue."
+  "pairLock": {
+    "olderAlwaysTaller": true,
+    "youngerAlwaysShorter": true,
+    "noFaceSwap": true,
+    "noOutfitSwap": true,
+    "noPropSwap": true,
+    "noDuplicateBrother": true,
+    "noThirdBrother": true,
+    "noAgeDrift": true,
+    "noSkinToneDrift": true,
+    "neutralScreenPosition": "When a scene starts from a neutral standing pose and previous scene does not require otherwise, older brother stays screen-left and younger brother screen-right. Preserve screen direction until a visible crossing action changes it."
   },
-  "updatedAt": "2026-08-26T17:53:00+07:00"
+  "continuityRules": {
+    "names": "System/display names remain C-SHARP and ARI only in metadata. Spoken Thai uses ซีชาร์ป and อาริ. Never place literal C-SHARP or ARI inside visual prompts as visible labels.",
+    "promptRoleNames": "Inside imageDescription and videoPrompt refer to them as older brother and younger brother.",
+    "noNameplates": "STRICT: no character names, usernames, floating labels, overhead tags, chat bubbles, health bars, score text, subtitles, captions, badges with letters or readable UI near the characters.",
+    "dialogue": "One speaking character maximum per scene. Non-speaker mouth stays closed and reacts naturally.",
+    "visualIdentity": "Both brothers must use the same canonical identity signatures across all 10 EP. Exact face geometry, skin tone, hair silhouette, outfit, props and body proportions are immutable.",
+    "previousSceneReference": "MANDATORY for EVERY scene from Scene 2 onward, not only when convenient. Use the immediately previous generated scene image plus Character Sheets. Preserve character pose handoff, relative position, screen direction, location geometry, prop inventory, obstacle state and lighting.",
+    "stateHandoff": "Every STEP6_V3 scene must define continuityStartState and continuityEndFrame. Scene N continuityEndFrame must match Scene N+1 continuityStartState in all meaningful physical details.",
+    "props": "Props cannot appear/disappear without a visible pickup/drop/use event.",
+    "obstacles": "Completed obstacles, opened doors, activated buttons, repaired bridges, collected keys/tokens and rescued animals stay in their completed state.",
+    "locationTransition": "No teleporting. Location changes require a visible bridge, corridor, doorway, portal, vehicle ride, climb, elevator, stairs or path transition.",
+    "dialoguePronunciation": "ARI is metadata only. Spoken name is อาริ (Ah-ree). Spoken C-SHARP is ซีชาร์ป."
+  },
+  "continuityLockFile": "ROBLOX-BROTHERS-ADVENTURE/CONTINUITY_LOCK_V3.json",
+  "updatedAt": "2026-09-11T07:09:00+07:00"
 }
