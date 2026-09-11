@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "3.0",
+  "seriesId": "roblox-brothers-adventure",
+  "mode": "HARD_CHARACTER_AND_STORY_CONTINUITY",
+  "referencePriority": [
+    "CHARACTER_SHEETS canonical identity",
+    "immediately previous generated scene image",
+    "current episode location/state description"
+  ],
+  "characterLock": {
+    "olderBrother": {
+      "id": "big_brother_csharp",
+      "visualPromptName": "older brother",
+      "spokenName": "ซีชาร์ป",
+      "relativeHeight": 1.0,
+      "face": "rounded-square East Asian child face, fair/light skin, dark-brown almond-shaped eyes, straight dark eyebrows, small rounded nose, soft cheeks",
+      "hair": "short dark-brown blocky hair with the same neat side-swept silhouette",
+      "outfit": "cream hoodie, light-green adventure vest, tan shorts, white sneakers, small green wristband, square backpack with a plain checkpoint-shaped badge with no letters",
+      "immutable": ["face geometry","skin tone","age","height role","hair silhouette","outfit colors","backpack","green wristband"]
+    },
+    "youngerBrother": {
+      "id": "little_brother_ari",
+      "visualPromptName": "younger brother",
+      "spokenName": "อาริ",
+      "relativeHeight": 0.86,
+      "face": "rounder East Asian child face, fair/light skin, slightly larger dark-brown almond-shaped eyes, straight dark eyebrows, small rounded nose, fuller soft cheeks",
+      "hair": "short dark-brown blocky hair with the same slightly fluffy front silhouette",
+      "outfit": "white shirt, bright-blue adventure hoodie, navy shorts, blue-and-white sneakers, small blue utility pouch with a plain compass-shaped charm with no letters",
+      "immutable": ["face geometry","skin tone","younger age","shorter height","hair silhouette","outfit colors","blue pouch","compass charm"]
+    },
+    "pairRules": [
+      "older brother must always be visibly taller than younger brother",
+      "never swap faces, hair, outfit, props, colors or height relationship",
+      "never create a third brother or duplicate either character",
+      "never age up or age down either brother",
+      "never switch which brother is speaking",
+      "never render character names, usernames, floating labels, chat bubbles, health bars or readable text near either character"
+    ]
+  },
+  "sceneGenerationContract": {
+    "scene1": "Use CHARACTER_SHEETS as the primary identity reference and establish canonical faces/outfits clearly.",
+    "scene2Plus": "Use CHARACTER_SHEETS for identity AND the immediately previous generated scene image as the mandatory continuity reference.",
+    "referenceOrder": "identity from character sheet first; pose/position/lighting/obstacle state from previous scene second; location sheet third",
+    "startFrameRule": "Scene N+1 must begin from the physical state of Scene N end frame unless an explicit transition scene changes location.",
+    "endFrameRule": "Every scene must define a continuityEndFrame describing character positions, prop inventory, obstacle state, camera direction and next-action setup.",
+    "screenDirectionRule": "Preserve left/right travel direction and brother positions unless the action visibly crosses or turns them.",
+    "propRule": "Props persist until visibly picked up, dropped, consumed or left behind.",
+    "obstacleRule": "Completed obstacles stay completed; activated buttons, bridges, doors, vehicles and puzzle states cannot reset without an explicit story reason.",
+    "locationTransitionRule": "No teleporting. A location change requires a portal, doorway, vehicle ride, climb, elevator, corridor or other visible transition beat.",
+    "dialogueRule": "At most one speaker per scene. The non-speaker keeps mouth closed and reacts naturally.",
+    "cameraRule": "Camera movement must follow the same physical space and cannot reset character positions between scenes."
+  },
+  "storyStateContract": {
+    "requiredFieldsPerScene": ["continuityStartState","mainAction","continuityEndFrame"],
+    "invariant": "continuityEndFrame(scene N) == continuityStartState(scene N+1) in all meaningful physical details",
+    "episodeRule": "Each episode is one continuous adventure with a clear start, escalation, payoff and complete ending inside the episode."
+  },
+  "generationStopConditions": [
+    "face changes noticeably",
+    "brothers swap outfits or height",
+    "one brother duplicates",
+    "scene begins from a different obstacle/location state than previous end frame",
+    "prop disappears or appears without explanation",
+    "dialogue speaker/lip-sync is swapped",
+    "camera orientation causes impossible teleport or obstacle reset"
+  ]
+}
