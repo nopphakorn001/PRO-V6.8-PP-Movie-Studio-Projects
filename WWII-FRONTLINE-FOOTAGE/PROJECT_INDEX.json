@@ -1,99 +1,56 @@
 {
-  "schemaVersion": "1.0",
+  "schemaVersion": "1.1",
   "series": {
     "id": "wwii-frontline-footage",
     "name": "WWII FRONTLINE FOOTAGE",
-    "description": "10-episode AI-generated cinematic historical reenactment series covering major World War II battlefields from 1939 to 1945.",
+    "description": "10-episode AI-generated historical reenactment series covering major World War II battlefields from 1939 to 1945 with archival-style visuals and a physically embedded human wartime cameraman.",
     "workflow": "PRO V6.8 P&P Movie Studio STEP6",
     "aspectRatio": "9:16",
     "sceneCountPerEpisode": 15,
     "secondsPerScene": 8,
     "targetDurationSeconds": 120,
-    "audioPolicy": "No dialogue and no narrator. Battlefield ambience, environmental SFX, nonverbal exertion and restrained score only.",
-    "visualPolicy": "Third-person embedded field-camera / wartime-film reenactment. Not first-person shooter POV. Period-correct uniforms and equipment, non-graphic combat, no modern objects, no triumphalist staging.",
-    "disclosure": "AI-generated cinematic historical reenactment. Not archival footage.",
+    "audioPolicy": "No dialogue, no narrator and no music. Diegetic battlefield ambience, weather, vehicles, footsteps, equipment, gunfire, artillery and nonverbal breathing only.",
+    "visualPolicy": "AI-generated reenactment styled as black-and-white 35mm wartime newsreel. Period-correct uniforms and equipment, non-graphic combat, no modern objects, no triumphalist staging.",
+    "cameraPolicy": {
+      "mode": "physically embedded human wartime cameraman",
+      "distanceToFriendlyAction": "approximately 1-5 meters",
+      "mustSharePhysicalSituation": true,
+      "mustUseSameCoverAsTroops": true,
+      "mustObeyTerrainAndLineOfSight": true,
+      "allowOcclusion": true,
+      "allowLateReaction": true,
+      "allowImperfectFocusAndExposure": true,
+      "allowTerrainSpecificLensContamination": true,
+      "forbidden": [
+        "drone shot",
+        "gimbal glide",
+        "crane move",
+        "omniscient overhead view",
+        "camera teleporting ahead of the action",
+        "camera staying impossibly exposed while troops hide",
+        "camera passing through walls, soldiers or vehicles",
+        "perfect hero framing",
+        "FPS or game weapon framing",
+        "copied identifiable movie shots"
+      ]
+    },
+    "archivalLook": {
+      "filmFormat": "35mm black-and-white wartime newsreel aesthetic",
+      "artifacts": ["moderate readable film grain", "subtle gate weave", "fine scratches and dust", "light flicker", "soft period optics", "imperfect exposure", "focus breathing", "restrained motion blur"],
+      "disclosure": "AI-generated historical reenactment with archival-style treatment. Not genuine archival footage."
+    },
     "status": "STEP6_IMPORT_READY",
     "episodes": [
-      {
-        "episode": 1,
-        "title": "Poland 1939: The War Begins",
-        "folder": "EP01-Poland-1939-The-War-Begins",
-        "step6": "WWII-FRONTLINE-FOOTAGE/EP01-Poland-1939-The-War-Begins/STEP6.json",
-        "metadata": "WWII-FRONTLINE-FOOTAGE/EP01-Poland-1939-The-War-Begins/metadata.json",
-        "status": "STEP6_IMPORT_READY"
-      },
-      {
-        "episode": 2,
-        "title": "Dunkirk 1940: Waiting on the Beach",
-        "folder": "EP02-Dunkirk-1940-Waiting-on-the-Beach",
-        "step6": "WWII-FRONTLINE-FOOTAGE/EP02-Dunkirk-1940-Waiting-on-the-Beach/STEP6.json",
-        "metadata": "WWII-FRONTLINE-FOOTAGE/EP02-Dunkirk-1940-Waiting-on-the-Beach/metadata.json",
-        "status": "STEP6_IMPORT_READY"
-      },
-      {
-        "episode": 3,
-        "title": "Eastern Front 1941: Into the Vast Land",
-        "folder": "EP03-Eastern-Front-1941-Into-the-Vast-Land",
-        "step6": "WWII-FRONTLINE-FOOTAGE/EP03-Eastern-Front-1941-Into-the-Vast-Land/STEP6.json",
-        "metadata": "WWII-FRONTLINE-FOOTAGE/EP03-Eastern-Front-1941-Into-the-Vast-Land/metadata.json",
-        "status": "STEP6_IMPORT_READY"
-      },
-      {
-        "episode": 4,
-        "title": "Moscow 1941: Winter Resistance",
-        "folder": "EP04-Moscow-1941-Winter-Resistance",
-        "step6": "WWII-FRONTLINE-FOOTAGE/EP04-Moscow-1941-Winter-Resistance/STEP6.json",
-        "metadata": "WWII-FRONTLINE-FOOTAGE/EP04-Moscow-1941-Winter-Resistance/metadata.json",
-        "status": "STEP6_IMPORT_READY"
-      },
-      {
-        "episode": 5,
-        "title": "El Alamein 1942: War in the Desert",
-        "folder": "EP05-El-Alamein-1942-War-in-the-Desert",
-        "step6": "WWII-FRONTLINE-FOOTAGE/EP05-El-Alamein-1942-War-in-the-Desert/STEP6.json",
-        "metadata": "WWII-FRONTLINE-FOOTAGE/EP05-El-Alamein-1942-War-in-the-Desert/metadata.json",
-        "status": "STEP6_IMPORT_READY"
-      },
-      {
-        "episode": 6,
-        "title": "Stalingrad: City of Fire",
-        "folder": "EP06-Stalingrad-City-of-Fire",
-        "step6": "WWII-FRONTLINE-FOOTAGE/EP06-Stalingrad-City-of-Fire/STEP6.json",
-        "metadata": "WWII-FRONTLINE-FOOTAGE/EP06-Stalingrad-City-of-Fire/metadata.json",
-        "status": "STEP6_IMPORT_READY"
-      },
-      {
-        "episode": 7,
-        "title": "Guadalcanal: Jungle Frontline",
-        "folder": "EP07-Guadalcanal-Jungle-Frontline",
-        "step6": "WWII-FRONTLINE-FOOTAGE/EP07-Guadalcanal-Jungle-Frontline/STEP6.json",
-        "metadata": "WWII-FRONTLINE-FOOTAGE/EP07-Guadalcanal-Jungle-Frontline/metadata.json",
-        "status": "STEP6_IMPORT_READY"
-      },
-      {
-        "episode": 8,
-        "title": "Normandy 1944: Omaha Beach Assault",
-        "folder": "EP08-Normandy-1944-Omaha-Beach-Assault",
-        "step6": "WWII-FRONTLINE-FOOTAGE/EP08-Normandy-1944-Omaha-Beach-Assault/STEP6.json",
-        "metadata": "WWII-FRONTLINE-FOOTAGE/EP08-Normandy-1944-Omaha-Beach-Assault/metadata.json",
-        "status": "STEP6_IMPORT_READY"
-      },
-      {
-        "episode": 9,
-        "title": "Bastogne 1944: Surrounded in Snow",
-        "folder": "EP09-Bastogne-1944-Surrounded-in-Snow",
-        "step6": "WWII-FRONTLINE-FOOTAGE/EP09-Bastogne-1944-Surrounded-in-Snow/STEP6.json",
-        "metadata": "WWII-FRONTLINE-FOOTAGE/EP09-Bastogne-1944-Surrounded-in-Snow/metadata.json",
-        "status": "STEP6_IMPORT_READY"
-      },
-      {
-        "episode": 10,
-        "title": "Berlin 1945: The Last Streets",
-        "folder": "EP10-Berlin-1945-The-Last-Streets",
-        "step6": "WWII-FRONTLINE-FOOTAGE/EP10-Berlin-1945-The-Last-Streets/STEP6.json",
-        "metadata": "WWII-FRONTLINE-FOOTAGE/EP10-Berlin-1945-The-Last-Streets/metadata.json",
-        "status": "STEP6_IMPORT_READY"
-      }
+      {"episode":1,"title":"Poland 1939: The War Begins","folder":"EP01-Poland-1939-The-War-Begins","step6":"WWII-FRONTLINE-FOOTAGE/EP01-Poland-1939-The-War-Begins/STEP6.json","metadata":"WWII-FRONTLINE-FOOTAGE/EP01-Poland-1939-The-War-Begins/metadata.json","cameraEnvironment":"mud road, hedgerow crawl, village walls","status":"STEP6_IMPORT_READY"},
+      {"episode":2,"title":"Dunkirk 1940: Waiting on the Beach","folder":"EP02-Dunkirk-1940-Waiting-on-the-Beach","step6":"WWII-FRONTLINE-FOOTAGE/EP02-Dunkirk-1940-Waiting-on-the-Beach/STEP6.json","metadata":"WWII-FRONTLINE-FOOTAGE/EP02-Dunkirk-1940-Waiting-on-the-Beach/metadata.json","cameraEnvironment":"soft sand, dunes, wind, wet pier, boat sway","status":"STEP6_IMPORT_READY"},
+      {"episode":3,"title":"Eastern Front 1941: Into the Vast Land","folder":"EP03-Eastern-Front-1941-Into-the-Vast-Land","step6":"WWII-FRONTLINE-FOOTAGE/EP03-Eastern-Front-1941-Into-the-Vast-Land/STEP6.json","metadata":"WWII-FRONTLINE-FOOTAGE/EP03-Eastern-Front-1941-Into-the-Vast-Land/metadata.json","cameraEnvironment":"mud march, trucks, roadside ditch, open fields","status":"STEP6_IMPORT_READY"},
+      {"episode":4,"title":"Moscow 1941: Winter Resistance","folder":"EP04-Moscow-1941-Winter-Resistance","step6":"WWII-FRONTLINE-FOOTAGE/EP04-Moscow-1941-Winter-Resistance/STEP6.json","metadata":"WWII-FRONTLINE-FOOTAGE/EP04-Moscow-1941-Winter-Resistance/metadata.json","cameraEnvironment":"deep snow, icy footing, trench cover, breath haze","status":"STEP6_IMPORT_READY"},
+      {"episode":5,"title":"El Alamein 1942: War in the Desert","folder":"EP05-El-Alamein-1942-War-in-the-Desert","step6":"WWII-FRONTLINE-FOOTAGE/EP05-El-Alamein-1942-War-in-the-Desert/STEP6.json","metadata":"WWII-FRONTLINE-FOOTAGE/EP05-El-Alamein-1942-War-in-the-Desert/metadata.json","cameraEnvironment":"dust, heat shimmer, gun pits, tank vibration","status":"STEP6_IMPORT_READY"},
+      {"episode":6,"title":"Stalingrad: City of Fire","folder":"EP06-Stalingrad-City-of-Fire","step6":"WWII-FRONTLINE-FOOTAGE/EP06-Stalingrad-City-of-Fire/STEP6.json","metadata":"WWII-FRONTLINE-FOOTAGE/EP06-Stalingrad-City-of-Fire/metadata.json","cameraEnvironment":"rubble, stairwells, wall breaches, dark interiors","status":"STEP6_IMPORT_READY"},
+      {"episode":7,"title":"Guadalcanal: Jungle Frontline","folder":"EP07-Guadalcanal-Jungle-Frontline","step6":"WWII-FRONTLINE-FOOTAGE/EP07-Guadalcanal-Jungle-Frontline/STEP6.json","metadata":"WWII-FRONTLINE-FOOTAGE/EP07-Guadalcanal-Jungle-Frontline/metadata.json","cameraEnvironment":"foliage occlusion, stream crossing, rain, muddy foxholes","status":"STEP6_IMPORT_READY"},
+      {"episode":8,"title":"Normandy 1944: Omaha Beach Assault","folder":"EP08-Normandy-1944-Omaha-Beach-Assault","step6":"WWII-FRONTLINE-FOOTAGE/EP08-Normandy-1944-Omaha-Beach-Assault/STEP6.json","metadata":"WWII-FRONTLINE-FOOTAGE/EP08-Normandy-1944-Omaha-Beach-Assault/metadata.json","cameraEnvironment":"landing craft, surf, spray, obstacles, shingle","status":"STEP6_IMPORT_READY"},
+      {"episode":9,"title":"Bastogne 1944: Surrounded in Snow","folder":"EP09-Bastogne-1944-Surrounded-in-Snow","step6":"WWII-FRONTLINE-FOOTAGE/EP09-Bastogne-1944-Surrounded-in-Snow/STEP6.json","metadata":"WWII-FRONTLINE-FOOTAGE/EP09-Bastogne-1944-Surrounded-in-Snow/metadata.json","cameraEnvironment":"frozen foxholes, fog, snow, cold-hand tremor","status":"STEP6_IMPORT_READY"},
+      {"episode":10,"title":"Berlin 1945: The Last Streets","folder":"EP10-Berlin-1945-The-Last-Streets","step6":"WWII-FRONTLINE-FOOTAGE/EP10-Berlin-1945-The-Last-Streets/STEP6.json","metadata":"WWII-FRONTLINE-FOOTAGE/EP10-Berlin-1945-The-Last-Streets/metadata.json","cameraEnvironment":"rubble climbing, building interiors, square crossings","status":"STEP6_IMPORT_READY"}
     ]
   }
 }
