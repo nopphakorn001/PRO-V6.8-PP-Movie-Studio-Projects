@@ -1,0 +1,81 @@
+{
+  "lockId": "THREE_KINGDOMS_POV_HARD_LOCK_V1",
+  "version": "1.0",
+  "scope": "THREE-KINGDOMS-SOLDIER-POV all episodes",
+  "mode": "CHEST_MOUNTED_FIRST_PERSON_REALISM",
+  "mandatory": true,
+  "cameraMount": {
+    "position": "upper chest / sternum height on the POV soldier",
+    "heightMetersApprox": "1.35-1.55 depending on body posture",
+    "orientation": "body-facing forward; view turns with torso movement rather than floating independently",
+    "fieldOfView": "normal human-scale field of view; avoid ultra-wide action-camera distortion",
+    "stabilization": "none beyond natural body damping"
+  },
+  "coreRules": [
+    "Every scene must feel recorded from a real soldier's chest inside the formation, not from an observing cinema camera.",
+    "Do not use wide battlefield showcase shots as the default composition.",
+    "Do not use drone, overhead, crane, orbit, third-person follow, detached tracking or external views of the POV owner.",
+    "Keep framing close, crowded, partially obstructed and human-scale.",
+    "Nearby shoulders, backs, shields, spear shafts, arms, dust, mud, smoke, debris and terrain should frequently occupy the foreground or frame edges.",
+    "The POV owner is never shown externally.",
+    "The camera must move because the body moves: walking, bracing, stumbling, crouching, being pushed, turning the torso, falling, getting up and breathing hard.",
+    "No smooth gimbal motion and no floating camera translation.",
+    "No centered weapon pose or game-HUD composition.",
+    "No heroic posing, no staged tableau, no perfectly readable formation and no clean panoramic battle overview.",
+    "The viewer should often have incomplete information about enemy position and overall battle state.",
+    "Stress, fatigue, unstable footing, restricted visibility and physical pressure are more important than visual spectacle.",
+    "Other soldiers behave independently and never perform for the viewer.",
+    "Battlefield action must remain serious, grounded and physically plausible."
+  ],
+  "framingRules": {
+    "defaultDistance": "close to nearby soldiers, normally within 0.5-3 meters inside the friendly formation",
+    "wideShotUsage": "exception only when naturally exposed by terrain; even then retain chest-level body-camera feeling and foreground obstruction",
+    "foregroundOcclusion": "expected and desirable",
+    "enemyVisibility": "partial, intermittent or obscured unless proximity makes a brief clear view unavoidable",
+    "weaponVisibility": {
+      "noWeaponVisiblePercentTarget": 45,
+      "partialShieldArmSpearAtEdgePercentTarget": 40,
+      "directInteractionPercentTarget": 15
+    }
+  },
+  "motionRules": [
+    "short forward movement rather than long uninterrupted running",
+    "shoulder and torso jolts from contact with nearby soldiers",
+    "brief stumbles on churned ground",
+    "crouch and rise under missile pressure",
+    "brace behind shield or earthwork",
+    "rapid but imperfect torso turns",
+    "brief framing loss during impacts or falls",
+    "recovery pause with audible breathing"
+  ],
+  "realismTone": [
+    "tense",
+    "serious",
+    "claustrophobic",
+    "muddy",
+    "dusty",
+    "crowded",
+    "fatigued",
+    "imperfect",
+    "partially obstructed",
+    "survival-focused"
+  ],
+  "forbidden": [
+    "wide cinematic battlefield reveal",
+    "drone shot",
+    "overhead shot",
+    "third-person POV owner",
+    "hero tracking shot",
+    "smooth dolly or gimbal glide",
+    "centered weapon like FPS game",
+    "clean symmetrical shield wall showcase",
+    "perfectly staged enemy line",
+    "heroic charge toward camera",
+    "cinematic slow motion",
+    "wuxia choreography",
+    "superhuman movement",
+    "camera anticipating impacts",
+    "camera observing the entire battlefield from a privileged angle"
+  ],
+  "requiredPromptSuffix": "Chest-mounted first-person POV only. Keep the frame close, crowded, partially obstructed and human-scaled. The camera moves only with the soldier's body. No wide battlefield showcase, no third-person angle, no centered weapon, no heroic framing, no smooth cinematic camera movement. Emphasize stress, restricted visibility, fatigue, impacts, unstable footing and survival realism."
+}
