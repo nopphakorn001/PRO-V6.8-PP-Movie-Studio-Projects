@@ -1,3 +1,42 @@
 {
-  "schemaVersion":"1.0","series":"WWII SOLDIER POV","set":"Set 02","episode":8,"slug":"monte-cassino-soldier-pov","title":"WWII Soldier POV: Monte Cassino — Up the Mountain","shortTitle":"Monte Cassino Soldier POV","hook":"Every step upward slides loose stone back under your boots.","shortDescription":"A fictional Polish II Corps infantryman climbs toward Monte Cassino through dust, rubble and steep mountain terrain. AI-generated cinematic historical reenactment.","historicalEvent":{"name":"Battle of Monte Cassino","dateRange":"January–May 1944","location":"Monte Cassino, Italy","perspective":"Fictional composite Polish II Corps infantryman"},"disclosure":"AI-generated cinematic historical reenactment. Not archival footage.","language":"English","aspectRatio":"9:16","durationTargetSeconds":120,"contentRating":"Non-graphic historical combat","keywords":["Monte Cassino","Polish II Corps","Italian Campaign","WWII POV","World War II","military history"],"hashtags":["#WWII","#MonteCassino","#PolishIIcorps","#History","#POV","#CinematicHistory"],"cta":"Follow for more immersive WWII Soldier POV episodes.","status":"READY_FOR_PRODUCTION","step6Path":"WWII-SOLDIER-POV/EP08-Monte-Cassino/STEP6.json","SERIES_ID":"wwii-soldier-pov","EPISODE":8,"CONTENT_ID":"wwii-soldier-pov-ep08","GITHUB_PATH":"WWII-SOLDIER-POV/EP08-Monte-Cassino","STATUS":"READY_FOR_PRODUCTION"
+  "schemaVersion": "2.0",
+  "series": "WWII SOLDIER POV",
+  "set": "Set 02",
+  "episode": 8,
+  "slug": "monte-cassino-soldier-pov",
+  "title": "WWII Soldier POV: Monte Cassino — Up the Mountain",
+  "shortTitle": "Monte Cassino Soldier POV",
+  "hook": "Every step upward costs time, breath and cover.",
+  "shortDescription": "A fictional Polish II Corps infantryman climbs the Monte Cassino approaches through loose rock, shattered masonry, smoke and intermittent fire. The V2 realism build emphasizes terrain, fatigue, cover, limited enemy visibility and human-eye POV instead of cinematic climbing or heroic staging.",
+  "historicalEvent": {
+    "name": "Battle of Monte Cassino",
+    "dateRange": "January–May 1944",
+    "location": "Monte Cassino, Italy",
+    "perspective": "Fictional composite Polish II Corps infantryman"
+  },
+  "disclosure": "AI-generated historical reenactment. Not archival footage.",
+  "language": "English",
+  "aspectRatio": "9:16",
+  "durationTargetSeconds": 120,
+  "contentRating": "Non-graphic historical combat",
+  "revision": "STEP6_V2_MONTE_CASSINO_REALISM",
+  "realismFocus": [
+    "terrain as primary obstacle",
+    "fatigue progression",
+    "short movement between cover",
+    "mostly hidden enemy",
+    "rubble and defensive positions",
+    "human-eye POV rather than FPS game camera",
+    "scene-to-scene state continuity"
+  ],
+  "keywords": ["Monte Cassino", "Polish II Corps", "Italian Campaign", "WWII POV", "World War II", "military history"],
+  "hashtags": ["#WWII", "#MonteCassino", "#PolishIIcorps", "#History", "#POV"],
+  "cta": "Follow for more immersive WWII Soldier POV episodes.",
+  "status": "TEST_READY_V2",
+  "step6Path": "WWII-SOLDIER-POV/EP08-Monte-Cassino/STEP6.json",
+  "SERIES_ID": "wwii-soldier-pov",
+  "EPISODE": 8,
+  "CONTENT_ID": "wwii-soldier-pov-ep08",
+  "GITHUB_PATH": "WWII-SOLDIER-POV/EP08-Monte-Cassino",
+  "STATUS": "TEST_READY_V2"
 }
