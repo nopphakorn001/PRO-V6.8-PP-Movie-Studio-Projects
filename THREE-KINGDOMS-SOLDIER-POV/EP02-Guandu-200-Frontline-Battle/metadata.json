@@ -2,7 +2,7 @@
   "series": "THREE-KINGDOMS-SOLDIER-POV",
   "episode": 2,
   "title": "EP02 — Battle of Guandu, 200 CE: Hold the Line",
-  "status": "STEP6_V3_CHEST_MOUNTED_TEST_READY",
+  "status": "STEP6_V4_CHEST_MOUNTED_NO_SPOKEN_VOICE_TEST_READY",
   "canonicalStep6": "STEP6_V2.json",
   "povHardLock": "THREE-KINGDOMS-SOLDIER-POV/POV_HARD_LOCK.json",
   "scenes": 15,
@@ -14,8 +14,8 @@
   "opposingFaction": "Yuan Shao army",
   "framingPolicy": "close, crowded, partially obstructed chest-mounted POV; no default wide battlefield shots",
   "cameraPolicy": "camera movement follows torso and body motion only; no floating, gimbal, drone, overhead or third-person views",
+  "audioPolicy": "NO_SPOKEN_VOICE: no human words, no dialogue, no commands, no chanting, no narration and no music; breathing and brief nonverbal exertion only",
   "battleFocus": "sustained frontline combat experienced at human scale through shields, shoulders, spear shafts, earthworks, dust, smoke, unstable footing and limited enemy visibility",
   "nonGraphic": true,
-  "audio": "diegetic battlefield ambience only; no narration, dialogue or music",
   "recommendedTestScenes": [1, 5, 8, 11, 15]
 }
