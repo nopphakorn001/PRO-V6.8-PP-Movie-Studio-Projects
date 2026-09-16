@@ -4,22 +4,19 @@
   "title": "EP01 — Yellow Turban Rebellion, 184 CE: The Rebellion Begins",
   "canonicalStep6": "STEP6_V2.json",
   "legacyStep6": "STEP6.json",
-  "status": "POV_REALISM_V2_TEST_READY",
+  "status": "POV_REALISM_V3_NO_SPOKEN_VOICE_TEST_READY",
   "scenes": 15,
   "secondsPerScene": 8,
   "estimatedDurationSeconds": 120,
   "aspectRatio": "9:16",
+  "povHardLock": "THREE-KINGDOMS-SOLDIER-POV/POV_HARD_LOCK.json",
+  "audioPolicy": "NO_SPOKEN_VOICE: no human words, no dialogue, no commands, no chanting, no narration and no music; breathing and brief nonverbal exertion only",
   "testFirst": [3, 4, 8, 11, 14],
-  "v2Changes": [
-    "separate invisible POV owner from visible scene characters",
-    "anti-FPS human-eye camera rules",
-    "POV body reference instead of face-driven character visibility",
-    "Han infantry faction lock",
-    "Yellow Turban irregular faction lock",
-    "late Eastern Han equipment restrictions",
-    "mandatory previous-scene continuity from scene 2 onward",
-    "continuityStartState and continuityEndFrame for every scene",
-    "reduced cinematic combat choreography",
-    "no narration, no dialogue, no music"
+  "changes": [
+    "global no-spoken-voice hard lock",
+    "all scene prompts explicitly forbid intelligible human speech",
+    "battlefield audio reduced to environmental SFX plus breathing/nonverbal exertion",
+    "chest-mounted POV remains mandatory",
+    "previous-scene continuity remains mandatory from scene 2"
   ]
 }
