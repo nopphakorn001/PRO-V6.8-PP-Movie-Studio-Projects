@@ -1,6 +1,6 @@
 {
-  "lockId": "THREE_KINGDOMS_POV_HARD_LOCK_V1",
-  "version": "1.0",
+  "lockId": "THREE_KINGDOMS_POV_HARD_LOCK_V2",
+  "version": "2.0",
   "scope": "THREE-KINGDOMS-SOLDIER-POV all episodes",
   "mode": "CHEST_MOUNTED_FIRST_PERSON_REALISM",
   "mandatory": true,
@@ -28,54 +28,54 @@
     "Battlefield action must remain serious, grounded and physically plausible."
   ],
   "framingRules": {
-    "defaultDistance": "close to nearby soldiers, normally within 0.5-3 meters inside the friendly formation",
-    "wideShotUsage": "exception only when naturally exposed by terrain; even then retain chest-level body-camera feeling and foreground obstruction",
-    "foregroundOcclusion": "expected and desirable",
-    "enemyVisibility": "partial, intermittent or obscured unless proximity makes a brief clear view unavoidable",
-    "weaponVisibility": {
-      "noWeaponVisiblePercentTarget": 45,
-      "partialShieldArmSpearAtEdgePercentTarget": 40,
-      "directInteractionPercentTarget": 15
-    }
+    "default": "close chest-mounted first-person framing",
+    "foregroundOcclusion": "frequent and natural",
+    "battlefieldOverview": "avoid except a brief accidental glimpse from the soldier's actual position",
+    "weaponPosition": "edge-only when physically needed; never centered as a permanent aiming reference"
   },
-  "motionRules": [
-    "short forward movement rather than long uninterrupted running",
-    "shoulder and torso jolts from contact with nearby soldiers",
-    "brief stumbles on churned ground",
-    "crouch and rise under missile pressure",
-    "brace behind shield or earthwork",
-    "rapid but imperfect torso turns",
-    "brief framing loss during impacts or falls",
-    "recovery pause with audible breathing"
-  ],
-  "realismTone": [
-    "tense",
-    "serious",
-    "claustrophobic",
-    "muddy",
-    "dusty",
-    "crowded",
-    "fatigued",
-    "imperfect",
-    "partially obstructed",
-    "survival-focused"
-  ],
-  "forbidden": [
-    "wide cinematic battlefield reveal",
-    "drone shot",
-    "overhead shot",
-    "third-person POV owner",
-    "hero tracking shot",
-    "smooth dolly or gimbal glide",
-    "centered weapon like FPS game",
-    "clean symmetrical shield wall showcase",
-    "perfectly staged enemy line",
-    "heroic charge toward camera",
-    "cinematic slow motion",
-    "wuxia choreography",
-    "superhuman movement",
-    "camera anticipating impacts",
-    "camera observing the entire battlefield from a privileged angle"
-  ],
-  "requiredPromptSuffix": "Chest-mounted first-person POV only. Keep the frame close, crowded, partially obstructed and human-scaled. The camera moves only with the soldier's body. No wide battlefield showcase, no third-person angle, no centered weapon, no heroic framing, no smooth cinematic camera movement. Emphasize stress, restricted visibility, fatigue, impacts, unstable footing and survival realism."
+  "audioHardLock": {
+    "mode": "NO_SPOKEN_VOICE",
+    "mandatory": true,
+    "spokenLanguage": false,
+    "dialogue": false,
+    "narration": false,
+    "intelligibleWords": false,
+    "commands": false,
+    "chants": false,
+    "battleCriesWithWords": false,
+    "music": false,
+    "allowedHumanSounds": [
+      "breathing",
+      "heavy breathing",
+      "nonverbal exertion",
+      "brief nonverbal grunts",
+      "coughing where natural"
+    ],
+    "allowedEnvironmentSounds": [
+      "footsteps",
+      "cloth movement",
+      "armor and gear movement",
+      "shield impacts",
+      "spear and wood contact",
+      "arrow flight and impacts",
+      "crossbow mechanisms",
+      "horse movement",
+      "cart wheels",
+      "wind",
+      "dust and debris",
+      "fire",
+      "distant nonverbal battlefield noise"
+    ],
+    "promptRule": "Do not generate any spoken human voice, words, dialogue, commands, chanting, narration or intelligible vocal language in any scene. Human vocal sound is limited to breathing and brief nonverbal exertion only."
+  },
+  "generationGate": {
+    "blockIf": [
+      "spoken human words are requested or implied",
+      "dialogue or narration is present",
+      "a command, chant or intelligible battle cry is requested",
+      "camera becomes third-person or detached",
+      "weapon becomes centered like a game HUD",
+      "shot becomes a wide cinematic battlefield showcase"
+    ]
+  }
 }
