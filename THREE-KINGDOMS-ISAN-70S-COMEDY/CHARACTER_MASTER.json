@@ -1,7 +1,7 @@
 {
   "series": "THREE-KINGDOMS-ISAN-70S-COMEDY",
-  "version": "2.0",
-  "status": "HARD_LOCK_TEXT_ONLY",
+  "version": "2.1",
+  "status": "HARD_LOCK_TEXT_ONLY_CANONICAL",
   "imagePolicy": "NO_IMAGES_NO_BASE64",
   "usage": {
     "step5SourceOfTruth": true,
@@ -11,19 +11,22 @@
   },
   "seriesStyleLock": {
     "visual": "1970s Thai-Chinese historical comedy film aesthetic, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical sets, natural sunlight. Three Kingdoms characters reimagined with grounded Isan Thai facial features and ordinary weathered bodies. Costumes are worn, practical and slightly mismatched rather than glamorous. No modern objects, no fantasy glow, no polished idol styling.",
-    "customVisual": "Feels like a lost 1970s rural historical comedy movie: rough village sets, handwoven textile accents, faded indigo and earth-tone fabrics, imperfect makeup, ordinary faces, sweat, dust and dry comic timing. Liu Bei looks broke but sincere; Guan Yu looks stern and rugged; Zhang Fei has loud drunk-uncle energy.",
-    "characterStyle": "Three Kingdoms characters with ordinary Isan Thai-looking faces, weathered skin, imperfect teeth and hair, rough practical clothing, no idol beauty, no polished fantasy hero styling.",
+    "customVisual": "Feels like a lost 1970s Thai-dubbed Chinese Three Kingdoms comedy film: faded Eastmancolor, warm sepia cast, soft old lens, film grain, slight gate weave, tiny scratches, dusty practical sets, imperfect makeup, ordinary weathered faces and dry comic timing. The characters still dress as Three Kingdoms figures, not as Thai villagers.",
+    "characterStyle": "Actual Three Kingdoms / late Eastern Han character costume grammar MUST remain recognizable. Only faces, skin, body type, mannerisms and comic archetypes are Isan-inspired. Clothing is NOT Thai/Isan clothing. Use period Chinese robes, practical late-Han armor, headwear, belts and footwear with worn 1970s-film realism. No Thai pha-khao-ma, no Isan textile styling, no modern fashion, no fantasy armor.",
     "forbidden": [
+      "change 1970s faded film look",
+      "Thai or Isan traditional clothing",
+      "pha-khao-ma or modern Thai textile styling",
       "idol beauty",
       "clean modern commercial look",
-      "fantasy hero styling",
+      "fantasy hero armor",
       "modern fashion",
       "modern objects",
       "perfect teeth",
       "perfect hair",
       "smooth plastic skin"
     ],
-    "femaleArchetypeRule": "Future female Three Kingdoms characters may carry bold, sharp-tongued, flashy 'สาวสก๊อย' attitude, but must remain in period-appropriate ancient clothing and the same 1970s faded-film world."
+    "femaleArchetypeRule": "Future female Three Kingdoms characters may have a bold, sharp-tongued, flashy 'สาวสก๊อย' personality and attitude, but MUST wear period-appropriate Three Kingdoms / late Eastern Han Chinese clothing only; never modern or Thai/Isan clothing."
   },
   "dialogueLock": {
     "language": "Thai",
@@ -53,7 +56,7 @@
       "bodyLocked": true,
       "voicePersonaLocked": true,
       "visualIdentity": "ชายอีสานวัยกลางคน รูปร่างผอมจากงานหนัก ผิวคล้ำแดด หน้าตาธรรมดา เหนื่อยล้าแต่ใจดี ผมดำยุ่งรวบหลวม หนวดเคราบางไม่เนี้ยบ ฟันและผิวมีความไม่สมบูรณ์แบบตามวัย ห้ามทำให้หล่อแบบพระเอก",
-      "coreCostume": "เสื้อคลุมโบราณสีครามหม่นและน้ำตาลซีด เนื้อผ้าหยาบ ผ้าคาดเอวทอมือเก่า รองเท้าเรียบง่าย ไม่มีเครื่องประดับหรู",
+      "coreCostume": "Recognizable Liu Bei-inspired late Eastern Han / Three Kingdoms attire: worn layered Han robe in muted blue-grey and earth tones, narrow period sash, practical cloth shoes, simple period hair binding. Poor and weathered, but unmistakably Chinese Three Kingdoms-era clothing. No Thai/Isan textile styling.",
       "manner": "สุภาพกว่าอีกสองคน แต่ยังพูดกันเอง มีจังหวะถอนหายใจและมุกจากความจน",
       "dialogueAddress": [
         "พี่กวน",
@@ -71,7 +74,7 @@
       "bodyLocked": true,
       "voicePersonaLocked": true,
       "visualIdentity": "ชายอีสานร่างสูงใหญ่ ไหล่กว้าง ผิวคล้ำแดด หน้าดุและเหนื่อย เครายาวดำปนหยาบไม่จัดทรง ผมรวบแบบใช้งานจริง รอยแดดและผิวไม่เรียบ ห้ามทำให้เป็นนักรบแฟนตาซีหรือหล่อเนี้ยบ",
-      "coreCostume": "เสื้อคลุมเขียวหม่นซีด เกราะใช้งานจริงเก่าและมีรอยสึก ผ้าทอพื้นบ้านเป็นรายละเอียดเล็กน้อย รองเท้าใช้งานจริง",
+      "coreCostume": "Recognizable Guan Yu-inspired Three Kingdoms attire: faded dark-green Han robe with restrained worn lamellar protection, period belt, practical boots, simple period head binding. Rugged and old, not ornate fantasy armor. No Thai/Isan textile styling.",
       "manner": "นิ่ง ขรึม พูดสั้น ชอบมุกหน้าตาย ไม่เล่นใหญ่",
       "dialogueAddress": [
         "พี่เล่า",
@@ -89,7 +92,7 @@
       "bodyLocked": true,
       "voicePersonaLocked": true,
       "visualIdentity": "ชายอีสานร่างใหญ่แน่น ผิวเข้มแดด หนวดเครารุงรัง ผมดำยุ่งคาดผ้า หน้าตาดุแต่มีแววขี้เล่น ไม่ต้องฟันสวยหรือผิวดี ให้ดูเหมือนลุงบ้านๆ ที่ดื่มหนักแต่แข็งแรง",
-      "coreCostume": "ชุดนักรบเก่าโทนดำ น้ำตาล แดงหม่น เกราะใช้งานจริง ผ้าคาดเอวลายทอพื้นบ้านแบบใช้งานจริง ถือไหสุราได้เมื่อเรื่องกำหนด",
+      "coreCostume": "Recognizable Zhang Fei-inspired Three Kingdoms attire: rough dark brown, black and muted red Han military tunic with worn lamellar pieces, period belt and boots, simple headcloth suitable to the era. Drunk-uncle energy comes from face and behavior, not Thai clothing. No Thai/Isan textile styling.",
       "manner": "เสียงดัง หัวเราะง่าย พูดตรง มุกมาจากความเมา ความมั่นหน้า และการแซวพี่เล่า",
       "dialogueAddress": [
         "พี่เล่า",
