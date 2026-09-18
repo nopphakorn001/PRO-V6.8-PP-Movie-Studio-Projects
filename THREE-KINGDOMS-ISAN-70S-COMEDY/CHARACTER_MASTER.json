@@ -1,6 +1,6 @@
 {
   "series": "THREE-KINGDOMS-ISAN-70S-COMEDY",
-  "version": "2.2",
+  "version": "2.3",
   "status": "HARD_LOCK_TEXT_ONLY_CANONICAL",
   "imagePolicy": "NO_IMAGES_NO_BASE64",
   "usage": {
@@ -31,7 +31,7 @@
   "dialogueLock": {
     "language": "Thai",
     "accent": "CURRENT_NATURAL_THAI",
-    "style": "Contemporary conversational Thai, natural and easy to understand, casual comedy. Delivery may have a light current Isan flavor where natural, but vocabulary must sound modern, not historical.",
+    "style": "Contemporary conversational Thai, natural and easy to understand, casual comedy with classic Thai cafe-comedy timing: setup, tease, straight-man reaction, quick punchline and occasional callback. Light current Isan flavor may appear naturally, but vocabulary must sound modern, not historical.",
     "nicknames": {
       "liu-bei": "พี่เล่า",
       "guan-yu": "พี่กวน",
@@ -45,7 +45,22 @@
       "no archaic words such as ข้า เจ้า มิใช่ เถิด ผู้ใด unless intentionally used as a joke",
       "no royal-court phrasing",
       "keep punchline timing"
-    ]
+    ],
+    "comedyLock": {
+      "mode": "THAI_CAFE_COMEDY",
+      "tone": "classic Thai cafe-style banter adapted to modern natural speech",
+      "rules": [
+        "every scene should contain at least one clear comic beat",
+        "use teasing between familiar characters",
+        "use setup -> pause -> punchline",
+        "use deadpan reaction for Guan Yu",
+        "use loud overconfident joke delivery for Zhang Fei",
+        "use dry poverty/self-deprecating humor for Liu Bei",
+        "allow light wordplay and callback jokes",
+        "avoid vulgar sexual jokes, cruelty, or random slapstick that breaks the Three Kingdoms world",
+        "keep lines short enough for an 8-second scene"
+      ]
+    }
   },
   "characters": [
     {
