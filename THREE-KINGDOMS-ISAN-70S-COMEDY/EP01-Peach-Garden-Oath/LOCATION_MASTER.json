@@ -1,0 +1,24 @@
+{
+  "episode": "EP01",
+  "id": "loc-ep01-peach-tavern",
+  "title": "ร้านเหล้าริมสวนท้อ",
+  "immutable": true,
+  "geography": {
+    "tavern": "north side",
+    "woodenTable": "immediately outside tavern under main peach tree",
+    "peachTree": "center-right above table",
+    "dirtPath": "runs past east side of tavern",
+    "woodenFence": "outer garden edge",
+    "sandalDisplay": "beside Liu Bei's starting seat at table",
+    "wineJarDefault": "inside tavern before Scene 2; on table from end of Scene 2 onward"
+  },
+  "lighting": "late-afternoon warm natural light, fixed direction across all 6 scenes",
+  "forbidden": [
+    "new market location",
+    "separate peach garden",
+    "moving tavern between scenes",
+    "random table reset",
+    "random prop reset",
+    "time-of-day jump"
+  ]
+}
