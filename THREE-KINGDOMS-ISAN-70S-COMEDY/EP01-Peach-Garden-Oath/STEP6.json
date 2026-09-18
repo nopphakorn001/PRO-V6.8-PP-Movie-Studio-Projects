@@ -1,6 +1,6 @@
 {
   "projectId": "three-kingdoms-isan-70s-comedy-ep01",
-  "revision": "EP01_V4_CANONICAL_5X8_THREE_KINGDOMS_COSTUME_ONE_LOCATION",
+  "revision": "EP01_V5_CANONICAL_CURRENT_THAI_5X8_ONE_LOCATION",
   "status": "IMPORT_READY_NO_IMAGES_CANONICAL",
   "settings": {
     "aspectRatio": "9:16",
@@ -23,11 +23,11 @@
     "visualStyleId": "custom",
     "visualStyle": "1970s Thai-Chinese historical comedy film aesthetic, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical late-Han Chinese sets, natural sunlight. Three Kingdoms characters have ordinary Isan-inspired faces and weathered bodies but wear recognizable Three Kingdoms / late Eastern Han Chinese clothing only. No modern objects, no fantasy glow, no polished idol styling.",
     "customVisualStyle": "Feels like a lost 1970s Thai-dubbed Chinese Three Kingdoms comedy film. Imperfect makeup, ordinary faces, sweat, dust and dry comic timing. Liu Bei looks broke but sincere; Guan Yu stern and rugged; Zhang Fei has loud drunk-uncle energy. Costume remains Chinese Three Kingdoms-era.",
-    "dialogueStyle": "Thai period-style speech: old-fashioned but easy to understand, rustic and informal. Use recognizable nicknames. No modern slang and no stiff royal-court language.",
+    "dialogueStyle": "Contemporary conversational Thai, natural present-day pronunciation and rhythm, casual comedy. Light current Isan flavor may appear naturally, but do not use historical/archaic Thai.",
     "speakerNicknameMap": {
       "liu-bei": "พี่เล่า",
       "guan-yu": "พี่กวน",
-      "zhang-fei": "เจ้าเตียว"
+      "zhang-fei": "เตียว"
     },
     "identityMode": "TEXT_CHARACTER_HARD_LOCK",
     "characterImagePolicy": "NO_EMBEDDED_CHARACTER_IMAGES",
@@ -56,8 +56,8 @@
     ],
     "storyTitle": "สามก๊กบ้านเฮา EP01 — สาบานสวนท้อแบบคนบ้านๆ",
     "storySummary": "40 วินาที 5 ฉากต่อเนื่อง ฉากละ 8 วินาที ทั้งหมดเกิดที่ร้านเหล้าริมสวนท้อแห่งเดียว พี่เล่าขายรองเท้าไม่ออก เจ้าเตียวชวนดื่ม พี่กวนร่วมวง ทั้งสามคุยเรื่องบ้านเมือง สาบานเป็นพี่น้อง และจบด้วยมุกไม่มีใครมีเงินจ่ายค่าสุรา",
-    "mainStoryPrompt": "CANONICAL LOCK. 5 scenes x 8 seconds = 40 seconds. ONE LOCATION only: ร้านเหล้าริมสวนท้อ. Actual Three Kingdoms characters in recognizable late Eastern Han / Three Kingdoms Chinese clothing. Faces, skin, body type and comic behavior may be Isan-inspired; clothing MUST NOT become Thai/Isan. Preserve the exact 1970s faded Thai-Chinese film look. No images or Base64 embedded in import JSON. Thai period-style informal comedy dialogue, one speaker at a time.",
-    "genreDetailPrompt": "Lost 1970s Thai-dubbed Chinese Three Kingdoms comedy film. Ordinary weathered Isan-inspired faces, but authentic-looking late-Han Chinese Three Kingdoms wardrobe. Dry rustic comedy.",
+    "mainStoryPrompt": "CANONICAL LOCK. 5 scenes x 8 seconds = 40 seconds. ONE LOCATION only: ร้านเหล้าริมสวนท้อ. Actual Three Kingdoms characters in recognizable late Eastern Han / Three Kingdoms Chinese clothing. Faces, skin, body type and comic behavior may be Isan-inspired; clothing MUST NOT become Thai/Isan. Preserve the exact 1970s faded Thai-Chinese film look. No images or Base64 embedded in import JSON. Contemporary natural Thai comedy dialogue, one speaker at a time. Use present-day Thai speech, no archaic words.",
+    "genreDetailPrompt": "Lost 1970s Thai-dubbed Chinese Three Kingdoms comedy film visually, but all spoken dialogue uses natural present-day Thai. Ordinary weathered Isan-inspired faces, late-Han Chinese wardrobe, dry rustic comedy.",
     "scenes": [
       {
         "id": "scene-ep01-001",
@@ -78,12 +78,12 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "เตียวหุย: พี่เล่า! ขายบ่ได้ก็วางเสียก่อน มาซดสุรากับข้าเถิด!",
+        "script": "เตียวหุย: พี่เล่า ขายไม่ได้ก็พักก่อน มากินเหล้ากับผมดีกว่า!",
         "dialogues": [
           {
             "characterId": "zhang-fei",
             "speakerName": "เตียวหุย",
-            "text": "พี่เล่า! ขายบ่ได้ก็วางเสียก่อน มาซดสุรากับข้าเถิด!"
+            "text": "พี่เล่า ขายไม่ได้ก็พักก่อน มากินเหล้ากับผมดีกว่า!"
           }
         ],
         "isGenerating": false,
@@ -92,7 +92,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "พี่เล่านั่งถอนใจมองรองเท้าสานที่ขายไม่ออก เจ้าเตียวเปิดประตูร้าน เดินออกมาพร้อมไหสุราแล้วชวนเสียงดัง",
         "imageDescription": "ONE LOCATION: outside the same late-Han Chinese tavern under one peach tree. Liu Bei wears worn muted blue-grey Han robes; Zhang Fei wears rough dark late-Han military clothing with worn lamellar pieces. Isan-inspired ordinary faces only, NOT Isan clothing. 1970s faded film.",
-        "videoPrompt": "8-second vertical shot. Start on Liu Bei at the table and sandal display; Zhang Fei exits the same tavern door with a clay wine jar, approaches only a few steps, and says the Thai period-comedy line. Keep the Chinese Three Kingdoms wardrobe locked. One speaker only. No location change.",
+        "videoPrompt": "8-second vertical shot. Start on Liu Bei at the table and sandal display; Zhang Fei exits the same tavern door with a clay wine jar, approaches only a few steps, and speaks in natural present-day Thai: \"พี่เล่า ขายไม่ได้ก็พักก่อน มากินเหล้ากับผมดีกว่า!\". Keep the Chinese Three Kingdoms wardrobe locked. One speaker only. No location change.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
         "characterMasterRequired": true,
@@ -128,12 +128,12 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "กวนอู: เจ้าเตียว...ข้าได้กลิ่นสุรามาแต่ไกล มิใช่ได้ยินเสียงเจ้าเลย",
+        "script": "กวนอู: เตียว...ฉันได้กลิ่นเหล้ามาแต่ไกล ไม่ใช่ได้ยินเสียงแกนะ",
         "dialogues": [
           {
             "characterId": "guan-yu",
             "speakerName": "กวนอู",
-            "text": "เจ้าเตียว...ข้าได้กลิ่นสุรามาแต่ไกล มิใช่ได้ยินเสียงเจ้าเลย"
+            "text": "เตียว...ฉันได้กลิ่นเหล้ามาแต่ไกล ไม่ใช่ได้ยินเสียงแกนะ"
           }
         ],
         "isGenerating": false,
@@ -142,7 +142,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "พี่กวนเดินเข้ามาถึงหัวโต๊ะ มองไหสุรานิ่งๆ เจ้าเตียวชะงัก ส่วนพี่เล่ากลั้นหัวเราะ",
         "imageDescription": "Same tavern, same table, same peach tree, same clay wine jar position. Guan Yu wears faded dark-green Three Kingdoms / late-Han robes with restrained worn lamellar protection. No Thai costume. 1970s old film.",
-        "videoPrompt": "8-second continuation from previous frame. Guan Yu enters from the same dirt path, stops at the table, looks at the wine jar and delivers one dry Thai period-style joke. Zhang Fei and Liu Bei react silently. Preserve exact props and costume.",
+        "videoPrompt": "8-second continuation from previous frame. Guan Yu enters from the same dirt path, stops at the table, looks at the wine jar and says naturally in present-day Thai: \"เตียว...ฉันได้กลิ่นเหล้ามาแต่ไกล ไม่ใช่ได้ยินเสียงแกนะ\". Zhang Fei and Liu Bei react silently. Preserve exact props and costume.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
         "characterMasterRequired": true,
@@ -179,12 +179,12 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "เล่าปี่: พี่กวน เจ้าเตียว...แผ่นดินวุ่นวายเช่นนี้ หากจะร่วมทาง ก็อย่าทิ้งกันยามยาก",
+        "script": "เล่าปี่: พี่กวน เตียว...บ้านเมืองมันวุ่น ถ้าจะไปด้วยกันก็อย่าทิ้งกันนะ",
         "dialogues": [
           {
             "characterId": "liu-bei",
             "speakerName": "เล่าปี่",
-            "text": "พี่กวน เจ้าเตียว...แผ่นดินวุ่นวายเช่นนี้ หากจะร่วมทาง ก็อย่าทิ้งกันยามยาก"
+            "text": "พี่กวน เตียว...บ้านเมืองมันวุ่น ถ้าจะไปด้วยกันก็อย่าทิ้งกันนะ"
           }
         ],
         "isGenerating": false,
@@ -193,7 +193,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "พี่เล่าพูดจริงจัง พี่กวนนั่งนิ่งฟัง เจ้าเตียวรินสุราแต่ลดเสียงลง",
         "imageDescription": "Same single location and same table. All three remain in recognizable Three Kingdoms late-Han Chinese clothing: Liu Bei blue-grey worn Han robe, Guan Yu faded green robe and restrained lamellar, Zhang Fei dark brown/black/muted red military clothing. Isan-inspired faces only.",
-        "videoPrompt": "8-second static-medium continuation. Liu Bei speaks one period-style Thai line. Guan Yu listens; Zhang Fei quietly pours wine. No overlapping dialogue, no location change, no costume drift.",
+        "videoPrompt": "8-second static-medium continuation. Liu Bei speaks naturally in present-day Thai: \"พี่กวน เตียว...บ้านเมืองมันวุ่น ถ้าจะไปด้วยกันก็อย่าทิ้งกันนะ\". Guan Yu listens; Zhang Fei quietly pours wine. No overlapping dialogue, no location change, no costume drift.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
         "characterMasterRequired": true,
@@ -230,12 +230,12 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "เตียวหุย: ได้! เป็นพี่น้องกันแล้ว...แต่สุราหนึ่งไห ต้องหารสามนะพี่เล่า!",
+        "script": "เตียวหุย: ได้! เป็นพี่น้องกันแล้ว แต่เหล้าไหนี้หารสามนะพี่เล่า!",
         "dialogues": [
           {
             "characterId": "zhang-fei",
             "speakerName": "เตียวหุย",
-            "text": "ได้! เป็นพี่น้องกันแล้ว...แต่สุราหนึ่งไห ต้องหารสามนะพี่เล่า!"
+            "text": "ได้! เป็นพี่น้องกันแล้ว แต่เหล้าไหนี้หารสามนะพี่เล่า!"
           }
         ],
         "isGenerating": false,
@@ -244,7 +244,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "ทั้งสามลุกข้างโต๊ะ ยกจอกพร้อมกัน พี่เล่ากับพี่กวนจริงจัง เจ้าเตียวเหลือบมองไหสุราแล้วพูดมุก",
         "imageDescription": "Grounded oath beside the SAME table and peach tree, not a new ceremonial garden. Three Kingdoms Chinese costumes remain unchanged and worn. No Thai costume, no fantasy aura, no heroic glamour. 1970s faded film.",
-        "videoPrompt": "8-second continuation. They stand beside the same table and raise simple clay cups. Zhang Fei alone speaks the joke. Liu Bei and Guan Yu stare at him silently for a beat. Keep same location, light and costumes.",
+        "videoPrompt": "8-second continuation. They stand beside the same table and raise simple clay cups. Zhang Fei alone says in present-day Thai: \"ได้! เป็นพี่น้องกันแล้ว แต่เหล้าไหนี้หารสามนะพี่เล่า!\". Liu Bei and Guan Yu stare at him silently for a beat. Keep same location, light and costumes.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
         "characterMasterRequired": true,
@@ -281,12 +281,12 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "เล่าปี่: ช้าก่อน เจ้าเตียว...เมื่อครู่เจ้าชวน แล้วผู้ใดเป็นคนจ่ายค่าสุรา?",
+        "script": "เล่าปี่: เดี๋ยวก่อนเตียว...นายเป็นคนชวน แล้วใครจ่ายค่าเหล้า?",
         "dialogues": [
           {
             "characterId": "liu-bei",
             "speakerName": "เล่าปี่",
-            "text": "ช้าก่อน เจ้าเตียว...เมื่อครู่เจ้าชวน แล้วผู้ใดเป็นคนจ่ายค่าสุรา?"
+            "text": "เดี๋ยวก่อนเตียว...นายเป็นคนชวน แล้วใครจ่ายค่าเหล้า?"
           }
         ],
         "isGenerating": false,
@@ -295,7 +295,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "ทั้งสามหยุด ล้วงถุงเงิน พบว่าว่างเปล่า มองหน้ากันเงียบๆ แล้วภาพค้าง",
         "imageDescription": "Same tavern and peach-tree table visible behind them. All three still wear the exact same locked Three Kingdoms Chinese costumes. Empty period cloth coin pouches only. No modern props.",
-        "videoPrompt": "8-second final continuation. Liu Bei asks the line; all three silently check empty period coin pouches, look at each other, then hold for a 1970s-style freeze-frame. No second location and no costume change.",
+        "videoPrompt": "8-second final continuation. Liu Bei asks naturally in present-day Thai: \"เดี๋ยวก่อนเตียว...นายเป็นคนชวน แล้วใครจ่ายค่าเหล้า?\". All three silently check empty period coin pouches, look at each other, then hold for a 1970s-style freeze-frame. No second location and no costume change.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
         "characterMasterRequired": true,
@@ -346,7 +346,7 @@
       {
         "id": "zhang-fei",
         "name": "เตียวหุย",
-        "nickname": "เจ้าเตียว",
+        "nickname": "เตียว",
         "role": "นักรบเสียงดัง พลังลุงขี้เมา",
         "description": "ชายอีสานร่างใหญ่แน่น ผิวเข้มแดด หนวดเครารุงรัง ผมดำยุ่งคาดผ้า หน้าตาดุแต่มีแววขี้เล่น ไม่ต้องฟันสวยหรือผิวดี ให้ดูเหมือนลุงบ้านๆ ที่ดื่มหนักแต่แข็งแรง",
         "mainOutfit": "Recognizable Zhang Fei-inspired Three Kingdoms attire: rough dark brown, black and muted red Han military tunic with worn lamellar pieces, period belt and boots, simple headcloth suitable to the era. Drunk-uncle energy comes from face and behavior, not Thai clothing. No Thai/Isan textile styling.",
