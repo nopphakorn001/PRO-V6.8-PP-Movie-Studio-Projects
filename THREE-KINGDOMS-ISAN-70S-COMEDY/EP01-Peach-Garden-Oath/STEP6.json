@@ -26,15 +26,16 @@
       "guan-yu": "พี่กวน",
       "zhang-fei": "เจ้าเตียว"
     },
-    "identityMode": "HARD_LOCK",
+    "identityMode": "TEXT_CHARACTER_HARD_LOCK",
     "continuityMode": "PREVIOUS_END_FRAME_CHAIN",
     "referencePriority": [
-      "character_master_image",
+      "step5_character_definition",
       "previous_scene_image",
       "episode_location_master",
       "current_action"
     ],
-    "customProjectStructure": "6 continuous scenes x 6 seconds in ONE LOCATION only: ร้านเหล้าริมสวนท้อ. Character identity comes from Step 5 master references. Scene N end frame must physically equal Scene N+1 start state. No location reset, no costume reset, no unexplained prop reset."
+    "customProjectStructure": "6 continuous scenes x 6 seconds in ONE LOCATION only: ร้านเหล้าริมสวนท้อ. Step 5 contains text-locked character masters only; no embedded character images or Base64. Scene 1 uses Step 5 character definitions + Location Master. Scene 2 onward additionally uses the previous generated scene image for continuity. Scene N end frame must physically equal Scene N+1 start state. No location reset, no costume reset, no unexplained prop reset.",
+    "characterImagePolicy": "NO_EMBEDDED_CHARACTER_IMAGES"
   },
   "movie": {
     "genre": "Three Kingdoms Isan Retro Comedy",
@@ -52,7 +53,7 @@
     ],
     "storyTitle": "สามก๊กบ้านเฮา EP01 — สาบานสวนท้อแบบคนบ้านๆ",
     "storySummary": "เล่าปี่นั่งขายรองเท้าสานอยู่หน้าร้านเหล้าริมสวนท้อ เจ้าเตียวถือไหสุราออกมาชวน พี่กวนเดินผ่านแล้วเข้าร่วมวง ทั้งสามคุยกันที่โต๊ะเดิมใต้ต้นท้อ ก่อนสาบานเป็นพี่น้องและจบด้วยมุกว่าไม่มีผู้ใดมีเงินจ่ายค่าสุรา ทั้งเรื่องเกิดในสถานที่เดียวต่อเนื่องกัน",
-    "mainStoryPrompt": "Create a 36-second vertical historical comedy using Liu Bei, Guan Yu and Zhang Fei. Reimagine them with ordinary Isan Thai-looking faces and rough practical clothing, not polished idols. Visual tone resembles a faded 1970s Thai-Chinese historical comedy film. Use short Thai period-style dialogue that sounds old-fashioned but remains easy to understand. Characters address one another informally with recognizable nicknames: Liu Bei = พี่เล่า, Guan Yu = พี่กวน, Zhang Fei = เจ้าเตียว. Do not use stiff court language, modern slang, or formal full-name address in normal conversation. Keep one clear speaker at a time, natural pauses and dry situational comedy. No modern objects. Entire EP01 must stay in one continuous physical location: a rustic tavern beside a peach garden. Never cut to a separate market or new garden. Preserve table, tavern facade, peach tree, clay wine jar, dirt path, light direction and character positions between scenes.",
+    "mainStoryPrompt": "Create a 36-second vertical historical comedy using Liu Bei, Guan Yu and Zhang Fei. Preserve the SERIES STYLE HARD LOCK exactly: faded 1970s Thai-Chinese historical comedy film, warm sepia Eastmancolor, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical sets and natural sunlight. Characters have ordinary Isan Thai-looking faces, weathered skin, imperfect teeth and hair, rough practical period clothing, no idol beauty and no polished fantasy hero styling. Liu Bei looks broke but sincere; Guan Yu stern and rugged; Zhang Fei has loud drunk-uncle energy. Use short Thai period-style dialogue that sounds old-fashioned but is easy to understand. Address each other informally with recognizable nicknames: Liu Bei = พี่เล่า, Guan Yu = พี่กวน, Zhang Fei = เจ้าเตียว. No stiff court language, no modern slang, no overlapping speech. Entire EP stays in ONE continuous physical location: ร้านเหล้าริมสวนท้อ. No separate market, no second garden, no teleporting.",
     "genreDetailPrompt": "Retro 1970s historical comedy with Three Kingdoms characters, Isan-inspired ordinary faces, worn costumes, earthy village atmosphere, and short Thai period-style dialogue using informal recognizable nicknames.",
     "scenes": [
       {
@@ -90,11 +91,12 @@
         "characterMasterRequired": true,
         "previousSceneReferenceRequired": false,
         "referencePriority": [
-          "character_master_image",
+          "step5_character_definition",
           "episode_location_master"
         ],
         "continuityStartState": "พี่เล่านั่งคนเดียวที่โต๊ะไม้หน้าร้าน ใต้เงาต้นท้อ แผงรองเท้าสานอยู่ข้างโต๊ะ ไหสุรายังอยู่ในร้าน",
-        "continuityEndFrame": "พี่เล่ายังนั่งที่เดิม เจ้าเตียวกำลังเดินออกจากประตูร้านพร้อมไหสุรา"
+        "continuityEndFrame": "พี่เล่ายังนั่งที่เดิม เจ้าเตียวกำลังเดินออกจากประตูร้านพร้อมไหสุรา",
+        "characterMasterMode": "TEXT_ONLY_STEP5_MASTER"
       },
       {
         "id": "scene-ep01-002",
@@ -135,12 +137,13 @@
         "characterMasterRequired": true,
         "previousSceneReferenceRequired": true,
         "referencePriority": [
-          "character_master_image",
+          "step5_character_definition",
           "previous_scene_image",
           "episode_location_master"
         ],
         "continuityStartState": "ต่อจากฉาก 1: พี่เล่านั่งที่เดิม เจ้าเตียวเดินออกจากประตูร้านพร้อมไหสุรา",
-        "continuityEndFrame": "เจ้าเตียวยืนข้างโต๊ะ วางไหสุราบนโต๊ะ พี่เล่ายังนั่ง พี่กวนกำลังเดินเข้ามาตามทางดินด้านข้างร้าน"
+        "continuityEndFrame": "เจ้าเตียวยืนข้างโต๊ะ วางไหสุราบนโต๊ะ พี่เล่ายังนั่ง พี่กวนกำลังเดินเข้ามาตามทางดินด้านข้างร้าน",
+        "characterMasterMode": "TEXT_ONLY_STEP5_MASTER"
       },
       {
         "id": "scene-ep01-003",
@@ -181,12 +184,13 @@
         "characterMasterRequired": true,
         "previousSceneReferenceRequired": true,
         "referencePriority": [
-          "character_master_image",
+          "step5_character_definition",
           "previous_scene_image",
           "episode_location_master"
         ],
         "continuityStartState": "ต่อจากฉาก 2: เจ้าเตียวยืนข้างโต๊ะ ไหสุราอยู่บนโต๊ะ พี่เล่านั่ง พี่กวนเดินเข้ามาจากทางดิน",
-        "continuityEndFrame": "พี่กวนหยุดที่หัวโต๊ะ เจ้าเตียวเชิญให้นั่ง พี่เล่าขยับม้านั่ง ทั้งสามอยู่รอบโต๊ะเดียวกัน"
+        "continuityEndFrame": "พี่กวนหยุดที่หัวโต๊ะ เจ้าเตียวเชิญให้นั่ง พี่เล่าขยับม้านั่ง ทั้งสามอยู่รอบโต๊ะเดียวกัน",
+        "characterMasterMode": "TEXT_ONLY_STEP5_MASTER"
       },
       {
         "id": "scene-ep01-004",
@@ -231,12 +235,13 @@
         "characterMasterRequired": true,
         "previousSceneReferenceRequired": true,
         "referencePriority": [
-          "character_master_image",
+          "step5_character_definition",
           "previous_scene_image",
           "episode_location_master"
         ],
         "continuityStartState": "ต่อจากฉาก 3: ทั้งสามนั่งรอบโต๊ะเดิม ไหสุราอยู่กลางโต๊ะ แสงเย็นยังมาจากทิศเดิม",
-        "continuityEndFrame": "ทั้งสามเริ่มจริงจัง พี่เล่าวางจอกลง เจ้าเตียวหยุดกิน พี่กวนมองพี่เล่า ใต้ต้นท้อเดิม"
+        "continuityEndFrame": "ทั้งสามเริ่มจริงจัง พี่เล่าวางจอกลง เจ้าเตียวหยุดกิน พี่กวนมองพี่เล่า ใต้ต้นท้อเดิม",
+        "characterMasterMode": "TEXT_ONLY_STEP5_MASTER"
       },
       {
         "id": "scene-ep01-005",
@@ -281,12 +286,13 @@
         "characterMasterRequired": true,
         "previousSceneReferenceRequired": true,
         "referencePriority": [
-          "character_master_image",
+          "step5_character_definition",
           "previous_scene_image",
           "episode_location_master"
         ],
         "continuityStartState": "ต่อจากฉาก 4: ทั้งสามยังอยู่โต๊ะเดิม แล้วลุกขึ้นข้างโต๊ะใต้ต้นท้อพร้อมจอกสุรา",
-        "continuityEndFrame": "ทั้งสามยกจอกเสร็จ วางจอกลงบนโต๊ะเดิม แล้วหันเตรียมเดินออกทางดินหน้าร้าน"
+        "continuityEndFrame": "ทั้งสามยกจอกเสร็จ วางจอกลงบนโต๊ะเดิม แล้วหันเตรียมเดินออกทางดินหน้าร้าน",
+        "characterMasterMode": "TEXT_ONLY_STEP5_MASTER"
       },
       {
         "id": "scene-ep01-006",
@@ -331,12 +337,13 @@
         "characterMasterRequired": true,
         "previousSceneReferenceRequired": true,
         "referencePriority": [
-          "character_master_image",
+          "step5_character_definition",
           "previous_scene_image",
           "episode_location_master"
         ],
         "continuityStartState": "ต่อจากฉาก 5: ทั้งสามอยู่ข้างโต๊ะเดิม กำลังจะเดินออกทางหน้าร้าน ไหสุรายังอยู่กลางโต๊ะ",
-        "continuityEndFrame": "ทั้งสามหยุด ล้วงถุงเงินว่างเปล่า มองหน้ากันข้างโต๊ะเดิม ภาพค้างแบบหนังยุค 70"
+        "continuityEndFrame": "ทั้งสามหยุด ล้วงถุงเงินว่างเปล่า มองหน้ากันข้างโต๊ะเดิม ภาพค้างแบบหนังยุค 70",
+        "characterMasterMode": "TEXT_ONLY_STEP5_MASTER"
       }
     ],
     "characters": [
@@ -347,20 +354,14 @@
         "description": "ชายหน้าตาธรรมดาแบบคนอีสานวัยกลางคน ผอมแดดเผา สีหน้าเหนื่อยแต่จริงใจ ไม่หล่อเนี้ยบ",
         "mainOutfit": "เสื้อคลุมโบราณสีครามหม่นและน้ำตาลซีด ผ้าคาดเอวทอมือเก่าๆ รองเท้าเรียบง่าย ไม่มีเครื่องประดับหรู",
         "style": "1970s rustic historical comedy",
-        "imageStatus": "idle",
+        "imageStatus": "not_required",
         "nickname": "พี่เล่า",
         "identityLocked": true,
         "faceLocked": true,
         "bodyLocked": true,
         "episodeCostumeLocked": true,
         "characterMasterRef": "THREE-KINGDOMS-ISAN-70S-COMEDY/CHARACTER_MASTER.json#liu-bei",
-        "referenceImageSource": {
-          "type": "generated_master_sheet",
-          "conversationFileId": "file_00000000971c82119e976d2256256f19",
-          "generationId": "4c64322c-5394-4bfa-9eb5-1366d7471f6a",
-          "base64Status": "PENDING_EXTRACTION_NEXT_TOOL_ACCESS"
-        },
-        "referenceImageBase64": null
+        "identityLockMode": "TEXT_DESCRIPTION_HARD_LOCK"
       },
       {
         "id": "guan-yu",
@@ -369,20 +370,14 @@
         "description": "ชายร่างสูงหน้าตาอีสาน เครายาวไม่เนี้ยบ ผิวคล้ำแดด สีหน้าจริงจังและดูเหนื่อย",
         "mainOutfit": "เสื้อคลุมเขียวหม่นซีด เกราะใช้งานจริงเก่าๆ ผ้าทอลายพื้นบ้านเป็นรายละเอียดเล็กน้อย",
         "style": "1970s rustic historical comedy",
-        "imageStatus": "idle",
+        "imageStatus": "not_required",
         "nickname": "พี่กวน",
         "identityLocked": true,
         "faceLocked": true,
         "bodyLocked": true,
         "episodeCostumeLocked": true,
         "characterMasterRef": "THREE-KINGDOMS-ISAN-70S-COMEDY/CHARACTER_MASTER.json#guan-yu",
-        "referenceImageSource": {
-          "type": "generated_master_sheet",
-          "conversationFileId": "file_00000000971c82119e976d2256256f19",
-          "generationId": "4c64322c-5394-4bfa-9eb5-1366d7471f6a",
-          "base64Status": "PENDING_EXTRACTION_NEXT_TOOL_ACCESS"
-        },
-        "referenceImageBase64": null
+        "identityLockMode": "TEXT_DESCRIPTION_HARD_LOCK"
       },
       {
         "id": "zhang-fei",
@@ -391,20 +386,14 @@
         "description": "ชายอีสานร่างใหญ่ หนวดเครารุงรัง ผิวเข้มแดด ท่าทางเสียงดัง ชอบเหล้าและมั่นใจเกินเหตุ",
         "mainOutfit": "ชุดนักรบเก่าๆ สีดำ น้ำตาล แดงหม่น มีผ้าคาดเอวลายทอพื้นบ้านแบบใช้งานจริง",
         "style": "1970s rustic historical comedy",
-        "imageStatus": "idle",
+        "imageStatus": "not_required",
         "nickname": "เจ้าเตียว",
         "identityLocked": true,
         "faceLocked": true,
         "bodyLocked": true,
         "episodeCostumeLocked": true,
         "characterMasterRef": "THREE-KINGDOMS-ISAN-70S-COMEDY/CHARACTER_MASTER.json#zhang-fei",
-        "referenceImageSource": {
-          "type": "generated_master_sheet",
-          "conversationFileId": "file_00000000971c82119e976d2256256f19",
-          "generationId": "4c64322c-5394-4bfa-9eb5-1366d7471f6a",
-          "base64Status": "PENDING_EXTRACTION_NEXT_TOOL_ACCESS"
-        },
-        "referenceImageBase64": null
+        "identityLockMode": "TEXT_DESCRIPTION_HARD_LOCK"
       }
     ],
     "atmosphereAssets": [
@@ -439,6 +428,6 @@
     "productionDesignAnalyzed": true
   },
   "currentStep": 6,
-  "revision": "EP01_V2_SINGLE_LOCATION_CHARACTER_MASTER_PREP",
-  "status": "IMPORT_READY_STRUCTURE_BASE64_PENDING"
+  "revision": "EP01_V3_NO_IMAGES_SINGLE_LOCATION_HARD_LOCK",
+  "status": "IMPORT_READY_NO_IMAGES"
 }
