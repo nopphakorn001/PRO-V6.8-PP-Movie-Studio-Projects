@@ -1,24 +1,25 @@
 {
   "series": "THREE-KINGDOMS-ISAN-70S-COMEDY",
-  "version": "1.5",
+  "version": "1.6",
   "status": "CANONICAL_HARD_LOCK_DO_NOT_DRIFT",
   "styleHardLock": {
     "immutable": true,
-    "visualStyle": "1970s Thai-Chinese historical comedy film aesthetic, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical sets, natural sunlight. Three Kingdoms characters reimagined with grounded Isan Thai facial features and ordinary weathered bodies. Costumes are worn, practical and slightly mismatched rather than glamorous. No modern objects, no fantasy glow, no polished idol styling.",
-    "customVisualStyle": "Lost 1970s Thai-dubbed Chinese Three Kingdoms comedy film look: faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical Chinese historical sets, imperfect makeup, ordinary weathered faces, dry comic timing. Wardrobe remains Three Kingdoms Chinese.",
-    "characterStyle": "Faces, skin, body type and mannerisms may be Isan-inspired, but wardrobe MUST remain recognizable Three Kingdoms / late Eastern Han Chinese clothing. Never convert costume into Thai/Isan dress.",
+    "visualStyle": "1970s rural Thailand comedy-film environment, vertical 9:16: faded Eastmancolor, warm sepia cast, soft period lens, film grain, slight gate weave, tiny scratches, muted contrast, old wooden roadside shops/taverns, dirt road, period utility poles, aged benches, warm tungsten bulbs and practical provincial Thai clutter. Characters remain actual Three Kingdoms figures in recognizable late Eastern Han / Three Kingdoms Chinese clothing.",
+    "customVisualStyle": "Lost 1970s Thai rural comedy atmosphere with Three Kingdoms characters dropped into provincial Thailand. Faces and mannerisms may be Isan-inspired. Wardrobe remains Three Kingdoms Chinese. Environment remains Thailand 1970s.",
+    "characterStyle": "THREE_KINGDOMS_LATE_HAN_CHINESE_COSTUME + ISAN_INSPIRED_FACE_AND_BEHAVIOR",
     "futureFemaleArchetype": "Future female characters may use a 'สาวสก๊อย' personality archetype only: bold, sharp-tongued, cheeky, flashy attitude. Wardrobe remains period Chinese Three Kingdoms / late Eastern Han.",
     "forbidden": [
       "change 1970s faded film look",
-      "Thai/Isan traditional costume",
-      "pha-khao-ma styling",
-      "modern clothes",
+      "change Three Kingdoms costume into Thai/Isan clothing",
+      "modern post-1970s clothes",
       "idol-beauty faces",
       "polished fantasy hero styling",
       "fantasy armor",
-      "modern objects",
-      "clean digital-commercial look"
-    ]
+      "post-1970s objects or contemporary branding",
+      "clean digital-commercial look",
+      "ancient-China environment replacing the Thai 1970s setting"
+    ],
+    "environmentStyle": "THAILAND_RURAL_1970S"
   },
   "dialogueHardLock": {
     "language": "Thai",
@@ -95,7 +96,9 @@
     "imagePolicy": "NO_IMAGES_NO_BASE64_IN_IMPORT_JSON",
     "costumePolicy": "THREE_KINGDOMS_LATE_HAN_CHINESE_ONLY",
     "faceAndBehaviorPolicy": "ISAN_INSPIRED_ONLY",
-    "stylePolicy": "1970S_FADED_THAI_CHINESE_FILM",
-    "dialoguePolicy": "THAI_CURRENT_CAFE_COMEDY"
+    "stylePolicy": "1970S_THAI_RURAL_FADED_FILM",
+    "dialoguePolicy": "THAI_CURRENT_CAFE_COMEDY",
+    "environmentPolicy": "THAILAND_RURAL_1970S",
+    "worldMixRule": "CHARACTERS_AND_COSTUME_THREE_KINGDOMS__ENVIRONMENT_THAIALND_1970S"
   }
 }
