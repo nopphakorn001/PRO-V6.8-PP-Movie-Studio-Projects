@@ -1,21 +1,64 @@
 {
   "series": "THREE-KINGDOMS-ISAN-70S-COMEDY",
-  "version": "1.0",
-  "identityMode": "HARD_LOCK",
-  "episodePolicy": "ONE_LOCATION_PER_EPISODE",
-  "referencePriority": [
-    "CHARACTER_MASTER",
-    "PREVIOUS_SCENE_IMAGE",
-    "EPISODE_LOCATION_MASTER",
-    "CURRENT_ACTION"
-  ],
-  "rules": [
-    "Character IDs never change between episodes.",
-    "Face, body proportions, hair, beard and core identity never regenerate from scratch when a master image exists.",
-    "Step 5 must contain the same canonical character references used by Step 6.",
-    "Each episode has exactly one physical location master; camera angle may change but geography does not reset.",
-    "Scene N continuityEndFrame must equal Scene N+1 continuityStartState.",
-    "From Scene 2 onward use previous scene image together with Character Master and Location Master.",
-    "No unexplained costume, prop, lighting or position reset."
-  ]
+  "version": "1.1",
+  "status": "HARD_LOCK",
+  "styleHardLock": {
+    "immutable": true,
+    "visualStyle": "1970s Thai-Chinese historical comedy film aesthetic, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical sets, natural sunlight. Three Kingdoms characters reimagined with grounded Isan Thai facial features and ordinary weathered bodies. Costumes are worn, practical and slightly mismatched rather than glamorous. No modern objects, no fantasy glow, no polished idol styling.",
+    "customVisualStyle": "Feels like a lost 1970s rural historical comedy movie: rough village sets, handwoven textile accents, faded indigo and earth-tone fabrics, imperfect makeup, ordinary faces, sweat, dust and dry comic timing. Liu Bei looks broke but sincere; Guan Yu looks stern and rugged; Zhang Fei has loud drunk-uncle energy.",
+    "characterStyle": "Three Kingdoms characters with ordinary Isan Thai-looking faces, weathered skin, imperfect teeth and hair, rough practical clothing, no idol beauty, no polished fantasy hero styling.",
+    "futureFemaleArchetype": "If a young female Three Kingdoms character appears, keep period-appropriate ancient clothing but use a bold, sharp-tongued, flashy 'สาวสก๊อย' attitude; never modern fashion.",
+    "forbidden": [
+      "change 1970s faded film look",
+      "idol-beauty faces",
+      "polished fantasy hero styling",
+      "modern objects",
+      "modern clothes",
+      "fantasy glow",
+      "clean digital-commercial look"
+    ]
+  },
+  "dialogueHardLock": {
+    "language": "Thai",
+    "mode": "THAI_PERIOD_INFORMAL_COMEDY",
+    "nicknames": {
+      "liu-bei": "พี่เล่า",
+      "guan-yu": "พี่กวน",
+      "zhang-fei": "เจ้าเตียว"
+    },
+    "rules": [
+      "old-fashioned but easy to understand",
+      "informal familiar speech",
+      "one clear speaker at a time",
+      "short punchline-friendly lines",
+      "no modern slang",
+      "no stiff royal-court language unless story requires it"
+    ]
+  },
+  "characterIdentityLock": {
+    "source": "CHARACTER_MASTER.json",
+    "immutableAcrossEpisodes": true,
+    "referencePriority": [
+      "CHARACTER_MASTER_REFERENCE",
+      "PREVIOUS_SCENE_IMAGE",
+      "EPISODE_LOCATION_MASTER",
+      "CURRENT_SCENE_ACTION"
+    ]
+  },
+  "episodeContinuityLock": {
+    "locationPolicy": "ONE_LOCATION_PER_EPISODE",
+    "previousSceneReferenceMandatoryFromScene": 2,
+    "rule": "Scene N continuityEndFrame must physically equal Scene N+1 continuityStartState.",
+    "preserve": [
+      "face",
+      "hair/beard",
+      "body proportions",
+      "costume",
+      "props",
+      "location geography",
+      "lighting direction",
+      "time of day",
+      "object state"
+    ]
+  }
 }
