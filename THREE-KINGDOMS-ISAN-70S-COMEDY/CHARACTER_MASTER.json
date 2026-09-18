@@ -1,6 +1,6 @@
 {
   "series": "THREE-KINGDOMS-ISAN-70S-COMEDY",
-  "version": "2.3",
+  "version": "2.4",
   "status": "HARD_LOCK_TEXT_ONLY_CANONICAL",
   "imagePolicy": "NO_IMAGES_NO_BASE64",
   "usage": {
@@ -10,23 +10,24 @@
     "nextSceneContinuity": "Scene 2 onward should also use the previous generated scene image when available."
   },
   "seriesStyleLock": {
-    "visual": "1970s Thai-Chinese historical comedy film aesthetic, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical sets, natural sunlight. Three Kingdoms characters reimagined with grounded Isan Thai facial features and ordinary weathered bodies. Costumes are worn, practical and slightly mismatched rather than glamorous. No modern objects, no fantasy glow, no polished idol styling.",
-    "customVisual": "Feels like a lost 1970s Thai-dubbed Chinese Three Kingdoms comedy film: faded Eastmancolor, warm sepia cast, soft old lens, film grain, slight gate weave, tiny scratches, dusty practical sets, imperfect makeup, ordinary weathered faces and dry comic timing. The characters still dress as Three Kingdoms figures, not as Thai villagers.",
+    "visual": "1970s Thailand rural film aesthetic, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft old lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty provincial Thai practical locations, warm natural sunlight and old tungsten bulbs. Characters are actual Three Kingdoms figures with ordinary Isan-inspired faces and weathered bodies, but their wardrobe remains recognizable late Eastern Han / Three Kingdoms Chinese clothing.",
+    "customVisual": "Feels like a lost 1970s Thai rural comedy film in which Three Kingdoms characters somehow live in provincial Thailand. Environment is rural Thailand 1970s: old wooden roadside tavern/shop, dirt road, hand-painted Thai-style signboards without readable generated text, weathered benches, old utility pole, tungsten bulb, metal enamelware and period clutter. Character wardrobe remains Three Kingdoms Chinese.",
     "characterStyle": "Actual Three Kingdoms / late Eastern Han character costume grammar MUST remain recognizable. Only faces, skin, body type, mannerisms and comic archetypes are Isan-inspired. Clothing is NOT Thai/Isan clothing. Use period Chinese robes, practical late-Han armor, headwear, belts and footwear with worn 1970s-film realism. No Thai pha-khao-ma, no Isan textile styling, no modern fashion, no fantasy armor.",
     "forbidden": [
       "change 1970s faded film look",
-      "Thai or Isan traditional clothing",
-      "pha-khao-ma or modern Thai textile styling",
+      "change character wardrobe into Thai/Isan traditional costume",
+      "pha-khao-ma styling on Three Kingdoms characters",
       "idol beauty",
       "clean modern commercial look",
       "fantasy hero armor",
-      "modern fashion",
-      "modern objects",
+      "post-1970s objects such as smartphones, LED screens, modern cars or contemporary branding",
       "perfect teeth",
       "perfect hair",
-      "smooth plastic skin"
+      "smooth plastic skin",
+      "turn the environment back into ancient China"
     ],
-    "femaleArchetypeRule": "Future female Three Kingdoms characters may have a bold, sharp-tongued, flashy 'สาวสก๊อย' personality and attitude, but MUST wear period-appropriate Three Kingdoms / late Eastern Han Chinese clothing only; never modern or Thai/Isan clothing."
+    "femaleArchetypeRule": "Future female Three Kingdoms characters may have a bold, sharp-tongued, flashy 'สาวสก๊อย' personality and attitude, but MUST wear period-appropriate Three Kingdoms / late Eastern Han Chinese clothing only; never modern or Thai/Isan clothing.",
+    "environmentRule": "ENVIRONMENT = Thailand rural/provincial 1970s. CHARACTER COSTUME = Three Kingdoms / late Eastern Han Chinese. Never merge these two rules."
   },
   "dialogueLock": {
     "language": "Thai",
