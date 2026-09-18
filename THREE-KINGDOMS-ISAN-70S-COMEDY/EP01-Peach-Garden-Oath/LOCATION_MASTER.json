@@ -3,12 +3,12 @@
   "episode": 1,
   "id": "loc-ep01-peach-tavern",
   "title": "ร้านเหล้าริมสวนท้อ",
-  "version": "2.0",
+  "version": "2.1",
   "status": "HARD_LOCK",
   "immutableWithinEpisode": true,
   "oneLocationPolicy": true,
-  "visualStyle": "1970s Thai-Chinese historical comedy film aesthetic, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical sets, natural sunlight. Three Kingdoms characters reimagined with grounded Isan Thai facial features and ordinary weathered bodies. Costumes are worn, practical and slightly mismatched rather than glamorous. No modern objects, no fantasy glow, no polished idol styling.",
-  "description": "ร้านเหล้าไม้เก่าหลังคามุงแบบบ้านๆ ตั้งติดสวนท้อขนาดเล็ก มีโต๊ะไม้เก่าใต้ต้นท้อใหญ่ ม้านั่ง รั้วไม้ ทางดิน และพื้นที่หน้าร้านพอให้ตัวละครเดินเข้าออก ทั้ง 6 ฉากเกิดในพื้นที่เดียวกันนี้เท่านั้น",
+  "visualStyle": "Same locked 1970s Thai-Chinese Three Kingdoms film look: faded Eastmancolor, warm sepia, soft old lens, grain and slight print wear. Architecture and props remain Chinese late-Han / Three Kingdoms period; no Thai/Isan costume or modern objects.",
+  "description": "ร้านเหล้าไม้เก่าแบบจีนปลายฮั่น ตั้งติดสวนท้อขนาดเล็ก มีโต๊ะไม้เก่าใต้ต้นท้อใหญ่ ม้านั่ง รั้วไม้จีนเรียบง่าย ทางดิน และพื้นที่หน้าร้านพอให้ตัวละครเดินเข้าออก ทั้ง 5 ฉากของ EP01 เกิดในพื้นที่เดียวกันนี้เท่านั้น",
   "geography": {
     "tavernFacade": "ด้านเหนือของพื้นที่",
     "tavernDoor": "กลางแนวผนังร้าน",
@@ -33,9 +33,15 @@
     "ย้ายโต๊ะไปตำแหน่งใหม่โดยไม่มีเหตุผล",
     "เปลี่ยนต้นท้อหรือหน้าร้าน",
     "เปลี่ยนเป็นตลาดแยก",
+    "เปลี่ยนสถานที่กลาง EP",
     "เปลี่ยนเวลาเป็นกลางคืนทันที",
     "เพิ่มอาคารใหม่แบบไม่มีที่มา",
-    "รีเซ็ตตำแหน่งไหสุราหรือรองเท้าสานข้ามฉาก"
+    "รีเซ็ตตำแหน่งไหสุราหรือรองเท้าสานข้ามฉาก",
+    "ใส่สิ่งของสมัยใหม่",
+    "เปลี่ยนฉากเป็นบ้านอีสานหรือไทย"
   ],
-  "continuityRule": "Scene N continuityEndFrame must physically equal Scene N+1 continuityStartState."
+  "continuityRule": "Scene N continuityEndFrame must physically equal Scene N+1 continuityStartState.",
+  "sceneCount": 5,
+  "secondsPerScene": 8,
+  "episodeDurationSeconds": 40
 }
