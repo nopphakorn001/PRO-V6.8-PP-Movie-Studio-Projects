@@ -1,20 +1,22 @@
 {
   "series": "THREE-KINGDOMS-ISAN-70S-COMEDY",
-  "version": "1.2",
-  "status": "HARD_LOCK",
+  "version": "1.3",
+  "status": "CANONICAL_HARD_LOCK_DO_NOT_DRIFT",
   "styleHardLock": {
     "immutable": true,
     "visualStyle": "1970s Thai-Chinese historical comedy film aesthetic, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical sets, natural sunlight. Three Kingdoms characters reimagined with grounded Isan Thai facial features and ordinary weathered bodies. Costumes are worn, practical and slightly mismatched rather than glamorous. No modern objects, no fantasy glow, no polished idol styling.",
-    "customVisualStyle": "Feels like a lost 1970s rural historical comedy movie: rough village sets, handwoven textile accents, faded indigo and earth-tone fabrics, imperfect makeup, ordinary faces, sweat, dust and dry comic timing. Liu Bei looks broke but sincere; Guan Yu looks stern and rugged; Zhang Fei has loud drunk-uncle energy.",
-    "characterStyle": "Three Kingdoms characters with ordinary Isan Thai-looking faces, weathered skin, imperfect teeth and hair, rough practical clothing, no idol beauty, no polished fantasy hero styling.",
-    "futureFemaleArchetype": "If a young female Three Kingdoms character appears, keep period-appropriate ancient clothing but use a bold, sharp-tongued, flashy 'สาวสก๊อย' attitude; never modern fashion.",
+    "customVisualStyle": "Lost 1970s Thai-dubbed Chinese Three Kingdoms comedy film look: faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical Chinese historical sets, imperfect makeup, ordinary weathered faces, dry comic timing. Wardrobe remains Three Kingdoms Chinese.",
+    "characterStyle": "Faces, skin, body type and mannerisms may be Isan-inspired, but wardrobe MUST remain recognizable Three Kingdoms / late Eastern Han Chinese clothing. Never convert costume into Thai/Isan dress.",
+    "futureFemaleArchetype": "Future female characters may use a 'สาวสก๊อย' personality archetype only: bold, sharp-tongued, cheeky, flashy attitude. Wardrobe remains period Chinese Three Kingdoms / late Eastern Han.",
     "forbidden": [
       "change 1970s faded film look",
+      "Thai/Isan traditional costume",
+      "pha-khao-ma styling",
+      "modern clothes",
       "idol-beauty faces",
       "polished fantasy hero styling",
+      "fantasy armor",
       "modern objects",
-      "modern clothes",
-      "fantasy glow",
       "clean digital-commercial look"
     ]
   },
@@ -49,7 +51,7 @@
     "rule": "Step 5 is the character source of truth. Scene 1 uses text-locked Step 5 character definitions. Scene 2 onward additionally uses the previous generated scene image for continuity."
   },
   "episodeContinuityLock": {
-    "locationPolicy": "ONE_LOCATION_PER_EPISODE",
+    "locationPolicy": "EXACTLY_ONE_LOCATION_PER_EPISODE",
     "previousSceneReferenceMandatoryFromScene": 2,
     "rule": "Scene N continuityEndFrame must physically equal Scene N+1 continuityStartState.",
     "preserve": [
@@ -62,6 +64,20 @@
       "lighting direction",
       "time of day",
       "object state"
-    ]
+    ],
+    "sceneDurationSeconds": 8,
+    "preferredSceneCount": 5
+  },
+  "canonicalSeriesRules": {
+    "immutable": true,
+    "episodeDurationTargetSeconds": "30-45",
+    "secondsPerScene": 8,
+    "preferredSceneCount": 5,
+    "oneLocationPerEpisode": true,
+    "imagePolicy": "NO_IMAGES_NO_BASE64_IN_IMPORT_JSON",
+    "costumePolicy": "THREE_KINGDOMS_LATE_HAN_CHINESE_ONLY",
+    "faceAndBehaviorPolicy": "ISAN_INSPIRED_ONLY",
+    "stylePolicy": "1970S_FADED_THAI_CHINESE_FILM",
+    "dialoguePolicy": "THAI_PERIOD_INFORMAL_COMEDY"
   }
 }
