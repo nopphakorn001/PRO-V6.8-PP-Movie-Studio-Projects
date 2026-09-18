@@ -1,0 +1,49 @@
+{
+  "series": "THREE-KINGDOMS-ISAN-70S-COMEDY",
+  "version": "1.0",
+  "identityMode": "HARD_LOCK",
+  "generatedMasterSheet": {
+    "conversationFileId": "file_00000000971c82119e976d2256256f19",
+    "generationId": "4c64322c-5394-4bfa-9eb5-1366d7471f6a",
+    "base64Status": "PENDING_EXTRACTION_NEXT_TOOL_ACCESS",
+    "note": "Master sheet generated in ChatGPT; when raw bytes become readable, split/extract per-character refs and inject base64 into EP JSON Step 5."
+  },
+  "characters": [
+    {
+      "id": "liu-bei",
+      "name": "เล่าปี่",
+      "nickname": "พี่เล่า",
+      "identityLocked": true,
+      "faceLocked": true,
+      "bodyLocked": true,
+      "canonicalDescription": "ชายหน้าตาธรรมดาแบบคนอีสานวัยกลางคน ผอมแดดเผา สีหน้าเหนื่อยแต่จริงใจ ไม่หล่อเนี้ยบ",
+      "canonicalOutfit": "เสื้อคลุมโบราณสีครามหม่นและน้ำตาลซีด ผ้าคาดเอวทอมือเก่าๆ รองเท้าเรียบง่าย ไม่มีเครื่องประดับหรู",
+      "style": "1970s rustic historical comedy",
+      "referenceImageBase64": null
+    },
+    {
+      "id": "guan-yu",
+      "name": "กวนอู",
+      "nickname": "พี่กวน",
+      "identityLocked": true,
+      "faceLocked": true,
+      "bodyLocked": true,
+      "canonicalDescription": "ชายร่างสูงหน้าตาอีสาน เครายาวไม่เนี้ยบ ผิวคล้ำแดด สีหน้าจริงจังและดูเหนื่อย",
+      "canonicalOutfit": "เสื้อคลุมเขียวหม่นซีด เกราะใช้งานจริงเก่าๆ ผ้าทอลายพื้นบ้านเป็นรายละเอียดเล็กน้อย",
+      "style": "1970s rustic historical comedy",
+      "referenceImageBase64": null
+    },
+    {
+      "id": "zhang-fei",
+      "name": "เตียวหุย",
+      "nickname": "เจ้าเตียว",
+      "identityLocked": true,
+      "faceLocked": true,
+      "bodyLocked": true,
+      "canonicalDescription": "ชายอีสานร่างใหญ่ หนวดเครารุงรัง ผิวเข้มแดด ท่าทางเสียงดัง ชอบเหล้าและมั่นใจเกินเหตุ",
+      "canonicalOutfit": "ชุดนักรบเก่าๆ สีดำ น้ำตาล แดงหม่น มีผ้าคาดเอวลายทอพื้นบ้านแบบใช้งานจริง",
+      "style": "1970s rustic historical comedy",
+      "referenceImageBase64": null
+    }
+  ]
+}
