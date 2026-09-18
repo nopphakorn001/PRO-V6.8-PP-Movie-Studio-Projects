@@ -1,6 +1,6 @@
 {
   "series": "THREE-KINGDOMS-ISAN-70S-COMEDY",
-  "version": "1.3",
+  "version": "1.4",
   "status": "CANONICAL_HARD_LOCK_DO_NOT_DRIFT",
   "styleHardLock": {
     "immutable": true,
@@ -22,19 +22,21 @@
   },
   "dialogueHardLock": {
     "language": "Thai",
-    "mode": "THAI_PERIOD_INFORMAL_COMEDY",
+    "accent": "CURRENT_NATURAL_THAI",
+    "mode": "THAI_CURRENT_CASUAL_COMEDY",
     "nicknames": {
       "liu-bei": "พี่เล่า",
       "guan-yu": "พี่กวน",
-      "zhang-fei": "เจ้าเตียว"
+      "zhang-fei": "เตียว"
     },
     "rules": [
-      "old-fashioned but easy to understand",
-      "informal familiar speech",
+      "modern conversational Thai",
+      "natural present-day pronunciation and rhythm",
+      "light current Isan flavor is allowed when natural",
       "one clear speaker at a time",
       "short punchline-friendly lines",
-      "no modern slang",
-      "no stiff royal-court language unless story requires it"
+      "no archaic/historical wording",
+      "no stiff royal-court language"
     ]
   },
   "characterIdentityLock": {
@@ -78,6 +80,6 @@
     "costumePolicy": "THREE_KINGDOMS_LATE_HAN_CHINESE_ONLY",
     "faceAndBehaviorPolicy": "ISAN_INSPIRED_ONLY",
     "stylePolicy": "1970S_FADED_THAI_CHINESE_FILM",
-    "dialoguePolicy": "THAI_PERIOD_INFORMAL_COMEDY"
+    "dialoguePolicy": "THAI_CURRENT_CASUAL_COMEDY"
   }
 }
