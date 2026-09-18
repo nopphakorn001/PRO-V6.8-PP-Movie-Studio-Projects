@@ -1,6 +1,6 @@
 {
   "projectId": "three-kingdoms-isan-70s-comedy-ep01",
-  "revision": "EP01_V5_CANONICAL_CURRENT_THAI_5X8_ONE_LOCATION",
+  "revision": "EP01_V6_CANONICAL_CURRENT_THAI_CAFE_COMEDY_5X8_ONE_LOCATION",
   "status": "IMPORT_READY_NO_IMAGES_CANONICAL",
   "settings": {
     "aspectRatio": "9:16",
@@ -23,7 +23,7 @@
     "visualStyleId": "custom",
     "visualStyle": "1970s Thai-Chinese historical comedy film aesthetic, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical late-Han Chinese sets, natural sunlight. Three Kingdoms characters have ordinary Isan-inspired faces and weathered bodies but wear recognizable Three Kingdoms / late Eastern Han Chinese clothing only. No modern objects, no fantasy glow, no polished idol styling.",
     "customVisualStyle": "Feels like a lost 1970s Thai-dubbed Chinese Three Kingdoms comedy film. Imperfect makeup, ordinary faces, sweat, dust and dry comic timing. Liu Bei looks broke but sincere; Guan Yu stern and rugged; Zhang Fei has loud drunk-uncle energy. Costume remains Chinese Three Kingdoms-era.",
-    "dialogueStyle": "Contemporary conversational Thai, natural present-day pronunciation and rhythm, casual comedy. Light current Isan flavor may appear naturally, but do not use historical/archaic Thai.",
+    "dialogueStyle": "Contemporary natural Thai with classic Thai cafe-comedy timing. Each scene has one clear comic beat using setup, teasing, deadpan reaction, quick punchline or callback. Light current Isan flavor may appear naturally. No archaic wording.",
     "speakerNicknameMap": {
       "liu-bei": "พี่เล่า",
       "guan-yu": "พี่กวน",
@@ -38,7 +38,19 @@
       "episode_location_master",
       "current_action"
     ],
-    "customProjectStructure": "5 continuous scenes x 8 seconds = 40 seconds. EXACTLY ONE LOCATION for the entire episode: ร้านเหล้าริมสวนท้อ. Step 5 text character masters are immutable. Wardrobe must remain Three Kingdoms / late Eastern Han Chinese. Scene N end frame must physically equal Scene N+1 start state."
+    "customProjectStructure": "5 continuous scenes x 8 seconds = 40 seconds. EXACTLY ONE LOCATION for the entire episode: ร้านเหล้าริมสวนท้อ. Step 5 text character masters are immutable. Wardrobe must remain Three Kingdoms / late Eastern Han Chinese. Scene N end frame must physically equal Scene N+1 start state.",
+    "comedyLock": {
+      "mode": "THAI_CAFE_COMEDY",
+      "mandatory": true,
+      "oneComicBeatPerScene": true,
+      "oneSpeakerAtATime": true,
+      "lineLength": "short enough for 8 seconds",
+      "characterFunctions": {
+        "liu-bei": "dry straight-faced poverty humor",
+        "guan-yu": "deadpan straight-man and short cutting comeback",
+        "zhang-fei": "loud drunk-uncle teasing and overconfidence"
+      }
+    }
   },
   "movie": {
     "genre": "Three Kingdoms Isan Retro Comedy",
@@ -56,7 +68,7 @@
     ],
     "storyTitle": "สามก๊กบ้านเฮา EP01 — สาบานสวนท้อแบบคนบ้านๆ",
     "storySummary": "40 วินาที 5 ฉากต่อเนื่อง ฉากละ 8 วินาที ทั้งหมดเกิดที่ร้านเหล้าริมสวนท้อแห่งเดียว พี่เล่าขายรองเท้าไม่ออก เจ้าเตียวชวนดื่ม พี่กวนร่วมวง ทั้งสามคุยเรื่องบ้านเมือง สาบานเป็นพี่น้อง และจบด้วยมุกไม่มีใครมีเงินจ่ายค่าสุรา",
-    "mainStoryPrompt": "CANONICAL LOCK. 5 scenes x 8 seconds = 40 seconds. ONE LOCATION only: ร้านเหล้าริมสวนท้อ. Actual Three Kingdoms characters in recognizable late Eastern Han / Three Kingdoms Chinese clothing. Faces, skin, body type and comic behavior may be Isan-inspired; clothing MUST NOT become Thai/Isan. Preserve the exact 1970s faded Thai-Chinese film look. No images or Base64 embedded in import JSON. Contemporary natural Thai comedy dialogue, one speaker at a time. Use present-day Thai speech, no archaic words.",
+    "mainStoryPrompt": "CANONICAL LOCK. 5 scenes x 8 seconds = 40 seconds. ONE LOCATION only: ร้านเหล้าริมสวนท้อ. Actual Three Kingdoms characters in recognizable late Eastern Han / Three Kingdoms Chinese clothing. Faces, skin, body type and comic behavior may be Isan-inspired; clothing MUST NOT become Thai/Isan. Preserve the exact 1970s faded Thai-Chinese film look. No images or Base64 embedded in import JSON. All dialogue uses natural present-day Thai with classic Thai cafe-comedy rhythm: setup, tease, deadpan reaction, punchline and occasional callback. One clear speaker at a time, at least one comic beat per scene, no archaic words.",
     "genreDetailPrompt": "Lost 1970s Thai-dubbed Chinese Three Kingdoms comedy film visually, but all spoken dialogue uses natural present-day Thai. Ordinary weathered Isan-inspired faces, late-Han Chinese wardrobe, dry rustic comedy.",
     "scenes": [
       {
@@ -78,12 +90,12 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "เตียวหุย: พี่เล่า ขายไม่ได้ก็พักก่อน มากินเหล้ากับผมดีกว่า!",
+        "script": "เตียวหุย: พี่เล่า ขายทั้งวันยังไม่ได้สักคู่เหรอ...งั้นขายร้านทิ้งแล้วมากินเหล้ากับผมดีกว่า!",
         "dialogues": [
           {
             "characterId": "zhang-fei",
             "speakerName": "เตียวหุย",
-            "text": "พี่เล่า ขายไม่ได้ก็พักก่อน มากินเหล้ากับผมดีกว่า!"
+            "text": "พี่เล่า ขายทั้งวันยังไม่ได้สักคู่เหรอ...งั้นขายร้านทิ้งแล้วมากินเหล้ากับผมดีกว่า!"
           }
         ],
         "isGenerating": false,
@@ -92,7 +104,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "พี่เล่านั่งถอนใจมองรองเท้าสานที่ขายไม่ออก เจ้าเตียวเปิดประตูร้าน เดินออกมาพร้อมไหสุราแล้วชวนเสียงดัง",
         "imageDescription": "ONE LOCATION: outside the same late-Han Chinese tavern under one peach tree. Liu Bei wears worn muted blue-grey Han robes; Zhang Fei wears rough dark late-Han military clothing with worn lamellar pieces. Isan-inspired ordinary faces only, NOT Isan clothing. 1970s faded film.",
-        "videoPrompt": "8-second vertical shot. Start on Liu Bei at the table and sandal display; Zhang Fei exits the same tavern door with a clay wine jar, approaches only a few steps, and speaks in natural present-day Thai: \"พี่เล่า ขายไม่ได้ก็พักก่อน มากินเหล้ากับผมดีกว่า!\". Keep the Chinese Three Kingdoms wardrobe locked. One speaker only. No location change.",
+        "videoPrompt": "8-second vertical shot. Start on Liu Bei at the table and sandal display; Zhang Fei exits the same tavern door with a clay wine jar and delivers a classic Thai cafe-style teasing line in natural present-day Thai: \"พี่เล่า ขายทั้งวันยังไม่ได้สักคู่เหรอ...งั้นขายร้านทิ้งแล้วมากินเหล้ากับผมดีกว่า!\". Liu Bei reacts silently with a tired stare. Keep Chinese Three Kingdoms wardrobe locked. One speaker only.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
         "characterMasterRequired": true,
@@ -103,7 +115,8 @@
           "episode_location_master"
         ],
         "continuityStartState": "พี่เล่านั่งคนเดียวที่โต๊ะไม้ใต้ต้นท้อ แผงรองเท้าสานอยู่ข้างโต๊ะ ไหสุรายังอยู่ในร้าน",
-        "continuityEndFrame": "เจ้าเตียวยืนข้างโต๊ะพร้อมไหสุรา พี่เล่ายังนั่งที่เดิม พี่กวนเริ่มปรากฏไกลๆ บนทางดินด้านข้างร้าน"
+        "continuityEndFrame": "เจ้าเตียวยืนข้างโต๊ะพร้อมไหสุรา พี่เล่ายังนั่งที่เดิม พี่กวนเริ่มปรากฏไกลๆ บนทางดินด้านข้างร้าน",
+        "comedyBeat": "THAI_CAFE_COMEDY"
       },
       {
         "id": "scene-ep01-002",
@@ -128,12 +141,12 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "กวนอู: เตียว...ฉันได้กลิ่นเหล้ามาแต่ไกล ไม่ใช่ได้ยินเสียงแกนะ",
+        "script": "กวนอู: เตียว...ฉันได้กลิ่นเหล้ามาแต่ไกล เสียงแกน่ะได้ยินตั้งแต่เมื่อวานแล้ว",
         "dialogues": [
           {
             "characterId": "guan-yu",
             "speakerName": "กวนอู",
-            "text": "เตียว...ฉันได้กลิ่นเหล้ามาแต่ไกล ไม่ใช่ได้ยินเสียงแกนะ"
+            "text": "เตียว...ฉันได้กลิ่นเหล้ามาแต่ไกล เสียงแกน่ะได้ยินตั้งแต่เมื่อวานแล้ว"
           }
         ],
         "isGenerating": false,
@@ -142,7 +155,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "พี่กวนเดินเข้ามาถึงหัวโต๊ะ มองไหสุรานิ่งๆ เจ้าเตียวชะงัก ส่วนพี่เล่ากลั้นหัวเราะ",
         "imageDescription": "Same tavern, same table, same peach tree, same clay wine jar position. Guan Yu wears faded dark-green Three Kingdoms / late-Han robes with restrained worn lamellar protection. No Thai costume. 1970s old film.",
-        "videoPrompt": "8-second continuation from previous frame. Guan Yu enters from the same dirt path, stops at the table, looks at the wine jar and says naturally in present-day Thai: \"เตียว...ฉันได้กลิ่นเหล้ามาแต่ไกล ไม่ใช่ได้ยินเสียงแกนะ\". Zhang Fei and Liu Bei react silently. Preserve exact props and costume.",
+        "videoPrompt": "8-second continuation from previous frame. Guan Yu enters from the same dirt path, looks at the wine jar and delivers a deadpan Thai cafe-style comeback in natural present-day Thai: \"เตียว...ฉันได้กลิ่นเหล้ามาแต่ไกล เสียงแกน่ะได้ยินตั้งแต่เมื่อวานแล้ว\". Zhang Fei reacts silently, offended for one beat; Liu Bei suppresses a smile. Preserve exact props and costume.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
         "characterMasterRequired": true,
@@ -154,7 +167,8 @@
           "episode_location_master"
         ],
         "continuityStartState": "ต่อจากฉาก 1: เจ้าเตียวยืนข้างโต๊ะ พี่เล่านั่ง พี่กวนเดินเข้ามาจากทางดิน",
-        "continuityEndFrame": "พี่กวนอยู่หัวโต๊ะ เจ้าเตียววางไหสุรากลางโต๊ะ พี่เล่าขยับที่นั่ง ทั้งสามพร้อมนั่งวงเดียวกัน"
+        "continuityEndFrame": "พี่กวนอยู่หัวโต๊ะ เจ้าเตียววางไหสุรากลางโต๊ะ พี่เล่าขยับที่นั่ง ทั้งสามพร้อมนั่งวงเดียวกัน",
+        "comedyBeat": "THAI_CAFE_COMEDY"
       },
       {
         "id": "scene-ep01-003",
@@ -179,12 +193,12 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "เล่าปี่: พี่กวน เตียว...บ้านเมืองมันวุ่น ถ้าจะไปด้วยกันก็อย่าทิ้งกันนะ",
+        "script": "เล่าปี่: พี่กวน เตียว...บ้านเมืองมันวุ่น เราสามคนต้องช่วยกันนะ โดยเฉพาะช่วยผมขายรองเท้าก่อน",
         "dialogues": [
           {
             "characterId": "liu-bei",
             "speakerName": "เล่าปี่",
-            "text": "พี่กวน เตียว...บ้านเมืองมันวุ่น ถ้าจะไปด้วยกันก็อย่าทิ้งกันนะ"
+            "text": "พี่กวน เตียว...บ้านเมืองมันวุ่น เราสามคนต้องช่วยกันนะ โดยเฉพาะช่วยผมขายรองเท้าก่อน"
           }
         ],
         "isGenerating": false,
@@ -193,7 +207,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "พี่เล่าพูดจริงจัง พี่กวนนั่งนิ่งฟัง เจ้าเตียวรินสุราแต่ลดเสียงลง",
         "imageDescription": "Same single location and same table. All three remain in recognizable Three Kingdoms late-Han Chinese clothing: Liu Bei blue-grey worn Han robe, Guan Yu faded green robe and restrained lamellar, Zhang Fei dark brown/black/muted red military clothing. Isan-inspired faces only.",
-        "videoPrompt": "8-second static-medium continuation. Liu Bei speaks naturally in present-day Thai: \"พี่กวน เตียว...บ้านเมืองมันวุ่น ถ้าจะไปด้วยกันก็อย่าทิ้งกันนะ\". Guan Yu listens; Zhang Fei quietly pours wine. No overlapping dialogue, no location change, no costume drift.",
+        "videoPrompt": "8-second static-medium continuation. Liu Bei begins sincerely, then lands a dry cafe-style punchline in natural present-day Thai: \"พี่กวน เตียว...บ้านเมืองมันวุ่น เราสามคนต้องช่วยกันนะ โดยเฉพาะช่วยผมขายรองเท้าก่อน\". Guan Yu stays deadpan; Zhang Fei pauses mid-pour. No overlapping dialogue.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
         "characterMasterRequired": true,
@@ -205,7 +219,8 @@
           "episode_location_master"
         ],
         "continuityStartState": "ต่อจากฉาก 2: ทั้งสามนั่งรอบโต๊ะ ไหสุราอยู่กลางโต๊ะ จอกดินเผาอยู่ตรงหน้าแต่ละคน",
-        "continuityEndFrame": "พี่เล่าวางจอกลง พี่กวนพยักหน้า เจ้าเตียวหยุดรินสุรา ทั้งสามมีสีหน้าจริงจังขึ้น"
+        "continuityEndFrame": "พี่เล่าวางจอกลง พี่กวนพยักหน้า เจ้าเตียวหยุดรินสุรา ทั้งสามมีสีหน้าจริงจังขึ้น",
+        "comedyBeat": "THAI_CAFE_COMEDY"
       },
       {
         "id": "scene-ep01-004",
@@ -230,12 +245,12 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "เตียวหุย: ได้! เป็นพี่น้องกันแล้ว แต่เหล้าไหนี้หารสามนะพี่เล่า!",
+        "script": "เตียวหุย: ตกลง! เป็นพี่น้องกันแล้ว ทุกอย่างหารสาม...ยกเว้นหนี้นะพี่เล่า!",
         "dialogues": [
           {
             "characterId": "zhang-fei",
             "speakerName": "เตียวหุย",
-            "text": "ได้! เป็นพี่น้องกันแล้ว แต่เหล้าไหนี้หารสามนะพี่เล่า!"
+            "text": "ตกลง! เป็นพี่น้องกันแล้ว ทุกอย่างหารสาม...ยกเว้นหนี้นะพี่เล่า!"
           }
         ],
         "isGenerating": false,
@@ -244,7 +259,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "ทั้งสามลุกข้างโต๊ะ ยกจอกพร้อมกัน พี่เล่ากับพี่กวนจริงจัง เจ้าเตียวเหลือบมองไหสุราแล้วพูดมุก",
         "imageDescription": "Grounded oath beside the SAME table and peach tree, not a new ceremonial garden. Three Kingdoms Chinese costumes remain unchanged and worn. No Thai costume, no fantasy aura, no heroic glamour. 1970s faded film.",
-        "videoPrompt": "8-second continuation. They stand beside the same table and raise simple clay cups. Zhang Fei alone says in present-day Thai: \"ได้! เป็นพี่น้องกันแล้ว แต่เหล้าไหนี้หารสามนะพี่เล่า!\". Liu Bei and Guan Yu stare at him silently for a beat. Keep same location, light and costumes.",
+        "videoPrompt": "8-second continuation. They stand beside the same table and raise clay cups. Zhang Fei breaks the solemn mood with a cafe-style punchline in natural present-day Thai: \"ตกลง! เป็นพี่น้องกันแล้ว ทุกอย่างหารสาม...ยกเว้นหนี้นะพี่เล่า!\". Liu Bei and Guan Yu stare at him silently for a comic beat. Same location and costumes.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
         "characterMasterRequired": true,
@@ -256,7 +271,8 @@
           "episode_location_master"
         ],
         "continuityStartState": "ต่อจากฉาก 3: ทั้งสามลุกจากโต๊ะเดิมใต้ต้นท้อ ถือจอกดินเผาคนละใบ",
-        "continuityEndFrame": "ทั้งสามวางจอกคืนบนโต๊ะ แล้วหันตัวเหมือนจะเดินออกจากร้าน ไหสุรายังอยู่กลางโต๊ะ"
+        "continuityEndFrame": "ทั้งสามวางจอกคืนบนโต๊ะ แล้วหันตัวเหมือนจะเดินออกจากร้าน ไหสุรายังอยู่กลางโต๊ะ",
+        "comedyBeat": "THAI_CAFE_COMEDY"
       },
       {
         "id": "scene-ep01-005",
@@ -281,12 +297,12 @@
         ],
         "isDetailed": true,
         "duration": 8,
-        "script": "เล่าปี่: เดี๋ยวก่อนเตียว...นายเป็นคนชวน แล้วใครจ่ายค่าเหล้า?",
+        "script": "เล่าปี่: เดี๋ยวก่อนเตียว...เมื่อกี้บอกทุกอย่างหารสาม งั้นค่าเหล้านี่หารด้วยใช่ไหม?",
         "dialogues": [
           {
             "characterId": "liu-bei",
             "speakerName": "เล่าปี่",
-            "text": "เดี๋ยวก่อนเตียว...นายเป็นคนชวน แล้วใครจ่ายค่าเหล้า?"
+            "text": "เดี๋ยวก่อนเตียว...เมื่อกี้บอกทุกอย่างหารสาม งั้นค่าเหล้านี่หารด้วยใช่ไหม?"
           }
         ],
         "isGenerating": false,
@@ -295,7 +311,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "ทั้งสามหยุด ล้วงถุงเงิน พบว่าว่างเปล่า มองหน้ากันเงียบๆ แล้วภาพค้าง",
         "imageDescription": "Same tavern and peach-tree table visible behind them. All three still wear the exact same locked Three Kingdoms Chinese costumes. Empty period cloth coin pouches only. No modern props.",
-        "videoPrompt": "8-second final continuation. Liu Bei asks naturally in present-day Thai: \"เดี๋ยวก่อนเตียว...นายเป็นคนชวน แล้วใครจ่ายค่าเหล้า?\". All three silently check empty period coin pouches, look at each other, then hold for a 1970s-style freeze-frame. No second location and no costume change.",
+        "videoPrompt": "8-second final continuation. Liu Bei uses a callback to Zhang Fei's previous joke and says naturally in present-day Thai: \"เดี๋ยวก่อนเตียว...เมื่อกี้บอกทุกอย่างหารสาม งั้นค่าเหล้านี่หารด้วยใช่ไหม?\". Zhang Fei freezes, Guan Yu slowly looks at him, all three check empty period coin pouches, then hold for a 1970s-style freeze-frame.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
         "characterMasterRequired": true,
@@ -307,7 +323,8 @@
           "episode_location_master"
         ],
         "continuityStartState": "ต่อจากฉาก 4: ทั้งสามเพิ่งวางจอกที่โต๊ะและกำลังหันเดินออกจากพื้นที่หน้าร้าน",
-        "continuityEndFrame": "ทั้งสามยืนข้างทางดินหน้าร้าน ล้วงถุงเงินว่างเปล่า โต๊ะและไหสุรายังมองเห็นด้านหลัง ภาพค้างแบบหนังยุค 70"
+        "continuityEndFrame": "ทั้งสามยืนข้างทางดินหน้าร้าน ล้วงถุงเงินว่างเปล่า โต๊ะและไหสุรายังมองเห็นด้านหลัง ภาพค้างแบบหนังยุค 70",
+        "comedyBeat": "THAI_CAFE_COMEDY"
       }
     ],
     "characters": [
