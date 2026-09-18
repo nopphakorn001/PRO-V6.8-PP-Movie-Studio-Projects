@@ -1,6 +1,6 @@
 {
   "series": "THREE-KINGDOMS-ISAN-70S-COMEDY",
-  "version": "1.4",
+  "version": "1.5",
   "status": "CANONICAL_HARD_LOCK_DO_NOT_DRIFT",
   "styleHardLock": {
     "immutable": true,
@@ -23,7 +23,7 @@
   "dialogueHardLock": {
     "language": "Thai",
     "accent": "CURRENT_NATURAL_THAI",
-    "mode": "THAI_CURRENT_CASUAL_COMEDY",
+    "mode": "THAI_CURRENT_CAFE_COMEDY",
     "nicknames": {
       "liu-bei": "พี่เล่า",
       "guan-yu": "พี่กวน",
@@ -33,11 +33,27 @@
       "modern conversational Thai",
       "natural present-day pronunciation and rhythm",
       "light current Isan flavor is allowed when natural",
+      "classic Thai cafe-comedy structure: setup, tease, deadpan response, punchline, callback",
       "one clear speaker at a time",
-      "short punchline-friendly lines",
+      "short punchline-friendly lines that fit within 8 seconds",
+      "at least one comic beat per scene",
       "no archaic/historical wording",
-      "no stiff royal-court language"
-    ]
+      "no stiff royal-court language",
+      "no vulgar sexual comedy and no random slapstick that breaks continuity"
+    ],
+    "cafeComedyLock": {
+      "enabled": true,
+      "straightMan": "guan-yu",
+      "loudComic": "zhang-fei",
+      "dryComic": "liu-bei",
+      "preferredPatterns": [
+        "แซวกันแบบคนสนิท",
+        "พูดจริงจังแล้วหักมุก",
+        "มุกหน้าตาย",
+        "เล่นคำสั้นๆ",
+        "callback จากมุกฉากก่อน"
+      ]
+    }
   },
   "characterIdentityLock": {
     "source": "CHARACTER_MASTER.json",
@@ -80,6 +96,6 @@
     "costumePolicy": "THREE_KINGDOMS_LATE_HAN_CHINESE_ONLY",
     "faceAndBehaviorPolicy": "ISAN_INSPIRED_ONLY",
     "stylePolicy": "1970S_FADED_THAI_CHINESE_FILM",
-    "dialoguePolicy": "THAI_CURRENT_CASUAL_COMEDY"
+    "dialoguePolicy": "THAI_CURRENT_CAFE_COMEDY"
   }
 }
