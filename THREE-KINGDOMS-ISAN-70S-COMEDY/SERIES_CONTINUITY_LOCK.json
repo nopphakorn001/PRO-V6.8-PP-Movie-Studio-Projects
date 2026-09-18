@@ -1,6 +1,6 @@
 {
   "series": "THREE-KINGDOMS-ISAN-70S-COMEDY",
-  "version": "1.1",
+  "version": "1.2",
   "status": "HARD_LOCK",
   "styleHardLock": {
     "immutable": true,
@@ -37,13 +37,16 @@
   },
   "characterIdentityLock": {
     "source": "CHARACTER_MASTER.json",
+    "mode": "TEXT_ONLY_STEP5_MASTER",
+    "imagePolicy": "NO_IMAGES_NO_BASE64",
     "immutableAcrossEpisodes": true,
     "referencePriority": [
-      "CHARACTER_MASTER_REFERENCE",
+      "STEP5_CHARACTER_DEFINITION",
       "PREVIOUS_SCENE_IMAGE",
       "EPISODE_LOCATION_MASTER",
       "CURRENT_SCENE_ACTION"
-    ]
+    ],
+    "rule": "Step 5 is the character source of truth. Scene 1 uses text-locked Step 5 character definitions. Scene 2 onward additionally uses the previous generated scene image for continuity."
   },
   "episodeContinuityLock": {
     "locationPolicy": "ONE_LOCATION_PER_EPISODE",
