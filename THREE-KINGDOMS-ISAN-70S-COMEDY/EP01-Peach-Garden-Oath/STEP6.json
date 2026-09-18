@@ -19,7 +19,13 @@
     "customLocationCount": 2,
     "visualStyleId": "custom",
     "visualStyle": "1970s Thai-Chinese historical comedy film aesthetic, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical sets, natural sunlight. Three Kingdoms characters reimagined with grounded Isan Thai facial features and ordinary weathered bodies. Costumes are worn, practical and slightly mismatched rather than glamorous. No modern objects, no fantasy glow, no polished idol styling.",
-    "customVisualStyle": "Feels like a lost 1970s rural historical comedy movie: rough village sets, handwoven textile accents, faded indigo and earth-tone fabrics, imperfect makeup, ordinary faces, sweat, dust and dry comic timing. Liu Bei looks broke but sincere; Guan Yu looks stern and rugged; Zhang Fei has loud drunk-uncle energy."
+    "customVisualStyle": "Feels like a lost 1970s rural historical comedy movie: rough village sets, handwoven textile accents, faded indigo and earth-tone fabrics, imperfect makeup, ordinary faces, sweat, dust and dry comic timing. Liu Bei looks broke but sincere; Guan Yu looks stern and rugged; Zhang Fei has loud drunk-uncle energy.",
+    "dialogueStyle": "Thai period-style speech: old-fashioned but easy to understand, rustic and informal. Characters use recognizable nicknames rather than formal full names. Avoid modern slang, corporate language, and overly royal or literary phrasing.",
+    "speakerNicknameMap": {
+      "liu-bei": "พี่เล่า",
+      "guan-yu": "พี่กวน",
+      "zhang-fei": "เจ้าเตียว"
+    }
   },
   "movie": {
     "genre": "Three Kingdoms Isan Retro Comedy",
@@ -37,8 +43,8 @@
     ],
     "storyTitle": "สามก๊กบ้านเฮา EP01 — สาบานสวนท้อแบบคนบ้านๆ",
     "storySummary": "เล่าปี่ขายรองเท้าสานไม่ออก เตียวหุยสายเมาชวนไปกินเหล้า กวนอูบังเอิญเข้าร่วมวง ทั้งสามคุยเรื่องบ้านเมืองแบบจริงจังปนฮา ก่อนสาบานเป็นพี่น้องใต้ต้นท้อ แล้วจบด้วยมุกว่าไม่มีใครมีเงินจ่ายค่าเหล้า",
-    "mainStoryPrompt": "Create a 36-second vertical historical comedy using Liu Bei, Guan Yu and Zhang Fei. Reimagine them with ordinary Isan Thai-looking faces and rough practical clothing, not polished idols. Visual tone resembles a faded 1970s Thai-Chinese historical comedy film. Use short Thai dialogue, clear speaker assignment, no overlapping speech, natural pauses and dry situational comedy. No modern objects.",
-    "genreDetailPrompt": "Retro 1970s historical comedy with actual Three Kingdoms characters, Isan-inspired ordinary faces, worn costumes, earthy village atmosphere and punchy Thai dialogue.",
+    "mainStoryPrompt": "Create a 36-second vertical historical comedy using Liu Bei, Guan Yu and Zhang Fei. Reimagine them with ordinary Isan Thai-looking faces and rough practical clothing, not polished idols. Visual tone resembles a faded 1970s Thai-Chinese historical comedy film. Use short Thai period-style dialogue that sounds old-fashioned but remains easy to understand. Characters address one another informally with recognizable nicknames: Liu Bei = พี่เล่า, Guan Yu = พี่กวน, Zhang Fei = เจ้าเตียว. Do not use stiff court language, modern slang, or formal full-name address in normal conversation. Keep one clear speaker at a time, natural pauses and dry situational comedy. No modern objects.",
+    "genreDetailPrompt": "Retro 1970s historical comedy with Three Kingdoms characters, Isan-inspired ordinary faces, worn costumes, earthy village atmosphere, and short Thai period-style dialogue using informal recognizable nicknames.",
     "scenes": [
       {
         "id": "scene-ep01-001",
@@ -55,12 +61,12 @@
         ],
         "isDetailed": true,
         "duration": 6,
-        "script": "เล่าปี่: บ้านเมืองก็วุ่น...รองเท้าข้าก็บ่มีคนซื้อ",
+        "script": "เล่าปี่: เฮ้อ...บ้านเมืองระส่ำแท้ รองเท้าเราก็ขายบ่ได้สักคู่",
         "dialogues": [
           {
             "characterId": "liu-bei",
             "speakerName": "เล่าปี่",
-            "text": "บ้านเมืองก็วุ่น...รองเท้าข้าก็บ่มีคนซื้อ"
+            "text": "เฮ้อ...บ้านเมืองระส่ำแท้ รองเท้าเราก็ขายบ่ได้สักคู่"
           }
         ],
         "isGenerating": false,
@@ -69,7 +75,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "เล่าปี่นั่งหน้าร้านเล็กๆ มองคนเดินผ่าน ก่อนถอนหายใจและยกรองเท้าสานขึ้นมาดู",
         "imageDescription": "Vertical 1970s-style historical comedy still. Liu Bei as an ordinary Isan-looking middle-aged man, tired face, lean build, faded indigo-brown robe, worn sash, sitting at a tiny ancient market stall with handmade straw sandals and woven mats. Dusty rural late-Han-inspired village, practical rough set, faded color film, grain and soft focus. He looks sincere but broke, not handsome or glamorous.",
-        "videoPrompt": "Medium vertical shot, mostly static like an old 1970s film. Liu Bei waits at his poor sandal stall, watches customers ignore him, lifts one straw sandal and sighs. Only Liu Bei speaks in Thai: \"บ้านเมืองก็วุ่น...รองเท้าข้าก็บ่มีคนซื้อ\". Natural comic pause. No overlapping speech.",
+        "videoPrompt": "Medium vertical shot, mostly static like an old 1970s film. Liu Bei waits at his poor sandal stall, watches customers ignore him, lifts one straw sandal and sighs. Only Liu Bei speaks in Thai period-style speech: \"เฮ้อ...บ้านเมืองระส่ำแท้ รองเท้าเราก็ขายบ่ได้สักคู่\". Natural comic pause. No overlapping speech.",
         "narrationText": ""
       },
       {
@@ -91,12 +97,12 @@
         ],
         "isDetailed": true,
         "duration": 6,
-        "script": "เตียวหุย: ขายบ่ได้กะพัก! ไปกินเหล้ากับข้า!",
+        "script": "เตียวหุย: พี่เล่า! นั่งหน้าหมองอยู่ใย ไปซดสุรากับข้าดีกว่า!",
         "dialogues": [
           {
             "characterId": "zhang-fei",
             "speakerName": "เตียวหุย",
-            "text": "ขายบ่ได้กะพัก! ไปกินเหล้ากับข้า!"
+            "text": "พี่เล่า! นั่งหน้าหมองอยู่ใย ไปซดสุรากับข้าดีกว่า!"
           }
         ],
         "isGenerating": false,
@@ -105,7 +111,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "เตียวหุยรูปร่างใหญ่ เสื้อเกราะเก่าๆ เดินเซเล็กน้อยพร้อมไหเหล้าแล้วตบบ่าเล่าปี่",
         "imageDescription": "Zhang Fei as a rough Isan-looking middle-aged man with thick beard, sun-darkened skin, stocky build, messy tied hair, worn lamellar pieces, old cloth wraps and woven sash accents. He carries a clay wine jar beside poor Liu Bei. Vintage 1970s faded historical comedy look.",
-        "videoPrompt": "Zhang Fei barges into frame with a clay wine jar, slightly unsteady but energetic, slaps Liu Bei on the shoulder and says in Thai: \"ขายบ่ได้กะพัก! ไปกินเหล้ากับข้า!\". Liu Bei reacts silently. One speaker only.",
+        "videoPrompt": "Zhang Fei barges into frame with a clay wine jar, slightly unsteady but energetic, slaps Liu Bei on the shoulder and says in Thai period-style speech: \"พี่เล่า! นั่งหน้าหมองอยู่ใย ไปซดสุรากับข้าดีกว่า!\". Liu Bei reacts silently. One speaker only.",
         "narrationText": ""
       },
       {
@@ -127,12 +133,12 @@
         ],
         "isDetailed": true,
         "duration": 6,
-        "script": "กวนอู: เรื่องบ้านเมืองค่อยคุย...เหล้าอยู่ไส",
+        "script": "กวนอู: เจ้าเตียว...ได้ยินว่ามีสุรา ข้าจึงหยุดฟัง",
         "dialogues": [
           {
             "characterId": "guan-yu",
             "speakerName": "กวนอู",
-            "text": "เรื่องบ้านเมืองค่อยคุย...เหล้าอยู่ไส"
+            "text": "เจ้าเตียว...ได้ยินว่ามีสุรา ข้าจึงหยุดฟัง"
           }
         ],
         "isGenerating": false,
@@ -141,7 +147,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "กวนอูร่างสูงเครายาวในชุดเก่าหยุดเดินและมองไหเหล้าแบบนิ่งๆ เตียวหุยชะงักแล้วหัวเราะ",
         "imageDescription": "Guan Yu reimagined as a rugged Isan-looking tall man, long untrimmed beard, stern tired face, faded dark-green robe with worn armor pieces and dusty boots. He looks directly at Zhang Fei's clay wine jar. 1970s historical film texture.",
-        "videoPrompt": "Medium two-shot. Guan Yu walks past, notices the wine jar, stops, gives a deadpan look and says in Thai: \"เรื่องบ้านเมืองค่อยคุย...เหล้าอยู่ไส\". Zhang Fei remains silent and reacts. Dry comic timing.",
+        "videoPrompt": "Medium two-shot. Guan Yu walks past, notices the wine jar, stops, gives a deadpan look and says in Thai period-style speech: \"เจ้าเตียว...ได้ยินว่ามีสุรา ข้าจึงหยุดฟัง\". Zhang Fei remains silent and reacts. Dry comic timing.",
         "narrationText": ""
       },
       {
@@ -167,12 +173,12 @@
         ],
         "isDetailed": true,
         "duration": 6,
-        "script": "เล่าปี่: ถ้าจะร่วมทางกัน เราต้องช่วยกันจริงๆ",
+        "script": "เล่าปี่: พี่กวน เจ้าเตียว...หากจะร่วมทาง ก็อย่าทิ้งกันยามยาก",
         "dialogues": [
           {
             "characterId": "liu-bei",
             "speakerName": "เล่าปี่",
-            "text": "ถ้าจะร่วมทางกัน เราต้องช่วยกันจริงๆ"
+            "text": "พี่กวน เจ้าเตียว...หากจะร่วมทาง ก็อย่าทิ้งกันยามยาก"
           }
         ],
         "isGenerating": false,
@@ -181,7 +187,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "เล่าปี่พูดจริงจัง เตียวหุยยังเคี้ยวอาหารอยู่ ส่วนกวนอูนั่งฟังนิ่งๆ",
         "imageDescription": "Simple peach garden with rough wooden table, cheap clay cups and rustic food. Liu Bei speaks sincerely; Zhang Fei eats greedily; Guan Yu listens sternly. Ordinary weathered faces and worn clothing. Faded 1970s Eastmancolor historical comedy aesthetic.",
-        "videoPrompt": "Static-medium group shot like an old historical comedy film. Only Liu Bei speaks in Thai: \"ถ้าจะร่วมทางกัน เราต้องช่วยกันจริงๆ\". Zhang Fei keeps chewing silently; Guan Yu listens. No overlapping speech.",
+        "videoPrompt": "Static-medium group shot like an old historical comedy film. Only Liu Bei speaks in Thai period-style speech: \"พี่กวน เจ้าเตียว...หากจะร่วมทาง ก็อย่าทิ้งกันยามยาก\". Zhang Fei keeps chewing silently; Guan Yu listens. No overlapping speech.",
         "narrationText": ""
       },
       {
@@ -207,12 +213,12 @@
         ],
         "isDetailed": true,
         "duration": 6,
-        "script": "เตียวหุย: เป็นพี่น้องกันแล้ว...เหล้าต้องหารสามเด้อ",
+        "script": "เตียวหุย: ได้! แต่นับแต่นี้ สุราหนึ่งไห...หารสามนะพี่เล่า!",
         "dialogues": [
           {
             "characterId": "zhang-fei",
             "speakerName": "เตียวหุย",
-            "text": "เป็นพี่น้องกันแล้ว...เหล้าต้องหารสามเด้อ"
+            "text": "ได้! แต่นับแต่นี้ สุราหนึ่งไห...หารสามนะพี่เล่า!"
           }
         ],
         "isGenerating": false,
@@ -221,7 +227,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "ทั้งสามยืนยกจอก เล่าปี่กับกวนอูทำหน้าจริงจัง แต่เตียวหุยพูดจบแล้วมองไหเหล้า",
         "imageDescription": "Grounded peach-garden oath scene, three rough ordinary-looking Three Kingdoms men raising cheap clay cups. No polished heroic pose and no fantasy effects. Vintage 1970s faded film, grain and worn costume texture.",
-        "videoPrompt": "Vertical medium group shot. Only Zhang Fei speaks in Thai: \"เป็นพี่น้องกันแล้ว...เหล้าต้องหารสามเด้อ\". Liu Bei and Guan Yu silently stare at him for one comic beat. No overlapping speech.",
+        "videoPrompt": "Vertical medium group shot. Only Zhang Fei speaks in Thai period-style speech: \"ได้! แต่นับแต่นี้ สุราหนึ่งไห...หารสามนะพี่เล่า!\". Liu Bei and Guan Yu silently stare at him for one comic beat. No overlapping speech.",
         "narrationText": ""
       },
       {
@@ -247,12 +253,12 @@
         ],
         "isDetailed": true,
         "duration": 6,
-        "script": "เล่าปี่: เดี๋ยวก่อน...ผู้ใดมีเงินบ้าง",
+        "script": "เล่าปี่: ช้าก่อน เจ้าเตียว...ค่าสุรานี่ ผู้ใดเป็นคนจ่าย?",
         "dialogues": [
           {
             "characterId": "liu-bei",
             "speakerName": "เล่าปี่",
-            "text": "เดี๋ยวก่อน...ผู้ใดมีเงินบ้าง"
+            "text": "ช้าก่อน เจ้าเตียว...ค่าสุรานี่ ผู้ใดเป็นคนจ่าย?"
           }
         ],
         "isGenerating": false,
@@ -261,7 +267,7 @@
         "isGeneratingVideo": false,
         "actionDescription": "ทั้งสามหยุดพร้อมกัน ล้วงกระเป๋าแล้วมองหน้ากัน เงียบหนึ่งจังหวะ ก่อนภาพค้างแบบหนังเก่า",
         "imageDescription": "At the peach garden exit, the three sworn brothers freeze awkwardly while checking empty cloth pouches. Ordinary rough faces, faded robes and worn gear. Comic embarrassment instead of heroic departure. 1970s film freeze-frame feeling.",
-        "videoPrompt": "The three men take two steps to leave. Only Liu Bei speaks in Thai: \"เดี๋ยวก่อน...ผู้ใดมีเงินบ้าง\". All three silently check empty pouches and look at one another. End with an awkward 1970s-style freeze-frame beat.",
+        "videoPrompt": "The three men take two steps to leave. Only Liu Bei speaks in Thai period-style speech: \"ช้าก่อน เจ้าเตียว...ค่าสุรานี่ ผู้ใดเป็นคนจ่าย?\". All three silently check empty pouches and look at one another. End with an awkward 1970s-style freeze-frame beat.",
         "narrationText": ""
       }
     ],
@@ -273,7 +279,8 @@
         "description": "ชายหน้าตาธรรมดาแบบคนอีสานวัยกลางคน ผอมแดดเผา สีหน้าเหนื่อยแต่จริงใจ ไม่หล่อเนี้ยบ",
         "mainOutfit": "เสื้อคลุมโบราณสีครามหม่นและน้ำตาลซีด ผ้าคาดเอวทอมือเก่าๆ รองเท้าเรียบง่าย ไม่มีเครื่องประดับหรู",
         "style": "1970s rustic historical comedy",
-        "imageStatus": "idle"
+        "imageStatus": "idle",
+        "nickname": "พี่เล่า"
       },
       {
         "id": "guan-yu",
@@ -282,7 +289,8 @@
         "description": "ชายร่างสูงหน้าตาอีสาน เครายาวไม่เนี้ยบ ผิวคล้ำแดด สีหน้าจริงจังและดูเหนื่อย",
         "mainOutfit": "เสื้อคลุมเขียวหม่นซีด เกราะใช้งานจริงเก่าๆ ผ้าทอลายพื้นบ้านเป็นรายละเอียดเล็กน้อย",
         "style": "1970s rustic historical comedy",
-        "imageStatus": "idle"
+        "imageStatus": "idle",
+        "nickname": "พี่กวน"
       },
       {
         "id": "zhang-fei",
@@ -291,7 +299,8 @@
         "description": "ชายอีสานร่างใหญ่ หนวดเครารุงรัง ผิวเข้มแดด ท่าทางเสียงดัง ชอบเหล้าและมั่นใจเกินเหตุ",
         "mainOutfit": "ชุดนักรบเก่าๆ สีดำ น้ำตาล แดงหม่น มีผ้าคาดเอวลายทอพื้นบ้านแบบใช้งานจริง",
         "style": "1970s rustic historical comedy",
-        "imageStatus": "idle"
+        "imageStatus": "idle",
+        "nickname": "เจ้าเตียว"
       }
     ],
     "atmosphereAssets": [
