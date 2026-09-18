@@ -1,0 +1,328 @@
+{
+  "projectId": "three-kingdoms-isan-70s-comedy-ep01",
+  "settings": {
+    "aspectRatio": "9:16",
+    "language": "Thai",
+    "targetSceneCount": 6,
+    "secondsPerScene": 6,
+    "imageModel": "🍌 Nano Banana Pro",
+    "videoModel": "veo-3-1-lite-lower-priority",
+    "productionMode": "frame",
+    "audioType": "ambient_sfx",
+    "selectedProjectStyle": "custom-structure",
+    "selectedProjectType": "custom-structure",
+    "characterStyleCategory": "human",
+    "customCharacterStyle": "Three Kingdoms characters with ordinary Isan Thai-looking faces, weathered skin, imperfect teeth and hair, rough practical clothing, no idol beauty, no polished fantasy hero styling.",
+    "castingMode": "custom",
+    "customCastingCount": 3,
+    "locationMode": "custom",
+    "customLocationCount": 2,
+    "visualStyleId": "custom",
+    "visualStyle": "1970s Thai-Chinese historical comedy film aesthetic, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical sets, natural sunlight. Three Kingdoms characters reimagined with grounded Isan Thai facial features and ordinary weathered bodies. Costumes are worn, practical and slightly mismatched rather than glamorous. No modern objects, no fantasy glow, no polished idol styling.",
+    "customVisualStyle": "Feels like a lost 1970s rural historical comedy movie: rough village sets, handwoven textile accents, faded indigo and earth-tone fabrics, imperfect makeup, ordinary faces, sweat, dust and dry comic timing. Liu Bei looks broke but sincere; Guan Yu looks stern and rugged; Zhang Fei has loud drunk-uncle energy."
+  },
+  "movie": {
+    "genre": "Three Kingdoms Isan Retro Comedy",
+    "selectedGenres": [
+      "comedy",
+      "historical",
+      "short-drama",
+      "retro"
+    ],
+    "selectedVisualMoods": [
+      "funny",
+      "rustic",
+      "warm",
+      "retro"
+    ],
+    "storyTitle": "สามก๊กบ้านเฮา EP01 — สาบานสวนท้อแบบคนบ้านๆ",
+    "storySummary": "เล่าปี่ขายรองเท้าสานไม่ออก เตียวหุยสายเมาชวนไปกินเหล้า กวนอูบังเอิญเข้าร่วมวง ทั้งสามคุยเรื่องบ้านเมืองแบบจริงจังปนฮา ก่อนสาบานเป็นพี่น้องใต้ต้นท้อ แล้วจบด้วยมุกว่าไม่มีใครมีเงินจ่ายค่าเหล้า",
+    "mainStoryPrompt": "Create a 36-second vertical historical comedy using Liu Bei, Guan Yu and Zhang Fei. Reimagine them with ordinary Isan Thai-looking faces and rough practical clothing, not polished idols. Visual tone resembles a faded 1970s Thai-Chinese historical comedy film. Use short Thai dialogue, clear speaker assignment, no overlapping speech, natural pauses and dry situational comedy. No modern objects.",
+    "genreDetailPrompt": "Retro 1970s historical comedy with actual Three Kingdoms characters, Isan-inspired ordinary faces, worn costumes, earthy village atmosphere and punchy Thai dialogue.",
+    "scenes": [
+      {
+        "id": "scene-ep01-001",
+        "order": 1,
+        "title": "รองเท้าบ่ขาย",
+        "description": "เล่าปี่ยืนเฝ้าแผงรองเท้าสานเก่าในตลาดแต่ไม่มีลูกค้า",
+        "location": "ตลาดหมู่บ้านโบราณ",
+        "mood": "ตลกแบบหมดหวัง",
+        "sceneCharacters": [
+          {
+            "id": "liu-bei",
+            "name": "เล่าปี่"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 6,
+        "script": "เล่าปี่: บ้านเมืองก็วุ่น...รองเท้าข้าก็บ่มีคนซื้อ",
+        "dialogues": [
+          {
+            "characterId": "liu-bei",
+            "speakerName": "เล่าปี่",
+            "text": "บ้านเมืองก็วุ่น...รองเท้าข้าก็บ่มีคนซื้อ"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "เล่าปี่นั่งหน้าร้านเล็กๆ มองคนเดินผ่าน ก่อนถอนหายใจและยกรองเท้าสานขึ้นมาดู",
+        "imageDescription": "Vertical 1970s-style historical comedy still. Liu Bei as an ordinary Isan-looking middle-aged man, tired face, lean build, faded indigo-brown robe, worn sash, sitting at a tiny ancient market stall with handmade straw sandals and woven mats. Dusty rural late-Han-inspired village, practical rough set, faded color film, grain and soft focus. He looks sincere but broke, not handsome or glamorous.",
+        "videoPrompt": "Medium vertical shot, mostly static like an old 1970s film. Liu Bei waits at his poor sandal stall, watches customers ignore him, lifts one straw sandal and sighs. Only Liu Bei speaks in Thai: \"บ้านเมืองก็วุ่น...รองเท้าข้าก็บ่มีคนซื้อ\". Natural comic pause. No overlapping speech.",
+        "narrationText": ""
+      },
+      {
+        "id": "scene-ep01-002",
+        "order": 2,
+        "title": "เตียวหุยสายเมา",
+        "description": "เตียวหุยเดินถือไหเหล้าเข้ามาแล้วชวนเล่าปี่แบบเสียงดัง",
+        "location": "ตลาดหมู่บ้านโบราณ",
+        "mood": "คึกคัก",
+        "sceneCharacters": [
+          {
+            "id": "zhang-fei",
+            "name": "เตียวหุย"
+          },
+          {
+            "id": "liu-bei",
+            "name": "เล่าปี่"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 6,
+        "script": "เตียวหุย: ขายบ่ได้กะพัก! ไปกินเหล้ากับข้า!",
+        "dialogues": [
+          {
+            "characterId": "zhang-fei",
+            "speakerName": "เตียวหุย",
+            "text": "ขายบ่ได้กะพัก! ไปกินเหล้ากับข้า!"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "เตียวหุยรูปร่างใหญ่ เสื้อเกราะเก่าๆ เดินเซเล็กน้อยพร้อมไหเหล้าแล้วตบบ่าเล่าปี่",
+        "imageDescription": "Zhang Fei as a rough Isan-looking middle-aged man with thick beard, sun-darkened skin, stocky build, messy tied hair, worn lamellar pieces, old cloth wraps and woven sash accents. He carries a clay wine jar beside poor Liu Bei. Vintage 1970s faded historical comedy look.",
+        "videoPrompt": "Zhang Fei barges into frame with a clay wine jar, slightly unsteady but energetic, slaps Liu Bei on the shoulder and says in Thai: \"ขายบ่ได้กะพัก! ไปกินเหล้ากับข้า!\". Liu Bei reacts silently. One speaker only.",
+        "narrationText": ""
+      },
+      {
+        "id": "scene-ep01-003",
+        "order": 3,
+        "title": "กวนอูหน้าดุ",
+        "description": "กวนอูเดินผ่าน พอได้ยินเรื่องเหล้าก็หยุด",
+        "location": "ตลาดหมู่บ้านโบราณ",
+        "mood": "ตลกหน้าตาย",
+        "sceneCharacters": [
+          {
+            "id": "guan-yu",
+            "name": "กวนอู"
+          },
+          {
+            "id": "zhang-fei",
+            "name": "เตียวหุย"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 6,
+        "script": "กวนอู: เรื่องบ้านเมืองค่อยคุย...เหล้าอยู่ไส",
+        "dialogues": [
+          {
+            "characterId": "guan-yu",
+            "speakerName": "กวนอู",
+            "text": "เรื่องบ้านเมืองค่อยคุย...เหล้าอยู่ไส"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "กวนอูร่างสูงเครายาวในชุดเก่าหยุดเดินและมองไหเหล้าแบบนิ่งๆ เตียวหุยชะงักแล้วหัวเราะ",
+        "imageDescription": "Guan Yu reimagined as a rugged Isan-looking tall man, long untrimmed beard, stern tired face, faded dark-green robe with worn armor pieces and dusty boots. He looks directly at Zhang Fei's clay wine jar. 1970s historical film texture.",
+        "videoPrompt": "Medium two-shot. Guan Yu walks past, notices the wine jar, stops, gives a deadpan look and says in Thai: \"เรื่องบ้านเมืองค่อยคุย...เหล้าอยู่ไส\". Zhang Fei remains silent and reacts. Dry comic timing.",
+        "narrationText": ""
+      },
+      {
+        "id": "scene-ep01-004",
+        "order": 4,
+        "title": "วงเหล้าใต้ต้นท้อ",
+        "description": "ทั้งสามนั่งกินข้าวง่ายๆ ใต้ต้นท้อ เตียวหุยรีบกินก่อนคนอื่น",
+        "location": "สวนท้อบ้านๆ",
+        "mood": "อบอุ่นปนฮา",
+        "sceneCharacters": [
+          {
+            "id": "liu-bei",
+            "name": "เล่าปี่"
+          },
+          {
+            "id": "guan-yu",
+            "name": "กวนอู"
+          },
+          {
+            "id": "zhang-fei",
+            "name": "เตียวหุย"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 6,
+        "script": "เล่าปี่: ถ้าจะร่วมทางกัน เราต้องช่วยกันจริงๆ",
+        "dialogues": [
+          {
+            "characterId": "liu-bei",
+            "speakerName": "เล่าปี่",
+            "text": "ถ้าจะร่วมทางกัน เราต้องช่วยกันจริงๆ"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "เล่าปี่พูดจริงจัง เตียวหุยยังเคี้ยวอาหารอยู่ ส่วนกวนอูนั่งฟังนิ่งๆ",
+        "imageDescription": "Simple peach garden with rough wooden table, cheap clay cups and rustic food. Liu Bei speaks sincerely; Zhang Fei eats greedily; Guan Yu listens sternly. Ordinary weathered faces and worn clothing. Faded 1970s Eastmancolor historical comedy aesthetic.",
+        "videoPrompt": "Static-medium group shot like an old historical comedy film. Only Liu Bei speaks in Thai: \"ถ้าจะร่วมทางกัน เราต้องช่วยกันจริงๆ\". Zhang Fei keeps chewing silently; Guan Yu listens. No overlapping speech.",
+        "narrationText": ""
+      },
+      {
+        "id": "scene-ep01-005",
+        "order": 5,
+        "title": "สาบานสวนท้อ",
+        "description": "ทั้งสามยกจอกเหล้าสาบานเป็นพี่น้องแบบเรียบง่าย",
+        "location": "สวนท้อบ้านๆ",
+        "mood": "จริงจังแต่ยังฮา",
+        "sceneCharacters": [
+          {
+            "id": "liu-bei",
+            "name": "เล่าปี่"
+          },
+          {
+            "id": "guan-yu",
+            "name": "กวนอู"
+          },
+          {
+            "id": "zhang-fei",
+            "name": "เตียวหุย"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 6,
+        "script": "เตียวหุย: เป็นพี่น้องกันแล้ว...เหล้าต้องหารสามเด้อ",
+        "dialogues": [
+          {
+            "characterId": "zhang-fei",
+            "speakerName": "เตียวหุย",
+            "text": "เป็นพี่น้องกันแล้ว...เหล้าต้องหารสามเด้อ"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "ทั้งสามยืนยกจอก เล่าปี่กับกวนอูทำหน้าจริงจัง แต่เตียวหุยพูดจบแล้วมองไหเหล้า",
+        "imageDescription": "Grounded peach-garden oath scene, three rough ordinary-looking Three Kingdoms men raising cheap clay cups. No polished heroic pose and no fantasy effects. Vintage 1970s faded film, grain and worn costume texture.",
+        "videoPrompt": "Vertical medium group shot. Only Zhang Fei speaks in Thai: \"เป็นพี่น้องกันแล้ว...เหล้าต้องหารสามเด้อ\". Liu Bei and Guan Yu silently stare at him for one comic beat. No overlapping speech.",
+        "narrationText": ""
+      },
+      {
+        "id": "scene-ep01-006",
+        "order": 6,
+        "title": "ใครจ่ายค่าเหล้า",
+        "description": "ทั้งสามกำลังจะเดินออกจากสวน แต่พบว่าทุกคนไม่มีเงิน",
+        "location": "ทางออกสวนท้อ",
+        "mood": "ปิดมุก",
+        "sceneCharacters": [
+          {
+            "id": "liu-bei",
+            "name": "เล่าปี่"
+          },
+          {
+            "id": "guan-yu",
+            "name": "กวนอู"
+          },
+          {
+            "id": "zhang-fei",
+            "name": "เตียวหุย"
+          }
+        ],
+        "isDetailed": true,
+        "duration": 6,
+        "script": "เล่าปี่: เดี๋ยวก่อน...ผู้ใดมีเงินบ้าง",
+        "dialogues": [
+          {
+            "characterId": "liu-bei",
+            "speakerName": "เล่าปี่",
+            "text": "เดี๋ยวก่อน...ผู้ใดมีเงินบ้าง"
+          }
+        ],
+        "isGenerating": false,
+        "generationProgress": 0,
+        "isGeneratingImage": false,
+        "isGeneratingVideo": false,
+        "actionDescription": "ทั้งสามหยุดพร้อมกัน ล้วงกระเป๋าแล้วมองหน้ากัน เงียบหนึ่งจังหวะ ก่อนภาพค้างแบบหนังเก่า",
+        "imageDescription": "At the peach garden exit, the three sworn brothers freeze awkwardly while checking empty cloth pouches. Ordinary rough faces, faded robes and worn gear. Comic embarrassment instead of heroic departure. 1970s film freeze-frame feeling.",
+        "videoPrompt": "The three men take two steps to leave. Only Liu Bei speaks in Thai: \"เดี๋ยวก่อน...ผู้ใดมีเงินบ้าง\". All three silently check empty pouches and look at one another. End with an awkward 1970s-style freeze-frame beat.",
+        "narrationText": ""
+      }
+    ],
+    "characters": [
+      {
+        "id": "liu-bei",
+        "name": "เล่าปี่",
+        "role": "ผู้นำที่ยังจนและชีวิตไม่ลงตัว",
+        "description": "ชายหน้าตาธรรมดาแบบคนอีสานวัยกลางคน ผอมแดดเผา สีหน้าเหนื่อยแต่จริงใจ ไม่หล่อเนี้ยบ",
+        "mainOutfit": "เสื้อคลุมโบราณสีครามหม่นและน้ำตาลซีด ผ้าคาดเอวทอมือเก่าๆ รองเท้าเรียบง่าย ไม่มีเครื่องประดับหรู",
+        "style": "1970s rustic historical comedy",
+        "imageStatus": "idle"
+      },
+      {
+        "id": "guan-yu",
+        "name": "กวนอู",
+        "role": "นักรบหน้าเคร่ง มุกหน้าตาย",
+        "description": "ชายร่างสูงหน้าตาอีสาน เครายาวไม่เนี้ยบ ผิวคล้ำแดด สีหน้าจริงจังและดูเหนื่อย",
+        "mainOutfit": "เสื้อคลุมเขียวหม่นซีด เกราะใช้งานจริงเก่าๆ ผ้าทอลายพื้นบ้านเป็นรายละเอียดเล็กน้อย",
+        "style": "1970s rustic historical comedy",
+        "imageStatus": "idle"
+      },
+      {
+        "id": "zhang-fei",
+        "name": "เตียวหุย",
+        "role": "นักรบเสียงดัง พลังลุงขี้เมา",
+        "description": "ชายอีสานร่างใหญ่ หนวดเครารุงรัง ผิวเข้มแดด ท่าทางเสียงดัง ชอบเหล้าและมั่นใจเกินเหตุ",
+        "mainOutfit": "ชุดนักรบเก่าๆ สีดำ น้ำตาล แดงหม่น มีผ้าคาดเอวลายทอพื้นบ้านแบบใช้งานจริง",
+        "style": "1970s rustic historical comedy",
+        "imageStatus": "idle"
+      }
+    ],
+    "atmosphereAssets": [
+      {
+        "id": "loc-market",
+        "title": "ตลาดหมู่บ้านโบราณ",
+        "description": "ตลาดเล็กๆ ฝุ่นเยอะ ร้านไม้และผ้าใบ ของใช้บ้านๆ ผู้คนธรรมดา ฉากดูสร้างจริงแบบหนังทุนไม่สูงยุค 70",
+        "lighting": "แสงธรรมชาติอุ่นซีด",
+        "relatedScenes": [
+          "scene-ep01-001",
+          "scene-ep01-002",
+          "scene-ep01-003"
+        ],
+        "status": "idle"
+      },
+      {
+        "id": "loc-peach-garden",
+        "title": "สวนท้อบ้านๆ",
+        "description": "สวนท้อขนาดเล็ก โต๊ะไม้เก่า ถ้วยดินเผา อาหารง่ายๆ บรรยากาศชนบท ไม่หรูและไม่แฟนตาซี",
+        "lighting": "แสงเย็นธรรมชาติแบบฟิล์มเก่า",
+        "relatedScenes": [
+          "scene-ep01-004",
+          "scene-ep01-005",
+          "scene-ep01-006"
+        ],
+        "status": "idle"
+      }
+    ],
+    "productAssets": [],
+    "customGenre": "Three Kingdoms Isan 1970s Vertical Comedy",
+    "productionDesignAnalyzed": true
+  },
+  "currentStep": 6
+}
