@@ -1,0 +1,21 @@
+{
+  "series": "THREE-KINGDOMS-ISAN-70S-COMEDY",
+  "version": "1.0",
+  "identityMode": "HARD_LOCK",
+  "episodePolicy": "ONE_LOCATION_PER_EPISODE",
+  "referencePriority": [
+    "CHARACTER_MASTER",
+    "PREVIOUS_SCENE_IMAGE",
+    "EPISODE_LOCATION_MASTER",
+    "CURRENT_ACTION"
+  ],
+  "rules": [
+    "Character IDs never change between episodes.",
+    "Face, body proportions, hair, beard and core identity never regenerate from scratch when a master image exists.",
+    "Step 5 must contain the same canonical character references used by Step 6.",
+    "Each episode has exactly one physical location master; camera angle may change but geography does not reset.",
+    "Scene N continuityEndFrame must equal Scene N+1 continuityStartState.",
+    "From Scene 2 onward use previous scene image together with Character Master and Location Master.",
+    "No unexplained costume, prop, lighting or position reset."
+  ]
+}
