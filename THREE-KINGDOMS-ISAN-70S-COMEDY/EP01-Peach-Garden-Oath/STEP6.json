@@ -1,6 +1,6 @@
 {
   "projectId": "three-kingdoms-isan-70s-comedy-ep01",
-  "revision": "EP01_V6_CANONICAL_CURRENT_THAI_CAFE_COMEDY_5X8_ONE_LOCATION",
+  "revision": "EP01_V7_THAIALND_1970S_ENV_CURRENT_THAI_CAFE_COMEDY_5X8_ONE_LOCATION",
   "status": "IMPORT_READY_NO_IMAGES_CANONICAL",
   "settings": {
     "aspectRatio": "9:16",
@@ -21,8 +21,8 @@
     "locationMode": "custom",
     "customLocationCount": 1,
     "visualStyleId": "custom",
-    "visualStyle": "1970s Thai-Chinese historical comedy film aesthetic, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft period lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty practical late-Han Chinese sets, natural sunlight. Three Kingdoms characters have ordinary Isan-inspired faces and weathered bodies but wear recognizable Three Kingdoms / late Eastern Han Chinese clothing only. No modern objects, no fantasy glow, no polished idol styling.",
-    "customVisualStyle": "Feels like a lost 1970s Thai-dubbed Chinese Three Kingdoms comedy film. Imperfect makeup, ordinary faces, sweat, dust and dry comic timing. Liu Bei looks broke but sincere; Guan Yu stern and rugged; Zhang Fei has loud drunk-uncle energy. Costume remains Chinese Three Kingdoms-era.",
+    "visualStyle": "1970s rural Thailand comedy-film environment, vertical 9:16. Faded Eastmancolor, warm sepia cast, soft old lens, visible film grain, slight gate weave, tiny scratches, muted contrast, dusty provincial Thai roadside setting, old wooden tavern/shop, dirt road, old utility pole, weathered benches and warm tungsten bulbs. Characters remain actual Three Kingdoms figures with Isan-inspired ordinary faces and recognizable late Eastern Han / Three Kingdoms Chinese clothing.",
+    "customVisualStyle": "Lost 1970s Thai rural comedy atmosphere. The world around the characters is provincial Thailand in the 1970s, while Liu Bei, Guan Yu and Zhang Fei still dress as Three Kingdoms characters. Imperfect makeup, ordinary faces, sweat, dust, dry cafe-comedy timing. No contemporary objects.",
     "dialogueStyle": "Contemporary natural Thai with classic Thai cafe-comedy timing. Each scene has one clear comic beat using setup, teasing, deadpan reaction, quick punchline or callback. Light current Isan flavor may appear naturally. No archaic wording.",
     "speakerNicknameMap": {
       "liu-bei": "พี่เล่า",
@@ -38,7 +38,7 @@
       "episode_location_master",
       "current_action"
     ],
-    "customProjectStructure": "5 continuous scenes x 8 seconds = 40 seconds. EXACTLY ONE LOCATION for the entire episode: ร้านเหล้าริมสวนท้อ. Step 5 text character masters are immutable. Wardrobe must remain Three Kingdoms / late Eastern Han Chinese. Scene N end frame must physically equal Scene N+1 start state.",
+    "customProjectStructure": "5 continuous scenes x 8 seconds = 40 seconds. EXACTLY ONE LOCATION for the entire episode: ร้านเหล้าริมสวนท้อในชนบทไทยยุค 70. Environment is Thailand 1970s. Character wardrobe remains Three Kingdoms / late Eastern Han Chinese. Step 5 text character masters are immutable. Scene N end frame must physically equal Scene N+1 start state.",
     "comedyLock": {
       "mode": "THAI_CAFE_COMEDY",
       "mandatory": true,
@@ -50,7 +50,8 @@
         "guan-yu": "deadpan straight-man and short cutting comeback",
         "zhang-fei": "loud drunk-uncle teasing and overconfidence"
       }
-    }
+    },
+    "environmentStyle": "THAILAND_RURAL_1970S"
   },
   "movie": {
     "genre": "Three Kingdoms Isan Retro Comedy",
@@ -67,16 +68,16 @@
       "retro"
     ],
     "storyTitle": "สามก๊กบ้านเฮา EP01 — สาบานสวนท้อแบบคนบ้านๆ",
-    "storySummary": "40 วินาที 5 ฉากต่อเนื่อง ฉากละ 8 วินาที ทั้งหมดเกิดที่ร้านเหล้าริมสวนท้อแห่งเดียว พี่เล่าขายรองเท้าไม่ออก เจ้าเตียวชวนดื่ม พี่กวนร่วมวง ทั้งสามคุยเรื่องบ้านเมือง สาบานเป็นพี่น้อง และจบด้วยมุกไม่มีใครมีเงินจ่ายค่าสุรา",
-    "mainStoryPrompt": "CANONICAL LOCK. 5 scenes x 8 seconds = 40 seconds. ONE LOCATION only: ร้านเหล้าริมสวนท้อ. Actual Three Kingdoms characters in recognizable late Eastern Han / Three Kingdoms Chinese clothing. Faces, skin, body type and comic behavior may be Isan-inspired; clothing MUST NOT become Thai/Isan. Preserve the exact 1970s faded Thai-Chinese film look. No images or Base64 embedded in import JSON. All dialogue uses natural present-day Thai with classic Thai cafe-comedy rhythm: setup, tease, deadpan reaction, punchline and occasional callback. One clear speaker at a time, at least one comic beat per scene, no archaic words.",
-    "genreDetailPrompt": "Lost 1970s Thai-dubbed Chinese Three Kingdoms comedy film visually, but all spoken dialogue uses natural present-day Thai. Ordinary weathered Isan-inspired faces, late-Han Chinese wardrobe, dry rustic comedy.",
+    "storySummary": "40 วินาที 5 ฉากต่อเนื่อง ฉากละ 8 วินาที ทั้งหมดเกิดที่ร้านเหล้าไม้ริมสวนท้อในชนบทไทยยุค 70 แห่งเดียว พี่เล่าขายรองเท้าไม่ออก เตียวชวนดื่ม พี่กวนร่วมวง ทั้งสามคุยเรื่องบ้านเมือง สาบานเป็นพี่น้อง และจบด้วยมุกหารค่าเหล้า",
+    "mainStoryPrompt": "CANONICAL LOCK. 5 scenes x 8 seconds = 40 seconds. ONE LOCATION only: a rustic roadside tavern beside a peach tree in rural Thailand in the 1970s. Environment and atmosphere MUST be Thailand 1970s: weathered wooden shop, dirt road, old utility pole, rough benches, hand-painted old signboard without readable generated text, warm tungsten bulb, provincial clutter and faded old-film texture. Characters remain actual Three Kingdoms figures in recognizable late Eastern Han / Three Kingdoms Chinese clothing. Faces, skin, body type and comic behavior may be Isan-inspired; clothing MUST NOT become Thai/Isan. Dialogue is natural present-day Thai with Thai cafe-comedy rhythm. No images or Base64 embedded.",
+    "genreDetailPrompt": "Lost 1970s Thai rural comedy film visually, with Three Kingdoms characters in Chinese late-Han costumes, ordinary weathered Isan-inspired faces, natural present-day Thai dialogue and classic Thai cafe-style punchlines.",
     "scenes": [
       {
         "id": "scene-ep01-001",
         "order": 1,
         "title": "ขายรองเท้าหน้าร้าน",
         "description": "พี่เล่านั่งขายรองเท้าสานที่โต๊ะหน้าร้านเหล้าริมสวนท้อ เจ้าเตียวโผล่ออกจากร้านพร้อมไหสุรา",
-        "location": "ร้านเหล้าริมสวนท้อ",
+        "location": "ร้านเหล้าริมสวนท้อ — ชนบทไทยยุค 70",
         "mood": "ตลกแบบชีวิตฝืด",
         "sceneCharacters": [
           {
@@ -103,7 +104,7 @@
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
         "actionDescription": "พี่เล่านั่งถอนใจมองรองเท้าสานที่ขายไม่ออก เจ้าเตียวเปิดประตูร้าน เดินออกมาพร้อมไหสุราแล้วชวนเสียงดัง",
-        "imageDescription": "ONE LOCATION: outside the same late-Han Chinese tavern under one peach tree. Liu Bei wears worn muted blue-grey Han robes; Zhang Fei wears rough dark late-Han military clothing with worn lamellar pieces. Isan-inspired ordinary faces only, NOT Isan clothing. 1970s faded film.",
+        "imageDescription": "Same ONE LOCATION: a weathered rural Thai roadside tavern/shop in the 1970s, beside a peach tree and dirt road, with rough wooden table and bench, old utility pole, warm tungsten bulb, enamelware and aged provincial clutter. Characters still wear locked Three Kingdoms / late-Han Chinese costumes. Liu Bei wears worn muted blue-grey Han robes; Zhang Fei wears rough dark late-Han military clothing with worn lamellar pieces. 1970s faded Eastmancolor, no contemporary objects, no ancient-China environment.",
         "videoPrompt": "8-second vertical shot. Start on Liu Bei at the table and sandal display; Zhang Fei exits the same tavern door with a clay wine jar and delivers a classic Thai cafe-style teasing line in natural present-day Thai: \"พี่เล่า ขายทั้งวันยังไม่ได้สักคู่เหรอ...งั้นขายร้านทิ้งแล้วมากินเหล้ากับผมดีกว่า!\". Liu Bei reacts silently with a tired stare. Keep Chinese Three Kingdoms wardrobe locked. One speaker only.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
@@ -123,7 +124,7 @@
         "order": 2,
         "title": "พี่กวนได้กลิ่นสุรา",
         "description": "พี่กวนเดินมาตามทางดินข้างร้าน เห็นเจ้าเตียวกับพี่เล่าที่โต๊ะเดิมแล้วหยุดร่วมวง",
-        "location": "ร้านเหล้าริมสวนท้อ",
+        "location": "ร้านเหล้าริมสวนท้อ — ชนบทไทยยุค 70",
         "mood": "มุกหน้าตาย",
         "sceneCharacters": [
           {
@@ -154,7 +155,7 @@
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
         "actionDescription": "พี่กวนเดินเข้ามาถึงหัวโต๊ะ มองไหสุรานิ่งๆ เจ้าเตียวชะงัก ส่วนพี่เล่ากลั้นหัวเราะ",
-        "imageDescription": "Same tavern, same table, same peach tree, same clay wine jar position. Guan Yu wears faded dark-green Three Kingdoms / late-Han robes with restrained worn lamellar protection. No Thai costume. 1970s old film.",
+        "imageDescription": "Same ONE LOCATION: a weathered rural Thai roadside tavern/shop in the 1970s, beside a peach tree and dirt road, with rough wooden table and bench, old utility pole, warm tungsten bulb, enamelware and aged provincial clutter. Characters still wear locked Three Kingdoms / late-Han Chinese costumes. Guan Yu wears faded dark-green late-Han robes with restrained worn lamellar protection; Liu Bei and Zhang Fei keep their previous locked costumes. 1970s faded Eastmancolor, no contemporary objects, no ancient-China environment.",
         "videoPrompt": "8-second continuation from previous frame. Guan Yu enters from the same dirt path, looks at the wine jar and delivers a deadpan Thai cafe-style comeback in natural present-day Thai: \"เตียว...ฉันได้กลิ่นเหล้ามาแต่ไกล เสียงแกน่ะได้ยินตั้งแต่เมื่อวานแล้ว\". Zhang Fei reacts silently, offended for one beat; Liu Bei suppresses a smile. Preserve exact props and costume.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
@@ -175,7 +176,7 @@
         "order": 3,
         "title": "คุยเรื่องบ้านเมือง",
         "description": "ทั้งสามนั่งรอบโต๊ะเดิม ดื่มสุราและคุยเรื่องบ้านเมือง พี่เล่าพูดจริงจังแต่ยังมีโทนบ้านๆ",
-        "location": "ร้านเหล้าริมสวนท้อ",
+        "location": "ร้านเหล้าริมสวนท้อ — ชนบทไทยยุค 70",
         "mood": "จริงจังปนฮา",
         "sceneCharacters": [
           {
@@ -206,7 +207,7 @@
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
         "actionDescription": "พี่เล่าพูดจริงจัง พี่กวนนั่งนิ่งฟัง เจ้าเตียวรินสุราแต่ลดเสียงลง",
-        "imageDescription": "Same single location and same table. All three remain in recognizable Three Kingdoms late-Han Chinese clothing: Liu Bei blue-grey worn Han robe, Guan Yu faded green robe and restrained lamellar, Zhang Fei dark brown/black/muted red military clothing. Isan-inspired faces only.",
+        "imageDescription": "Same ONE LOCATION: a weathered rural Thai roadside tavern/shop in the 1970s, beside a peach tree and dirt road, with rough wooden table and bench, old utility pole, warm tungsten bulb, enamelware and aged provincial clutter. Characters still wear locked Three Kingdoms / late-Han Chinese costumes. All three keep their exact locked Three Kingdoms costumes: Liu Bei blue-grey Han robe, Guan Yu faded green robe and worn lamellar, Zhang Fei dark brown/black/muted red military clothing. 1970s faded Eastmancolor, no contemporary objects, no ancient-China environment.",
         "videoPrompt": "8-second static-medium continuation. Liu Bei begins sincerely, then lands a dry cafe-style punchline in natural present-day Thai: \"พี่กวน เตียว...บ้านเมืองมันวุ่น เราสามคนต้องช่วยกันนะ โดยเฉพาะช่วยผมขายรองเท้าก่อน\". Guan Yu stays deadpan; Zhang Fei pauses mid-pour. No overlapping dialogue.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
@@ -227,7 +228,7 @@
         "order": 4,
         "title": "สาบานใต้ต้นท้อ",
         "description": "ทั้งสามลุกจากโต๊ะเดิม ยกจอกสาบานเป็นพี่น้อง เจ้าเตียวทำลายบรรยากาศด้วยมุกเรื่องสุรา",
-        "location": "ร้านเหล้าริมสวนท้อ",
+        "location": "ร้านเหล้าริมสวนท้อ — ชนบทไทยยุค 70",
         "mood": "ซึ้งนิดๆ แล้วหักมุก",
         "sceneCharacters": [
           {
@@ -258,8 +259,8 @@
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
         "actionDescription": "ทั้งสามลุกข้างโต๊ะ ยกจอกพร้อมกัน พี่เล่ากับพี่กวนจริงจัง เจ้าเตียวเหลือบมองไหสุราแล้วพูดมุก",
-        "imageDescription": "Grounded oath beside the SAME table and peach tree, not a new ceremonial garden. Three Kingdoms Chinese costumes remain unchanged and worn. No Thai costume, no fantasy aura, no heroic glamour. 1970s faded film.",
-        "videoPrompt": "8-second continuation. They stand beside the same table and raise clay cups. Zhang Fei breaks the solemn mood with a cafe-style punchline in natural present-day Thai: \"ตกลง! เป็นพี่น้องกันแล้ว ทุกอย่างหารสาม...ยกเว้นหนี้นะพี่เล่า!\". Liu Bei and Guan Yu stare at him silently for a comic beat. Same location and costumes.",
+        "imageDescription": "Same ONE LOCATION: a weathered rural Thai roadside tavern/shop in the 1970s, beside a peach tree and dirt road, with rough wooden table and bench, old utility pole, warm tungsten bulb, enamelware and aged provincial clutter. Characters still wear locked Three Kingdoms / late-Han Chinese costumes. All three keep the exact same locked Three Kingdoms Chinese costumes while standing beside the same Thai 1970s roadside tavern table. 1970s faded Eastmancolor, no contemporary objects, no ancient-China environment.",
+        "videoPrompt": "8-second continuation. They stand beside the same table and raise clay cups. Zhang Fei breaks the solemn mood with a cafe-style punchline in natural present-day Thai: \"ตกลง! เป็นพี่น้องกันแล้ว ทุกอย่างหารสาม...ยกเว้นหนี้นะพี่เล่า!\". Liu Bei and Guan Yu stare at him silently for a comic beat. Keep the same rural Thailand 1970s tavern environment and the same Three Kingdoms costumes.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
         "characterMasterRequired": true,
@@ -279,7 +280,7 @@
         "order": 5,
         "title": "ผู้ใดจ่ายค่าสุรา",
         "description": "ทั้งสามกำลังจะเดินออกจากร้านแต่หยุดพร้อมกันเมื่อพี่เล่าถามเรื่องเงิน ปิดด้วย freeze-frame แบบหนังยุค 70",
-        "location": "ร้านเหล้าริมสวนท้อ",
+        "location": "ร้านเหล้าริมสวนท้อ — ชนบทไทยยุค 70",
         "mood": "ปิดมุก",
         "sceneCharacters": [
           {
@@ -310,7 +311,7 @@
         "isGeneratingImage": false,
         "isGeneratingVideo": false,
         "actionDescription": "ทั้งสามหยุด ล้วงถุงเงิน พบว่าว่างเปล่า มองหน้ากันเงียบๆ แล้วภาพค้าง",
-        "imageDescription": "Same tavern and peach-tree table visible behind them. All three still wear the exact same locked Three Kingdoms Chinese costumes. Empty period cloth coin pouches only. No modern props.",
+        "imageDescription": "Same ONE LOCATION: a weathered rural Thai roadside tavern/shop in the 1970s, beside a peach tree and dirt road, with rough wooden table and bench, old utility pole, warm tungsten bulb, enamelware and aged provincial clutter. Characters still wear locked Three Kingdoms / late-Han Chinese costumes. All three still wear the exact same locked Three Kingdoms Chinese costumes; the Thai 1970s tavern, dirt road and old utility pole remain visible. 1970s faded Eastmancolor, no contemporary objects, no ancient-China environment.",
         "videoPrompt": "8-second final continuation. Liu Bei uses a callback to Zhang Fei's previous joke and says naturally in present-day Thai: \"เดี๋ยวก่อนเตียว...เมื่อกี้บอกทุกอย่างหารสาม งั้นค่าเหล้านี่หารด้วยใช่ไหม?\". Zhang Fei freezes, Guan Yu slowly looks at him, all three check empty period coin pouches, then hold for a 1970s-style freeze-frame.",
         "narrationText": "",
         "locationRef": "loc-ep01-peach-tavern",
@@ -380,18 +381,21 @@
     "atmosphereAssets": [
       {
         "id": "loc-ep01-peach-tavern",
-        "title": "ร้านเหล้าริมสวนท้อ",
-        "description": "ร้านเหล้าไม้เก่าแบบจีนปลายฮั่น ตั้งติดสวนท้อขนาดเล็ก มีโต๊ะไม้เก่าใต้ต้นท้อใหญ่ ม้านั่ง รั้วไม้จีนเรียบง่าย ทางดิน และพื้นที่หน้าร้านพอให้ตัวละครเดินเข้าออก ทั้ง 5 ฉากของ EP01 เกิดในพื้นที่เดียวกันนี้เท่านั้น",
-        "lighting": "แสงบ่ายแก่ถึงเย็นอุ่นแบบฟิล์มสีซีดยุค 70 ทิศทางแสงคงเดิมตลอด EP",
+        "title": "ร้านเหล้าริมสวนท้อ — ชนบทไทยยุค 70",
+        "description": "ร้านเหล้าไม้เก่าแบบชนบทไทยยุค 70 อยู่ริมถนนดิน มีหน้าร้านเปิดโล่ง โต๊ะไม้เก่าและม้านั่งยาวใต้ต้นท้อข้างร้าน ป้ายร้านเขียนมือแบบเก่าโดยไม่ต้องมีข้อความอ่านชัด หลอดไฟไส้สีอุ่น เสาไฟเก่า รั้วไม้ ของใช้เคลือบและภาชนะบ้านๆ ทั้ง 5 ฉากของ EP01 เกิดในพื้นที่เดียวกันนี้เท่านั้น",
+        "lighting": "แสงบ่ายแก่ถึงเย็นของชนบทไทยยุค 70 โทนอุ่น ฟิล์มสีซีด แสงธรรมชาติคงทิศเดิม และมีหลอดไฟไส้สีอุ่นหน้าร้านเมื่อเห็นในเฟรม",
         "keyProps": [
           "โต๊ะไม้เก่า",
-          "ม้านั่ง",
+          "ม้านั่งยาว",
           "ไหสุราดินเผา",
           "จอกดินเผา",
           "แผงรองเท้าสานเล็ก",
           "ต้นท้อใหญ่",
-          "รั้วไม้",
-          "ทางดิน"
+          "รั้วไม้เก่า",
+          "ถนนดิน",
+          "หลอดไฟไส้สีอุ่น",
+          "เสาไฟเก่า",
+          "ภาชนะเคลือบและของใช้บ้านๆ ยุค 70"
         ],
         "immutable": true,
         "relatedScenes": [
