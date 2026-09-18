@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'none'; object-src 'none'; base-uri 'none'"><title>สามก๊กบ้านเฮา — ประกอบ EP01 จากภาพเดิม</title>
+<style>body{font:16px/1.7 system-ui,sans-serif;background:#171411;color:#f5eee5;margin:0}main{max-width:1160px;margin:auto;padding:28px}h1{font-size:28px;line-height:1.35}h2{font-size:20px}button,.download{background:#f0b665;color:#23170a;border:0;border-radius:8px;padding:12px 16px;cursor:pointer;font:inherit;text-decoration:none;display:inline-block;margin:5px}button:disabled{opacity:.4;cursor:not-allowed}select,input{font:inherit;max-width:100%;padding:8px}.box,.card{border:1px solid #504538;border-radius:12px;padding:20px;margin:18px 0;background:#211c17}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}.card{margin:0}canvas{display:block;width:100%;height:auto;touch-action:none;background:#333;cursor:crosshair}label{display:block;margin:12px 0}.hint{color:#d5c5b0;font-size:14px}.ok{color:#9edfba}.warn{color:#ffcc87}pre{white-space:pre-wrap;word-break:break-word}.hidden{display:none}code{overflow-wrap:anywhere}table{width:100%;border-collapse:collapse}td,th{padding:9px;text-align:left;border-bottom:1px solid #504538}.status{min-height:30px}</style></head>
+<body><main><h1>สามก๊กบ้านเฮา · EP01 ฉบับภาพตัวละครเดิม</h1>
+<p>6 ฉาก × 6 วินาที · สถานที่เดียว: ร้านเหล้าริมสวนท้อ · ภาษาไทยย้อนยุค มุกตลก · ไม่สร้างหน้าใหม่</p>
+<div class="box"><strong>สถานะ: รอเลือก JSON export ต้นฉบับที่มีภาพจริง</strong><p>ไฟล์นี้ทำงานบนเครื่องคุณ ไม่อัปโหลดภาพ ไม่เรียก AI และไม่ใช้รูปโปสเตอร์ ตัวละครอยู่ใน <code>movie.characters</code> และฉากอยู่ใน <code>movie.scenes</code> ตามโครง export เดิม ไม่สร้าง wrapper ชื่อ step5/step6 ขึ้นใหม่</p>
+<label>เลือกไฟล์ “สามก๊กบ้านเฮา EP01 — สาบานสวนท้อแบบคนบ้านๆ.json” <input id="source" type="file" accept=".json,application/json"></label><p id="sourceStatus" class="status"></p>
+<p class="hint">ถ้า STEP5 เดิมมีภาพตัวละคร จะนำภาพนั้นมาให้ยืนยันก่อน หากมีภาพอยู่เฉพาะในฉาก ให้เลือกฉากแล้วลากกรอบครอปเฉพาะตัวละคร ห้ามใช้ภาพกลุ่มเดียวกันแทนทั้งสามคน การครอปไม่เปลี่ยนหน้า สี หรือเสื้อผ้า</p></div>
+<div id="cards" class="grid"></div>
+<div class="box"><h2>EP01 — สาบานได้ แต่ใครจ่ายสุรา</h2><p>ทุกฉากอยู่ที่โต๊ะเดียวกัน ทั้งสามอยู่ในพื้นที่นี้ตั้งแต่ฉากแรก ไม่เดินจากตลาดไปสวน และไม่เปลี่ยนแสงหรือชุดกลางตอน</p><table><thead><tr><th>ฉาก</th><th>ผู้พูด</th><th>บทพูด</th></tr></thead><tbody id="lines"></tbody></table></div>
+<div class="box"><button id="build" disabled>ประกอบ EP01 พร้อมภาพ STEP5</button><p id="buildStatus" class="status"></p><div id="results" class="hidden"></div><p class="warn">หลัง Import ต้องตรวจว่าภาพตัวละคร STEP5 ขึ้นครบ และเลือก reference ใน STEP6 จริง กฎใน JSON ไม่ใช่ตัวรับประกันว่า AI จะรักษาหน้า/เสียงได้ 100% ยังไม่ได้ทดสอบ importer ของ P&P จากหน้านี้</p></div>
+</main><script src="ep01-builder.js"></script><script>
+'use strict';
+const A=window.TKIEP01, sourceInput=document.getElementById('source'), cards=document.getElementById('cards'), buildButton=document.getElementById('build'), resultBox=document.getElementById('results');
+let source=null,selected={},fileInfo={},loadGeneration=0,resultUrls=[];
+function node(tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;}
+function setStatus(id,text,ok){const n=document.getElementById(id);n.textContent=text;n.className='status '+(ok?'ok':'warn');}
+function clearResults(){resultUrls.forEach(URL.revokeObjectURL);resultUrls=[];resultBox.replaceChildren();resultBox.classList.add('hidden');setStatus('buildStatus','',true);}
+function refresh(){buildButton.disabled=!source||![...A.IDS,'location'].every(id=>selected[id]&&selected[id].confirmed);}
+for(let i=0;i<A.SCENES.length;i++){const s=A.SCENES[i],row=node('tr');row.append(node('td',String(i+1)),node('td',A.NAMES[s.speaker]),node('td',s.text));document.getElementById('lines').append(row);}
+sourceInput.addEventListener('change',async()=>{
+ const epoch=++loadGeneration,file=sourceInput.files[0];source=null;selected={};cards.replaceChildren();clearResults();refresh();if(!file)return;
+ try{
+  if(file.size>600*1024*1024)throw new Error('ไฟล์ใหญ่เกิน 600 MB กรุณา export โดยไม่ฝังวิดีโอถ้าระบบมีตัวเลือก');
+  setStatus('sourceStatus','กำลังอ่าน JSON และตรวจข้อมูล...',true);
+  const text=await file.text();if(epoch!==loadGeneration)return;
+  const parsed=JSON.parse(text.replace(/^\uFEFF/,''));A.assertSource(parsed);
+  source=parsed;fileInfo={sourceFileName:file.name,sourceFileSha256:await A.sha256(new TextEncoder().encode(text))};
+  if(epoch!==loadGeneration)return;
+  for(const id of [...A.IDS,'location'])makeCard(id,epoch);
+  setStatus('sourceStatus','อ่านโครงสร้างได้แล้ว โปรดยืนยันภาพเดิมทั้ง 3 คน และภาพสถานที่ 1 ภาพ',true);
+ }catch(e){source=null;setStatus('sourceStatus',e.message,false);}refresh();
+});
+function makeCard(id,epoch){
+ const card=node('section',undefined,'card'),label=id==='location'?'สถานที่เดียว — เลือกฉากโต๊ะใต้ต้นท้อ':A.NAMES[id]+' / '+A.NICKS[id],list=A.candidates(source,id);
+ card.append(node('h2',label));
+ if(!list.length){card.append(node('p','ไม่พบภาพฝังใน export สำหรับรายการนี้ ห้ามสร้างภาพใหม่แทน กรุณาตรวจว่า export นี้รวมภาพตัวละครหรือภาพฉากที่สร้างสำเร็จแล้ว','warn'));cards.append(card);return;}
+ const pick=node('select'),canvas=node('canvas'),ctx=canvas.getContext('2d'),note=node('p','', 'hint'),reset=node('button','ใช้เต็มภาพ'),confirm=node('button','ยืนยันภาพนี้'),state=node('p','ยังไม่ยืนยัน','warn');
+ list.forEach((c,i)=>{const o=node('option',c.label+' · '+c.sourcePath);o.value=String(i);pick.append(o);});
+ card.append(pick,note,canvas,reset,confirm,state);cards.append(card);
+ let image=null,rect=null,drag=null,current=null,imageSeq=0;
+ function draw(){if(!image)return;ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(image,0,0);if(rect){ctx.strokeStyle='#ffd05a';ctx.lineWidth=Math.max(2,image.width/160);ctx.strokeRect(rect.x,rect.y,rect.w,rect.h);}}
+ function changed(){delete selected[id];clearResults();state.textContent='ยังไม่ยืนยัน';state.className='warn';refresh();}
+ function point(e){const r=canvas.getBoundingClientRect();return{x:Math.max(0,Math.min(canvas.width,(e.clientX-r.left)*canvas.width/r.width)),y:Math.max(0,Math.min(canvas.height,(e.clientY-r.top)*canvas.height/r.height))};}
+ canvas.addEventListener('pointerdown',e=>{if(!image)return;changed();drag=point(e);rect=null;canvas.setPointerCapture(e.pointerId);draw();});
+ canvas.addEventListener('pointermove',e=>{if(!drag)return;const p=point(e);rect={x:Math.round(Math.min(drag.x,p.x)),y:Math.round(Math.min(drag.y,p.y)),w:Math.round(Math.abs(drag.x-p.x)),h:Math.round(Math.abs(drag.y-p.y))};draw();});
+ canvas.addEventListener('pointerup',()=>{drag=null;});canvas.addEventListener('pointercancel',()=>{drag=null;});
+ reset.addEventListener('click',()=>{rect=null;changed();draw();});
+ confirm.addEventListener('click',async()=>{
+  try{
+   if(!image||!current)throw new Error('ภาพยังไม่พร้อม');
+   if(id!=='location'&&!current.native&&!rect)throw new Error('ภาพนี้มาจากฉาก กรุณาลากกรอบให้เหลือเฉพาะ '+A.NAMES[id]+' ก่อนยืนยัน');
+   if(rect&&(rect.w<96||rect.h<96))throw new Error('กรอบเล็กเกินไป ควรเห็นใบหน้า ผม และชุดชัดเจน');
+   let dataUri=current.dataUri,crop=null;
+   if(rect){const out=document.createElement('canvas');out.width=rect.w;out.height=rect.h;out.getContext('2d').drawImage(image,rect.x,rect.y,rect.w,rect.h,0,0,rect.w,rect.h);dataUri=out.toDataURL('image/png');crop={x:rect.x,y:rect.y,width:rect.w,height:rect.h,sourceWidth:image.width,sourceHeight:image.height};}
+   const digest=await A.sha256(A.parseImage(dataUri).bytes);if(epoch!==loadGeneration)return;
+   selected[id]={...current,dataUri,crop,confirmed:true};state.textContent='ยืนยันแล้ว · SHA256 '+digest.slice(0,16)+'…'+(crop?' · ครอปจากภาพเดิม':' · ใช้ไบต์ภาพเดิม');state.className='ok';refresh();
+  }catch(e){state.textContent=e.message;state.className='warn';}
+ });
+ async function show(){
+  const seq=++imageSeq;changed();current=list[Number(pick.value)];rect=null;image=null;confirm.disabled=true;
+  note.textContent=current.native?'พบภาพในข้อมูล STEP5 เดิม ตรวจว่าเป็นตัวละคร/สถานที่ที่อนุมัติแล้วก่อนยืนยัน':'ภาพนี้เป็นภาพฉาก ไม่ใช่ character sheet อัตโนมัติ สำหรับตัวละครต้องลากกรอบครอปเฉพาะคน ส่วนสถานที่เลือกฉากสวนท้อที่ต้องการคงไว้ทั้งตอน';
+  try{A.parseImage(current.dataUri);const img=new Image();img.onload=()=>{if(seq!==imageSeq||epoch!==loadGeneration)return;if(img.width<96||img.height<96){state.textContent='ภาพเล็กเกินไปสำหรับ reference';return;}image=img;canvas.width=img.width;canvas.height=img.height;draw();confirm.disabled=false;};img.onerror=()=>{state.textContent='อ่านพิกเซลภาพนี้ไม่ได้ เลือกภาพอื่นจากต้นฉบับ';};img.src=current.dataUri;}catch(e){state.textContent=e.message;}
+ }
+ pick.addEventListener('change',show);show();
+}
+buildButton.addEventListener('click',async()=>{
+ buildButton.disabled=true;clearResults();setStatus('buildStatus','กำลังตรวจ Base64, hash, บทพูด และความต่อเนื่อง...',true);
+ try{
+  const result=await A.build(source,selected,fileInfo),files=A.packageFiles(result),projectText=JSON.stringify(result.project,null,2);
+  function link(text,blob,name){const url=URL.createObjectURL(blob);resultUrls.push(url);const a=node('a',text,'download');a.href=url;a.download=name;resultBox.append(a);}
+  link('รับไฟล์ EP01 สำหรับ Import ครั้งเดียว',new Blob([projectText],{type:'application/json;charset=utf-8'}),'EP01_STEP6_WITH_MASTERS.json');
+  link('รับ ZIP ตัวละคร + Master + EP01 สำหรับเก็บใน Git',new Blob(A.makeZip(files),{type:'application/zip'}),'THREE_KINGDOMS_ISAN_EP01_MASTER_PACK.zip');
+  resultBox.append(node('p','ใช้ EP01_STEP6_WITH_MASTERS.json นำเข้า P&P ได้ในครั้งเดียวตามโครง export; ตรวจภาพใน STEP5 ก่อนกดสร้างฉาก ไม่ต้อง import STEP5 แล้ว import STEP6 ซ้ำ หากเก็บขึ้น Git ให้แตก ZIP ลง root ของ repo แล้วตรวจ git diff ก่อน commit/push'));
+  resultBox.append(node('pre',JSON.stringify(result.qa,null,2)));
+  resultBox.classList.remove('hidden');setStatus('buildStatus','ประกอบไฟล์และตรวจโครงสร้างผ่านแล้ว · 3 ตัวละคร · 1 สถานที่ · 6 ฉาก · 36 วินาที · ยังรอทดสอบ Import จริง',true);
+ }catch(e){setStatus('buildStatus','หยุดสร้างไฟล์: '+e.message,false);}finally{refresh();}
+});
+</script></body></html>

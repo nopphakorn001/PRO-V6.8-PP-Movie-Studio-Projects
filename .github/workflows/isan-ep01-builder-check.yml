@@ -1,0 +1,27 @@
+name: Isan EP01 builder checks
+on:
+  push:
+    paths:
+      - 'THREE-KINGDOMS-ISAN-70S-COMEDY/tools/**'
+      - '.github/workflows/isan-ep01-builder-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch exact public repository commit
+        env:
+          REPO_URL: ${{ github.server_url }}/${{ github.repository }}.git
+          TARGET_SHA: ${{ github.sha }}
+        run: |
+          git init .
+          git remote add origin "$REPO_URL"
+          git fetch --no-tags --depth=1 origin "$TARGET_SHA"
+          git checkout --detach FETCH_HEAD
+      - name: Check syntax and deterministic builder invariants
+        run: |
+          node --check THREE-KINGDOMS-ISAN-70S-COMEDY/tools/ep01-builder.js
+          node THREE-KINGDOMS-ISAN-70S-COMEDY/tools/tests/test-ep01-builder.cjs
