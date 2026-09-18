@@ -1,6 +1,6 @@
 {
   "series": "THREE-KINGDOMS-ISAN-70S-COMEDY",
-  "version": "2.1",
+  "version": "2.2",
   "status": "HARD_LOCK_TEXT_ONLY_CANONICAL",
   "imagePolicy": "NO_IMAGES_NO_BASE64",
   "usage": {
@@ -30,18 +30,21 @@
   },
   "dialogueLock": {
     "language": "Thai",
-    "style": "Thai period-style, rustic, informal, easy to understand, dry comedy",
+    "accent": "CURRENT_NATURAL_THAI",
+    "style": "Contemporary conversational Thai, natural and easy to understand, casual comedy. Delivery may have a light current Isan flavor where natural, but vocabulary must sound modern, not historical.",
     "nicknames": {
       "liu-bei": "พี่เล่า",
       "guan-yu": "พี่กวน",
-      "zhang-fei": "เจ้าเตียว"
+      "zhang-fei": "เตียว"
     },
     "rules": [
       "one clear speaker at a time",
-      "short lines",
-      "punchline-friendly timing",
-      "no modern slang",
-      "no stiff royal-court phrasing unless plot requires it"
+      "short natural spoken lines",
+      "modern conversational Thai",
+      "light current Isan flavor is allowed in delivery",
+      "no archaic words such as ข้า เจ้า มิใช่ เถิด ผู้ใด unless intentionally used as a joke",
+      "no royal-court phrasing",
+      "keep punchline timing"
     ]
   },
   "characters": [
@@ -57,10 +60,10 @@
       "voicePersonaLocked": true,
       "visualIdentity": "ชายอีสานวัยกลางคน รูปร่างผอมจากงานหนัก ผิวคล้ำแดด หน้าตาธรรมดา เหนื่อยล้าแต่ใจดี ผมดำยุ่งรวบหลวม หนวดเคราบางไม่เนี้ยบ ฟันและผิวมีความไม่สมบูรณ์แบบตามวัย ห้ามทำให้หล่อแบบพระเอก",
       "coreCostume": "Recognizable Liu Bei-inspired late Eastern Han / Three Kingdoms attire: worn layered Han robe in muted blue-grey and earth tones, narrow period sash, practical cloth shoes, simple period hair binding. Poor and weathered, but unmistakably Chinese Three Kingdoms-era clothing. No Thai/Isan textile styling.",
-      "manner": "สุภาพกว่าอีกสองคน แต่ยังพูดกันเอง มีจังหวะถอนหายใจและมุกจากความจน",
+      "manner": "พูดภาษาไทยปัจจุบัน สุภาพกว่าเพื่อนเล็กน้อย แต่คุยกันเองและมีมุกจากความจน",
       "dialogueAddress": [
         "พี่กวน",
-        "เจ้าเตียว"
+        "เตียว"
       ]
     },
     {
@@ -75,16 +78,16 @@
       "voicePersonaLocked": true,
       "visualIdentity": "ชายอีสานร่างสูงใหญ่ ไหล่กว้าง ผิวคล้ำแดด หน้าดุและเหนื่อย เครายาวดำปนหยาบไม่จัดทรง ผมรวบแบบใช้งานจริง รอยแดดและผิวไม่เรียบ ห้ามทำให้เป็นนักรบแฟนตาซีหรือหล่อเนี้ยบ",
       "coreCostume": "Recognizable Guan Yu-inspired Three Kingdoms attire: faded dark-green Han robe with restrained worn lamellar protection, period belt, practical boots, simple period head binding. Rugged and old, not ornate fantasy armor. No Thai/Isan textile styling.",
-      "manner": "นิ่ง ขรึม พูดสั้น ชอบมุกหน้าตาย ไม่เล่นใหญ่",
+      "manner": "พูดภาษาไทยปัจจุบันสั้นๆ นิ่ง ขรึม มุกหน้าตาย ไม่ใช้ถ้อยคำย้อนยุค",
       "dialogueAddress": [
         "พี่เล่า",
-        "เจ้าเตียว"
+        "เตียว"
       ]
     },
     {
       "id": "zhang-fei",
       "name": "เตียวหุย",
-      "nickname": "เจ้าเตียว",
+      "nickname": "เตียว",
       "role": "นักรบเสียงดัง พลังลุงขี้เมา",
       "archetype": "ลุงขี้เมาใจใหญ่ เสียงดัง มั่นใจเกินเหตุ แต่รักพวกพ้อง",
       "identityLocked": true,
@@ -93,7 +96,7 @@
       "voicePersonaLocked": true,
       "visualIdentity": "ชายอีสานร่างใหญ่แน่น ผิวเข้มแดด หนวดเครารุงรัง ผมดำยุ่งคาดผ้า หน้าตาดุแต่มีแววขี้เล่น ไม่ต้องฟันสวยหรือผิวดี ให้ดูเหมือนลุงบ้านๆ ที่ดื่มหนักแต่แข็งแรง",
       "coreCostume": "Recognizable Zhang Fei-inspired Three Kingdoms attire: rough dark brown, black and muted red Han military tunic with worn lamellar pieces, period belt and boots, simple headcloth suitable to the era. Drunk-uncle energy comes from face and behavior, not Thai clothing. No Thai/Isan textile styling.",
-      "manner": "เสียงดัง หัวเราะง่าย พูดตรง มุกมาจากความเมา ความมั่นหน้า และการแซวพี่เล่า",
+      "manner": "พูดภาษาไทยปัจจุบัน เสียงดัง ขี้แซว หัวเราะง่าย ฟีลลุงขี้เมา แต่ไม่ใช้ศัพท์ย้อนยุค",
       "dialogueAddress": [
         "พี่เล่า",
         "พี่กวน"
